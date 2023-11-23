@@ -50,5 +50,5 @@ bindkey ${key[Esc]}${key[Enter]} edit-command-line
 bindkey ${key[Esc]}'g' toggle-directory-history
 
 # Removing keybinds
-bindkey -r $PER_DIRECTORY_HISTORY_TOGGLE
-bindkey -r ${key[Ctrl]}'s'
+[[ -z $PER_DIRECTORY_HISTORY_TOGGLE ]] || bindkey -r $PER_DIRECTORY_HISTORY_TOGGLE
+# bindkey -r ${key[Ctrl]}'s'

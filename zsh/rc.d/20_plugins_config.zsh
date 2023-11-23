@@ -46,4 +46,4 @@ bindkey -e
 
 zstyle ':antidote:bundle' use-friendly-names 'yes'
 source "${ZDOTDIR}/.antidote/antidote.zsh"
-antidote load "${ZDOTDIR}/antidote-plugins.txt"
+[[ -r "${ZDOTDIR}/antidote-plugins.txt" ]] && antidote load "${ZDOTDIR}/antidote-plugins.txt"
