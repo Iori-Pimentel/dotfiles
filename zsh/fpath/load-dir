@@ -1,0 +1,10 @@
+#!/bin/zsh
+
+# file contains previous session directories saved using save-dir
+LWD_FILE="${XDG_DATA_HOME}/zsh/lwd"
+
+if [[ -r "$LWD_FILE" ]]; then
+  { local IFS= ; read -r LWD; read -r OLDLWD; } < "$LWD_FILE"
+  [[ -d "$OLDLWD" ]] && cd "$OLDLWD"
+  [[ -d "$LWD" ]] && cd "$LWD"
+fi

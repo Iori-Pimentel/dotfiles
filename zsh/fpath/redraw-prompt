@@ -1,0 +1,9 @@
+#!/bin/zsh
+
+# for func in chpwd "${chpwd_functions[@]}" precmd "${precmd_functions[@]}"; do
+for func in precmd "${precmd_functions[@]}"; do
+  [[ "${+functions[$func]}" == 0 ]] || "$func" &>/dev/null || true
+done
+unset func
+
+p10k display -r

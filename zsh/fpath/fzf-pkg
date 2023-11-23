@@ -1,0 +1,12 @@
+#!/bin/zsh
+
+# FIXME: don't include installed pkgs
+# Can use 'APT-Manual-Installed: yes|no'
+# or 'pkg list-installed'
+# or maybe 'apt' (have not checked)
+pkg list-all 2> /dev/null |
+awk '!/^Listing[.][.][.]$/' |
+awk -F/ '{ print $1 }' |
+fzf --multi --preview-window='down:70%:wrap' \
+  --preview 'pkg show {} 2> /dev/null | bat --color=always --pager=never --decorations=never --language=yaml' |
+xargs -ro echo 'pkg install'

@@ -1,0 +1,9 @@
+#!/bin/zsh
+
+autoload unregex
+# prefix=/data/data/com.termux/files/usr
+# converted to
+# s:/data/data/com\.termux/files/usr:~prefix:g;
+SUBSTITUTIONS=$(hash -d | unregex | awk -F= '{ print $2, $1}' OFS=':~' | awk '{ print "s", $0, "g;" }' OFS=':')
+
+sed -e "$SUBSTITUTIONS" < /dev/stdin
