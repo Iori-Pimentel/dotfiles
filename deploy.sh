@@ -28,7 +28,7 @@ git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
 DOTFILES="${HOME}/.local/dotfiles"
 
 # git clone https://github.com/Iori-Pimentel/dotfiles.git "${DOTFILES}/dotfiles"
-git clone ~/.local/dotfiles "${DOTFILES}/dotfiles"
+git clone ~/storage/downloads/dotfiles "${DOTFILES}/dotfiles"
 ln -sf "${DOTFILES}/zsh/.zshenv" ~/.zshenv
 git clone --depth=1 https://github.com/mattmc3/antidote.git "${DOTFILES}/zsh/.antidote"
 
