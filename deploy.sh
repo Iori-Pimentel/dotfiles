@@ -11,6 +11,7 @@ SCRIPT_DIR=$(dirname "$0")
 
 [[ -e ${PREFIX}/etc/termux/chosen_mirrors ]] ||
   termux-change-repo
+  # ln -s "${PREFIX}/etc/termux/"{mirrors/asia,chosen_mirrors}
 
 yes | pkg upgrade
 
@@ -19,6 +20,8 @@ packages=(
   manpages tealdeer
   eza bat
   neovim fzf
+  termux-api
+  openssh
 ) && pkg install -y ${packages[@]}
 unset packages
 
@@ -32,7 +35,7 @@ git clone ~/storage/downloads/dotfiles "$DOTFILES"
 ln -sf "${DOTFILES}/zsh/.zshenv" ~/.zshenv
 git clone --depth=1 https://github.com/mattmc3/antidote.git "${DOTFILES}/zsh/.antidote"
 
-COLORS='https://raw.githubusercontent.com/adi1090x/termux-style/master/colors/gruvbox-dark.properties'
+COLORS='https://github.com/adi1090x/termux-style/raw/master/colors/gruvbox-dark.properties'
 FONT='https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf'
 curl -fsSL $COLORS $FONT -o ~/.termux/colors.properties -o ~/.termux/font.ttf
 
