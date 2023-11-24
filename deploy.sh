@@ -18,7 +18,7 @@ packages=(
   zsh git # dependencies
   manpages tealdeer
   eza bat
-  neovim
+  neovim fzf
 ) && pkg install -y ${packages[@]}
 unset packages
 
@@ -28,13 +28,13 @@ git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
 DOTFILES="${HOME}/.local/dotfiles"
 
 # git clone https://github.com/Iori-Pimentel/dotfiles.git "${DOTFILES}/dotfiles"
-git clone ~/storage/downloads/dotfiles "${DOTFILES}/dotfiles"
+git clone ~/storage/downloads/dotfiles "$DOTFILES"
 ln -sf "${DOTFILES}/zsh/.zshenv" ~/.zshenv
 git clone --depth=1 https://github.com/mattmc3/antidote.git "${DOTFILES}/zsh/.antidote"
 
 COLORS='https://raw.githubusercontent.com/adi1090x/termux-style/master/colors/gruvbox-dark.properties'
 FONT='https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf'
-curl -fsSL $COLORS $FONT -o ~/.termux/colors.properties -o ~/.termux/font.tff
+curl -fsSL $COLORS $FONT -o ~/.termux/colors.properties -o ~/.termux/font.ttf
 
 # Default XDG paths
 XDG_CACHE_HOME="${HOME}/.cache"
