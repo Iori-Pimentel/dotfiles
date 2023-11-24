@@ -25,6 +25,10 @@ alias o=" cd .."
 alias oo=" cd ../.."
 alias ooo=" cd ../../.."
 
+# git
+alias gs='git status'
+alias gc='git config --list --show-origin'
+
 alias n="nvim"
 export LESS_TERMCAP_md=$(echoti bold; echoti setaf 1) 
 export LESS_TERMCAP_mb=$(echoti blink) 

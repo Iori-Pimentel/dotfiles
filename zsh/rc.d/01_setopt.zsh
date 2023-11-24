@@ -12,11 +12,12 @@ setopt NOTIFY # report status of background jobs immediately
 setopt AUTO_RESUME # attempt to resume existing job before creating a new process 
 setopt LONG_LIST_JOBS # list jobs in the long format by default 
 
-unsetopt BEEP # do not beep on errors 
-unsetopt NOMATCH # try to avoid the 'zsh: no matches found...' 
+setopt no_BEEP # do not beep on errors 
+setopt no_NOMATCH # try to avoid the 'zsh: no matches found...' 
+setopt no_FLOW_CONTROL # disable ^S and ^Q
+setopt no_SHORT_LOOPS # disable short loop forms, can be confusing 
 
 setopt CORRECT_ALL # try to correct the spelling of all arguments in a line 
-unsetopt FLOW_CONTROL # disable ^S and ^Q
 setopt MULTIOS # allows multiple input and output redirections 
 setopt CLOBBER # allow > redirection to truncate existing files 
 setopt BRACE_CCL # allow brace character class list expansion 
@@ -26,7 +27,6 @@ setopt LIST_TYPES # mark type of completion suggestions
 setopt HASH_LIST_ALL # whenever a command completion is attempted, make sure the entire command path is hashed first 
 setopt COMPLETE_IN_WORD # allow completion from within a word/phrase 
 setopt ALWAYS_TO_END # move cursor to the end of a completed word 
-unsetopt SHORT_LOOPS # disable short loop forms, can be confusing 
  
 # a bit fancy than default 
 PROMPT_EOL_MARK='%K{red} %k'
