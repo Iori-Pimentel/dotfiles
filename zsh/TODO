@@ -1,0 +1,102 @@
+explain() { 
+   open https://explainshell.com/explain\?cmd=$(echo $(fc -ln -1) | node -e 'process.stdout.write(encodeURIComponent(require("fs").readFileSync(0, "utf-8")))') 
+
+ }
+
+ zle_bracketed_paste contains start and end chars when pasting
+
+syntax highlighting on << EOF broken
+syntax highlighting on regex on grep|sed|awk
+
+fix fsh when fzf-tab esc and spelling correction edit
+
+use less -pattern='' for [Docs]
+
+androfecth CPU find
+
+fixnvim SIGHUP
+undo on word chunks
+
+pass zsh undohistnto nvim when edit-command-line
+
+add nvim diff swap file
+
+make colors function for easier echoti/terminfo
+
+ zsh-mouse ========
+fzf-tab breaks it
+prompt breaks it (maybe caused by p10k)
+cant scroll
+ ==================
+
+ctrl-/ backward-delete-word on /
+
+ man -a # not working
+
+ after edit-command-line move cursor to end of buffer
+
+ WORDCHARS toggling from spaces only to path delimeters
+
+ remember Esc-s fix spelling on word
+
+ disable autopair after Ctrl-v (quote-insert)
+
+ ESC-o to go to command flags and options
+
+back to local after accept-line
+
+run-help and which-command clear autosuggestion
+
+ctrl-shift-arrows broken
+
+qq breaks per-directory-history
+
+add customs hooks
+
+key input: Esc Ctrl-Alt-V breaks pasting
+key input: Ctrl-v Ctrl-Alt-V breaks pasting
+
+no syntax highlighting when creating func .ex mman() { man -a $@ } 
+
+ fzf-tab glob operators, glob flags and glob qualifiers
+
+
+# Debugging
+ set -x
+ export PS4='+(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]:+${FUNCNAME[0]}(): }'
+
+# ctrl-c wanted behaviour
+# comment out command and enter
+# command should be saved
+# fzf to run and delete commented commands
+# behaviour when empty command ???
+
+
+z fzf-tab on directories
+
+
+nvim vi" keys doesnt pair correctly
+
+_path_files completion
+cd ~/./d/z
+
+make prompt dirs clickable to cd
+
+open files using am
+click on command to move cursor
+
+disable spelling correction for _go and others
+
+zstyle ':completion:*' matcher-list '' \
+    'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+
+zstyle ':completion:*:(argument-rest|files):*' matcher-list '' \
+    'm:{[:lower:]-}={[:upper:]_}' \
+    'r:|[.,_-]=* r:|=*' \
+    'r:|.=* r:|=*'
+# zstyle ':completion:*' matcher-list 'b:=*'
+
+ | sed s:$HOME:~:
+
+
+history remove empty lines
