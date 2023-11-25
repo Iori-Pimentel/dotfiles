@@ -17,7 +17,7 @@ alias sp='shorten-path'
 alias pk="fzf-pkg"
 
 # History suppression
-alias c=" clear; echo"
+alias c=" clear"
 alias pwd=" pwd"
 alias q=" exit"
 alias p=' cd ~-'

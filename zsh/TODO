@@ -33,8 +33,6 @@ ctrl-/ backward-delete-word on /
 
  man -a # not working
 
- after edit-command-line move cursor to end of buffer
-
  WORDCHARS toggling from spaces only to path delimeters
 
  remember Esc-s fix spelling on word
