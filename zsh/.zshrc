@@ -1,16 +1,21 @@
 #!/bin/zsh
-# Show motd only if different
-if ! cmp -s "${HOME}/.hushlogin" "${PREFIX}/etc/motd"; then
+
+if [[ -o login ]]; then
+  # Show motd only if different
+  if ! cmp -s "${HOME}/.hushlogin" "${PREFIX}/etc/motd"; then
     tee "${HOME}/.hushlogin" < "${PREFIX}/etc/motd"
     read -k1 "REPLY?Press Enter to continue: "
     echo
+  fi
+  [[ $(uname -o) == "Android" ]] && androfetch
+  tldr --quiet $(tldr --quiet --list | shuf -n1)
 fi
 
-autoload load-dir; load-dir
+autoload session-cd && {
+  session-cd load
+  TRAPEXIT() { session-cd save; }
+}
 
-[[ $(uname -o) == "Android" ]] && androfetch
-tldr --quiet $(tldr --quiet --list | shuf -n1)
-  
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.local/dotfiles/zsh/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.

@@ -8,7 +8,7 @@ alias bat="bat --theme OneHalfDark"
 alias f="rga-fzf"
 alias wget="wget --hsts-file=${XDG_CACHE_HOME}/wget/wget-hsts"
 
-alias qq='save-dir && clear && exec zsh -l'
+alias qq='clear && session-cd save && exec zsh'
 
 autoload shorten-path
 autoload fzf-pkg
