@@ -9,6 +9,10 @@ alias f="rga-fzf"
 alias wget="wget --hsts-file=${XDG_CACHE_HOME}/wget/wget-hsts"
 
 alias qq='clear && session-cd save && exec zsh'
+alias man='man '
+
+alias n="nvim"
+alias na='NVIM_APPNAME=a-nvim nvim'
 
 autoload shorten-path
 autoload fzf-pkg
@@ -29,7 +33,6 @@ alias ooo=" cd ../../.."
 alias gs='git status'
 alias gc='git config --list --show-origin'
 
-alias n="nvim"
 export LESS_TERMCAP_md=$(echoti bold; echoti setaf 1) 
 export LESS_TERMCAP_mb=$(echoti blink) 
 export LESS_TERMCAP_me=$(echoti sgr0) 
