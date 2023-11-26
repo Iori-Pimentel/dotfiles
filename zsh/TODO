@@ -8,6 +8,8 @@ explain() {
 syntax highlighting on << EOF broken
 syntax highlighting on regex on grep|sed|awk
 
+shorten-path keep slash if substitution is in middle of a path
+
 fix fsh when fzf-tab esc and spelling correction edit
 
 use less -pattern='' for [Docs]
