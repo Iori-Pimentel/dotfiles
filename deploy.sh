@@ -6,15 +6,12 @@
 set -e
 SCRIPT_DIR=$(dirname "$0")
 
-[[ -d ~/storage ]] ||
-  termux-setup-storage
+[[ -d ~/storage ]] || termux-setup-storage
 
-[[ -e ${PREFIX}/etc/termux/chosen_mirrors ]] ||
-  termux-change-repo
-  # ln -s "${PREFIX}/etc/termux/"{mirrors/asia,chosen_mirrors}
+# termux-change-repo alternative that defaults to asia mirror group
+ln -sfT "${PREFIX}/etc/termux/"{mirrors/asia,chosen_mirrors}
 
-yes | pkg upgrade
-
+pkg upgrade -y
 packages=(
   zsh git # dependencies
   manpages tealdeer
@@ -23,7 +20,6 @@ packages=(
   termux-api
   openssh
 ) && pkg install -y ${packages[@]}
-unset packages
 
 tldr --update
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
@@ -47,8 +43,8 @@ XDG_STATE_HOME="${HOME}/.local/state"
 
 # Required Directories
 mkdir -p "${XDG_DATA_HOME}/zsh" # Needed for history file
-mkdir -p "${XDG_CONFIG_HOME}/git"
 
+mkdir -p "${XDG_CONFIG_HOME}/git"
 ln -sf "${DOTFILES}/configs/gitconfig" "${XDG_CONFIG_HOME}/git/config"
 # scripts
 # mkdir -p "~/.local/bin"
