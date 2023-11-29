@@ -17,6 +17,7 @@ packages=(
   neovim fzf
   termux-api
   openssh
+  shellcheck
 ) && pkg install -y ${packages[@]}
 
 # Default XDG paths
@@ -44,8 +45,10 @@ FONT='https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20
 curl -fsSL $COLORS $FONT -o ~/.termux/colors.properties -o ~/.termux/font.ttf
 
 ANDROFETCH='https://github.com/laraib07/androfetch/raw/main/androfetch'
-curl -fsSL $ANDROFETCH -o ~/.local/bin/androfetch && chmod u+x ~/.local/bin/androfetch
+BIN_DIR="${HOME}/.local/bin"
 
+mv-bin() { chmod u+x "$@" && mv "$@" "$BIN_DIR"; }
+curl -fsSL -O $ANDROFETCH && mv-bin androfetch
 
 # scripts
 
