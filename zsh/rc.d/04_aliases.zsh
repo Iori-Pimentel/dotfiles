@@ -1,15 +1,14 @@
 # ================= Aliases =================
 
 # alias l="eza --group-directories-first --classify --icons --color=auto"
-alias ll="eza -la --group-directories-first --no-user --git --icons --color=always"
-alias lt="eza --tree --icons --color=auto"
-alias lta="eza --tree --icons --no-user --no-time --no-filesize -la --color=auto"
+alias ll="eza -la --group-directories-first --no-user --git --icons=always --color=always"
+alias lt="eza --tree --icons=always --color=auto"
+alias lta="eza --tree --icons=always --no-user --no-time --no-filesize -la --color=auto"
 alias bat="bat --theme OneHalfDark"
 alias f="rga-fzf"
 alias wget="wget --hsts-file=${XDG_CACHE_HOME}/wget/wget-hsts"
 
 alias qq='clear && session-cd save && exec zsh'
-alias man='man '
 
 alias n="nvim"
 alias na='NVIM_APPNAME=a-nvim nvim'
