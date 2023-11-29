@@ -4,7 +4,7 @@ autoload unregex
 # prefix=/data/data/com.termux/files/usr
 # converted to
 # s:/data/data/com\.termux/files/usr:~prefix:g;
-hashSED=$(hash -d | unregex | awk -F'=' '{ print "H" $2 "E", $1}' OFS=':~' | awk '{ print "s", $0, "g;" }' OFS=':')
+hashSED=$(hash -d | unregex | awk -F'=' '{ print $2, $1 }' OFS=':~' | awk '{ print "s", $0, "g;" }' OFS=':')
 homeSED=$(echo ${HOME} | unregex | awk '{ print "s", $0, "~", "g" }' OFS=':')
 
 sed -e "$hashSED" -e "$homeSED" < /dev/stdin
