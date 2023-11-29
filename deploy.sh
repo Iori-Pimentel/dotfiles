@@ -19,20 +19,6 @@ packages=(
   openssh
 ) && pkg install -y ${packages[@]}
 
-tldr --update
-git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
-
-DOTFILES="${HOME}/.local/dotfiles"
-
-# git clone https://github.com/Iori-Pimentel/dotfiles.git "${DOTFILES}/dotfiles"
-git clone ~/storage/downloads/dotfiles "$DOTFILES"
-ln -sf "${DOTFILES}/zsh/.zshenv" ~/.zshenv
-git clone --depth=1 https://github.com/mattmc3/antidote.git "${DOTFILES}/zsh/.antidote"
-
-COLORS='https://github.com/adi1090x/termux-style/raw/master/colors/gruvbox-dark.properties'
-FONT='https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf'
-curl -fsSL $COLORS $FONT -o ~/.termux/colors.properties -o ~/.termux/font.ttf
-
 # Default XDG paths
 XDG_CACHE_HOME="${HOME}/.cache"
 XDG_CONFIG_HOME="${HOME}/.config"
@@ -41,14 +27,31 @@ XDG_STATE_HOME="${HOME}/.local/state"
 
 # Required Directories
 mkdir -p "${XDG_DATA_HOME}/zsh" # Needed for history file
-
 mkdir -p "${XDG_CONFIG_HOME}/git"
-ln -sf "${DOTFILES}/configs/gitconfig" "${XDG_CONFIG_HOME}/git/config"
-# scripts
-# mkdir -p "~/.local/bin"
-# curl -O https://raw.githubusercontent.com/laraib07/androfetch/main/androfetch && chmod u+x androfetch && mv androfetch ~/.local/bin/
+mkdir -p "${HOME}/.local/bin"
 
+
+DOTFILES="${HOME}/.local/dotfiles"
+
+git clone https://github.com/Iori-Pimentel/dotfiles.git  "${DOTFILES}"
+git clone https://github.com/mattmc3/antidote.git        "${DOTFILES}/zsh/.antidote" --depth=1
+
+ln -sfT "${DOTFILES}/zsh/.zshenv"        ~/.zshenv
+ln -sfT "${DOTFILES}/configs/gitconfig"  "${XDG_CONFIG_HOME}/git/config"
+
+COLORS='https://github.com/adi1090x/termux-style/raw/master/colors/gruvbox-dark.properties'
+FONT='https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf'
+curl -fsSL $COLORS $FONT -o ~/.termux/colors.properties -o ~/.termux/font.ttf
+
+ANDROFETCH='https://github.com/laraib07/androfetch/raw/main/androfetch'
+curl -fsSL $ANDROFETCH -o ~/.local/bin/androfetch && chmod u+x ~/.local/bin/androfetch
+
+
+# scripts
+
+tldr --update
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
 chsh -s zsh
 
-echo 'Run pkg install ripgrep-all fd wget curl'
+echo 'Run pkg install ripgrep-all fd'
 echo 'Restart the terminal using exit to apply zsh'
