@@ -1,10 +1,8 @@
 #!/bin/bash
 # Zsh setup script for Termux-Monet
 # https://github.com/HardcodedCat/termux-monet
-# TODO: Add error handling
 
 set -e
-SCRIPT_DIR=$(dirname "$0")
 
 [[ -d ~/storage ]] || termux-setup-storage
 
