@@ -3,6 +3,10 @@ explain() {
 
  }
 
+ function per-hist-dir-cmd-search() {
+    find ~/.directory_history -type f -name history -exec grep --color=always "${1}" {} + | sed -E 's/: [0-9:]+;//' | sed 's/\/history:/:/'
+}
+
  zle_bracketed_paste contains start and end chars when pasting
 
 syntax highlighting on << EOF broken
