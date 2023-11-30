@@ -8,6 +8,7 @@ opt.cursorline = true
 opt.ignorecase = true
 opt.smartcase = true
 opt.background = "dark"
+opt.signcolumn = "yes:1" -- left side padding
 
 -- tabs & indentation
 opt.tabstop = 2 -- number of spaces a tab is visually worth
