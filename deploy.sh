@@ -18,6 +18,9 @@ packages=(
   termux-api
   openssh
   shellcheck
+  clang # c compiler for nvim-treesitter 
+  lua-language-server # mason-lspconfig replacement for lua
+  python # nvim-jdtls dependencies
 ) && pkg install -y ${packages[@]}
 
 # Default XDG paths
@@ -39,6 +42,7 @@ git clone https://github.com/mattmc3/antidote.git        "${DOTFILES}/zsh/.antid
 
 ln -sfT "${DOTFILES}/zsh/.zshenv"        ~/.zshenv
 ln -sfT "${DOTFILES}/configs/gitconfig"  "${XDG_CONFIG_HOME}/git/config"
+ln -sfT "${DOTFILES}/nvim"               "${XDG_CONFIG_HOME}/a-nvim"
 
 COLORS='https://github.com/adi1090x/termux-style/raw/master/colors/gruvbox-dark.properties'
 FONT='https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf'
