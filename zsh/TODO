@@ -7,6 +7,18 @@ explain() {
     find ~/.directory_history -type f -name history -exec grep --color=always "${1}" {} + | sed -E 's/: [0-9:]+;//' | sed 's/\/history:/:/'
 }
 
+autosuggestion go to history for ctrl-o && delte history line from file command
+nvim auto :set ft=zsh for files in fpath
+
+autosuggestion swap args pos
+
+find undojoin for zshzle
+autopair trigger only when whitespace in left and right
+
+dont create window in nvim when :h
+
+dont run command if history expansion fails
+
  zle_bracketed_paste contains start and end chars when pasting
 
 syntax highlighting on << EOF broken
@@ -52,8 +64,6 @@ back to local after accept-line
 run-help and which-command clear autosuggestion
 
 ctrl-shift-arrows broken
-
-qq breaks per-directory-history
 
 add customs hooks
 
