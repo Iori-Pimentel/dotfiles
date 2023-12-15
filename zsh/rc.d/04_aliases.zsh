@@ -2,7 +2,7 @@
 
 alias eza='eza --all --no-user --icons=always --color=always --git --group-directories-first'
 alias ll='eza --long'
-alias lt='eza --tree --git-ignore'
+alias lt='eza --tree --git-ignore --level 2'
 
 alias bat='bat --theme OneHalfDark'
 alias f='rga-fzf'
