@@ -1,4 +1,0 @@
-#!/bin/zsh
-
-# create file containing previous session directories to be loaded using load-dir
-printf '%s\n%s' "$PWD" "$OLDPWD" > "${XDG_DATA_HOME}/zsh/lwd"
