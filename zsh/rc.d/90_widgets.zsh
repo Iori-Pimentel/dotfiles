@@ -99,9 +99,9 @@ zle -N bracketed-paste
 #   less -i "+/function $plugin" \
 #   $(antidote path jimhester/$plugin)/$plugin.zsh }
 
-autoload redraw-prompt
-
 toggle-directory-history() {
+# Addressed issue with per-directory-history-toggle-history by creating a new
+# prompt at each call; resolved by copying the source code and removing zle -I.
   if [[ $_per_directory_history_is_global == true ]]; then
     _per-directory-history-set-directory-history
     _per_directory_history_is_global=false
@@ -110,7 +110,7 @@ toggle-directory-history() {
     _per_directory_history_is_global=true
   fi
 
-  redraw-prompt
+  autoload redraw-prompt && redraw-prompt
   zle autosuggest-fetch
 }
 
