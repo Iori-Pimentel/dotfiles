@@ -41,7 +41,11 @@ ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(accept-line bracketed-paste fzf-tab-complete edit-command-line edit-command)
 
 bindkey -e
- 
+
+# ==== per-directory-history ====
+
+HISTORY_BASE="${XDG_DATA_HOME}/zsh/directory-history"
+
 # ==== antidote ====
 
 zstyle ':antidote:bundle' use-friendly-names 'yes'
