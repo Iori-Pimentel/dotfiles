@@ -1,66 +1,3 @@
-# ─────────────────────────────────────────────────
-_space-pair() {
-  _ap-can-delete-p && [[ $LBUFFER =~ ' $' ]]
-}
-
-_remove-opening-pairs() {
-  PAIRS="${(@k)AUTOPAIR_PAIRS}"
-  tr -d "$PAIRS" <<< "$WORDCHARS"
-}
-
-_at-boundary() {
-  [[ -z "$LBUFFER" ]] && return 0
-
-  [[ "$LBUFFER" =~ "" ]]
-
-  
-}
-
-_opening-pair-at-last() {
-  PAIRS="${(@k)AUTOPAIR_PAIRS}"
-  LAST_CHAR="$LBUFFER:0:1"
-  [[ -z "$(tr -d $PAIRS <<< $LAST_CHAR)" ]]
-}
-
-_last-char-is-word() {
-  [[ "$1" =~ "[[:alnum:]]$" ]] && return 0
-  [[ "$1" =~ " $" ]] && return 1
-
-  # TODO: make not loop
-  for char in $(echo "$WORDCHARS" | sed "s:\S:& :g"); do
-    [[ "$1" =~ '\'$char'$' ]] && return 0
-  done
-
-  return 1
-}
-
-_rbuffer-no-pair() {
-  [[ -z "$RBUFFER" ]] && return 0
-  [[ "$RBUFFER" =~ ' $' ]] && return 1
-  PAIRS="${(@v)AUTOPAIR_PAIRS}"
-
-  for char in $(echo "$PAIRS"); do
-    [[ "$RBUFFER" =~ '\'$char'$' ]] && return 1
-  done
-
-  return 0
-}
-
-# TODO: fix lag
-backward-kill-word() {
-  _space-pair && zle autopair-delete && return
-  LBUFFER="${LBUFFER%%[[:space:]]#}"
-  
-  while ! [[ "$LBUFFER" =~ ' $' ]] && ! [[ -z "$LBUFFER" ]]; do
-    zle autopair-delete
-  done
-}
-
-zle -N backward-kill-word
-
-# ──────────────────────────────────────────────────
-
-
 edit-command() {
 	setopt localoptions nomultibyte
   byteoffset=$(( $#LBUFFER + 1 ))
@@ -86,9 +23,9 @@ bracketed-paste() {
   zle .$WIDGET PASTED
 
   read -r -d '' trimmed <<< "$PASTED"
-  LBUFFER+="$trimmed"
 
-  [[ $(wc -l <<< $trimmed) != 1 ]] && zle edit-command-line
+  LBUFFER+="$trimmed"
+  [[ "$trimmed" =~ $'\n' ]] && zle edit-command-line
 }
 zle -N bracketed-paste
 

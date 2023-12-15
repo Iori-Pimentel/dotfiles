@@ -5,7 +5,6 @@ WORDCHARS=$(tr -d '/' <<< "$WORDCHARS")
 # WORDCHARS='*?_-.[]~=&;!#$%^(){}<>:"\|'\'
 
 typeset -A key
-
 key=(
   Up             '^[[A'
   Down           '^[[B'
