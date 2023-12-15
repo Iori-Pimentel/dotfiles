@@ -23,4 +23,4 @@ opt.expandtab = false
 -- Setting expandtab means that you never wanna see a \t again in your file.
 
 -- opt.clipboard:append("unnamedplus") -- use system clipboard on all registers
-vim.keymap.set({ "n", "v" }, "y", '"+y', {}) -- yank into system clipboard
+vim.keymap.set({ "n", "v" }, "y", '"+y', {}) -- use system clipboard on yank only
