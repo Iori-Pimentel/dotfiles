@@ -1,3 +1,8 @@
+accept-line() {
+	[[ "$BUFFER" =~ '[[:graph:]]' ]] && zle .$WIDGET
+}
+zle -N accept-line
+
 edit-command() {
 	setopt localoptions nomultibyte
 	byteoffset=$(( $#LBUFFER + 1 ))
