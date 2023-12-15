@@ -1,0 +1,25 @@
+** History Notes **
+
+!! run previous command
+!!0 or !!- command name
+!* get all args
+!^ first arg
+!$ last arg
+!# ge current line
+  !#*
+  !#^
+  !#$
+!:a absolute 
+!:h head dir
+!:q qoute
+!:e ext
+!:t tail file
+
+** Lualine Notes **
+
+Mode
+file path
+if file exists
+show if changed
+change color to be different to window color
+show match count with / on lualine or on cursor line
