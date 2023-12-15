@@ -7,6 +7,6 @@ if [[ $1 == 'load' ]] && [[ -r "$saveFile" ]]; then
   { read -r sessionPWD && read -r sessionOLDPWD; } < "$saveFile"
   [[ -d "$sessionOLDPWD" ]] && cd "$sessionOLDPWD"
   [[ -d "$sessionPWD" ]] && cd "$sessionPWD"
-elif [[ $1 == 'save' ]] && [[ -w "$saveFile" ]]; then
+elif [[ $1 == 'save' ]]; then
   printf '%s\n%s' "$PWD" "$OLDPWD" > "$saveFile"
 fi
