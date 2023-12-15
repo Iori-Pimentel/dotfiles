@@ -1,7 +1,7 @@
 ** History Notes **
 
 !! run previous command
-!!0 or !!- command name
+!!0 command name
 !* get all args
 !^ first arg
 !$ last arg
