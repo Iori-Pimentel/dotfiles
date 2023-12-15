@@ -6,25 +6,25 @@ WORDCHARS=$(tr -d '/' <<< "$WORDCHARS")
 
 typeset -A key
 key=(
-  Up             '^[[A'
-  Down           '^[[B'
-  Right          '^[[C'
-  Left           '^[[D'
+	Up             '^[[A'
+	Down           '^[[B'
+	Right          '^[[C'
+	Left           '^[[D'
 
-  CtrlUp         '^[[1;5A'
-  CtrlDown       '^[[1;5B'
-  CtrlRight      '^[[1;5C'
-  CtrlLeft       '^[[1;5D'
+	CtrlUp         '^[[1;5A'
+	CtrlDown       '^[[1;5B'
+	CtrlRight      '^[[1;5C'
+	CtrlLeft       '^[[1;5D'
 
-  Backspace      '^?'
-  Delete         '^[[3~'
-  CtrlBackspace  '^H'
-  CtrlDelete     '^[[3;5~'
-  CtrlSpace      '^@'
+	Backspace      '^?'
+	Delete         '^[[3~'
+	CtrlBackspace  '^H'
+	CtrlDelete     '^[[3;5~'
+	CtrlSpace      '^@'
 
-  Esc            '^['
-  Enter          '^M'
-  Ctrl           '^'
+	Esc            '^['
+	Enter          '^M'
+	Ctrl           '^'
 )
 
 # [Docs]
