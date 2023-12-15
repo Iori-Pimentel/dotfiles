@@ -1,32 +1,32 @@
 # ================= Aliases =================
 
-# alias l="eza --group-directories-first --classify --icons --color=auto"
-alias ll="eza -la --group-directories-first --no-user --git --icons=always --color=always"
-alias lt="eza --tree --icons=always --color=auto"
-alias lta="eza --tree --icons=always --no-user --no-time --no-filesize -la --color=auto"
-alias bat="bat --theme OneHalfDark"
-alias f="rga-fzf"
+alias eza='eza --all --no-user --icons=always --color=always --git --group-directories-first'
+alias ll='eza --long'
+alias lt='eza --tree --git-ignore'
+
+alias bat='bat --theme OneHalfDark'
+alias f='rga-fzf'
 alias wget="wget --hsts-file=${XDG_CACHE_HOME}/wget/wget-hsts"
 
 alias qq='clear && session-cd save && exec zsh'
 
-alias n="nvim"
+alias n='nvim'
 alias na='NVIM_APPNAME=a-nvim nvim'
 
 autoload shorten-path
 autoload fzf-pkg
 
 alias sp='shorten-path'
-alias pk="fzf-pkg"
+alias pk='fzf-pkg'
 
 # History suppression
-alias c=" clear"
-alias pwd=" pwd"
-alias q=" exit"
+alias c=' clear'
+alias pwd=' pwd'
+alias q=' exit'
 alias p=' cd ~-'
-alias o=" cd .."
-alias oo=" cd ../.."
-alias ooo=" cd ../../.."
+alias o=' cd ..'
+alias oo=' cd ../..'
+alias ooo=' cd ../../..'
 
 # git
 alias gs='git status'
