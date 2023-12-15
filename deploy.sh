@@ -14,6 +14,7 @@ packages=(
   zsh git # dependencies
   manpages tealdeer
   eza bat
+  fd ripgrep
   neovim fzf
   termux-api
   openssh
