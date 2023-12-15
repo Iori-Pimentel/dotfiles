@@ -46,7 +46,9 @@ ln -sfT "${DOTFILES}/nvim"               "${XDG_CONFIG_HOME}/a-nvim"
 
 COLORS='https://github.com/adi1090x/termux-style/raw/master/colors/gruvbox-dark.properties'
 FONT='https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf'
-curl -fsSL $COLORS $FONT -o ~/.termux/colors.properties -o ~/.termux/font.ttf
+FONT_ITALIC='https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts%2FJetBrainsMono%2FNoLigatures%2FItalic%2FJetBrainsMonoNLNerdFont-Italic.ttf'
+
+curl -fsSL $COLORS $FONT $FONT_ITALIC -o ~/.termux/colors.properties -o ~/.termux/font.ttf -o ~/.termux/font-italic.ttf
 
 ANDROFETCH='https://github.com/laraib07/androfetch/raw/main/androfetch'
 BIN_DIR="${HOME}/.local/bin"
