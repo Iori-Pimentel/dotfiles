@@ -34,6 +34,7 @@ bindkey ${key[Up]} up-line-or-search
 bindkey ${key[Down]} down-line-or-search
 bindkey ${key[CtrlLeft]} emacs-backward-word
 bindkey ${key[CtrlRight]} emacs-forward-word
+bindkey ${key[CtrlDown]} end-of-history
 bindkey ${key[CtrlBackspace]} backward-kill-word
 bindkey ${key[CtrlDelete]} kill-word
 bindkey ${key[Delete]} delete-char

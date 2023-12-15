@@ -10,6 +10,8 @@ explain() {
 autosuggestion go to history for ctrl-o && delte history line from file command
 nvim auto :set ft=zsh for files in fpath
 
+nvim tablines hides cursor
+
 autosuggestion swap args pos
 
 find undojoin for zshzle
