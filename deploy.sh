@@ -63,5 +63,6 @@ tldr --update
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
 chsh -s zsh
 
-echo 'Run pkg install ripgrep-all fd'
-echo 'Restart the terminal using exit to apply zsh'
+echo 'Run command when pushing to github:'
+echo 'git remote set-url origin git@github.com:Iori-Pimentel/dotfiles.git'
+echo 'Restart the app to continue'
