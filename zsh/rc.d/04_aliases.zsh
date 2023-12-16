@@ -29,8 +29,9 @@ alias oo=' cd ../..'
 alias ooo=' cd ../../..'
 
 # git
+autoload git-config-info
 alias gs='git status'
-alias gc='git config --list --show-origin'
+alias gc='git-config-info'
 
 export LESS_TERMCAP_md=$(echoti bold; echoti setaf 1) 
 export LESS_TERMCAP_mb=$(echoti blink) 

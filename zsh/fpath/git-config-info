@@ -1,0 +1,13 @@
+#!/bin/zsh
+
+git config --list --show-origin |
+	{ autoload shorten-path && shorten-path; } |
+	sed 's/^file://' |
+	awk -F'\t' '
+		{
+			key = $1; content = substr($0, index($0, "\t"))
+			arr[key] = arr[key] "\n" content
+		}
+		END {for (key in arr) print "[" key "]" arr[key]}' |
+	bat --plain --language=ini # syntax highligthing
+
