@@ -42,7 +42,7 @@ zle -N bracketed-paste
 #   $(antidote path jimhester/$plugin)/$plugin.zsh }
 
 toggle-directory-history() {
-# Addressed issue with per-directory-history-toggle-history by creating a new
+# Addressed issue with per-directory-history-toggle-history creating a new
 # prompt at each call; resolved by copying the source code and removing zle -I.
 	if [[ $_per_directory_history_is_global == true ]]; then
 		_per-directory-history-set-directory-history
