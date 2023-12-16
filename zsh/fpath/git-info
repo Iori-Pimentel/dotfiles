@@ -5,10 +5,10 @@
 local gitRoot
 
 git rev-parse --show-toplevel 2> /dev/null | read -r gitRoot && ( # run a subshell
-  cd "$gitRoot"
+	cd "$gitRoot"
 
-  # merge command output into a table
-  exec 3< <(tokei --hidden --sort=files)
-  exec 4< <(onefetch --include-hidden -d 'lines-of-code' 'size')
-  paste <(<&3) <(<&4) | column -t -s $'\t'
+	# merge command output into a table
+	exec 3< <(tokei --hidden --sort=files)
+	exec 4< <(onefetch --include-hidden -d 'lines-of-code' 'size')
+	paste <(<&3) <(<&4) | column -t -s $'\t'
 )
