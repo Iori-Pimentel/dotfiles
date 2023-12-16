@@ -1,6 +1,9 @@
 local opt = vim.opt -- for conciseness
 
 opt.number = false
+opt.laststatus = 3 -- global statusline
+opt.splitbelow = true
+opt.splitright = true
 opt.scrolloff = 8
 opt.undofile = true
 opt.wrap = false
