@@ -50,4 +50,4 @@ HISTORY_BASE="${XDG_DATA_HOME}/zsh/directory-history"
 
 zstyle ':antidote:bundle' use-friendly-names 'yes'
 source "${ZDOTDIR}/.antidote/antidote.zsh"
-[[ -r "${ZDOTDIR}/antidote-plugins.txt" ]] && antidote load "${ZDOTDIR}/antidote-plugins.txt"
+antidote load "${ZDOTDIR}/antidote-plugins.txt"

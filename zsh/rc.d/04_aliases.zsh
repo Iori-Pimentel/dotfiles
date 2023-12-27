@@ -1,5 +1,3 @@
-# ================= Aliases =================
-
 alias eza='eza --all --no-user --icons=always --color=always --git --group-directories-first'
 alias ll='eza --long'
 alias lt='eza --tree --git-ignore --level 2'
@@ -28,7 +26,6 @@ alias o=' cd ..'
 alias oo=' cd ../..'
 alias ooo=' cd ../../..'
 
-# git
 autoload git-config-info
 alias gs='git status'
 alias gc='git-config-info'

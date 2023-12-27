@@ -16,6 +16,7 @@ key=(
 	CtrlRight      '^[[1;5C'
 	CtrlLeft       '^[[1;5D'
 
+	Tab            '^I'
 	Backspace      '^?'
 	Delete         '^[[3~'
 	CtrlBackspace  '^H'
@@ -38,8 +39,8 @@ bindkey ${key[CtrlBackspace]} backward-kill-word
 bindkey ${key[CtrlDelete]} kill-word
 bindkey ${key[Delete]} delete-char
 bindkey ${key[Ctrl]}'u' vi-kill-line
-bindkey ${key[Ctrl]}'a' beginning-of-line #change
-bindkey ${key[Ctrl]}'e' end-of-line #change
+bindkey ${key[Ctrl]}'a' beginning-of-line
+bindkey ${key[Ctrl]}'e' end-of-line
 bindkey ${key[Ctrl]}'n' down-history
 bindkey ${key[Ctrl]}'p' up-history
 bindkey ${key[Esc]}'u' undo
