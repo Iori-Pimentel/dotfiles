@@ -7,6 +7,8 @@ man zshoptions
 KEYBOARD_HACK
 Note that this does not provide **-style triggers, you will need to enable fzf's zsh completion as well.
 
+chsh - <TAB> redraws prompt
+
  function per-hist-dir-cmd-search() {
     find ~/.directory_history -type f -name history -exec grep --color=always "${1}" {} + | sed -E 's/: [0-9:]+;//' | sed 's/\/history:/:/'
 }
