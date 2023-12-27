@@ -1,7 +1,6 @@
 local opt = vim.opt -- for conciseness
 
 opt.number = false
-opt.laststatus = 3 -- global statusline
 opt.splitbelow = true
 opt.splitright = true
 opt.scrolloff = 8
@@ -11,7 +10,10 @@ opt.cursorline = true
 opt.ignorecase = true
 opt.smartcase = true
 opt.background = "dark"
-opt.signcolumn = "yes:1" -- left side padding
+opt.grepprg = 'git grep -n'
+opt.laststatus = 3        -- enables global statusline
+opt.signcolumn = "yes:1"  -- left side padding
+opt.wildignorecase = true -- for completion of file names in command mode
 
 -- tabs & indentation
 opt.tabstop = 2
