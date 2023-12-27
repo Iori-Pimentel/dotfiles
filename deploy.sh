@@ -11,18 +11,20 @@ ln -sfT "${PREFIX}/etc/termux/"{mirrors/asia,chosen_mirrors}
 
 pkg upgrade -y
 packages=(
-  zsh git
-  manpages tealdeer
-  eza bat
-  fd ripgrep
-  neovim fzf
-  termux-api
-  openssh
-  shellcheck
-  clang # c compiler for nvim-treesitter 
-  lua-language-server # mason-lspconfig replacement for lua
-  python # nvim-jdtls dependencies
-) && pkg install -y "${packages[@]}"
+	zsh git
+	manpages tealdeer
+	eza bat
+	fd ripgrep
+	neovim fzf
+	termux-api
+	openssh
+	shellcheck
+	clang # c compiler for nvim-treesitter 
+	lua-language-server # mason-lspconfig replacement for lua
+	python # nvim-jdtls dependencies
+)
+pkg install -y "${packages[@]}"
+unset packages
 
 # Default XDG paths
 XDG_CACHE_HOME="${HOME}/.cache"
@@ -30,12 +32,13 @@ XDG_CONFIG_HOME="${HOME}/.config"
 XDG_DATA_HOME="${HOME}/.local/share"
 XDG_STATE_HOME="${HOME}/.local/state"
 
-args=(
-	--parents
+directories=(
 	"${XDG_DATA_HOME}/zsh" # for zsh HISTFILE
 	"${XDG_CONFIG_HOME}/git"
 	"${HOME}/.local/bin"
-) && mkdir "${args[@]}" && unset args
+)
+mkdir --parents "${directories[@]}"
+unset directories
 
 DOTFILES="${HOME}/.local/dotfiles"
 git clone https://github.com/Iori-Pimentel/dotfiles.git  "${DOTFILES}"
@@ -60,7 +63,10 @@ args=(
 	"$FONT"        -o ~/.termux/font.ttf
 	"$FONT_ITALIC" -o ~/.termux/font-italic.ttf
 	"$ANDROFETCH"  -o ~/.local/bin/androfetch
-) && curl "${args[@]}" && unset args
+)
+curl "${args[@]}"
+unset args
+
 chmod u+x ~/.local/bin/androfetch
 
 tldr --update
