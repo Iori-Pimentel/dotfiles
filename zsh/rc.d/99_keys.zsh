@@ -29,25 +29,23 @@ key=(
 )
 
 # <Docs> man zshzle | less '+/^STANDARD WIDGETS' </Docs>
-bindkey ${key[Up]} up-line-or-search
-bindkey ${key[Down]} down-line-or-search
-bindkey ${key[CtrlLeft]} emacs-backward-word
-bindkey ${key[CtrlRight]} emacs-forward-word
-bindkey ${key[CtrlDown]} end-of-history
-bindkey ${key[CtrlBackspace]} backward-kill-word
-bindkey ${key[CtrlDelete]} kill-word
-bindkey ${key[Delete]} delete-char
-bindkey ${key[Ctrl]}'u' vi-kill-line
-bindkey ${key[Ctrl]}'a' beginning-of-line
-bindkey ${key[Ctrl]}'e' end-of-line
-bindkey ${key[Ctrl]}'n' down-history
-bindkey ${key[Ctrl]}'p' up-history
-bindkey ${key[Esc]}'u' undo
+bindkey  ${key[Up]}             up-line-or-search
+bindkey  ${key[Down]}           down-line-or-search
+bindkey  ${key[CtrlLeft]}       emacs-backward-word
+bindkey  ${key[CtrlRight]}      emacs-forward-word
+bindkey  ${key[CtrlDown]}       end-of-history
+bindkey  ${key[CtrlBackspace]}  backward-kill-word
+bindkey  ${key[CtrlDelete]}     kill-word
+bindkey  ${key[Delete]}         delete-char
+bindkey  ${key[Ctrl]}'u'        vi-kill-line
+bindkey  ${key[Ctrl]}'a'        beginning-of-line
+bindkey  ${key[Ctrl]}'e'        end-of-line
+bindkey  ${key[Ctrl]}'n'        down-history
+bindkey  ${key[Ctrl]}'p'        up-history
+bindkey  ${key[Esc]}'u'         undo
 
-
-
-bindkey ${key[Esc]}${key[Enter]} edit-command-line
-bindkey ${key[Esc]}'g' toggle-directory-history
+bindkey  ${key[Esc]}${key[Enter]}  edit-command-line
+bindkey  ${key[Esc]}'g'            toggle-directory-history
 
 # Removing keybinds
 [[ -z $PER_DIRECTORY_HISTORY_TOGGLE ]] || bindkey -r $PER_DIRECTORY_HISTORY_TOGGLE
