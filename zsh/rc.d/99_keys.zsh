@@ -28,8 +28,7 @@ key=(
 	Ctrl           '^'
 )
 
-# [Docs]
-# man zshzle | less -i '+/^standard widgets'
+# <Docs> man zshzle | less '+/^STANDARD WIDGETS' </Docs>
 bindkey ${key[Up]} up-line-or-search
 bindkey ${key[Down]} down-line-or-search
 bindkey ${key[CtrlLeft]} emacs-backward-word

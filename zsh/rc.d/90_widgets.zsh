@@ -36,12 +36,8 @@ zle -N bracketed-paste
 
 # ──────────────────────────────────────────────────
 
-# [Docs]
-# () { local plugin='per-directory-history'
-#   less -i "+/function $plugin" \
-#   $(antidote path jimhester/$plugin)/$plugin.zsh }
-
 toggle-directory-history() {
+# <Docs> () { nvim "+/function $1" $(antidote path jimhester/$1)/$1.zsh } per-directory-history </Docs>
 # Addressed issue with per-directory-history-toggle-history creating a new
 # prompt at each call; resolved by copying the source code and removing zle -I.
 	if [[ $_per_directory_history_is_global == true ]]; then
