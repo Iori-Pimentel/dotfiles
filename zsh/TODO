@@ -2,10 +2,36 @@ explain() {
    open https://explainshell.com/explain\?cmd=$(echo $(fc -ln -1) | node -e 'process.stdout.write(encodeURIComponent(require("fs").readFileSync(0, "utf-8")))') 
 
  }
+nvim :h keytrans()
+nvim qq q Q
+nvim :echo(keytrans(@q))
+nvim :h ex-commands
+nvim :h *c_CTRL-F*
+nvim map : to q:a
+nvim :h <cWORD>
+nvim add visual block mapping to s:\%V{text}:{sub}:
+nvim :h visual-operators
+
+nvim universal ctags
+nvim :h ins-completion
+nvim :h dict
+nvim :h tag-stack
+nvim Y doesnt use + reg
+nvim make 0 reg equal to + reg
 man zshoptions
  SH_FILE_EXPANSION
 KEYBOARD_HACK
 Note that this does not provide **-style triggers, you will need to enable fzf's zsh completion as well.
+=~ saves results?
+bindkey ^V is quoted-insert
+man zshzle
+	world read-command Hello
+	recursive-edit
+	undo
+	select-a-shell-word
+	WORDCHARS
+man zshall
+	MATCH
 
 chsh - <TAB> redraws prompt
 
