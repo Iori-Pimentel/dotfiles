@@ -10,10 +10,17 @@ opt.cursorline = true
 opt.ignorecase = true
 opt.smartcase = true
 opt.background = "dark"
-opt.grepprg = 'git grep -n'
 opt.laststatus = 3        -- enables global statusline
 opt.signcolumn = "yes:1"  -- left side padding
 opt.wildignorecase = true -- for completion of file names in command mode
+
+if vim.fn.executable('rg') == 1 then
+	opt.grepprg = 'rg --vimgrep'
+	opt.grepformat:prepend('%f:%l:%c:%m') -- fix cursor to be in correct column
+else
+	-- works only inside git repo
+	opt.grepprg = 'git grep -n'
+end
 
 -- tabs & indentation
 opt.tabstop = 2
