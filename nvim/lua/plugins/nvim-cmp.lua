@@ -20,7 +20,9 @@ return {
 				completeopt = "menu,menuone,preview,noselect",
 			},
 			snippet = {
-				expand = function(args) luasnip.lsp_expand(args.body) end,
+				expand = function(args)
+					luasnip.lsp_expand(args.body)
+				end,
 			},
 			mapping = cmp.mapping.preset.insert({
 				["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
@@ -34,19 +36,19 @@ return {
 			}),
 		})
 
-		cmp.setup.cmdline({ '/', '?' }, {
+		cmp.setup.cmdline({ "/", "?" }, {
 			mapping = cmp.mapping.preset.cmdline(),
 			sources = {
-				{ name = 'buffer' }
-			}
+				{ name = "buffer" },
+			},
 		})
 
-		cmp.setup.cmdline(':', {
+		cmp.setup.cmdline(":", {
 			mapping = cmp.mapping.preset.cmdline(),
 			sources = cmp.config.sources({
-				{ name = 'path' },
-				{ name = 'cmdline' },
-			})
+				{ name = "path" },
+				{ name = "cmdline" },
+			}),
 		})
 	end,
 }

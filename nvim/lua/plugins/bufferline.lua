@@ -8,14 +8,14 @@ return {
 			options = {
 				show_buffer_close_icons = false,
 				separator_style = { "", "" },
-				left_trunc_marker = '~~~',
-				right_trunc_marker = '~~~',
+				left_trunc_marker = "~~~",
+				right_trunc_marker = "~~~",
 			},
 		})
 		-- create autocommand to show :help in bufferline
-		vim.api.nvim_create_autocmd('BufWinEnter', {
+		vim.api.nvim_create_autocmd("BufWinEnter", {
 			callback = function()
-				if vim.bo.filetype == 'help' then
+				if vim.bo.filetype == "help" then
 					vim.cmd.only()
 					vim.bo.buflisted = true
 				end

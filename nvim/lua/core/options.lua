@@ -10,17 +10,17 @@ opt.cursorline = true
 opt.ignorecase = true
 opt.smartcase = true
 opt.background = "dark"
-opt.laststatus = 3        -- enables global statusline
-opt.signcolumn = "yes:1"  -- left side padding
+opt.laststatus = 3 -- enables global statusline
+opt.signcolumn = "yes:1" -- left side padding
 opt.wildignorecase = true -- for completion of file names in command mode
 opt.cmdwinheight = 5
 opt.virtualedit = "block"
-if vim.fn.executable('rg') == 1 then
-	opt.grepprg = 'rg --vimgrep'
-	opt.grepformat:prepend('%f:%l:%c:%m') -- fix cursor to be in correct column
+if vim.fn.executable("rg") == 1 then
+	opt.grepprg = "rg --vimgrep"
+	opt.grepformat:prepend("%f:%l:%c:%m") -- fix cursor to be in correct column
 else
 	-- works only inside git repo
-	opt.grepprg = 'git grep -n'
+	opt.grepprg = "git grep -n"
 end
 
 -- tabs & indentation
@@ -37,5 +37,5 @@ opt.expandtab = false
 
 -- opt.clipboard:append("unnamedplus")       -- use system clipboard on all actions
 vim.keymap.set({ "n", "v" }, "y", '"+y', {}) -- use system clipboard on yank only
-vim.keymap.set({ "n" }, "H", ':BufferLineCyclePrev<CR>', {})
-vim.keymap.set({ "n" }, "L", ':BufferLineCycleNext<CR>', {})
+vim.keymap.set({ "n" }, "H", ":BufferLineCyclePrev<CR>", {})
+vim.keymap.set({ "n" }, "L", ":BufferLineCycleNext<CR>", {})
