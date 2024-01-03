@@ -11,6 +11,17 @@ nvim map : to q:a
 nvim :h <cWORD>
 nvim add visual block mapping to s:\%V{text}:{sub}:
 nvim :h visual-operators
+nvim :h 'cpoptions'
+nvim :h 'diffexpr'
+nvim :h 'list'
+nvim :h 'showbreak'
+nvim :h 'showmatch'
+nvim :h 'virtualedit'
+nvim :h 'wildcharm'
+nvim :h 'wildmenu'
+nvim :h 'breakindent'
+nvim try dotted line indentlines
+nvim double click mouse to center cursor
 
 nvim universal ctags
 nvim :h ins-completion
