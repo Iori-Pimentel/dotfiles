@@ -20,6 +20,7 @@ packages=(
 	openssh
 	shellcheck
 	clang # c compiler for nvim-treesitter 
+	stylua # formatter for conform nvim
 )
 pkg install -y "${packages[@]}"
 unset packages
