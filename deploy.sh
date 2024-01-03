@@ -20,8 +20,6 @@ packages=(
 	openssh
 	shellcheck
 	clang # c compiler for nvim-treesitter 
-	lua-language-server # mason-lspconfig replacement for lua
-	python # nvim-jdtls dependencies
 )
 pkg install -y "${packages[@]}"
 unset packages
