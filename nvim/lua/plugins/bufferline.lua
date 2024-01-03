@@ -8,6 +8,8 @@ return {
 			options = {
 				show_buffer_close_icons = false,
 				separator_style = { "", "" },
+				left_trunc_marker = '~~~',
+				right_trunc_marker = '~~~',
 			},
 		})
 	end,
