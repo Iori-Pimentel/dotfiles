@@ -41,13 +41,13 @@ mkdir --parents "${directories[@]}"
 unset directories
 
 DOTFILES="${HOME}/.local/dotfiles"
-git clone https://github.com/Iori-Pimentel/dotfiles.git  "${DOTFILES}"
-git clone https://github.com/mattmc3/antidote.git        "${DOTFILES}/zsh/.antidote" --depth=1
+git clone https://github.com/Iori-Pimentel/dotfiles.git "${DOTFILES}"
+git clone https://github.com/mattmc3/antidote.git       "${DOTFILES}/zsh/.antidote" --depth=1
 
 args=(--symbolic --force --no-target-directory)
-ln "${args[@]}"  "${DOTFILES}/zsh/.zshenv"        "${HOME}/.zshenv"
-ln "${args[@]}"  "${DOTFILES}/configs/gitconfig"  "${XDG_CONFIG_HOME}/git/config"
-ln "${args[@]}"  "${DOTFILES}/nvim"               "${XDG_CONFIG_HOME}/a-nvim"
+ln "${args[@]}" "${DOTFILES}/zsh/.zshenv"       "${HOME}/.zshenv"
+ln "${args[@]}" "${DOTFILES}/configs/gitconfig" "${XDG_CONFIG_HOME}/git/config"
+ln "${args[@]}" "${DOTFILES}/nvim"              "${XDG_CONFIG_HOME}/a-nvim"
 unset args
 
 COLORS='https://github.com/adi1090x/termux-style/raw/master/colors/gruvbox-dark.properties'

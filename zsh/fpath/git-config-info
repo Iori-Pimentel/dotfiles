@@ -10,4 +10,3 @@ git config --list --show-origin |
 		}
 		END {for (key in arr) print "[" key "]" arr[key]}' |
 	bat --plain --language=ini # syntax highligthing
-

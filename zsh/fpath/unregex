@@ -6,4 +6,3 @@ unregex() {
 	SPECIAL=']\\:()$*.^|['
 	sed -e s:[$SPECIAL]:'\\&:g' < /dev/stdin
 }
-

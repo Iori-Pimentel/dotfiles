@@ -17,15 +17,15 @@ zstyle ':fzf-tab:*' continuous-trigger 'tab'
 zstyle ':fzf-tab:*' prefix ''
 
 ## Completion tweaks 
-zstyle ':completion:*:default'      list-colors         "${(s.:.)LS_COLORS}" 
-zstyle ':completion:*'              list-dirs-first     true 
-zstyle ':completion:*'              verbose             true 
-zstyle ':completion:*:all-files'    matcher             'r:|=** l:|=** m:{a-z\-}={A-Z\_}' #TODO: Understand
-# zstyle ':completion::complete:*'    use-cache           true 
-# zstyle ':completion::complete:*'    cache-path          "${XDG_CACHE_HOME}/zsh/compcache" 
-zstyle ':completion:*:descriptions' format              [%d]
-zstyle ':completion:*:manuals.*'    insert-sections     true
-zstyle ':completion:*:manuals'      separate-sections   true
+zstyle ':completion:*:default'      list-colors       "${(s.:.)LS_COLORS}"
+zstyle ':completion:*'              list-dirs-first   true
+zstyle ':completion:*'              verbose           true
+zstyle ':completion:*:all-files'    matcher           'r:|=** l:|=** m:{a-z\-}={A-Z\_}' #TODO: Understand
+# zstyle ':completion::complete:*'    use-cache         true
+# zstyle ':completion::complete:*'    cache-path        "${XDG_CACHE_HOME}/zsh/compcache"
+zstyle ':completion:*:descriptions' format            [%d]
+zstyle ':completion:*:manuals.*'    insert-sections   true
+zstyle ':completion:*:manuals'      separate-sections true
 # zstyle ':completion:*:man:*'      menu yes select
 # zstyle ':fzf-tab:complete:man:*' show-group none
 
