@@ -19,8 +19,9 @@ packages=(
 	termux-api
 	openssh
 	shellcheck
-	clang # c compiler for nvim-treesitter 
-	stylua # formatter for conform nvim
+	clang  # c compiler for nvim-treesitter
+	stylua # formatter used by conform nvim
+	shfmt  # formatter not used by conform nvim
 )
 pkg install -y "${packages[@]}"
 unset packages
