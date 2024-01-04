@@ -15,6 +15,20 @@ opt.signcolumn = "yes:1" -- left side padding
 opt.wildignorecase = true -- for completion of file names in command mode
 opt.cmdwinheight = 5
 opt.virtualedit = "block"
+opt.list = true
+opt.listchars = {
+	trail = "~",
+	extends = "~",
+	precedes = "~",
+	lead = "~",
+	tab = "| ",
+	-- |hl-NonText| highlighting will be used for "eol", "extends" and "precedes".
+	-- |hl-Whitespace| for "nbsp", "space", "tab", "multispace", "lead" and "trail".
+}
+vim.cmd([[colorscheme habamax]])
+-- Whitespace highlight links to NonText on habamax colorscheme
+vim.cmd([[highlight NonText cterm=bold ctermfg=003]])
+
 if vim.fn.executable("rg") == 1 then
 	opt.grepprg = "rg --vimgrep"
 	opt.grepformat:prepend("%f:%l:%c:%m") -- fix cursor to be in correct column
