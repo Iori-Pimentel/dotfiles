@@ -1,5 +1,5 @@
-explain() { 
-   open https://explainshell.com/explain\?cmd=$(echo $(fc -ln -1) | node -e 'process.stdout.write(encodeURIComponent(require("fs").readFileSync(0, "utf-8")))') 
+explain() {
+   open https://explainshell.com/explain\?cmd=$(echo $(fc -ln -1) | node -e 'process.stdout.write(encodeURIComponent(require("fs").readFileSync(0, "utf-8")))')
 
  }
 nvim :h keytrans()
@@ -115,7 +115,7 @@ add customs hooks
 key input: Esc Ctrl-Alt-V breaks pasting
 key input: Ctrl-v Ctrl-Alt-V breaks pasting
 
-no syntax highlighting when creating func .ex mman() { man -a $@ } 
+no syntax highlighting when creating func .ex mman() { man -a $@ }
 
  fzf-tab glob operators, glob flags and glob qualifiers
 

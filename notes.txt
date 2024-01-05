@@ -9,7 +9,7 @@
   !#*
   !#^
   !#$
-!:a absolute 
+!:a absolute
 !:h head dir
 !:q qoute
 !:e ext

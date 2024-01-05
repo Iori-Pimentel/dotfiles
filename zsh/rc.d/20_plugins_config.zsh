@@ -1,13 +1,13 @@
 # ==== z ====
 
 ZSHZ_DATA="${XDG_CACHE_HOME}/zsh/z"
-ZSHZ_UNCOMMON=1 # match to uncommon prefix 
-ZSHZ_CASE=smart # ignore case when lowercase, match case with uppercase 
+ZSHZ_UNCOMMON=1 # match to uncommon prefix
+ZSHZ_CASE=smart # ignore case when lowercase, match case with uppercase
 
 
 # ==== fzf-tab ====
 # TODO: preview
-#zstyle ':fzf-tab:complete:eza:*' 
+#zstyle ':fzf-tab:complete:eza:*'
 #zstyle ':fzf-tab::complete:*:directories' fzf-preview 'eza -1 --color=always $realpath'
 
 # Nvim completion on recently opened files
@@ -16,7 +16,7 @@ zstyle ':fzf-tab:*' switch-group ':' '"'
 zstyle ':fzf-tab:*' continuous-trigger 'tab'
 zstyle ':fzf-tab:*' prefix ''
 
-## Completion tweaks 
+## Completion tweaks
 zstyle ':completion:*:default'      list-colors       "${(s.:.)LS_COLORS}"
 zstyle ':completion:*'              list-dirs-first   true
 zstyle ':completion:*'              verbose           true
