@@ -48,8 +48,3 @@ opt.expandtab = false
 -- shiftwidth is how many columns of whitespace a “level of indentation” is worth.
 -- softtabstop is how many columns of whitespace a tab keypress or a backspace keypress is worth.
 -- Setting expandtab means that you never wanna see a \t again in your file.
-
--- opt.clipboard:append("unnamedplus")       -- use system clipboard on all actions
-vim.keymap.set({ "n", "v" }, "y", '"+y', {}) -- use system clipboard on yank only
-vim.keymap.set({ "n" }, "H", ":BufferLineCyclePrev<CR>", {})
-vim.keymap.set({ "n" }, "L", ":BufferLineCycleNext<CR>", {})

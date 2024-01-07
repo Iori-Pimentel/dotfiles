@@ -1,5 +1,6 @@
 vim.g.mapleader = " " -- set leader key to space
 require("core.options")
+require("core.mappings")
 
 -- highlight yank text
 vim.api.nvim_create_autocmd("TextYankPost", {
