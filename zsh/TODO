@@ -22,6 +22,8 @@ nvim :h 'wildmenu'
 nvim :h 'breakindent'
 nvim try dotted line indentlines
 nvim double click mouse to center cursor
+nvim :h filetype && disable changing formatoptions (autocomment)
+nvim :h ex-commands
 
 nvim universal ctags
 nvim :h ins-completion
