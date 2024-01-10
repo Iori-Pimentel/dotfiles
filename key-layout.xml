@@ -21,6 +21,15 @@ See bottom_row.xml for the definition of the bottom row and neo2.xml for a
 layout that re-defines it.
 See srcs/juloo.keyboard2/KeyValue.java for the keys that have a special meaning.
 -->
+<!-- Theme Settings
+Theme: Dark
+Keyboard Background Opacity: 0%
+Margin Bottom: 3dp
+Keyboard Height: 30%
+Horizontal Margin: 135dp
+Vertical spacing: 4dp
+Horizontal spacing: 2dp
+-->
 <keyboard name="Vim Layout" bottom_row = "false" script="latin">
 	<row>
 		<key width="0.6" key0="7" key4="esc"/>
