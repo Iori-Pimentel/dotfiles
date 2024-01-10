@@ -50,6 +50,9 @@ ln "${args[@]}" "${DOTFILES}/configs/gitconfig" "${XDG_CONFIG_HOME}/git/config"
 ln "${args[@]}" "${DOTFILES}/nvim"              "${XDG_CONFIG_HOME}/a-nvim"
 unset args
 
+# termux.properties must be a normal/non-link file at destination
+cp "${DOTFILES}/termux.properties" "${HOME}/.termux/termux.properties"
+
 COLORS='https://github.com/adi1090x/termux-style/raw/master/colors/gruvbox-dark.properties'
 FONT='https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf'
 FONT_ITALIC='https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts%2FJetBrainsMono%2FNoLigatures%2FItalic%2FJetBrainsMonoNLNerdFont-Italic.ttf'
