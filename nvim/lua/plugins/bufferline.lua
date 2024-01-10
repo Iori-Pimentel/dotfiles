@@ -10,6 +10,7 @@ return {
 				separator_style = { "", "" },
 				left_trunc_marker = "~~~",
 				right_trunc_marker = "~~~",
+				sort_by = "insert_after_current",
 			},
 		})
 		-- create autocommand to show :help in bufferline
