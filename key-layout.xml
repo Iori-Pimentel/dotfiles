@@ -23,7 +23,6 @@ See srcs/juloo.keyboard2/KeyValue.java for the keys that have a special meaning.
 -->
 <!-- Theme Settings
 Theme: Dark
-Keyboard Background Opacity: 0%
 Margin Bottom: 3dp
 Keyboard Height: 30%
 Horizontal Margin: 135dp
@@ -78,12 +77,12 @@ Horizontal spacing: 2dp
 		<key key0="n" key3="/" key2=":" key1="\?" key4="="/>
 		<key key0="m" key3="," key4=";" key2="`" key1="'"/>
 		<key width="1.5" key0="shift" key2="loc capslock"/>
-		<key width="0.9" key0="box"/>
-		<key width="0.9" key0="arrows" key3="subscript" key1="superscript"/>
+		<key width="0.8" key0="box"/>
+		<key width="1" key0="arrows" key3="subscript" key1="superscript"/>
 	</row>
 	<row height="0.95">
-		<key width="1.2" key0="." key3="loc £" key1="loc €"/>
-		<key width="0.6" key0="0" key4="f12_placeholder" key3="f11_placeholder"/>
+		<key width="0.8" key0="0" key3="loc £" key4="loc €"/>
+		<key width="1" key0="." key4="f12_placeholder" key3="f11_placeholder"/>
 
 		<key width="1.7" key0="ctrl" key2="loc meta"/>
 		<key width="1.1" key0="fn" key1="loc alt" key2="change_method" key3="switch_emoji" key4="config"/>
