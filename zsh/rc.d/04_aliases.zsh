@@ -2,10 +2,7 @@ alias eza='eza --all --no-user --icons=always --color=always --git --group-direc
 alias ll='eza --long'
 alias lt='eza --tree --git-ignore --level 2'
 
-alias bat='bat --theme OneHalfDark'
-alias f='rga-fzf'
-alias wget="wget --hsts-file=${XDG_CACHE_HOME}/wget/wget-hsts"
-
+alias q='exit'
 alias qq='clear && session-cd save && exec zsh'
 
 alias n='nvim'
@@ -16,15 +13,6 @@ autoload fzf-pkg
 
 alias sp='shorten-path'
 alias pk='fzf-pkg'
-
-# History suppression
-alias c=' clear'
-alias pwd=' pwd'
-alias q=' exit'
-alias p=' cd ~-'
-alias o=' cd ..'
-alias oo=' cd ../..'
-alias ooo=' cd ../../..'
 
 autoload git-config-info
 alias gs='git status'
