@@ -17,11 +17,3 @@ alias pk='fzf-pkg'
 autoload git-config-info
 alias gs='git status'
 alias gc='git-config-info'
-
-export LESS_TERMCAP_md=$(echoti bold; echoti setaf 1)
-export LESS_TERMCAP_mb=$(echoti blink)
-export LESS_TERMCAP_me=$(echoti sgr0)
-export LESS_TERMCAP_so=$(echoti smso)
-export LESS_TERMCAP_se=$(echoti rmso)
-export LESS_TERMCAP_us=$(echoti smul; echoti setaf 2)
-export LESS_TERMCAP_ue=$(echoti sgr0)
