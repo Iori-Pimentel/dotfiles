@@ -63,3 +63,6 @@ quoted-insert() {
 	[[ $REPLY == 'bracketed-paste' ]] && zle -U $KEYS || LBUFFER+=$KEYS
 }
 zle -N quoted-insert
+
+clear-screen() { clear }
+zle -N clear-screen
