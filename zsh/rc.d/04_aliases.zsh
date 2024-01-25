@@ -4,6 +4,7 @@ alias lt='eza --tree --git-ignore --level 2'
 
 alias q='exit'
 alias qq='clear && session-cd save && exec zsh'
+alias z='zshz /data/data/com.termux/files 2>&1'
 
 alias n='nvim'
 

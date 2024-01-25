@@ -3,7 +3,6 @@
 ZSHZ_DATA="${XDG_CACHE_HOME}/zsh/z"
 ZSHZ_UNCOMMON=1 # match to uncommon prefix
 ZSHZ_CASE=smart # ignore case when lowercase, match case with uppercase
-alias zd='z /data/data/com.termux/files'
 
 
 # ==== fzf-tab ====
