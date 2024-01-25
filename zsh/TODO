@@ -24,21 +24,34 @@ nvim try dotted line indentlines
 nvim double click mouse to center cursor
 nvim :h filetype && disable changing formatoptions (autocomment)
 nvim :h ex-commands
+nvim :h scroll
+nvim :h redo-register
+nvim :di[splay]
+nvim CTRL-R CTRL-W
+nvim disable whichkey for regs
+nvim i never use ? in normal mode
+nvim ga # get ascii
+nvim digraphs
 
+column vs pr
+zle infer-next-history
+zshall bracketed-paste-magic and its children
+nvim insert escapse chars   char by char
+zshall 'PARAMETERS SET BY THE SHELL'
+set vs typeset vs local
 nvim universal ctags
 nvim :h ins-completion
 nvim :h dict
 nvim :h tag-stack
-nvim Y doesnt use + reg
 nvim make 0 reg equal to + reg
 man zshoptions
  SH_FILE_EXPANSION
 KEYBOARD_HACK
 Note that this does not provide **-style triggers, you will need to enable fzf's zsh completion as well.
-=~ saves results?
-bindkey ^V is quoted-insert
+[[ =~ ]] saves results?
+$REPLY and $KEYS
 man zshzle
-	world read-command Hello
+	read-command
 	recursive-edit
 	undo
 	select-a-shell-word
@@ -58,6 +71,8 @@ nvim auto :set ft=zsh for files in fpath
 nvim tablines hides cursor
 
 autosuggestion swap args pos
+zle undo only cursor pos
+zle daw diw ciw
 
 find undojoin for zshzle
 autopair trigger only when whitespace in left and right
@@ -66,7 +81,7 @@ dont create window in nvim when :h
 
 dont run command if history expansion fails
 
- zle_bracketed_paste contains start and end chars when pasting
+ zle_bracketed_paste two element array contains start and end chars when pasting
 
 syntax highlighting on << EOF broken
 syntax highlighting on regex on grep|sed|awk
@@ -74,8 +89,6 @@ syntax highlighting on regex on grep|sed|awk
 shorten-path keep slash if substitution is in middle of a path
 
 fix fsh when fzf-tab esc and spelling correction edit
-
-use less -pattern='' for [Docs]
 
 androfecth CPU find
 
@@ -102,20 +115,18 @@ ctrl-/ backward-delete-word on /
 
  remember Esc-s fix spelling on word
 
- disable autopair after Ctrl-v (quote-insert)
-
  ESC-o to go to command flags and options
+ CtrlShiftArrows to move between commands separated by:
+ ; | || &&
 
 back to local after accept-line
 
 run-help and which-command clear autosuggestion
 
-ctrl-shift-arrows broken
-
 add customs hooks
 
 key input: Esc Ctrl-Alt-V breaks pasting
-key input: Ctrl-v Ctrl-Alt-V breaks pasting
+Fix:? bindkey regex
 
 no syntax highlighting when creating func .ex mman() { man -a $@ }
 
@@ -125,13 +136,6 @@ no syntax highlighting when creating func .ex mman() { man -a $@ }
 # Debugging
  set -x
  export PS4='+(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]:+${FUNCNAME[0]}(): }'
-
-# ctrl-c wanted behaviour
-# comment out command and enter
-# command should be saved
-# fzf to run and delete commented commands
-# behaviour when empty command ???
-
 
 z fzf-tab on directories
 
