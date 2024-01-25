@@ -39,6 +39,7 @@ zstyle ':completion:*:manuals'      separate-sections true
 ZSH_AUTOSUGGEST_MANUAL_REBIND=true
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(accept-line bracketed-paste fzf-tab-complete edit-command-line edit-command)
+ZSH_AUTOSUGGEST_PARTIAL_ACCEPT_WIDGETS=(forward-word forward-word-path)
 
 bindkey -e
 
