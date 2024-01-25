@@ -1,12 +1,6 @@
 #!/bin/zsh
 
 if [[ -o login ]]; then
-  # Show motd only if different
-  if ! cmp -s "${HOME}/.hushlogin" "${PREFIX}/etc/motd"; then
-    tee "${HOME}/.hushlogin" < "${PREFIX}/etc/motd"
-    read -k1 "REPLY?Press Enter to continue: "
-    echo
-  fi
   [[ $(uname -o) == "Android" ]] && androfetch
   tldr --quiet $(tldr --quiet --list | shuf -n1)
 fi

@@ -80,6 +80,7 @@ chmod u+x ${PREFIX}/bin/androfetch
 
 tldr --update
 termux-reload-settings
+touch ~/.hushlogin
 clear && chsh -s zsh && exec zsh
 
 # Run command when pushing to github:
