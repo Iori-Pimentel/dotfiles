@@ -33,6 +33,7 @@ nvim i never use ? in normal mode
 nvim ga # get ascii
 nvim digraphs
 
+manpages command for shell builtins?
 column vs pr
 zle infer-next-history
 zshall bracketed-paste-magic and its children
