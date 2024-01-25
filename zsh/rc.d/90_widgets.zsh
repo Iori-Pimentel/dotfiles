@@ -56,8 +56,10 @@ zle -N toggle-directory-history
 
 # ──────────────────────────────────────────────────
 
-quote-insert() {
-	# fix autopair
-	# fix Ctrl-Alt-V
-	# find ESC widget
+# Replacing widget functionality for Ctrl-v
+# Fixes pasting text when Ctrl-v is active
+quoted-insert() {
+	zle read-command
+	[[ $REPLY == 'bracketed-paste' ]] && zle -U $KEYS || LBUFFER+=$KEYS
 }
+zle -N quoted-insert
