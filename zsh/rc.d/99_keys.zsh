@@ -16,6 +16,11 @@ key=(
 	CtrlRight      '^[[1;5C'
 	CtrlLeft       '^[[1;5D'
 
+	CtrlShiftUp     '^[[1;6A'
+	CtrlShiftDown   '^[[1;6B'
+	CtrlShiftRight  '^[[1;6C'
+	CtrlShiftLeft   '^[[1;6D'
+
 	Tab            '^I'
 	Backspace      '^?'
 	Delete         '^[[3~'
@@ -46,6 +51,11 @@ bindkey  ${key[Esc]}'u'         undo
 
 bindkey  ${key[Esc]}${key[Enter]}  edit-command-line
 bindkey  ${key[Esc]}'g'            toggle-directory-history
+
+bindkey  -s ${key[CtrlShiftLeft]}   ${key[CtrlLeft]}
+bindkey  -s ${key[CtrlShiftRight]}  ${key[CtrlRight]}
+bindkey  -s ${key[CtrlShiftDown]}   ${key[CtrlDown]}
+bindkey  -s ${key[CtrlShiftUp]}     ${key[CtrlUp]}
 
 # Removing keybinds
 [[ -z $PER_DIRECTORY_HISTORY_TOGGLE ]] || bindkey -r $PER_DIRECTORY_HISTORY_TOGGLE
