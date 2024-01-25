@@ -6,7 +6,6 @@ alias q='exit'
 alias qq='clear && session-cd save && exec zsh'
 
 alias n='nvim'
-alias na='NVIM_APPNAME=a-nvim nvim'
 
 autoload shorten-path
 autoload fzf-pkg

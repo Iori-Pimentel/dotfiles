@@ -40,7 +40,7 @@ git clone $ANTIDOTE ${BASE}/zsh/.antidote --depth=1
 mkdir -p ${CONF}/git
 ln -sfT ${BASE}/zsh/.zshenv       ${HOME}/.zshenv
 ln -sfT ${BASE}/configs/gitconfig ${CONF}/git/config
-ln -sfT ${BASE}/nvim              ${CONF}/a-nvim
+ln -sfT ${BASE}/nvim              ${CONF}/nvim
 
 cat <<- 'EOF' > ~/.termux/termux.properties
 	# Example file can be found in:

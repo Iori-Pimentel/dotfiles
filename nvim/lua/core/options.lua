@@ -15,9 +15,10 @@ opt.signcolumn = "yes:1" -- left side padding
 opt.wildignorecase = true -- for completion of file names in command mode
 opt.cmdwinheight = 5
 opt.virtualedit = "block"
-opt.list = true
+opt.shortmess:append("I") -- disable intro
 opt.numberwidth = 1 -- minimize width of line numbers
 opt.colorcolumn = { 79, 80 }
+opt.list = true
 opt.listchars = {
 	tab = "| ",
 	precedes = "~", -- overflow symbol when wrap = false
@@ -35,7 +36,9 @@ vim.cmd([[colorscheme habamax]])
 vim.cmd([[
 	highlight NonText cterm=bold ctermfg=003
 	highlight StatusLine ctermbg=003
-	highlight clear DiffChange ctermfg=145
+	highlight GitSignsAdd ctermfg=006
+	highlight GitSignsDelete ctermfg=001
+	highlight GitSignsChange ctermfg=15
 ]])
 
 if vim.fn.executable("rg") == 1 then

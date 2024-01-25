@@ -19,6 +19,7 @@ return {
 				if vim.bo.filetype == "help" then
 					vim.cmd.only()
 					vim.bo.buflisted = true
+					vim.wo.list = false
 				end
 			end,
 		})
