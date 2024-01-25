@@ -19,7 +19,8 @@ packages=(
 	shfmt  # formatter not used by conform nvim
 	# nmap # networking tool
 	# lsof # list open files (already installed)
-) pkg install -y ${packages[@]}
+)
+pkg install -y ${packages[@]}
 
 XDG_CONFIG_HOME=~/.config
  XDG_CACHE_HOME=~/.cache
