@@ -1,8 +1,12 @@
 local map = vim.keymap.set
 -- opt.clipboard:append("unnamedplus") -- use system clipboard on all actions
-map({ "n", "v" }, "y", '"+y') -- use system clipboard on yank only
+-- use system clipboard on yank only
+map({ "n", "v" }, "y", '"+y')
+map("n", "Y", '"+y$')
+
 map("n", "<leader>n", "<CMD>setlocal number!<CR>")
 map({ "n", "v" }, "<leader>*", "*Ncgn", { remap = true }) -- replace keyword under cursor
+map("n", ".", ".`.") -- moves to beginning of change
 
 -- bufferline.nvim
 map("n", "H", "<CMD>BufferLineCyclePrev<CR>")
