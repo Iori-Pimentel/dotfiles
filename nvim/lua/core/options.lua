@@ -18,6 +18,9 @@ opt.virtualedit = "block"
 opt.shortmess:append("I") -- disable intro
 opt.numberwidth = 1 -- minimize width of line numbers
 opt.colorcolumn = { 79, 80 }
+opt.wrapscan = false
+opt.hlsearch = false
+opt.incsearch = false
 opt.list = true
 opt.listchars = {
 	tab = "| ",

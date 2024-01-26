@@ -4,6 +4,11 @@ local map = vim.keymap.set
 map({ "n", "v" }, "y", '"+y')
 map("n", "Y", '"+y$')
 
+-- relies on opt.virtualedit = "block"
+-- keeps column position on visual block
+map("v", "{", [[<CMD>silent! keeppatterns ?\v(^$|%^)<CR>]])
+map("v", "}", [[<CMD>silent! keeppatterns /\v(^$|%$)<CR>]])
+
 map("n", "<leader>n", "<CMD>setlocal number!<CR>")
 map({ "n", "v" }, "<leader>*", "*Ncgn", { remap = true }) -- replace keyword under cursor
 map("n", ".", ".`.") -- moves to beginning of change
