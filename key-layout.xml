@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<!-- <?xml version="1.0" encoding="utf-8"?> -->
 <!-- Custom layout for tablets designed on vim keybindings
 App: https://github.com/Julow/Unexpected-Keyboard
 
@@ -30,6 +30,7 @@ Vertical spacing: 4dp
 Horizontal spacing: 2dp
 -->
 <keyboard name="Vim Layout" bottom_row = "false" script="latin">
+	<!-- <modmap> <shift a=":" b="b"/> </modmap> -->
 	<row>
 		<key width="0.6" key0="7"/>
 		<key width="0.6" key0="8"/>
@@ -52,15 +53,15 @@ Horizontal spacing: 2dp
 		<key width="0.6" key0="5"/>
 		<key width="0.6" key0="6"/>
 
-		<key shift="0.5" key0="a" key1="tab"/>
+		<key shift="0.5" key0="a" key1="tab" key4="*" key3="\#"/>
 		<key key0="s"/>
 		<key key0="d"/>
 		<key key0="f"/>
 		<key key0="g"/>
 		<key key0="h"/>
-		<key key0="j" key4="\@" key3="!" key2="%"/>
-		<key key0="k" key4="~" key3="&quot;" key2="+"/>
-		<key key0="l" key2="\\" key3="," key4=";"/>
+		<key key0="j"/>
+		<key key0="k"/>
+		<key key0="l" key3="!" key4="&quot;" key2="%"/>
 		<key shift="0.5" width="1.8" key0="enter" key1="loc voice_typing" key2="action"/>
 	</row>
 	<row>
@@ -69,13 +70,13 @@ Horizontal spacing: 2dp
 		<key width="0.6" key0="3"/>
 
 		<key width="1.5" key0="shift" key2="loc capslock"/>
-		<key key0="z"/>
+		<key key0="z" key1="|" key4="=" key3="~"/>
 		<key key0="x"/>
 		<key key0="c"/>
 		<key key0="v"/>
-		<key key0="b"/>
-		<key key0="n" key3="/" key2=":" key4="\?"/>
-		<key key0="m" key4="`" key3="'" key2="="/>
+		<key key0="b" key3="\?" key4="\@" key2="+"/>
+		<key key0="n" key3="/" key2=":" key4="\\"/>
+		<key key0="m" key4="`" key3="'" key2="&amp;"/>
 		<key width="1.5" key0="shift" key2="loc capslock"/>
 		<key width="0.8" key0="box"/>
 		<key width="1" key0="arrows" key4="subscript" key2="superscript" key3="fn"/>
@@ -86,7 +87,7 @@ Horizontal spacing: 2dp
 
 		<key width="1.7" key0="ctrl" key2="loc meta"/>
 		<key width="1.1" key0="." key4="alt"/>
-		<key width="4.4" key0="space" key1="^" key2="$" key8="_" key6="|" key5="&amp;" key7="-" key4="*" key3="\#"/>
+		<key width="4.4" key0="space" key1="^" key2="$" key8="_" key7="-" key3="," key4=";"/>
 		<key width="1.1" key7="up" key6="right" key5="left" key8="down"/>
 		<key width="1.7" key0="ctrl"/>
 		<key width="1.8" key0="switch_greekmath" key3="change_method" key4="config"/>
