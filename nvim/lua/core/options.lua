@@ -34,17 +34,6 @@ opt.listchars = {
 	trail = ".",
 }
 
-vim.cmd([[
-	colorscheme habamax
-	highlight StatusLine ctermbg=003
-	highlight GitSignsAdd ctermfg=006
-	highlight GitSignsDelete ctermfg=001
-	highlight GitSignsChange ctermfg=15
-
-	" highlight for listchars and fillchars
-	highlight NonText ctermfg=003
-]])
-
 if vim.fn.executable("rg") == 1 then
 	opt.grepprg = "rg --vimgrep"
 	opt.grepformat:prepend("%f:%l:%c:%m") -- fix cursor to be in correct column
