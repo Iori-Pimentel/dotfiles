@@ -1,3 +1,12 @@
+learn lua
+add augroup
+move numpad to right
+nvim g; g- g+
+nvim show search highlighting only when on word
+marks on cmdwin
+nvim go to insert to paste charwise
+nvim :pu[!] to paste linewese
+
 explain() {
    open https://explainshell.com/explain\?cmd=$(echo $(fc -ln -1) | node -e 'process.stdout.write(encodeURIComponent(require("fs").readFileSync(0, "utf-8")))')
 
@@ -6,27 +15,19 @@ nvim :h keytrans()
 nvim qq q Q
 nvim :echo(keytrans(@q))
 nvim :h ex-commands
-nvim :h *c_CTRL-F*
-nvim map : to q:a
 nvim :h <cWORD>
-nvim add visual block mapping to s:\%V{text}:{sub}:
 nvim :h visual-operators
 nvim :h 'cpoptions'
 nvim :h 'diffexpr'
-nvim :h 'list'
 nvim :h 'showbreak'
 nvim :h 'showmatch'
-nvim :h 'virtualedit'
 nvim :h 'wildcharm'
 nvim :h 'wildmenu'
 nvim :h 'breakindent'
-nvim try dotted line indentlines
 nvim double click mouse to center cursor
-nvim :h filetype && disable changing formatoptions (autocomment)
 nvim :h ex-commands
 nvim :h scroll
 nvim :h redo-register
-nvim :di[splay]
 nvim CTRL-R CTRL-W
 nvim disable whichkey for regs
 nvim i never use ? in normal mode

@@ -1,47 +1,48 @@
 local opt = vim.opt
 
 opt.number = false
+opt.numberwidth = 1
+opt.colorcolumn = { 79, 80 }
+opt.cursorline = true
+-- left side padding
+opt.signcolumn = "yes:1"
+-- disable intro
+opt.shortmess:append("I")
+
 opt.splitbelow = true
 opt.splitright = true
-opt.scrolloff = 2
-opt.undofile = true
-opt.wrap = false
-opt.cursorline = true
+opt.cmdwinheight = 5
+-- enables global statusline for split windows
+opt.laststatus = 3
+
 opt.ignorecase = true
 opt.smartcase = true
-opt.background = "dark"
-opt.laststatus = 3 -- enables global statusline for split windows
-opt.signcolumn = "yes:1" -- left side padding
-opt.wildignorecase = true -- for completion of file names in command mode
-opt.cmdwinheight = 5
-opt.virtualedit = "block"
-opt.shortmess:append("I") -- disable intro
-opt.numberwidth = 1 -- minimize width of line numbers
-opt.colorcolumn = { 79, 80 }
-opt.wrapscan = false
-opt.hlsearch = false
 opt.incsearch = false
-opt.list = true
+opt.hlsearch = false
+opt.wrapscan = false
+
+opt.undofile = true
+opt.wrap = false
+opt.mouse = "n"
+opt.scrolloff = 2
+opt.virtualedit = "block"
+-- for completion of file names in command mode
+opt.wildignorecase = true
+
 opt.listchars = {
-	tab = "| ",
-	precedes = "~", -- overflow symbol when wrap = false
-	extends = "~", -- overflow symbol when wrap = false
-	trail = ".", -- symbol for trailing spaces
+	tab = "╎ ",
+	trail = ".",
 }
 
--- overflow symbol when wrap = true
-opt.fillchars = { lastline = "~" }
--- Disable mouse in insert mode to prevent misclicks when typing
-opt.mouse = "nv"
-
-vim.cmd([[colorscheme habamax]])
--- Whitespace highlight links to NonText on habamax colorscheme
 vim.cmd([[
-	highlight NonText cterm=bold ctermfg=003
+	colorscheme habamax
 	highlight StatusLine ctermbg=003
 	highlight GitSignsAdd ctermfg=006
 	highlight GitSignsDelete ctermfg=001
 	highlight GitSignsChange ctermfg=15
+
+	" highlight for listchars and fillchars
+	highlight NonText ctermfg=003
 ]])
 
 if vim.fn.executable("rg") == 1 then
@@ -56,7 +57,6 @@ opt.tabstop = 2
 opt.shiftwidth = 2
 opt.softtabstop = 2
 opt.expandtab = false
-
 -- https://arisweedler.medium.com/tab-settings-in-vim-1ea0863c5990
 -- tabstop is effectively how many columns of whitespace a \t is worth.
 -- shiftwidth is how many columns of whitespace a “level of indentation” is worth.

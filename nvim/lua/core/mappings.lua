@@ -1,17 +1,36 @@
 local map = vim.keymap.set
--- opt.clipboard:append("unnamedplus") -- use system clipboard on all actions
--- use system clipboard on yank only
-map({ "n", "v" }, "y", '"+y')
-map("n", "Y", '"+y$')
+vim.g.mapleader = " "
+
+map("n", "<leader>n", "<CMD>setlocal number!<CR>")
+
+map("n", "[q", "<CMD>cprev<CR>")
+map("n", "]q", "<CMD>cnext<CR>")
+map("n", "[Q", "<CMD>cpfile<CR>")
+map("n", "]Q", "<CMD>cnfile<CR>")
+
+-- disables scrolling
+map("i", "<Up>", "<Nop>")
+map("i", "<Down>", "<Nop>")
+
+-- Navigation that remembers column position
+map("i", "<c-j>", "<c-g>j")
+map("i", "<c-k>", "<c-g>k")
+
+-- excludes whitespace on motion
+map("o", [[a"]], [[2i"]])
+map("o", [[a']], [[2i']])
+map("o", [[a`]], [[2i`]])
+
+-- dot-repeatable replace keyword under cursor
+map({ "n", "v" }, "<leader>*", "*Ncgn", { remap = true })
+
+-- moves to beginning of change
+map("n", ".", [[.`.]])
 
 -- relies on opt.virtualedit = "block"
 -- keeps column position on visual block
 map("v", "{", [[<CMD>silent! keeppatterns ?\v(^$|%^)<CR>]])
 map("v", "}", [[<CMD>silent! keeppatterns /\v(^$|%$)<CR>]])
-
-map("n", "<leader>n", "<CMD>setlocal number!<CR>")
-map({ "n", "v" }, "<leader>*", "*Ncgn", { remap = true }) -- replace keyword under cursor
-map("n", ".", ".`.") -- moves to beginning of change
 
 -- bufferline.nvim
 map("n", "H", "<CMD>BufferLineCyclePrev<CR>")
