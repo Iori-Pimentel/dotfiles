@@ -30,10 +30,11 @@ autocmd("FileType", {
 })
 
 -- bufferline.nvim add :help buffers
-autocmd("FileType", {
-	pattern = "help",
+autocmd("BufWinEnter", {
 	callback = function()
-		vim.cmd.only()
-		vim.bo.buflisted = true
+		if vim.bo.filetype == "help" then
+			vim.cmd.only()
+			vim.bo.buflisted = true
+		end
 	end,
 })
