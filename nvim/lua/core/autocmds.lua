@@ -20,7 +20,7 @@ autocmd("TextYankPost", {
 autocmd({ "CursorMoved", "CursorMovedI" }, {
 	group = default,
 	callback = function()
-		local col = vim.fn.getpos(".")[3]
+		local col = vim.fn.charcol(".")
 		vim.wo.list = col == 1 and vim.bo.modifiable
 	end,
 })
