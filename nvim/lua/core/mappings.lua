@@ -2,6 +2,7 @@ local map = vim.keymap.set
 vim.g.mapleader = " "
 
 map("n", "<leader>n", "<CMD>setlocal number!<CR>")
+map("n", "q:", "q:$k")
 
 map("n", "[q", "<CMD>cprev<CR>")
 map("n", "]q", "<CMD>cnext<CR>")
