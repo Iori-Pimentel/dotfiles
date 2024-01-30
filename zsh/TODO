@@ -1,11 +1,14 @@
 learn lua
-add augroup
 move numpad to right
 nvim g; g- g+
 nvim show search highlighting only when on word
 marks on cmdwin
 nvim go to insert to paste charwise
 nvim :pu[!] to paste linewese
+git add -p # include untracked files
+increase highlight priority TextYankHighlight
+The -- more -- prompt
+nvim-treesitter vim not working on cmdline window
 
 explain() {
    open https://explainshell.com/explain\?cmd=$(echo $(fc -ln -1) | node -e 'process.stdout.write(encodeURIComponent(require("fs").readFileSync(0, "utf-8")))')
@@ -36,7 +39,7 @@ nvim digraphs
 
 manpages command for shell builtins?
 column vs pr
-zle infer-next-history
+zle infer-next-history <Right> key?
 zshall bracketed-paste-magic and its children
 nvim insert escapse chars   char by char
 zshall 'PARAMETERS SET BY THE SHELL'
