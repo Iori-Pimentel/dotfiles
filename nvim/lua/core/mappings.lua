@@ -28,10 +28,10 @@ map({ "n", "v" }, "<leader>*", "*Ncgn", { remap = true })
 -- moves to beginning of change
 map("n", ".", [[.`.]])
 
--- relies on opt.virtualedit = "block"
+-- excludes newline on visual selection
 -- keeps column position on visual block
-map("v", "{", [[<CMD>silent! keeppatterns ?\v(^$|%^)<CR>]])
-map("v", "}", [[<CMD>silent! keeppatterns /\v(^$|%$)<CR>]])
+map("v", "{", [[<CMD>silent! keeppatterns ?\v(\n^$|%^)<CR>]])
+map("v", "}", [[<CMD>silent! keeppatterns /\v(\n^$|%$)<CR>]])
 
 -- bufferline.nvim
 map("n", "H", "<CMD>BufferLineCyclePrev<CR>")
