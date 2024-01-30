@@ -11,7 +11,7 @@ opt.shortmess:append("I")
 
 opt.splitbelow = true
 opt.splitright = true
-opt.cmdwinheight = 5
+opt.cmdwinheight = 3
 -- enables global statusline for split windows
 opt.laststatus = 3
 
