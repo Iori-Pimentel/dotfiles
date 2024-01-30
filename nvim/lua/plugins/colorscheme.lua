@@ -2,10 +2,16 @@ return {
 	"catppuccin/nvim",
 	name = "catppuccin",
 	priority = 1000,
-	config = function()
-		require("catppuccin").setup({
-			show_end_of_buffer = true,
-		})
-		vim.cmd("colorscheme catppuccin-mocha")
+	opts = {
+		show_end_of_buffer = true,
+		color_overrides = {
+			all = {
+				base = "#222327",
+				mantle = "#2E343F",
+			},
+		},
+	},
+	init = function()
+		vim.cmd("colorscheme catppuccin")
 	end,
 }
