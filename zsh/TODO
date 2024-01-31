@@ -112,9 +112,6 @@ run-help and which-command clear autosuggestion
 
 add customs hooks
 
-key input: Esc Ctrl-Alt-V breaks pasting
-Fix:? bindkey regex
-
 no syntax highlighting when creating func .ex mman() { man -a $@ }
 
  fzf-tab glob operators, glob flags and glob qualifiers

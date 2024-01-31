@@ -56,8 +56,10 @@ zle -N toggle-directory-history
 
 # ──────────────────────────────────────────────────
 
-# Replacing widget functionality for Ctrl-v
-# Fixes pasting text when Ctrl-v is active
+# Replacing widget functionality for <Ctrl-v>
+# Fixes pasting text when <Ctrl-v> is active
+# Waits for sequence that is bound before inserting
+# Can change inserted sequence using bindkey -s
 quoted-insert() {
 	zle read-command
 	[[ $REPLY == 'bracketed-paste' ]] && zle -U $KEYS || LBUFFER+=$KEYS

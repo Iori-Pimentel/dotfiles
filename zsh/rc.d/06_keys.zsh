@@ -77,3 +77,9 @@ bindkey -s ${key[CtrlShiftUp]}    ''
 bindkey -s ${key[CtrlShiftDown]}  ''
 bindkey -s ${key[CtrlShiftLeft]}  ''
 bindkey -s ${key[CtrlShiftRight]} ''
+
+# <Docs> man zshzle | less +/Reading.Commands </Docs>
+# Fixes pasting text when <Esc> is active
+# Ignores <Esc> if sequence is not bound
+# <Esc> timeout defined by KEYTIMEOUT
+bindkey -s ${key[Esc]} ''
