@@ -5,7 +5,7 @@ HISTSIZE=10000000
 SAVEHIST=10000000
 
 # Bar Cursor ----------
-# <Docs> man zshzle | less '+/Special Widgets' '+/zle-line' </Docs>
+# <Docs> man zshzle | less +/Special.Widgets +/zle-line </Docs>
 barcursor() { echo -ne '\e[5 q'; }
 autoload redraw-prompt
 zle-line-init() { barcursor }

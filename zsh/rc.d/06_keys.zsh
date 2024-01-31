@@ -31,7 +31,7 @@ key=(
 	CtrlShiftLeft   '^[[1;6D'
 )
 
-# <Docs> man zshzle | less '+/^STANDARD WIDGETS' </Docs>
+# <Docs> man zshzle | less +/^STANDARD.WIDGETS </Docs>
 # History Navigation
 bindkey  ${key[Up]}             up-line-or-search
 bindkey  ${key[Down]}           down-line-or-search
@@ -46,7 +46,7 @@ bindkey  ${key[Delete]}         delete-char
 bindkey  ${key[Esc]}'u'         undo
 bindkey  ${key[Esc]}${key[Enter]}  edit-command-line
 
-# <Docs> man zshcontrib | less +/select-word-style '+ ' </Docs>
+# <Docs> man zshcontrib | less +/select-word-style +nn </Docs>
 # Movements delimited by shell argements
 autoload select-word-style
 select-word-style shell # also autoloads all -match functions
