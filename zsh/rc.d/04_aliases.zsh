@@ -13,6 +13,7 @@ autoload fzf-pkg
 
 alias sp='shorten-path'
 alias pk='fzf-pkg'
+alias pkf='pkg files'
 alias pks='dpkg --search'
 
 autoload git-config-info
