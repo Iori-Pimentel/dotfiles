@@ -17,7 +17,7 @@ autocmd("TextYankPost", {
 })
 
 -- display tab and trailing space when on first column
-autocmd({ "CursorMoved", "CursorMovedI" }, {
+autocmd({ "BufWinEnter", "CursorMoved", "CursorMovedI" }, {
 	group = default,
 	callback = function()
 		local col = vim.fn.charcol(".")
