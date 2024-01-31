@@ -1,5 +1,4 @@
 learn lua
-move numpad to right
 nvim g; g- g+
 nvim show search highlighting only when on word
 marks on cmdwin
@@ -10,6 +9,8 @@ increase highlight priority TextYankHighlight
 The -- more -- prompt
 nvim-treesitter vim not working on cmdline window
 nvim-treesitter highlight doesnt work when zl
+nvim add changes to qflist from git
+nvim :f := :bm
 
 explain() {
    open https://explainshell.com/explain\?cmd=$(echo $(fc -ln -1) | node -e 'process.stdout.write(encodeURIComponent(require("fs").readFileSync(0, "utf-8")))')
@@ -30,13 +31,20 @@ nvim :h 'wildmenu'
 nvim :h 'breakindent'
 nvim double click mouse to center cursor
 nvim :h ex-commands
-nvim :h scroll
 nvim :h redo-register
 nvim CTRL-R CTRL-W
-nvim disable whichkey for regs
-nvim i never use ? in normal mode
+nvim CTRL-R CTRL-A
+nvim CTRL-R CTRL-L
 nvim ga # get ascii
 nvim digraphs
+nvim :h index
+nvim [_CTRL-i
+nvim [_I
+nvim [_i
+nvim ]_CTRL-i
+nvim ]_I
+nvim ]_i
+nvim v_gv
 
 manpages command for shell builtins?
 column vs pr
@@ -49,21 +57,13 @@ nvim universal ctags
 nvim :h ins-completion
 nvim :h dict
 nvim :h tag-stack
-nvim make 0 reg equal to + reg
 man zshoptions
  SH_FILE_EXPANSION
-KEYBOARD_HACK
 Note that this does not provide **-style triggers, you will need to enable fzf's zsh completion as well.
 [[ =~ ]] saves results?
 $REPLY and $KEYS
-man zshzle
-	read-command
-	recursive-edit
-	undo
-	select-a-shell-word
-	WORDCHARS
-man zshall
-	MATCH
+man zshzle recursive-edit
+man zshall MATCH
 
 chsh - <TAB> redraws prompt
 
@@ -74,16 +74,7 @@ chsh - <TAB> redraws prompt
 autosuggestion go to history for ctrl-o && delte history line from file command
 nvim auto :set ft=zsh for files in fpath
 
-nvim tablines hides cursor
-
-autosuggestion swap args pos
-zle undo only cursor pos
-zle daw diw ciw
-
-find undojoin for zshzle
 autopair trigger only when whitespace in left and right
-
-dont create window in nvim when :h
 
 dont run command if history expansion fails
 
@@ -113,17 +104,7 @@ prompt breaks it (maybe caused by p10k)
 cant scroll
  ==================
 
-ctrl-/ backward-delete-word on /
-
  man -a # not working
-
- WORDCHARS toggling from spaces only to path delimeters
-
- remember Esc-s fix spelling on word
-
- ESC-o to go to command flags and options
- CtrlShiftArrows to move between commands separated by:
- ; | || &&
 
 back to local after accept-line
 
@@ -151,10 +132,7 @@ nvim vi" keys doesnt pair correctly
 _path_files completion
 cd ~/./d/z
 
-make prompt dirs clickable to cd
-
 open files using am
-click on command to move cursor
 
 disable spelling correction for _go and others
 
@@ -166,8 +144,3 @@ zstyle ':completion:*:(argument-rest|files):*' matcher-list '' \
     'r:|[.,_-]=* r:|=*' \
     'r:|.=* r:|=*'
 # zstyle ':completion:*' matcher-list 'b:=*'
-
- | sed s:$HOME:~:
-
-
-history remove empty lines
