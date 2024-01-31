@@ -47,8 +47,6 @@ Horizontal spacing: 2dp
 		<shift a=")" b="}"/>
 		<shift a="[" b="&lt;"/>
 		<shift a="]" b="&gt;"/>
-		<shift a="0" b="1"/>
-		<shift a="fn" b="switch_greekmath"/>
 		</modmap>
 	<row>
 		<key key0="q" key4="esc"/>
@@ -58,8 +56,8 @@ Horizontal spacing: 2dp
 		<key key0="t"/>
 		<key key0="y"/>
 		<key key0="u"/>
-		<key key0="i"/>
-		<key key0="o"/>
+		<key key0="i" key3="[" key4="]"/>
+		<key key0="o" key3="(" key4=")"/>
 		<key key0="p" key4="switch_forward"/>
 	</row>
 	<row>
@@ -69,9 +67,9 @@ Horizontal spacing: 2dp
 		<key key0="f"/>
 		<key key0="g"/>
 		<key key0="h"/>
-		<key key0="j" key3="[" key4="]"/>
-		<key key0="k" key3="(" key4=")"/>
-		<key key0="l" key3="0"/>
+		<key key0="j"/>
+		<key key0="k"/>
+		<key key0="l"/>
 	</row>
 	<row>
 		<key width="1.5" key0="shift" key2="loc capslock"/>
@@ -81,13 +79,13 @@ Horizontal spacing: 2dp
 		<key key0="v"/>
 		<key key0="b"/>
 		<key key0="n" key3="/" key2=":" key4="*"/>
-		<key key0="m" key3="&quot;" key4="%" key2="'"/>
+		<key key0="m" key3="&quot;" key2="'"/>
 		<key width="1.5" key0="backspace" key2="delete"/>
 	</row>
 	<row height="0.95">
 		<key width="1.7" key0="ctrl" key2="loc meta"/>
 		<key width="1.1" key0="." key4="alt"/>
-		<key width="4.4" key0="space" key1="^" key2="$" key8="_" key7="-" key3=";" key4="fn"/>
+		<key width="4.4" key0="space" key1="^" key2="$" key8="_" key7="-" key3=";" key4="%"/>
 		<key width="1.1" key0="" key7="up" key6="right" key5="left" key8="down"/>
 		<key width="1.7" key0="enter" key2="action" key4="config"/>
 	</row>
