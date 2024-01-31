@@ -1,21 +1,21 @@
 <keyboard bottom_row="false" script="">
-    <row>
-        <key shift="12" key0="7"/>
-        <key key0="8"/>
-        <key key0="9" key4="switch_forward"/>
-    </row>
-    <row>
-        <key shift="12" key0="4"/>
-        <key key0="5"/>
-        <key key0="6"/>
-    </row>
-    <row>
-        <key shift="12" key0="1"/>
-        <key key0="2"/>
-        <key key0="3"/>
-    </row>
-    <row height="0.95">
-        <key shift="12" key0="0"/>
-        <key width="2" key0="backspace"/>
-    </row>
+	<row>
+		<key shift="12" key0="7"/>
+		<key key0="8"/>
+		<key key0="9" key4="switch_forward"/>
+		</row>
+	<row>
+		<key shift="12" key0="4"/>
+		<key key0="5"/>
+		<key key0="6"/>
+		</row>
+	<row>
+		<key shift="12" key0="1"/>
+		<key key0="2"/>
+		<key key0="3"/>
+		</row>
+	<row height="0.95">
+		<key shift="12" key0="0" key3="f11_placeholder" key4="f12_placeholder"/>
+		<key width="2" key0="backspace" key4="fn" key3="box"/>
+	</row>
 </keyboard>
