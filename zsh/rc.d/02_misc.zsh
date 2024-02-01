@@ -4,6 +4,12 @@ HISTFILE="${XDG_DATA_HOME}/zsh/history"
 HISTSIZE=10000000
 SAVEHIST=10000000
 
+# cd into last exited directory
+autoload session-cd && {
+  session-cd load
+  TRAPEXIT() { session-cd save; }
+}
+
 # Bar Cursor ----------
 # <Docs> man zshzle | less +/Special.Widgets +/zle-line </Docs>
 barcursor() { echo -ne '\e[5 q'; }
