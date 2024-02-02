@@ -1,14 +1,11 @@
 typeset -A key
 key=(
-	Ctrl          '^'
-	Esc           '^['
-	Tab           '^I'
-	Enter         '^M'
-	Backspace     '^?'
-	Delete        '^[[3~'
-	CtrlBackspace '^H'
-	CtrlDelete    '^[[3;5~'
-	CtrlSpace     '^@'
+	Ctrl      '^'
+	Esc       '^['
+	Tab       '^I'
+	ShiftTab  '^[[Z'
+	Enter     '^M'
+	CtrlSpace '^@'
 
 	Up             '^[[A'
 	Down           '^[[B'
@@ -26,6 +23,14 @@ key=(
 	CtrlShiftDown  '^[[1;6B'
 	CtrlShiftLeft  '^[[1;6D'
 	CtrlShiftRight '^[[1;6C'
+
+	Backspace     '^?'
+	CtrlBackspace '^H'
+
+	Delete          '^[[3~'
+	CtrlDelete      '^[[3;5~'
+	ShiftDelete     '^[[3;2~'
+	CtrlShiftDelete '^[[3;6~'
 )
 
 # <Docs> man zshzle | less +/^STANDARD.WIDGETS </Docs>
@@ -77,6 +82,10 @@ bindkey -s ${key[CtrlShiftUp]}    ''
 bindkey -s ${key[CtrlShiftDown]}  ''
 bindkey -s ${key[CtrlShiftLeft]}  ''
 bindkey -s ${key[CtrlShiftRight]} ''
+
+bindkey -s ${key[ShiftTab]}        ''
+bindkey -s ${key[ShiftDelete]}     ''
+bindkey -s ${key[CtrlShiftDelete]} ''
 
 # <Docs> man zshzle | less +/Reading.Commands </Docs>
 # Fixes pasting text when <Esc> is active
