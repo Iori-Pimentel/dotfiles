@@ -1,45 +1,40 @@
-accept-line() {
-	[[ "$BUFFER" =~ '[[:graph:]]' ]] && zle .$WIDGET
-}
-zle -N accept-line
-
-edit-command() {
-	setopt localoptions nomultibyte
-	byteoffset=$(( $#LBUFFER + 1 ))
-
-	() {
-		# editor is assumed to be vim/nvim
-		"$EDITOR" -c "normal! ${byteoffset}go" -- "$1"
-		BUFFER="$(< $1)"
-	} =(<<< "$BUFFER")
-
-	CURSOR=${#BUFFER}
-}
-zle -N edit-command
-
-# ──────────────────────────────────────────────────
-
-
-autoload -z edit-command-line
 zle -N edit-command-line
+autoload edit-command-line
 
+zle -N accept-line
+accept-line() {
+	[[ "$BUFFER" =~ '[^[:space:]]' ]] && zle .$WIDGET
+}
+
+zle -N bracketed-paste
 bracketed-paste() {
-	local PASTED
-	zle .$WIDGET PASTED
-
-	read -r -d '' trimmed <<< "$PASTED"
+	local pasted trimmed
+	zle .$WIDGET pasted
+	read -d '' -r trimmed <<< "$pasted"
 
 	LBUFFER+="$trimmed"
 	[[ "$trimmed" =~ $'\n' ]] && zle edit-command-line
 }
-zle -N bracketed-paste
 
-# ──────────────────────────────────────────────────
+zle -N clear-screen
+clear-screen() {
+	clear # removes scrollback buffer
+}
 
-toggle-directory-history() {
+# Fixes pasting text when <Ctrl-v> is active
+# Waits for sequence that is bound before inserting
+# Can change inserted sequence using bindkey -s
+zle -N quoted-insert
+quoted-insert() {
+	zle read-command
+	[[ $REPLY == 'bracketed-paste' ]] && zle -U $KEYS || LBUFFER+=$KEYS
+}
+
 # <Docs> () { nvim +/function.$1 $(antidote path jimhester/$1)/$1.zsh } per-directory-history </Docs>
 # Addressed issue with per-directory-history-toggle-history creating a new
 # prompt at each call; resolved by copying the source code and removing zle -I.
+zle -N toggle-directory-history
+toggle-directory-history() {
 	if [[ $_per_directory_history_is_global == true ]]; then
 		_per-directory-history-set-directory-history
 		_per_directory_history_is_global=false
@@ -51,20 +46,3 @@ toggle-directory-history() {
 	autoload redraw-prompt && redraw-prompt
 	zle autosuggest-fetch
 }
-
-zle -N toggle-directory-history
-
-# ──────────────────────────────────────────────────
-
-# Replacing widget functionality for <Ctrl-v>
-# Fixes pasting text when <Ctrl-v> is active
-# Waits for sequence that is bound before inserting
-# Can change inserted sequence using bindkey -s
-quoted-insert() {
-	zle read-command
-	[[ $REPLY == 'bracketed-paste' ]] && zle -U $KEYS || LBUFFER+=$KEYS
-}
-zle -N quoted-insert
-
-clear-screen() { clear }
-zle -N clear-screen

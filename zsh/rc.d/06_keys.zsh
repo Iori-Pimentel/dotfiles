@@ -65,8 +65,8 @@ bindkey ${key[Esc]}${key[Left]}      backward-word-path
 bindkey ${key[Esc]}${key[Right]}     forward-word-path
 
 # Replacing plugin keybind
-bindkey -r ${key[Ctrl]}'g'
 bindkey ${key[Esc]}'g' toggle-directory-history
+bindkey -r ${key[Ctrl]}'g'
 
 # Removing bindings on unused keys
 bindkey -s ${key[ShiftUp]}        ''
