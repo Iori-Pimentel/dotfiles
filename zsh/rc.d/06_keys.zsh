@@ -74,6 +74,7 @@ bindkey ${key[Esc]}'g' toggle-directory-history
 bindkey -r ${key[Ctrl]}'g'
 
 # Removing bindings on unused keys
+bindkey -s ${key[CtrlUp]}         ''
 bindkey -s ${key[ShiftUp]}        ''
 bindkey -s ${key[ShiftDown]}      ''
 bindkey -s ${key[ShiftLeft]}      ''
