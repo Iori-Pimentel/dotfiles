@@ -9,6 +9,9 @@ map("n", "]q", "<CMD>cnext<CR>")
 map("n", "[Q", "<CMD>cpfile<CR>")
 map("n", "]Q", "<CMD>cnfile<CR>")
 
+map("n", "[b", "<CMD>earlier 1f<CR>")
+map("n", "]b", "<CMD>later 1f<CR>")
+
 -- disables scrolling
 map("i", "<Up>", "<Nop>")
 map("i", "<Down>", "<Nop>")
