@@ -5,7 +5,7 @@ mv ~/.local/dotfiles "${PREFIX}/tmp"
 
 To install, run the command:
 ```bash
-bash <(curl -fssL https://github.com/iori-pimentel/dotfiles/raw/main/deploy.sh)
+bash <(curl -fsSL https://github.com/iori-pimentel/dotfiles/raw/main/deploy.sh)
 ```
 
 For faster z navigation, run the command:
