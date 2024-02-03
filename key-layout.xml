@@ -58,7 +58,7 @@ Horizontal spacing: 2dp
 		<key key0="u"/>
 		<key key0="i" key3="[" key4="]"/>
 		<key key0="o" key3="(" key4=")"/>
-		<key key0="p" key4="switch_forward"/>
+		<key key0="p"/>
 	</row>
 	<row>
 		<key shift="0.5" key0="a" key1="tab"/>
@@ -67,9 +67,9 @@ Horizontal spacing: 2dp
 		<key key0="f"/>
 		<key key0="g"/>
 		<key key0="h"/>
-		<key key0="j"/>
-		<key key0="k"/>
-		<key key0="l"/>
+		<key key0="j" key3="7" key4="8" key2="9"/>
+		<key key0="k" key3="4" key4="5" key2="6"/>
+		<key key0="l" key3="1" key4="2" key2="3"/>
 	</row>
 	<row>
 		<key width="1.5" key0="shift" key2="loc capslock"/>
@@ -79,7 +79,7 @@ Horizontal spacing: 2dp
 		<key key0="v"/>
 		<key key0="b"/>
 		<key key0="n" key3="/" key2=":" key4="*"/>
-		<key key0="m" key3="&quot;" key4="'"/>
+		<key key0="m" key3="&quot;" key4="'" key2="0"/>
 		<key width="1.5" key0="backspace" key2="delete"/>
 	</row>
 	<row height="0.95">
