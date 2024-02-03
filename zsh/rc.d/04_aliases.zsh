@@ -5,7 +5,6 @@ alias lt='eza --tree --git-ignore --level 2'
 alias q='exit'
 alias qq='clear && session-cd save && exec zsh'
 alias z='zshz /data/data/com.termux/files 2>&1'
-
 alias n='nvim'
 
 autoload shorten-path
@@ -19,3 +18,9 @@ alias pks='dpkg --search'
 autoload git-config-info
 alias gs='git status'
 alias gc='git-config-info'
+
+alias p='cd ~-'
+alias o='cd ..'
+alias oo='cd ../..'
+alias ooo='cd ../../..'
+alias oooo='cd ../../../..'
