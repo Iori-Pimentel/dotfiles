@@ -6,8 +6,8 @@ SAVEHIST=10000000
 
 # cd into last exited directory
 autoload session-cd && {
-  session-cd load
-  TRAPEXIT() { session-cd save; }
+	session-cd load
+	TRAPEXIT() { session-cd save; }
 }
 
 # Bar Cursor ----------
