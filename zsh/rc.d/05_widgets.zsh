@@ -22,12 +22,26 @@ clear-screen() {
 }
 
 # Fixes pasting text when <Ctrl-v> is active
-# Waits for sequence that is bound before inserting
-# Can change inserted sequence using bindkey -s
 zle -N quoted-insert
 quoted-insert() {
 	zle read-command
-	[[ $REPLY == 'bracketed-paste' ]] && zle -U $KEYS || LBUFFER+=$KEYS
+
+	if [[ $REPLY == 'bracketed-paste' ]];then
+		zle -U $KEYS # starts bracketed-paste
+		return
+	fi
+
+	zle read-input VALUE
+	LBUFFER+=$KEYS$VALUE
+}
+
+zle -N read-input
+read-input() {
+	local args=(
+		-t 0
+		-k $(( $KEYS_QUEUED_COUNT + 1 ))
+	)
+	read ${args[@]} $1
 }
 
 # <Docs> () { nvim +/function.$1 $(antidote path jimhester/$1)/$1.zsh } per-directory-history </Docs>
