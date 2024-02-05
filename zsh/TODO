@@ -1,4 +1,24 @@
+man zshcontrib | less +/ABBREVIATED.DYNAMIC.REFERENCES.TO.DIRECTORIES
+
+https://stackoverflow.com/questions/76390333/is-there-an-escape-code-to-pause-the-terminal-screen-refresh
+rename xterm echo -n "\033]0;Hello\a"
+
+zmv
+
+autoload -Uz xtermctl ; xtermctl
+xtermctl --explain
+
 learn lua
+read man zshcontrib
+print -z echo hello world
+# up-line-or-beginning-search
+unalias run-help
+autoload run-help
+
+split-shell-arguments
+then check if option
+then edit
+
 nvim g; g- g+
 nvim show search highlighting only when on word
 marks on cmdwin
@@ -85,8 +105,6 @@ syntax highlighting on regex on grep|sed|awk
 
 shorten-path keep slash if substitution is in middle of a path
 
-fix fsh when fzf-tab esc and spelling correction edit
-
 androfecth CPU find
 
 fixnvim SIGHUP
@@ -105,8 +123,6 @@ cant scroll
  ==================
 
  man -a # not working
-
-back to local after accept-line
 
 run-help and which-command clear autosuggestion
 
@@ -130,14 +146,3 @@ _path_files completion
 cd ~/./d/z
 
 open files using am
-
-disable spelling correction for _go and others
-
-zstyle ':completion:*' matcher-list '' \
-    'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
-
-zstyle ':completion:*:(argument-rest|files):*' matcher-list '' \
-    'm:{[:lower:]-}={[:upper:]_}' \
-    'r:|[.,_-]=* r:|=*' \
-    'r:|.=* r:|=*'
-# zstyle ':completion:*' matcher-list 'b:=*'
