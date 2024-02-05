@@ -1,5 +1,25 @@
+autoload modify-current-argument
+
 zle -N edit-command-line
 autoload edit-command-line
+
+# <Docs> man zshexpn | less +/Parameter.Expansion.Flags '+/ (D|~)' </Docs>
+expand-path() {
+	FILE=${~1} # expands argument
+	[[ -e $FILE ]] || return 1
+
+	# preserves symbolic directory of $FILE
+	[[ ${FILE} == /* ]] || FILE=$PWD/$FILE
+	# resolves ../. components
+	FILE=$(realpath -s ${FILE})
+	# converts absolute path to ~/
+	REPLY=${(D)FILE}
+}
+
+zle -N expand-current-path
+expand-current-path() {
+	modify-current-argument expand-path
+}
 
 zle -N accept-line
 accept-line() {
@@ -21,7 +41,7 @@ clear-screen() {
 	clear # removes scrollback buffer
 }
 
-# Fixes pasting text when <Ctrl-v> is active
+# Fixes pasting text for <Ctrl-v>
 zle -N quoted-insert
 quoted-insert() {
 	zle read-command
@@ -35,6 +55,7 @@ quoted-insert() {
 	LBUFFER+=$KEYS$VALUE
 }
 
+# Fixes pasting text for <Esc>
 zle -N read-input
 read-input() {
 	local args=(

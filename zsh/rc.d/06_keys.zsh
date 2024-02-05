@@ -8,6 +8,8 @@ key=(
 	Delete        '^[[3~'
 	CtrlBackspace '^H'
 	CtrlDelete    '^[[3;5~'
+	Tab           '^I'
+	ShiftTab     '^[[Z'
 
 	Up            '^[[A'
 	Down          '^[[B'
@@ -16,6 +18,8 @@ key=(
 	CtrlLeft      '^[[1;5D'
 	CtrlRight     '^[[1;5C'
 )
+
+bindkey -A emacs main
 bindkey ${key[Esc]} read-input
 
 # <Docs> man zshzle | less +/^STANDARD.WIDGETS </Docs>
@@ -26,10 +30,16 @@ bindkey ${key[Ctrl]}'n'  down-history
 bindkey ${key[Ctrl]}'p'  up-history
 
 # Modifying Text
-bindkey ${key[Delete]} delete-char
+bindkey ${key[Delete]}  delete-char
+bindkey ${key[Ctrl]}'u' kill-buffer
 
 # Misc bindings
-bindkey ${key[Esc]}'u'           undo
+bindkey ${key[Esc]}'u' undo
+bindkey ${key[Esc]}'h' _complete_help
+# or group them with colors
+# bindkey ${key[Esc]}'f' fzf-file
+# bindkey ${key[Esc]}'d' fzf-directory
+bindkey ${key[ShiftTab]} expand-current-path
 bindkey ${key[Esc]}${key[Enter]} edit-command-line
 
 # <Docs> man zshcontrib | less +/select-word-style +nn </Docs>
