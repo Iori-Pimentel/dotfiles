@@ -17,7 +17,5 @@ chpwd() { session-cd save; }
 
 hash -d PREFIX="$PREFIX"
 
-source "${PREFIX}/share/fzf/key-bindings.zsh"
-
 # Removes duplicate entries
 typeset -U path cdpath fpath manpath

@@ -21,6 +21,12 @@ expand-current-path() {
 	modify-current-argument expand-path
 }
 
+zle -N fzf-file-widget
+fzf-file-widget() {
+	LBUFFER+=$(eval $FZF_DEFAULT_COMMAND | fzf)
+	zle reset-prompt
+}
+
 zle -N accept-line
 accept-line() {
 	[[ "$BUFFER" =~ '[^[:space:]]' ]] && zle .$WIDGET

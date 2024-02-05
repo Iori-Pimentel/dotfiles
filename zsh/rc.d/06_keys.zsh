@@ -36,9 +36,7 @@ bindkey ${key[Ctrl]}'u' kill-buffer
 # Misc bindings
 bindkey ${key[Esc]}'u' undo
 bindkey ${key[Esc]}'h' _complete_help
-# or group them with colors
-# bindkey ${key[Esc]}'f' fzf-file
-# bindkey ${key[Esc]}'d' fzf-directory
+bindkey ${key[Ctrl]}'t' fzf-file-widget
 bindkey ${key[ShiftTab]} expand-current-path
 bindkey ${key[Esc]}${key[Enter]} edit-command-line
 

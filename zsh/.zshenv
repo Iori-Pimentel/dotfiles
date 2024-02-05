@@ -12,6 +12,9 @@ export VISUAL=nvim
 export EDITOR=nvim
 export PAGER=less
 
+export FZF_DEFAULT_COMMAND='fd --hidden'
+export FZF_DEFAULT_OPTS='--height 40% --reverse'
+
 # Sets color for manpages in less
 export LESS_TERMCAP_md=$(echoti bold; echoti setaf 1)
 export LESS_TERMCAP_mb=$(echoti blink)
