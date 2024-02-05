@@ -17,7 +17,6 @@ setopt no_NOMATCH      # try to avoid the 'zsh: no matches found...'
 setopt no_FLOW_CONTROL # disable ^S and ^Q
 setopt no_SHORT_LOOPS  # disable short loop forms, can be confusing
 
-setopt CORRECT_ALL          # try to correct the spelling of all arguments in a line
 setopt MULTIOS              # allows multiple input and output redirections
 setopt CLOBBER              # allow > redirection to truncate existing files
 setopt BRACE_CCL            # allow brace character class list expansion
