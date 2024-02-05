@@ -9,7 +9,8 @@ key=(
 	CtrlBackspace '^H'
 	CtrlDelete    '^[[3;5~'
 	Tab           '^I'
-	ShiftTab     '^[[Z'
+	ShiftTab      '^[[Z'
+	Space         ' '
 
 	Up            '^[[A'
 	Down          '^[[B'
@@ -36,8 +37,8 @@ bindkey ${key[Ctrl]}'u' kill-buffer
 # Misc bindings
 bindkey ${key[Esc]}'u' undo
 bindkey ${key[Esc]}'h' _complete_help
-bindkey ${key[Ctrl]}'t' fzf-file-widget
-bindkey ${key[ShiftTab]} expand-current-path
+bindkey ${key[ShiftTab]} fzf-file-widget
+bindkey ${key[Ctrl]}${key[Space]} expand-current-path
 bindkey ${key[Esc]}${key[Enter]} edit-command-line
 
 # <Docs> man zshcontrib | less +/select-word-style +nn </Docs>
