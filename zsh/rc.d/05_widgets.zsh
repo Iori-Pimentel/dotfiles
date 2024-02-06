@@ -23,7 +23,10 @@ expand-current-path() {
 
 zle -N fzf-file-widget
 fzf-file-widget() {
+	[[ $LBUFFER[-1] == ' ' ]] || LBUFFER+=' '
 	LBUFFER+=$(eval $FZF_DEFAULT_COMMAND | fzf)
+	[[ $LBUFFER[-1] == ' ' ]] || LBUFFER+=' '
+
 	zle reset-prompt
 }
 
