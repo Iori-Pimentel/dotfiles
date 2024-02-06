@@ -13,6 +13,9 @@ export EDITOR=nvim
 export PAGER=less
 
 export FZF_DEFAULT_COMMAND='fd --hidden'
+# https://github.com/sharkdp/fd/issues/1461
+# Temporary fix for fd not respecting .gitignore in a subdirectory
+export FZF_DEFAULT_COMMAND='rg --hidden --files'
 export FZF_DEFAULT_OPTS='--height 40% --reverse'
 
 # Sets color for manpages in less
