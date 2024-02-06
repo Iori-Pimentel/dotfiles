@@ -1,4 +1,5 @@
 local map = vim.keymap.set
+map({ "n", "v" }, " ", "<Nop>")
 vim.g.mapleader = " "
 
 map("n", "<leader>n", "<CMD>setlocal number!<CR>")
@@ -26,7 +27,7 @@ map("o", [[a']], [[2i']])
 map("o", [[a`]], [[2i`]])
 
 -- dot-repeatable replace keyword under cursor
-map({ "n", "v" }, "<leader>*", "*Ncgn", { remap = true })
+map({ "n", "v" }, "S", "*Ncgn", { remap = true })
 
 -- moves to beginning of change
 map("n", ".", [[.`.]])
