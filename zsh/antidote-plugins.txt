@@ -1,11 +1,7 @@
 romkatv/powerlevel10k
-
 agkozak/zsh-z
-hlissner/zsh-autopair
 jimhester/per-directory-history
 Aloxaf/fzf-tab
 
-# should be last
 zsh-users/zsh-autosuggestions
 zsh-users/zsh-syntax-highlighting
-#zdharma-continuum/fast-syntax-highlighting
