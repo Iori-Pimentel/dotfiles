@@ -1,25 +1,8 @@
 autoload modify-current-argument
+autoload glob-expand-current-path
 
 zle -N edit-command-line
 autoload edit-command-line
-
-# <Docs> man zshexpn | less +/Parameter.Expansion.Flags '+/ (D|~)' </Docs>
-expand-path() {
-	FILE=${~1} # expands argument
-	[[ -e $FILE ]] || return 1
-
-	# preserves symbolic directory of $FILE
-	[[ ${FILE} == /* ]] || FILE=$PWD/$FILE
-	# resolves ../. components
-	FILE=$(realpath -s ${FILE})
-	# converts absolute path to ~/
-	REPLY=${(D)FILE}
-}
-
-zle -N expand-current-path
-expand-current-path() {
-	modify-current-argument expand-path
-}
 
 zle -N fzf-file-widget
 fzf-file-widget() {
@@ -72,6 +55,14 @@ read-input() {
 		-k $(( $KEYS_QUEUED_COUNT + 1 ))
 	)
 	read ${args[@]} $1
+}
+
+# Alternative to expand-absolute-path that does not resolve symlinks
+# This is done since I prefer ~/storage/downloads (symlink)
+# over /storage/emulated/0/Download
+zle -N expand-current-path
+expand-current-path() {
+	modify-current-argument glob-expand-current-path
 }
 
 # <Docs> () { nvim +/function.$1 $(antidote path jimhester/$1)/$1.zsh } per-directory-history </Docs>
