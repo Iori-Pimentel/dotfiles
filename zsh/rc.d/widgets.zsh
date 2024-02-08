@@ -1,5 +1,4 @@
 autoload modify-current-argument
-autoload glob-expand-current-path
 
 zle -N edit-command-line
 autoload edit-command-line
@@ -78,6 +77,6 @@ toggle-directory-history() {
 		_per_directory_history_is_global=true
 	fi
 
-	autoload redraw-prompt && redraw-prompt
+	redraw-prompt
 	zle autosuggest-fetch
 }

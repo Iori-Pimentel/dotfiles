@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 git config --list --show-origin |
-	{ autoload shorten-path && shorten-path; } |
+	shorten-path |
 	sed 's/^file://' |
 	awk -F'\t' '
 		{

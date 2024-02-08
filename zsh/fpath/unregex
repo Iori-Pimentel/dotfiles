@@ -1,8 +1,6 @@
 #!/bin/zsh
 
-unregex() {
-	# square brackets must be in ends facing away from center (regex weirdness)
-	# \\: is for sed delimeter used outside the function (delimeter = ':')
-	SPECIAL=']\\:()$*.^|['
-	sed -e s:[$SPECIAL]:'\\&:g' < /dev/stdin
-}
+# square brackets must be in ends facing away from center (regex weirdness)
+# \\: is for sed delimeter used outside the function (delimeter = ':')
+SPECIAL=']\\:()$*.^|['
+sed -e s:[$SPECIAL]:'\\&:g' < /dev/stdin

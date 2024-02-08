@@ -8,15 +8,11 @@ alias q=' exit'
 alias z='zshz /data/data/com.termux/files 2>&1'
 alias n='nvim'
 
-autoload shorten-path
-autoload fzf-pkg
-
 alias sp='shorten-path'
 alias pk='fzf-pkg'
 alias pkf='pkg files'
 alias pks='dpkg --search'
 
-autoload git-config-info
 alias gs='git status'
 alias gc='git-config-info'
 

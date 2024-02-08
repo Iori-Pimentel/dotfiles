@@ -5,7 +5,6 @@ zle -N zle-line-pre-redraw
 zle-line-init() { barcursor }
 zle-line-pre-redraw() { barcursor }
 
-autoload session-cd
 session-cd load
 
 # <Docs> man zshmisc | less +/SPECIAL.FUNCTIONS </Docs>

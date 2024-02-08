@@ -1,6 +1,5 @@
 #!/bin/zsh
 
-autoload unregex
 # prefix=/data/data/com.termux/files/usr
 # converted to
 # s:/data/data/com\.termux/files/usr:~prefix:g;
