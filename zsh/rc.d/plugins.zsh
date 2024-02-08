@@ -6,7 +6,7 @@ ZSHZ_NO_RESOLVE_SYMLINKS=1
 # hides unwanted prefix
 zstyle ':fzf-tab:*' prefix ''
 # enables colors for fzf-tab
-zstyle ':completion:*:descriptions' format [%d]
+zstyle ':completion:*:descriptions' format '[%d]'
 # removes header display
 zstyle ':fzf-tab:*' show-group none
 # applies color even for a single group
@@ -32,6 +32,22 @@ ZSH_AUTOSUGGEST_PARTIAL_ACCEPT_WIDGETS=(
 	forward-word
 	forward-word-path
 )
+
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
+	os_icon dir per_directory_history vcs status
+	newline prompt_char
+)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
+
+POWERLEVEL9K_DIR_MAX_LENGTH=30
+# allows shortening current directory
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=0
+
+POWERLEVEL9K_STATUS_OK=false
+POWERLEVEL9K_STATUS_OK_PIPE=true
+POWERLEVEL9K_STATUS_ERROR=true
+# Turns off status icons
+typeset -m 'POWERLEVEL9K_STATUS_*_VISUAL_IDENTIFIER_EXPANSION'=
 
 zstyle ':antidote:bundle' use-friendly-names 'yes'
 source "${ZDOTDIR}/.antidote/antidote.zsh"
