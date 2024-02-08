@@ -27,8 +27,9 @@ opt.mouse = "n"
 opt.scrolloff = 2
 opt.virtualedit = "block"
 opt.isfname:append({ "{", "}" })
--- for completion of file names in command mode
-opt.wildignorecase = true
+
+-- hides netrw header
+vim.g.netrw_banner = 0
 
 opt.listchars = {
 	tab = "╎ ",
