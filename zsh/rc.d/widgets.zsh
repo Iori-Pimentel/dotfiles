@@ -19,12 +19,12 @@ accept-line() {
 
 zle -N bracketed-paste
 bracketed-paste() {
-	local pasted trimmed
-	zle .$WIDGET pasted
-	read -d '' -r trimmed <<< "$pasted"
+	local PASTED TRIMMED
+	zle .$WIDGET PASTED
+	read -d '' -r TRIMMED <<< "$PASTED"
 
-	LBUFFER+="$trimmed"
-	[[ "$trimmed" =~ $'\n' ]] && zle edit-command-line
+	LBUFFER+="$TRIMMED"
+	[[ "$TRIMMED" =~ $'\n' ]] && zle edit-command-line
 }
 
 zle -N clear-screen
