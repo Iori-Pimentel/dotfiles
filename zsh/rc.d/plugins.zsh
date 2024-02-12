@@ -11,6 +11,8 @@ zstyle ':completion:*:descriptions' format '[%d]'
 zstyle ':fzf-tab:*' show-group none
 # applies color even for a single group
 zstyle ':fzf-tab:*' single-group color
+# prevents getting stuck when pressing ctrl-z
+zstyle ':fzf-tab:*' fzf-bindings 'ctrl-z:ignore'
 
 zstyle ':completion:*'            list-dirs-first  true
 zstyle ':completion:*:cd:*'       complete-options yes
