@@ -15,15 +15,13 @@ chpwd() {
 # https://github.com/jimhester/per-directory-history/issues/31
 # Not using preexec() since $1 is empty caused by per-directory-history
 zshaddhistory() {
-	local title=$1
-	# squeeze consecutive newlines
-	title=$(tr -s '\n' <<< "$title")
-	# remove trailing newlines
-	title=${title%%$'\n'}
-	# convert $'\n' to '; '
-	title=${title//$'\n'/; }
+	BUFFER=$1
+	# [p]arameter [s]plit by '\n'
+	SPLIT_BUFFER=( ${(ps:\n:)BUFFER} )
+	# [p]arameter [j]oin by '; '
+	FORMATTED_BUFFER=${(pj:; :)SPLIT_BUFFER}
 
-	printf '\e]2;%s\a' ${title} > $TTY
+	printf '\e]2;%s\a' ${FORMATTED_BUFFER} > $TTY
 }
 
 precmd() {
