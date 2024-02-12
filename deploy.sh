@@ -45,7 +45,7 @@ ln -sfT ${BASE}/nvim              ${CONF}/nvim
 
 cat <<- 'EOF' > ~/.termux/termux.properties
 	# Example file can be found in:
-	# ~/../usr/share/examples/termux/termux.properties
+	# ${PREFIX}/share/examples/termux/termux.properties
 
 	extra-keys = []
 	back-key = escape
