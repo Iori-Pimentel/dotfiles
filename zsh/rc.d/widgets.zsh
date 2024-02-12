@@ -3,13 +3,18 @@ autoload modify-current-argument
 zle -N edit-command-line
 autoload edit-command-line
 
-zle -N fzf-file-widget
-fzf-file-widget() {
-	[[ $LBUFFER[-1] == ' ' ]] || LBUFFER+=' '
-	LBUFFER+=$(eval $FZF_DEFAULT_COMMAND | fzf)
-	[[ $LBUFFER[-1] == ' ' ]] || LBUFFER+=' '
+define-alternative-completion
+zle -N fzf-tab-alternative
+# TODO: limit or stream output to prevent waiting
+fzf-tab-alternative() {
+	local recursive_files=(
+		$(fd --hidden --follow --type=f)
+	)
+	local recursive_directories=(
+		$(fd --hidden --follow --type=d)
+	)
 
-	zle reset-prompt
+	zle fzf-tab-complete
 }
 
 zle -N accept-line

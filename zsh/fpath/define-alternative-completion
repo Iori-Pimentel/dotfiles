@@ -1,0 +1,14 @@
+#!/bin/zsh
+
+autoload +X _files _cd
+functions[_files_orig]=$functions[_files]
+functions[_cd_orig]=$functions[_cd]
+
+_files() {
+	compadd -a recursive_files || _files_orig
+}
+
+_cd() {
+	compadd -a recursive_directories || _cd_orig
+}
+

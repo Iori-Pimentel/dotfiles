@@ -37,7 +37,7 @@ bindkey ${key[Ctrl]}'u' kill-buffer
 # Misc bindings
 bindkey ${key[Esc]}'u' undo
 bindkey ${key[Esc]}'h' _complete_help
-bindkey ${key[ShiftTab]} fzf-file-widget
+bindkey ${key[ShiftTab]} fzf-tab-alternative
 bindkey ${key[Ctrl]}${key[Space]} expand-current-path
 bindkey ${key[Esc]}${key[Enter]} edit-command-line
 
