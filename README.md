@@ -1,6 +1,7 @@
-If preexisting dotfiles, run this command first:
+If using [Termux](https://github.com/termux/termux-app) and not [Termux-Monet](https://github.com/KitsunedFox/termux-monet), run this command first:
 ```bash
-mv ~/.local/dotfiles "${PREFIX}/tmp"
+pkg install --yes --option Dpkg::Options::="--force-confnew" termux-tools
+pkg upgrade --yes --option Dpkg::Options::="--force-confnew"
 ```
 
 To install, run the command:

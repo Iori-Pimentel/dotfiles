@@ -9,7 +9,7 @@ set -o errexit
 # termux-change-repo alternative that defaults to asia mirror group
 ln -sfT ${PREFIX}/etc/termux/{mirrors/asia,chosen_mirrors}
 
-pkg upgrade -y
+pkg upgrade --yes
 packages=(
 	zsh git manpages tealdeer
 	eza bat fd ripgrep neovim
@@ -20,7 +20,7 @@ packages=(
 	# nmap # networking tool
 	# lsof # list open files (already installed)
 )
-pkg install -y ${packages[@]}
+pkg install --yes ${packages[@]}
 
 XDG_CONFIG_HOME=~/.config
  XDG_CACHE_HOME=~/.cache
