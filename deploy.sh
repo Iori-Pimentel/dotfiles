@@ -80,9 +80,13 @@ chmod u+x ${PREFIX}/bin/androfetch
 # Increases color0 contrast with background
 sed --in-place 's/color0.*/color0:  #787878/' ~/.termux/colors.properties
 
-tldr --update
 termux-reload-settings
 touch ~/.hushlogin
+# Background processes
+tldr --update &
+nvim --headless "+Lazy! install" +qa &
+wait
+
 clear && chsh -s zsh && exec zsh
 
 # Run command when pushing to github:
