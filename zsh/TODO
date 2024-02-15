@@ -1,3 +1,6 @@
+deploy.sh:
+	git remote set-url origin git@github.com:Iori-Pimentel/dotfiles.git
+
 man zshcontrib | less +/ABBREVIATED.DYNAMIC.REFERENCES.TO.DIRECTORIES
 
 https://stackoverflow.com/questions/76390333/is-there-an-escape-code-to-pause-the-terminal-screen-refresh
@@ -32,10 +35,6 @@ nvim-treesitter highlight doesnt work when zl
 nvim add changes to qflist from git
 nvim :f := :bm
 
-explain() {
-   open https://explainshell.com/explain\?cmd=$(echo $(fc -ln -1) | node -e 'process.stdout.write(encodeURIComponent(require("fs").readFileSync(0, "utf-8")))')
-
- }
 nvim :h keytrans()
 nvim qq q Q
 nvim :echo(keytrans(@q))
@@ -94,11 +93,7 @@ chsh - <TAB> redraws prompt
 autosuggestion go to history for ctrl-o && delte history line from file command
 nvim auto :set ft=zsh for files in fpath
 
-autopair trigger only when whitespace in left and right
-
 dont run command if history expansion fails
-
- zle_bracketed_paste two element array contains start and end chars when pasting
 
 syntax highlighting on << EOF broken
 syntax highlighting on regex on grep|sed|awk
@@ -116,17 +111,9 @@ add nvim diff swap file
 
 make colors function for easier echoti/terminfo
 
- zsh-mouse ========
-fzf-tab breaks it
-prompt breaks it (maybe caused by p10k)
-cant scroll
- ==================
-
  man -a # not working
 
 run-help and which-command clear autosuggestion
-
-add customs hooks
 
 no syntax highlighting when creating func .ex mman() { man -a $@ }
 
