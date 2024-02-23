@@ -10,7 +10,6 @@ fi
 
 autoload ${ZDOTDIR}/fpath/*
 
-source ${ZDOTDIR}/rc.d/setopt.zsh
 # After {hooks,p10k}.zsh: plugins.zsh
 source ${ZDOTDIR}/rc.d/hooks.zsh
 source ${ZDOTDIR}/rc.d/p10k.zsh
