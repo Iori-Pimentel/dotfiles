@@ -1,7 +1,6 @@
 #!/bin/zsh
 
 git config --list --show-origin |
-	shorten-path |
 	sed 's/^file://' |
 	awk -F'\t' '
 		{

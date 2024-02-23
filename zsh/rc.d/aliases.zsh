@@ -8,7 +8,6 @@ alias q=' exit'
 alias z='zshz /data/data/com.termux/files 2>&1'
 alias n='nvim'
 
-alias sp='shorten-path'
 alias pk='fzf-pkg'
 alias pkf='pkg files'
 alias pks='dpkg --search'
