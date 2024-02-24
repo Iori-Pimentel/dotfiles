@@ -7,5 +7,11 @@ git config --list --show-origin |
 			key = $1; content = substr($0, index($0, "\t"))
 			arr[key] = arr[key] "\n" content
 		}
-		END {for (key in arr) print "[" key "]" arr[key]}' |
+		END {
+			for (key in arr) {
+				printf "["
+				system("zsh -c print\\ -n\\ -D\\ " key)
+				printf "]%s\n", arr[key]
+			}
+		}' |
 	bat --plain --language=ini # syntax highligthing
