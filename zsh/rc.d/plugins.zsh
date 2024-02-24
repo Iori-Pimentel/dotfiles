@@ -17,7 +17,6 @@ zstyle ':fzf-tab:*' fzf-bindings 'ctrl-z:ignore'
 zstyle ':completion:*'            list-dirs-first  true
 zstyle ':completion:*:cd:*'       complete-options yes
 zstyle ':completion:*:parameters' ignored-patterns '_*'
-autoload compinit && compinit
 
 # disables rebind on every precmd
 ZSH_AUTOSUGGEST_MANUAL_REBIND=true

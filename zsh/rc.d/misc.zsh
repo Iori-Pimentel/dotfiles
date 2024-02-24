@@ -22,5 +22,9 @@ PROMPT_EOL_MARK='%K{red} %k'
 # named directories
 hash -d PREFIX="$PREFIX"
 
+# enable completion
+autoload compinit
+compinit -d "$XDG_CACHE_HOME/zsh/compdump"
+
 # Removes duplicate entries
 typeset -U path cdpath fpath manpath
