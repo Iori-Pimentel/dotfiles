@@ -52,5 +52,5 @@ POWERLEVEL9K_STATUS_ERROR=true
 typeset -m 'POWERLEVEL9K_STATUS_*_VISUAL_IDENTIFIER_EXPANSION'=
 
 zstyle ':antidote:bundle' use-friendly-names 'yes'
-source "${ZDOTDIR}/.antidote/antidote.zsh"
-antidote load "${ZDOTDIR}/antidote-plugins.txt"
+source "${XDG_CACHE_HOME}/antidote/.antidote/antidote.zsh"
+antidote load "${ZDOTDIR}/plugins"

@@ -36,7 +36,7 @@ DOTFILES=https://github.com/Iori-Pimentel/dotfiles.git
 ANTIDOTE=https://github.com/mattmc3/antidote.git
 
 git clone $DOTFILES ${BASE}
-git clone $ANTIDOTE ${BASE}/zsh/.antidote --depth=1
+git clone $ANTIDOTE ${CACHE}/antidote/.antidote --depth=1
 
 mkdir -p ${CONF}/git
 ln -sfT ${BASE}/zsh/.zshenv       ${HOME}/.zshenv
