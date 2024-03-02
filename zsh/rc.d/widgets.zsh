@@ -3,20 +3,6 @@ autoload modify-current-argument
 zle -N edit-command-line
 autoload edit-command-line
 
-define-alternative-completion
-zle -N fzf-tab-alternative
-# TODO: limit or stream output to prevent waiting
-fzf-tab-alternative() {
-	local recursive_files=(
-		$(fd --hidden --follow --type=f)
-	)
-	local recursive_directories=(
-		$(fd --hidden --follow --type=d)
-	)
-
-	zle fzf-tab-complete
-}
-
 zle -N accept-line
 accept-line() {
 	[[ "$BUFFER" =~ '[^[:space:]]' ]] && zle .$WIDGET
@@ -61,14 +47,6 @@ read-input() {
 	read ${args[@]} $1
 }
 
-# Alternative to expand-absolute-path that does not resolve symlinks
-# This is done since I prefer ~/storage/downloads (symlink)
-# over /storage/emulated/0/Download
-zle -N expand-current-path
-expand-current-path() {
-	modify-current-argument glob-expand-current-path
-}
-
 # <Docs> () { nvim +/function.$1 $(antidote path jimhester/$1)/$1.zsh } per-directory-history </Docs>
 # Addressed issue with per-directory-history-toggle-history creating a new
 # prompt at each call; resolved by copying the source code and removing zle -I.
@@ -84,4 +62,33 @@ toggle-directory-history() {
 
 	redraw-prompt
 	zle autosuggest-fetch
+}
+
+zle -C fzf-files complete-word fzf-files
+fzf-files() {
+	emulate -L zsh # for LOCAL_TRAPS: works?
+	local SEARCH_PATH FD_ARGS FILE_PATH
+
+	if [[ "${compstate[quoting]}" =~ 'single|double' ]]; then
+		SEARCH_PATH=${PREFIX}
+	else
+		SEARCH_PATH=${~PREFIX}
+	fi
+
+	[[ -z "${SEARCH_PATH}" ]] && SEARCH_PATH='./'
+	[[ "${SEARCH_PATH[-1]}" != '/' ]] && return 1
+
+	FD_ARGS=(
+		--print0
+		--hidden
+		--strip-cwd-prefix
+		--base-directory="${SEARCH_PATH}"
+		.
+	)
+
+	FILE_PATH="$(fd "${FD_ARGS[@]}" 2>/dev/null | fzf --read0)"
+	TRAPEXIT() { zle reset-prompt }
+
+	[[ -z "${FILE_PATH}" ]] && return 1
+	compadd -P "${PREFIX}" -fW "${SEARCH_PATH}" -- "${FILE_PATH%/}"
 }

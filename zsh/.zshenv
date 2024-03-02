@@ -16,7 +16,15 @@ export FZF_DEFAULT_COMMAND='fd --hidden'
 # https://github.com/sharkdp/fd/issues/1461
 # Temporary fix for fd not respecting .gitignore in a subdirectory
 export FZF_DEFAULT_COMMAND='rg --hidden --files'
-export FZF_DEFAULT_OPTS='--height 40% --reverse'
+FZF_ARGS=(
+	--height=40%
+	--reverse
+	--info=inline-right
+	--ellipsis=
+	--border=top
+	--select-1
+	--exit-0
+) export FZF_DEFAULT_OPTS="${FZF_ARGS[@]}"
 
 # Sets color for manpages in less
 export LESS_TERMCAP_md=$(echoti bold; echoti setaf 1)
