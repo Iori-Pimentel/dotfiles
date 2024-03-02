@@ -1,3 +1,18 @@
+git diff show tabs and escape characters
+man zshcompwid | less +/COMPLETION.SPECIAL.PARAMETERS
+application mode vs raw mode
+\M use bindkey to see
+zstyle to set completer
+chnage github tabsize using modelines
+man zshcompsys keep-prefix recursive-files
+alias %=' '
+learn CHASE_LINKS
+find if current path is symlink
+cd .. and ll .. is different in ~/storage/downloads
+does a program know if in a symbolic link
+
+add current histno at p10k prompt
+zshall compcontext
 deploy.sh:
 	git remote set-url origin git@github.com:Iori-Pimentel/dotfiles.git
 
@@ -13,14 +28,8 @@ xtermctl --explain
 
 learn lua
 read man zshcontrib
-print -z echo hello world
-# up-line-or-beginning-search
 unalias run-help
 autoload run-help
-
-split-shell-arguments
-then check if option
-then edit
 
 nvim g; g- g+
 nvim show search highlighting only when on word
@@ -69,7 +78,6 @@ manpages command for shell builtins?
 column vs pr
 zle infer-next-history <Right> key?
 zshall bracketed-paste-magic and its children
-nvim insert escapse chars   char by char
 zshall 'PARAMETERS SET BY THE SHELL'
 set vs typeset vs local
 nvim universal ctags
@@ -97,8 +105,6 @@ dont run command if history expansion fails
 
 syntax highlighting on << EOF broken
 syntax highlighting on regex on grep|sed|awk
-
-shorten-path keep slash if substitution is in middle of a path
 
 androfecth CPU find
 
