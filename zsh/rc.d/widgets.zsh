@@ -85,7 +85,6 @@ fzf-files() {
 		--hidden
 		--strip-cwd-prefix
 		--base-directory="${SEARCH_PATH}"
-		.
 	)
 
 	local FZF_ARGS=(
