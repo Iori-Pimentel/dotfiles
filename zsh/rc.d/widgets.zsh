@@ -70,9 +70,9 @@ fzf-files() {
 	local SEARCH_PATH FD_ARGS FILE_PATH
 
 	if [[ "${compstate[quoting]}" =~ 'single|double' ]]; then
-		SEARCH_PATH=${PREFIX}
+		SEARCH_PATH="${PREFIX}"
 	else
-		SEARCH_PATH=${~PREFIX}
+		SEARCH_PATH="$(eval printf '%s' "$PREFIX")"
 	fi
 
 	[[ -z "${SEARCH_PATH}" ]] && SEARCH_PATH='./'
