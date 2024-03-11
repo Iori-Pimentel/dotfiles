@@ -73,6 +73,7 @@ fzf-files() {
 	if [[ "${compstate[quoting]}" =~ 'single|double' ]]; then
 		SEARCH_PATH="${PREFIX}"
 	else
+		# eval should be safe to do in this branch
 		SEARCH_PATH="$(eval printf '%s' "$PREFIX")"
 	fi
 
