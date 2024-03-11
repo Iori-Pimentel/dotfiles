@@ -66,8 +66,7 @@ toggle-directory-history() {
 
 zle -C fzf-files complete-word fzf-files
 fzf-files() {
-	# NOTE: command substitution strips trailing newlines
-	emulate -L zsh # for LOCAL_TRAPS: works?
+	emulate -L zsh
 
 	local SEARCH_PATH
 	if [[ "${compstate[quoting]}" =~ 'single|double' ]]; then
@@ -95,7 +94,7 @@ fzf-files() {
 		--bind=ctrl-z:ignore
 		--border-label-pos=3
 		# Display on border if selection has non-printable character
-		--bind 'focus:transform-border-label(
+		--bind='focus:transform-border-label(
 			[[ {} =~ [^[:print:]] ]] && cat -v <<< "{}"
 		)'
 	)
