@@ -90,6 +90,7 @@ fzf-files() {
 
 	local FZF_ARGS=(
 		--read0
+		--print0
 		--scheme=path
 		--bind=ctrl-z:ignore
 		--border-label-pos=3
@@ -99,7 +100,9 @@ fzf-files() {
 		)'
 	)
 
-	local FILE_PATH="$(fd "${FD_ARGS[@]}" 2>/dev/null | fzf "${FZF_ARGS[@]}")"
+	local FILE_PATH
+	FILE_PATH="$(fd "${FD_ARGS[@]}" 2>/dev/null | fzf "${FZF_ARGS[@]}")"
+	FILE_PATH="${FILE_PATH%$'\0'}"
 	TRAPEXIT() { zle reset-prompt }
 
 	[[ -z "${FILE_PATH}" ]] && return 1
