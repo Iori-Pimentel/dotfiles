@@ -30,19 +30,17 @@ bindkey ${key[Down]}     down-line-or-search
 bindkey ${key[Ctrl]}'n'  down-history
 bindkey ${key[Ctrl]}'p'  up-history
 
-# Modifying Text
+# Deleting text
 bindkey ${key[Delete]}  delete-char
 bindkey ${key[Ctrl]}'u' kill-buffer
 
 # Misc bindings
 bindkey ${key[Esc]}'u' undo
-bindkey ${key[Esc]}'h' _complete_help
 bindkey ${key[ShiftTab]} fzf-files
-bindkey ${key[Ctrl]}${key[Space]} expand-current-path
 bindkey ${key[Esc]}${key[Enter]} edit-command-line
 
 # <Docs> man zshcontrib | less +/select-word-style +nn </Docs>
-# Movements delimited by shell argements
+# Movements delimited by shell arguments
 autoload select-word-style
 select-word-style shell # also autoloads all -match functions
 bindkey ${key[CtrlBackspace]} backward-kill-word
@@ -50,17 +48,11 @@ bindkey ${key[CtrlDelete]}    kill-word
 bindkey ${key[CtrlLeft]}      backward-word
 bindkey ${key[CtrlRight]}     forward-word
 
-# Movements delimited by [/ ]
+# Movements delimited by [/]
 zstyle ':zle:*path*' word-style unspecified
-zstyle ':zle:*path*' word-chars '/ '
+zstyle ':zle:*path*' word-chars '/'
 zle -N backward-kill-word-{path,match}
-zle -N kill-word-{path,match}
-zle -N backward-word-{path,match}
-zle -N forward-word-{path,match}
 bindkey ${key[Esc]}${key[Backspace]} backward-kill-word-path
-bindkey ${key[Esc]}${key[Delete]}    kill-word-path
-bindkey ${key[Esc]}${key[Left]}      backward-word-path
-bindkey ${key[Esc]}${key[Right]}     forward-word-path
 
 # Replacing plugin keybind
 bindkey ${key[Esc]}'g' toggle-directory-history
