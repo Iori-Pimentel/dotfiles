@@ -73,7 +73,8 @@ fzf-files() {
 		SEARCH_PATH="${PREFIX}"
 	else
 		# eval should be safe to do in this branch
-		SEARCH_PATH="$(eval printf '%s' "$PREFIX")"
+		SEARCH_PATH="$(eval printf '"%s\0"' "$PREFIX")"
+		SEARCH_PATH="${SEARCH_PATH%$'\0'}"
 	fi
 
 	[[ -z "${SEARCH_PATH}" ]] && SEARCH_PATH='./'
