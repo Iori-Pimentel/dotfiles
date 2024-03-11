@@ -66,9 +66,10 @@ toggle-directory-history() {
 
 zle -C fzf-files complete-word fzf-files
 fzf-files() {
+	# NOTE: command substitution strips trailing newlines
 	emulate -L zsh # for LOCAL_TRAPS: works?
-	local SEARCH_PATH FD_ARGS FILE_PATH
 
+	local SEARCH_PATH
 	if [[ "${compstate[quoting]}" =~ 'single|double' ]]; then
 		SEARCH_PATH="${PREFIX}"
 	else
@@ -78,7 +79,7 @@ fzf-files() {
 	[[ -z "${SEARCH_PATH}" ]] && SEARCH_PATH='./'
 	[[ "${SEARCH_PATH[-1]}" != '/' ]] && return 1
 
-	FD_ARGS=(
+	local FD_ARGS=(
 		--print0
 		--hidden
 		--strip-cwd-prefix
@@ -86,9 +87,21 @@ fzf-files() {
 		.
 	)
 
-	FILE_PATH="$(fd "${FD_ARGS[@]}" 2>/dev/null | fzf --read0)"
+	local FZF_ARGS=(
+		--read0
+		--scheme=path
+		--bind=ctrl-z:ignore
+		--border-label-pos=3
+		# Display on border if selection has non-printable character
+		--bind 'focus:transform-border-label(
+			[[ {} =~ [^[:print:]] ]] && cat -v <<< "{}"
+		)'
+	)
+
+	local FILE_PATH="$(fd "${FD_ARGS[@]}" 2>/dev/null | fzf "${FZF_ARGS[@]}")"
 	TRAPEXIT() { zle reset-prompt }
 
 	[[ -z "${FILE_PATH}" ]] && return 1
+	# FIXME: does not preserve LBUFFER contents
 	compadd -P "${PREFIX}" -fW "${SEARCH_PATH}" -- "${FILE_PATH%/}"
 }
