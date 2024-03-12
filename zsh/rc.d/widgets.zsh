@@ -95,7 +95,11 @@ fzf-files() {
 		--border-label-pos=3
 		# Display on border if selection has non-printable character
 		--bind='focus:transform-border-label(
-			[[ {} =~ [^[:print:]] ]] && cat -v <<< "{}"
+			[[ {} =~ [^[:print:]] ]] && cat -v <<< {} |
+				# Remove trailing newline
+				head --bytes=-1 |
+				# Translate newline as supplement to `cat -v`
+				tr "\n" "$"
 		)'
 	)
 
