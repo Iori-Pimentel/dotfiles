@@ -66,19 +66,19 @@ toggle-directory-history() {
 
 zle -C fzf-files complete-word fzf-files
 fzf-files() {
-	emulate -L zsh
-
 	local SEARCH_PATH
 	if [[ "${compstate[quoting]}" =~ 'single|double' ]]; then
 		SEARCH_PATH="${PREFIX}"
 	else
 		# eval should be safe to do in this branch
-		SEARCH_PATH="$(eval printf '"%s\0"' "$PREFIX")"
+		SEARCH_PATH="$(eval printf '"%s\0"' "$PREFIX" 2>/dev/null)" || return 1
 		SEARCH_PATH="${SEARCH_PATH%$'\0'}"
 	fi
 
-	[[ -z "${SEARCH_PATH}" ]] && SEARCH_PATH='./'
-	[[ "${SEARCH_PATH[-1]}" != '/' ]] && return 1
+	[[ -z "${PREFIX}" ]] && SEARCH_PATH='./'
+
+	[[ "${SEARCH_PATH}" == *$'\0'* ]] && return 1
+	[[ "${SEARCH_PATH[-1]}" == '/' ]] || return 1
 
 	local FD_ARGS=(
 		--print0
@@ -106,6 +106,8 @@ fzf-files() {
 	local FILE_PATH
 	FILE_PATH="$(fd "${FD_ARGS[@]}" 2>/dev/null | fzf "${FZF_ARGS[@]}")"
 	FILE_PATH="${FILE_PATH%$'\0'}"
+
+	setopt LOCAL_OPTIONS LOCAL_TRAPS
 	TRAPEXIT() { zle reset-prompt }
 
 	[[ -z "${FILE_PATH}" ]] && return 1
