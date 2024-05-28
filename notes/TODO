@@ -1,3 +1,6 @@
+pasting ^C^D causes a crash
+find why comment lines are being removed from history
+
 git diff show tabs and escape characters
 man zshcompwid | less +/COMPLETION.SPECIAL.PARAMETERS
 application mode vs raw mode
