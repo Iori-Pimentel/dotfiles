@@ -91,7 +91,6 @@ fzf-files() {
 		--read0
 		--print0
 		--scheme=path
-		--bind=ctrl-z:ignore
 		--border-label-pos=3
 		# Display on border if selection has non-printable character
 		--bind='focus:transform-border-label(

@@ -24,6 +24,8 @@ FZF_ARGS=(
 	--border=top
 	--select-1
 	--exit-0
+	# Prevents getting stuck when used inside a widget
+	--bind=ctrl-z:ignore
 ) export FZF_DEFAULT_OPTS="${FZF_ARGS[@]}"
 
 # Sets color for manpages in less
