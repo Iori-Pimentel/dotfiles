@@ -13,8 +13,8 @@ setopt HIST_IGNORE_SPACE  # don’t store lines starting with space
 
 mkdir -p "${XDG_DATA_HOME}/zsh"
 HISTFILE="${XDG_DATA_HOME}/zsh/history"
-HISTSIZE=10000000
-SAVEHIST=10000000
+HISTSIZE=10000000 # Size in memory
+SAVEHIST=10000000 # Size in file
 
 # a bit fancy than default
 PROMPT_EOL_MARK='%K{red} %k'
