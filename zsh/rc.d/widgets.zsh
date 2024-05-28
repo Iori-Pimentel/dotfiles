@@ -64,6 +64,60 @@ toggle-directory-history() {
 	zle autosuggest-fetch
 }
 
+zle -N fzf-history
+fzf-history() {
+	local FC_ARGS=(
+		-l # list
+		-r # reverse
+		1 # history starting from 1
+	)
+
+	local EXPRESSION_ARGS=(
+		'^[0-9]*'
+		# set dim and italic
+		$'\e[2;3m'
+		# reset
+		$'\e[m'
+	)
+
+	local SED_ARGS=(
+		# Convert first column from right to left align
+		--expression='s/^ *//'
+		# Set styles for first column
+		--expression="$(
+			printf 's/%s/%s&%s/' "${EXPRESSION_ARGS[@]}"
+		)"
+	)
+
+	local FZF_ARGS=(
+		--ansi
+		--scheme=history
+		# Exclude first field in search
+		# This allows ^command searches
+		--nth '2..'
+		# To hide it instead, use --with-nth
+	)
+
+	local HISTORY_NUM _
+
+	fc "${FC_ARGS[@]}" |
+	sed "${SED_ARGS[@]}" |
+	fzf "${FZF_ARGS[@]}" | read HISTORY_NUM _
+
+	setopt LOCAL_OPTIONS LOCAL_TRAPS
+	TRAPEXIT() { zle reset-prompt }
+
+	(( $HISTORY_NUM )) || return 1
+
+	# Updating HISTNO updates the BUFFER using a
+	# history list that includes edits
+	# which doesn't match with fc so we use
+	# ${history[$HISTORY_NUM]} which matches
+	HISTNO="$HISTORY_NUM"
+	BUFFER="${history[$HISTORY_NUM]}"
+	CURSOR="$#BUFFER"
+}
+
 zle -C fzf-files complete-word fzf-files
 fzf-files() {
 	local SEARCH_PATH

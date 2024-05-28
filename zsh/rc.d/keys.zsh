@@ -18,6 +18,8 @@ key=(
 	Right         '^[[C'
 	CtrlLeft      '^[[1;5D'
 	CtrlRight     '^[[1;5C'
+
+	ShiftUp       '^[[1;2A'
 )
 
 bindkey -A emacs main
@@ -37,6 +39,7 @@ bindkey ${key[Ctrl]}'u' kill-buffer
 # Misc bindings
 bindkey ${key[Esc]}'u' undo
 bindkey ${key[ShiftTab]} fzf-files
+bindkey ${key[ShiftUp]} fzf-history
 bindkey ${key[Esc]}${key[Enter]} edit-command-line
 
 # <Docs> man zshcontrib | less +/select-word-style +nn </Docs>
