@@ -16,12 +16,10 @@ chpwd() {
 # Not using preexec() since $1 is empty caused by per-directory-history
 zshaddhistory() {
 	BUFFER=$1
-	# [p]arameter [s]plit by '\n'
-	SPLIT_BUFFER=( ${(ps:\n:)BUFFER} )
-	# [p]arameter [j]oin by '; '
-	FORMATTED_BUFFER=${(pj:; :)SPLIT_BUFFER}
-
-	printf '\e]2;%s\a' ${FORMATTED_BUFFER} > $TTY
+	# Replace : and non-printable characters with space
+	# TODO: Find out why : breaks the title
+	BUFFER=${BUFFER//[!:[:print:]]/ }
+	printf '\e]2;%s\a' ${BUFFER} > $TTY
 }
 
 precmd() {
