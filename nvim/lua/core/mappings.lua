@@ -13,9 +13,9 @@ map("n", "]Q", "<CMD>cnfile<CR>")
 map("n", "[b", "<CMD>earlier 1f<CR>")
 map("n", "]b", "<CMD>later 1f<CR>")
 
--- disables scrolling
-map("i", "<Up>", "<Nop>")
-map("i", "<Down>", "<Nop>")
+-- Moves screen and not cursor when scrolling
+map("i", "<Up>", "<c-x><c-y>")
+map("i", "<Down>", "<c-x><c-e>")
 
 -- Navigation that remembers column position
 map("i", "<c-j>", "<c-g>j")
