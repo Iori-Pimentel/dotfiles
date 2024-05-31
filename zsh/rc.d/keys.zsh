@@ -12,35 +12,23 @@ key=(
 	ShiftTab      '^[[Z'
 	Space         ' '
 
-	Up            '^[[A'
-	Down          '^[[B'
-	Left          '^[[D'
-	Right         '^[[C'
-	CtrlLeft      '^[[1;5D'
+	CtrlUp        '^[[1;5A'
 	CtrlRight     '^[[1;5C'
-
-	ShiftUp       '^[[1;2A'
+	CtrlLeft      '^[[1;5D'
 )
 
 bindkey -A emacs main
 bindkey ${key[Esc]} read-input
 
 # <Docs> man zshzle | less +/^STANDARD.WIDGETS </Docs>
-# History Navigation
-bindkey ${key[Up]}       up-line-or-search
-bindkey ${key[Down]}     down-line-or-search
-bindkey ${key[Ctrl]}'n'  down-history
-bindkey ${key[Ctrl]}'p'  up-history
-
-# Deleting text
-bindkey ${key[Delete]}  delete-char
+bindkey ${key[Esc]}'u'  undo
 bindkey ${key[Ctrl]}'u' kill-buffer
-
-# Misc bindings
-bindkey ${key[Esc]}'u' undo
-bindkey ${key[ShiftTab]} fzf-files
-bindkey ${key[ShiftUp]} fzf-history
+bindkey ${key[Delete]}  delete-char
 bindkey ${key[Esc]}${key[Enter]} edit-command-line
+
+# Custom widgets
+bindkey ${key[ShiftTab]} fzf-files
+bindkey ${key[CtrlUp]}   fzf-history
 
 # <Docs> man zshcontrib | less +/select-word-style +nn </Docs>
 # Movements delimited by shell arguments
