@@ -26,6 +26,8 @@ FZF_ARGS=(
 	--exit-0
 	# Prevents getting stuck when used inside a widget
 	--bind=ctrl-z:ignore
+	# Move cursor to the first entry whenever the query is changed
+	--bind=change:first
 ) export FZF_DEFAULT_OPTS="${FZF_ARGS[@]}"
 
 # Sets color for manpages in less
