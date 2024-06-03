@@ -104,8 +104,7 @@ fzf-history() {
 	sed "${SED_ARGS[@]}" |
 	fzf "${FZF_ARGS[@]}" | read HISTORY_NUM _
 
-	setopt LOCAL_OPTIONS LOCAL_TRAPS
-	TRAPEXIT() { zle reset-prompt }
+	zle reset-prompt
 
 	(( $HISTORY_NUM )) || return 1
 
@@ -156,7 +155,10 @@ fzf-files() {
 	FILE_PATH="$(fd "${FD_ARGS[@]}" 2>/dev/null | fzf "${FZF_ARGS[@]}")"
 	FILE_PATH="${FILE_PATH%$'\0'}"
 
+	# Dont know if setopt is necessary.
 	setopt LOCAL_OPTIONS LOCAL_TRAPS
+	# Special case for completion widgets:
+	# Cannot call zle directly. Must use TRAPEXIT.
 	TRAPEXIT() { zle reset-prompt }
 
 	[[ -z "${FILE_PATH}" ]] && return 1
