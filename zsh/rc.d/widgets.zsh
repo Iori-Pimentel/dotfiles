@@ -82,7 +82,7 @@ fzf-history() {
 
 	local SED_ARGS=(
 		# Convert first column from right to left align
-		--expression='s/^ *//'
+		--expression='s/^[[:space:]]*//'
 		# Set styles for first column
 		--expression="$(
 			printf 's/%s/%s&%s/' "${EXPRESSION_ARGS[@]}"
