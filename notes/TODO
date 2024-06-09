@@ -1,14 +1,15 @@
+man trap
+man 7 signal
+man ps
+# to figure out which CHAR sends signals
+man stty
+
 pasting ^C^D causes a crash
 find why comment lines are being removed from history
 
 git diff show tabs and escape characters
-man zshcompwid | less +/COMPLETION.SPECIAL.PARAMETERS
 application mode vs raw mode
-\M use bindkey to see
-zstyle to set completer
 chnage github tabsize using modelines
-man zshcompsys keep-prefix recursive-files
-alias %=' '
 learn CHASE_LINKS
 find if current path is symlink
 cd .. and ll .. is different in ~/storage/downloads
@@ -16,23 +17,18 @@ does a program know if in a symbolic link
 
 add current histno at p10k prompt
 zshall compcontext
-deploy.sh:
-	git remote set-url origin git@github.com:Iori-Pimentel/dotfiles.git
 
+# interesting
 man zshcontrib | less +/ABBREVIATED.DYNAMIC.REFERENCES.TO.DIRECTORIES
 
 https://stackoverflow.com/questions/76390333/is-there-an-escape-code-to-pause-the-terminal-screen-refresh
-rename xterm echo -n "\033]0;Hello\a"
-
-zmv
 
 autoload -Uz xtermctl ; xtermctl
 xtermctl --explain
+n ~PREFIX/share/zsh/5.9/functions/xtermctl
 
 learn lua
 read man zshcontrib
-unalias run-help
-autoload run-help
 
 nvim g; g- g+
 nvim show search highlighting only when on word
@@ -82,16 +78,13 @@ column vs pr
 zle infer-next-history <Right> key?
 zshall bracketed-paste-magic and its children
 zshall 'PARAMETERS SET BY THE SHELL'
-set vs typeset vs local
 nvim universal ctags
 nvim :h ins-completion
 nvim :h dict
 nvim :h tag-stack
 man zshoptions
  SH_FILE_EXPANSION
-Note that this does not provide **-style triggers, you will need to enable fzf's zsh completion as well.
-[[ =~ ]] saves results?
-$REPLY and $KEYS
+# interesting
 man zshzle recursive-edit
 man zshall MATCH
 
@@ -112,9 +105,6 @@ syntax highlighting on regex on grep|sed|awk
 androfecth CPU find
 
 fixnvim SIGHUP
-undo on word chunks
-
-pass zsh undohistnto nvim when edit-command-line
 
 add nvim diff swap file
 
