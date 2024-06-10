@@ -5,17 +5,24 @@ autoload edit-command-line
 
 zle -N accept-line
 accept-line() {
-	[[ "$BUFFER" =~ '[^[:space:]]' ]] && zle .$WIDGET
+	[[ "$BUFFER" =~ '[^[:space:]]' ]] && zle .accept-line
 }
 
+# Warning if pasting Ctrl-c:
+# Ctrl-c sends an interrupt signal instead of a literal ^C,
+# causing bracketed-paste to not trigger,
+# which breaks literal pasting functionality
 zle -N bracketed-paste
 bracketed-paste() {
-	local PASTED TRIMMED
-	zle .$WIDGET PASTED
-	read -d '' -r TRIMMED <<< "$PASTED"
+	local PASTED
+	zle .bracketed-paste PASTED
 
-	LBUFFER+="$TRIMMED"
-	[[ "$TRIMMED" =~ $'\n' ]] && zle edit-command-line
+	setopt LOCAL_OPTIONS EXTENDED_GLOB
+	PASTED="${PASTED##[[:space:]]#}"
+	PASTED="${PASTED%%[[:space:]]#}"
+
+	LBUFFER+="$PASTED"
+	[[ "$PASTED" =~ $'\n' ]] && zle edit-command-line
 }
 
 zle -N clear-screen
