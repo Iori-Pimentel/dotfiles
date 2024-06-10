@@ -57,6 +57,8 @@ read-input() {
 # <Docs> () { nvim +/function.$1 $(antidote path jimhester/$1)/$1.zsh } per-directory-history </Docs>
 # Addressed issue with per-directory-history-toggle-history creating a new
 # prompt at each call; resolved by copying the source code and removing zle -I.
+# FIXME: toggle-directory-history increases
+# history number everytime it is called
 zle -N toggle-directory-history
 toggle-directory-history() {
 	if [[ $_per_directory_history_is_global == true ]]; then
