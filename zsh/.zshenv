@@ -21,6 +21,7 @@ FZF_ARGS=(
 	--reverse
 	--info=inline-right
 	--ellipsis=
+	--separator=
 	--border=top
 	--select-1
 	--exit-0
