@@ -101,6 +101,7 @@ fzf-history() {
 	local FZF_ARGS=(
 		--ansi
 		--scheme=history
+		--query="^${LBUFFER//[^[:print:]]/ }"
 		# Exclude first field in search
 		# This allows ^command searches
 		--nth '2..'
