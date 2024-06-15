@@ -1,5 +1,9 @@
 HISTORY_BASE="${XDG_DATA_HOME}/zsh/directory-history"
 
+# Manually patched ~/.cache/antidote/agkozak/zsh-z/_zshz
+# so that completion uses shortened named directories.
+# This is different from ZSHZ_TILDE that only shortens $HOME to ~
+# Patch: completion_list=(${(fD)completions[@]})
 ZSHZ_DATA="${XDG_CACHE_HOME}/zsh/z"
 ZSHZ_NO_RESOLVE_SYMLINKS=1
 
