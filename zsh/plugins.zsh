@@ -3,8 +3,6 @@ source /data/data/com.termux/files/home/.cache/antidote/romkatv/powerlevel10k/po
 source /data/data/com.termux/files/home/.cache/antidote/romkatv/powerlevel10k/powerlevel9k.zsh-theme
 fpath+=( /data/data/com.termux/files/home/.cache/antidote/agkozak/zsh-z )
 source /data/data/com.termux/files/home/.cache/antidote/agkozak/zsh-z/zsh-z.plugin.zsh
-fpath+=( /data/data/com.termux/files/home/.cache/antidote/jimhester/per-directory-history )
-source /data/data/com.termux/files/home/.cache/antidote/jimhester/per-directory-history/per-directory-history.plugin.zsh
 fpath+=( /data/data/com.termux/files/home/.cache/antidote/Aloxaf/fzf-tab )
 source /data/data/com.termux/files/home/.cache/antidote/Aloxaf/fzf-tab/fzf-tab.plugin.zsh
 fpath+=( /data/data/com.termux/files/home/.cache/antidote/zsh-users/zsh-autosuggestions )

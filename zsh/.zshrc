@@ -19,3 +19,5 @@ source ${ZDOTDIR}/rc.d/aliases.zsh
 source ${ZDOTDIR}/rc.d/keys.zsh
 source ${ZDOTDIR}/rc.d/widgets.zsh
 source ${ZDOTDIR}/rc.d/misc.zsh
+
+source ${ZDOTDIR}/rc.d/directory-history.zsh
