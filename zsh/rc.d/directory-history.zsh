@@ -2,13 +2,10 @@ add-zsh-hook zshaddhistory mark-history-line
 mark-history-line() {
 	local PWD_HISTFILE=$HISTORY_BASE$PWD/history
 
-	# <Docs> man zshmisc | less +/fc.-p </Docs>
-	fc -p $PWD_HISTFILE.temp
-	setopt INC_APPEND_HISTORY
-
-	# This is necessary since `fc -p` does not
-	# create the directories automatically
 	mkdir --parent ${PWD_HISTFILE:h}
+	HISTFILE=$PWD_HISTFILE.temp
+
+	setopt INC_APPEND_HISTORY
 }
 
 add-zsh-hook preexec save-history-line
@@ -16,20 +13,13 @@ save-history-line() {
 	local PWD_HISTFILE=$HISTORY_BASE$PWD/history
 	[[ -s $PWD_HISTFILE.temp ]] || return
 
-	cat $PWD_HISTFILE.temp >> $HISTFILE
+	cat $PWD_HISTFILE.temp >> $GLOBAL_HISTFILE
 	cat $PWD_HISTFILE.temp >> $PWD_HISTFILE
 
-	# Adds history line back to internal history list,
-	# Counteracting the `fc -p` in mark-history-line
-	# that prevented it from being added.
-	# 
-	# This is better than using `print -sr -- $1`
-	# since `fc -p` unsets $1 for preexec hooks
-	# and using it in zshaddhistory hooks complicates
-	# if HISTORY_IGNORE or any HIST*IGNORE* options is set
-	fc -R $PWD_HISTFILE.temp
-
 	rm $PWD_HISTFILE.temp
+
+	# We want to preserve HISTFILE
+	HISTFILE=$GLOBAL_HISTFILE
 }
 
 add-zsh-hook precmd start-history-precmd
@@ -54,6 +44,7 @@ start-history-precmd() {
 local-history-list() {
 	local PWD_HISTFILE=$HISTORY_BASE$PWD/history
 
+	fc -P
 	fc -p $PWD_HISTFILE
 	CURRENT_HISTFILE=$PWD_HISTFILE
 
@@ -63,6 +54,7 @@ local-history-list() {
 }
 
 global-history-list() {
+	fc -P
 	fc -p $GLOBAL_HISTFILE
 	CURRENT_HISTFILE=$GLOBAL_HISTFILE
 }
