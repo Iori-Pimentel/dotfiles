@@ -3,7 +3,9 @@ mark-history-line() {
 	local PWD_HISTFILE=$HISTORY_BASE$PWD/history
 
 	mkdir --parent ${PWD_HISTFILE:h}
-	HISTFILE=$PWD_HISTFILE.temp
+
+	cat $CURRENT_HISTFILE > $CURRENT_HISTFILE.temp
+	HISTFILE=$CURRENT_HISTFILE
 
 	setopt INC_APPEND_HISTORY
 }
@@ -11,12 +13,11 @@ mark-history-line() {
 add-zsh-hook preexec save-history-line
 save-history-line() {
 	local PWD_HISTFILE=$HISTORY_BASE$PWD/history
-	[[ -s $PWD_HISTFILE.temp ]] || return
+	[[ -s $CURRENT_HISTFILE.temp ]] || return
 
-	cat $PWD_HISTFILE.temp >> $GLOBAL_HISTFILE
-	cat $PWD_HISTFILE.temp >> $PWD_HISTFILE
+	comm -13 $CURRENT_HISTFILE.temp $CURRENT_HISTFILE >> $OTHER_HISTFILE
 
-	rm $PWD_HISTFILE.temp
+	rm $CURRENT_HISTFILE.temp
 
 	# We want to preserve HISTFILE
 	HISTFILE=$GLOBAL_HISTFILE
@@ -47,6 +48,7 @@ local-history-list() {
 	fc -P
 	fc -p $PWD_HISTFILE
 	CURRENT_HISTFILE=$PWD_HISTFILE
+	OTHER_HISTFILE=$GLOBAL_HISTFILE
 
 	# <Docs> man zshbuiltins | less +/fc.-p +/one.argument </Docs>
 	# We want to preserve HISTFILE
@@ -54,9 +56,12 @@ local-history-list() {
 }
 
 global-history-list() {
+	local PWD_HISTFILE=$HISTORY_BASE$PWD/history
+
 	fc -P
 	fc -p $GLOBAL_HISTFILE
 	CURRENT_HISTFILE=$GLOBAL_HISTFILE
+	OTHER_HISTFILE=$PWD_HISTFILE
 }
 
 bindkey '^G' toggle-history-list
