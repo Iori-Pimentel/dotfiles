@@ -6,8 +6,17 @@ mark-history-line() {
 	HISTFILE=$CURRENT_HISTFILE
 
 	setopt INC_APPEND_HISTORY
+	local CP_ARGS=(
+		# treat DEST as normal file
+		--no-target-directory
+		# Skip if the .old file is still there.
+		# Which meant it has not been processed.
+		--update=none
+		$CURRENT_HISTFILE
+		$CURRENT_HISTFILE.old
+	)
 	touch $CURRENT_HISTFILE
-	cp --no-target-directory $CURRENT_HISTFILE $CURRENT_HISTFILE.old
+	cp "${CP_ARGS[@]}"
 
 	# <Docs> man zshmisc | less +/zshaddhistory +/returns.status </Docs>
 	return 0
@@ -25,11 +34,16 @@ save-history-line() {
 		)
 		mkdir --parent ${OTHER_HISTFILE:h}
 		comm "${COMM_ARGS[@]}" >> $OTHER_HISTFILE
+		rm $CURRENT_HISTFILE.old
 	fi
+
+	# We want to preserve HISTFILE
+	HISTFILE=$GLOBAL_HISTFILE
 }
 
 add-zsh-hook precmd start-history-precmd
 start-history-precmd() {
+	[[ $HISTFILE == '/'* ]] || HISTFILE=${XDG_DATA_HOME}/zsh/history
 	[[ $HISTORY_BASE == '/'* ]] || HISTORY_BASE=${XDG_DATA_HOME}/zsh/directory-history
 	[[ $HIST_START_LOCAL == false ]] || HIST_START_LOCAL=true
 	GLOBAL_HISTFILE=$HISTFILE
