@@ -116,6 +116,10 @@ fzf-history() {
 
 	zle reset-prompt
 
+	# Lines imported by SHARE_HISTORY option
+	# end with a * character which we ignore
+	HISTORY_NUM=${HISTORY_NUM%%[*]}
+
 	(( $HISTORY_NUM )) || return 1
 
 	# Updating HISTNO updates the BUFFER using a
