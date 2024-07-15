@@ -1,43 +1,22 @@
-add-zsh-hook zshaddhistory mark-history-line
-mark-history-line() {
-	[[ ${PWD:t} == $HIST_NAME ]] && return
-
-	mkdir --parent ${CURRENT_HISTFILE:h}
-	HISTFILE=$CURRENT_HISTFILE
-
+add-zsh-hook zshaddhistory before-save-history
+before-save-history() {
 	setopt INC_APPEND_HISTORY
-	local CP_ARGS=(
-		# treat DEST as normal file
-		--no-target-directory
-		# Skip if the .old file is still there.
-		# Which meant it has not been processed.
-		--update=none
-		$CURRENT_HISTFILE
-		$CURRENT_HISTFILE.old
-	)
-	touch $CURRENT_HISTFILE
-	cp "${CP_ARGS[@]}"
 
-	# <Docs> man zshmisc | less +/zshaddhistory +/returns.status </Docs>
-	return 0
+	mkdir --parent ${CURRENT_HISTFILE:h} ${OTHER_HISTFILE:h}
+	touch $CURRENT_HISTFILE
+
+	exec {HIST_FD}< $CURRENT_HISTFILE
+	<&$HIST_FD > /dev/null
+
+	HISTFILE=$CURRENT_HISTFILE
 }
 
-add-zsh-hook preexec save-history-line
-save-history-line() {
-	[[ ${PWD:t} == $HIST_NAME ]] && return
+add-zsh-hook preexec after-save-history
+after-save-history() {
+	# Assume only this process has written to CURRENT_HISTFILE
+	<&$HIST_FD >> $OTHER_HISTFILE
+	exec {HIST_FD}>&-
 
-	if [[ -f $CURRENT_HISTFILE.old && -f $CURRENT_HISTFILE ]]; then
-		local COMM_ARGS=(
-			-1 -3 # output lines unique to CURRENT_HISTFILE
-			$CURRENT_HISTFILE.old
-			$CURRENT_HISTFILE
-		)
-		mkdir --parent ${OTHER_HISTFILE:h}
-		comm "${COMM_ARGS[@]}" >> $OTHER_HISTFILE
-		rm $CURRENT_HISTFILE.old
-	fi
-
-	# We want to preserve HISTFILE
 	HISTFILE=$GLOBAL_HISTFILE
 }
 
