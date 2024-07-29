@@ -1,23 +1,19 @@
 add-zsh-hook zshaddhistory before-save-history
 before-save-history() {
+	HISTFILE=$CURRENT_HISTFILE
 	setopt INC_APPEND_HISTORY
 
-	mkdir --parent ${CURRENT_HISTFILE:h} ${OTHER_HISTFILE:h}
-	touch $CURRENT_HISTFILE
-
-	exec {HIST_FD}< $CURRENT_HISTFILE
+	exec {HIST_FD}< $CURRENT_HISTFILE 2>/dev/null || return
 	<&$HIST_FD > /dev/null
-
-	HISTFILE=$CURRENT_HISTFILE
 }
 
 add-zsh-hook preexec after-save-history
 after-save-history() {
+	HISTFILE=$GLOBAL_HISTFILE
+
 	# Assume only this process has written to CURRENT_HISTFILE
 	<&$HIST_FD >> $OTHER_HISTFILE
 	exec {HIST_FD}>&-
-
-	HISTFILE=$GLOBAL_HISTFILE
 }
 
 add-zsh-hook precmd start-history-precmd
@@ -46,25 +42,30 @@ start-history-precmd() {
 }
 
 local-history-list() {
-	local PWD_HISTFILE=$HISTORY_BASE$PWD/$HIST_NAME
-
-	fc -P
-	fc -p $PWD_HISTFILE
-	CURRENT_HISTFILE=$PWD_HISTFILE
+	CURRENT_HISTFILE=$HISTORY_BASE$PWD/$HIST_NAME
 	OTHER_HISTFILE=$GLOBAL_HISTFILE
 
-	# <Docs> man zshbuiltins | less +/fc.-p +/one.argument </Docs>
-	# We want to preserve HISTFILE
-	HISTFILE=$GLOBAL_HISTFILE
+	set-history-list
 }
 
 global-history-list() {
-	local PWD_HISTFILE=$HISTORY_BASE$PWD/$HIST_NAME
+	CURRENT_HISTFILE=$GLOBAL_HISTFILE
+	OTHER_HISTFILE=$HISTORY_BASE$PWD/$HIST_NAME
+
+	set-history-list
+}
+
+set-history-list() {
+	[[ -d ${CURRENT_HISTFILE:h} ]] || mkdir --parent ${CURRENT_HISTFILE:h}
+	[[ -f ${CURRENT_HISTFILE} ]] || touch ${CURRENT_HISTFILE}
+
+	[[ -d ${OTHER_HISTFILE:h} ]] || mkdir --parent ${OTHER_HISTFILE:h}
+	[[ -f ${OTHER_HISTFILE} ]] || touch ${OTHER_HISTFILE}
 
 	fc -P
-	fc -p $GLOBAL_HISTFILE
-	CURRENT_HISTFILE=$GLOBAL_HISTFILE
-	OTHER_HISTFILE=$PWD_HISTFILE
+	fc -p $CURRENT_HISTFILE
+
+	HISTFILE=$GLOBAL_HISTFILE
 }
 
 bindkey '^G' toggle-history-list
