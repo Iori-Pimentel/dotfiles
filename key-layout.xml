@@ -34,14 +34,14 @@ Horizontal spacing: 2dp
 		<shift a="^" b="|"/>
 		<shift a="$" b="&amp;"/>
 		<shift a="/" b="?"/>
-		<shift a="-" b="+"/>
-		<shift a="_" b="="/>
+		<shift a="-" b="_"/>
+		<shift a="=" b="+"/>
 		<shift a="*" b="\#"/>
 		<shift a=":" b="\\"/>
 		<shift a=";" b=","/>
-		<shift a="'" b="`"/>
-		<shift a="&quot;" b="!"/>
-		<shift a="%" b="\@"/>
+		<shift a="'" b="&quot;"/>
+		<shift a="`" b="\@"/>
+		<shift a="%" b="!"/>
 		<shift a="" b="~"/> <!-- "" maps to arrows key0 -->
 		<shift a="(" b="{"/>
 		<shift a=")" b="}"/>
@@ -79,13 +79,13 @@ Horizontal spacing: 2dp
 		<key key0="v"/>
 		<key key0="b"/>
 		<key key0="n" sw="/" ne=":" se="*"/>
-		<key key0="m" sw="&quot;" se="'" ne="0"/>
+		<key key0="m" sw="'" se="`" ne="0"/>
 		<key width="1.5" key0="backspace" ne="delete"/>
 	</row>
 	<row height="0.95">
 		<key width="1.7" key0="ctrl"/>
 		<key width="1.1" key0="." se="loc alt" sw="loc meta" nw="loc compose"/>
-		<key width="4.4" key0="space" nw="^" ne="$" s="_" n="-" sw=";" se="%"/>
+		<key width="4.4" key0="space" nw="^" ne="$" s="-" n="=" sw=";" se="%"/>
 		<key width="1.1" key0="" n="up" e="right" w="left" s="down"/>
 		<key width="1.7" key0="enter" ne="action" se="config"/>
 	</row>
