@@ -4,20 +4,21 @@ before-save-history() {
 	setopt INC_APPEND_HISTORY
 
 	exec {HIST_FD}< $CURRENT_HISTFILE 2>/dev/null || return
-	<&$HIST_FD > /dev/null
+	sysseek -u $HIST_FD -w end 0
 }
 
 add-zsh-hook preexec after-save-history
 after-save-history() {
 	HISTFILE=$GLOBAL_HISTFILE
 
-	# Assume only this process has written to CURRENT_HISTFILE
-	<&$HIST_FD >> $OTHER_HISTFILE
+	cat <&$HIST_FD >> $OTHER_HISTFILE &!
 	exec {HIST_FD}>&-
 }
 
 add-zsh-hook precmd start-history-precmd
 start-history-precmd() {
+	zmodload zsh/system 2>/dev/null # For sysseek
+
 	[[ $HISTFILE == '/'* ]] || HISTFILE=${XDG_DATA_HOME}/zsh/history
 	[[ $HISTORY_BASE == '/'* ]] || HISTORY_BASE=${XDG_DATA_HOME}/zsh/directory-history
 	[[ $HIST_START_LOCAL == false ]] || HIST_START_LOCAL=true
