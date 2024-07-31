@@ -44,7 +44,3 @@ zstyle ':zle:*path*' word-style unspecified
 zstyle ':zle:*path*' word-chars '/'
 zle -N backward-kill-word-{path,match}
 bindkey ${key[Esc]}${key[Backspace]} backward-kill-word-path
-
-# Replacing plugin keybind
-bindkey ${key[Esc]}'g' toggle-directory-history
-bindkey -r ${key[Ctrl]}'g'
