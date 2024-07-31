@@ -1,5 +1,7 @@
 add-zsh-hook zshaddhistory before-save-history
 before-save-history() {
+	# If SHARE_HISTORY option is set, using CURRENT_HISTFILE
+	# is needed so that the appropriate history is imported
 	HISTFILE=$CURRENT_HISTFILE
 	setopt INC_APPEND_HISTORY
 
@@ -11,8 +13,11 @@ add-zsh-hook preexec after-save-history
 after-save-history() {
 	HISTFILE=$GLOBAL_HISTFILE
 
+	(( $HIST_FD )) || return
 	cat <&$HIST_FD >> $OTHER_HISTFILE &!
+
 	exec {HIST_FD}>&-
+	unset HIST_FD
 }
 
 add-zsh-hook precmd start-history-precmd
