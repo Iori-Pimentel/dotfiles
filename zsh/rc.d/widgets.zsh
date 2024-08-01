@@ -62,6 +62,9 @@ fzf-history() {
 		1 # history starting from 1
 	)
 
+	# Filter duplicate commands
+	local AWK_ARG='{ line=$0; $1=""; if (!seen[$0]++) print line }'
+
 	local EXPRESSION_ARGS=(
 		'^[0-9]*'
 		# set dim and italic
@@ -92,6 +95,7 @@ fzf-history() {
 	local HISTORY_NUM _
 
 	fc "${FC_ARGS[@]}" |
+	awk "${AWK_ARG}" |
 	sed "${SED_ARGS[@]}" |
 	fzf "${FZF_ARGS[@]}" | read HISTORY_NUM _
 
