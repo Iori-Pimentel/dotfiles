@@ -3,6 +3,8 @@
 # https://github.com/HardcodedCat/termux-monet
 
 set -o errexit
+PS4='\e[36m deploy.sh:${LINENO} => \e[m'
+set -o xtrace
 
 [[ -d ~/storage ]] || termux-setup-storage
 
