@@ -5,7 +5,7 @@ before-save-history() {
 	HISTFILE=$CURRENT_HISTFILE
 	setopt INC_APPEND_HISTORY
 
-	exec {HIST_FD}< $CURRENT_HISTFILE 2>/dev/null || return
+	{ exec {HIST_FD}< $CURRENT_HISTFILE } 2>/dev/null || return
 	sysseek -u $HIST_FD -w end 0
 }
 
