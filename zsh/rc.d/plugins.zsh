@@ -5,6 +5,10 @@
 ZSHZ_DATA="${XDG_CACHE_HOME}/zsh/z"
 ZSHZ_NO_RESOLVE_SYMLINKS=1
 
+typeset -A ZSH_HIGHLIGHT_STYLES
+# Fixes comment visibility in gruvbox theme
+ZSH_HIGHLIGHT_STYLES[comment]='fg=magenta,bold'
+
 # hides unwanted prefix
 zstyle ':fzf-tab:*' prefix ''
 # enables colors for fzf-tab
