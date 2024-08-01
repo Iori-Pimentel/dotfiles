@@ -21,9 +21,7 @@ session-save() {
 # Called only once per session
 session-cd load
 
-# https://github.com/jimhester/per-directory-history/issues/31
-# Not using preexec() since $1 is empty caused by per-directory-history
-add-zsh-hook zshaddhistory command-title
+add-zsh-hook preexec command-title
 command-title() {
 	BUFFER="$1"
 	set-title "$BUFFER"

@@ -11,9 +11,9 @@ ln -sfT ${PREFIX}/etc/termux/{mirrors/asia,chosen_mirrors}
 
 pkg upgrade --yes
 packages=(
-	zsh git manpages tealdeer
+	zsh git manpages
 	eza bat fd ripgrep neovim
-	fzf termux-api openssh shellcheck
+	fzf termux-api openssh
 	clang  # c compiler for nvim-treesitter
 	stylua # formatter used by conform nvim
 	shfmt  # formatter not used by conform nvim
@@ -82,10 +82,7 @@ sed --in-place 's/color0.*/color0:  #787878/' ~/.termux/colors.properties
 
 termux-reload-settings
 touch ~/.hushlogin
-# Background processes
-tldr --update &
-nvim --headless "+Lazy! install" +qa &
-wait
+nvim --headless "+Lazy! install" +qa
 
 clear && chsh -s zsh && exec zsh
 

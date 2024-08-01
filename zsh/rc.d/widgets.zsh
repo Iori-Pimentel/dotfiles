@@ -1,5 +1,3 @@
-autoload modify-current-argument
-
 zle -N edit-command-line
 autoload edit-command-line
 
