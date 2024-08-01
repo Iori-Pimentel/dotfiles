@@ -16,6 +16,7 @@ export FZF_DEFAULT_COMMAND='fd --hidden'
 FZF_ARGS=(
 	--height=40%
 	--reverse
+	--ignore-case
 	--info=inline-right
 	--ellipsis=
 	--separator=
