@@ -1,26 +1,4 @@
-<!-- <?xml version="1.0" encoding="utf-8"?> -->
-<!-- Custom layout for tablets designed on vim keybindings
-App: https://github.com/Julow/Unexpected-Keyboard
-
-A layout is made of keys arranged into rows. Keys can be made bigger with the
-'width' attribute and blank space can be added on the left of a key with the
-'shift' attribute.
-
-'key0' assigns the symbol on the middle of the key. 'key1', 'key2', etc..
-assign symbols to the corners of a key, they are arranged like this:
-
-1 7 2
-5 0 6
-3 8 4
-
-Keys prefixed with 'loc ' are not visible on the keyboard. They are used to
-specify a place for a key, if it needed to be added to the layout later.
-(for example, by the "Add keys to keyboard" option)
-
-See bottom_row.xml for the definition of the bottom row and neo2.xml for a
-layout that re-defines it.
-See srcs/juloo.keyboard2/KeyValue.java for the keys that have a special meaning.
--->
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Theme Settings
 Theme: Dark
 Margin Bottom: 3dp
@@ -29,7 +7,7 @@ Horizontal Margin: 200dp
 Vertical spacing: 4dp
 Horizontal spacing: 2dp
 -->
-<keyboard bottom_row = "false" script="">
+<keyboard name="Termux Keyboard" bottom_row="false" locale_extra_keys="false">
 	<modmap>
 		<shift a="^" b="|"/>
 		<shift a="$" b="&amp;"/>
