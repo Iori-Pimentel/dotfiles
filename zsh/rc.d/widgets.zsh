@@ -54,19 +54,32 @@ read-input() {
 
 zle -N fzf-argument
 fzf-argument() {
-	zmodload zsh/parameter 2>/dev/null # For history parameter
-
 	# NOTE: historywords parameter is not used because it does not
 	# split properly if HIST_LEX_WORDS option is unset
-	# (u) unique elements only
+	zmodload zsh/parameter 2>/dev/null # For history parameter
+	local ARGS
+
 	# (z) split as shell arguments
-	LBUFFER+="$(printf '%s\0' "${(uz)history[@]}" | fzf --read0)"
+	ARGS=( "${(z)BUFFER}" "${(z)history[@]}" )
+
+	# :#  remove elements that match pattern
+	ARGS=( "${ARGS[@]:#*[^[:print:]]*}" )
+	ARGS=( "${ARGS[@]:#}" )
+
+	# (u) unique elements only
+	ARGS=( "${(u)ARGS[@]}" )
+
+	LBUFFER+="$(printf '%s\0' "${ARGS[@]}" | fzf --read0)"
 
 	zle reset-prompt
 }
 
 zle -N fzf-history
 fzf-history() {
+	zmodload zsh/parameter 2>/dev/null # For history parameter
+	# Fixes the problem of fc having output even with empty history
+	(( $#history > 0 )) || return 1
+
 	local FC_ARGS=(
 		-l # list
 		-r # reverse
@@ -101,8 +114,6 @@ fzf-history() {
 		--nth '2..'
 		# To hide it instead, use --with-nth
 	)
-
-	zle kill-buffer
 
 	local HISTORY_NUM _
 	fc "${FC_ARGS[@]}" |
