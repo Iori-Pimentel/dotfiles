@@ -52,6 +52,19 @@ read-input() {
 	read ${args[@]} $1
 }
 
+zle -N fzf-argument
+fzf-argument() {
+	zmodload zsh/parameter 2>/dev/null # For history parameter
+
+	# NOTE: historywords parameter is not used because it does not
+	# split properly if HIST_LEX_WORDS option is unset
+	# (u) unique elements only
+	# (z) split as shell arguments
+	LBUFFER+="$(printf '%s\0' "${(uz)history[@]}" | fzf --read0)"
+
+	zle reset-prompt
+}
+
 zle -N fzf-history
 fzf-history() {
 	local FC_ARGS=(
