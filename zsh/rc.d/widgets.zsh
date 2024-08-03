@@ -96,15 +96,15 @@ fzf-history() {
 	local FZF_ARGS=(
 		--ansi
 		--scheme=history
-		--query="^${LBUFFER//[^[:print:]]/ }"
 		# Exclude first field in search
 		# This allows ^command searches
 		--nth '2..'
 		# To hide it instead, use --with-nth
 	)
 
-	local HISTORY_NUM _
+	zle kill-buffer
 
+	local HISTORY_NUM _
 	fc "${FC_ARGS[@]}" |
 	awk "${AWK_ARG}" |
 	sed "${SED_ARGS[@]}" |
