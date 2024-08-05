@@ -97,12 +97,14 @@ fzf-history() {
 		--border-label="[tab]: query 'arg => *arg*"
 	)
 
+	before-fzf
 	local FZF_QUERY FZF_KEY HISTORY_NUM _
 	fc "${FC_ARGS[@]}" |
 	awk "${AWK_ARG}" |
 	sed "${SED_ARGS[@]}" |
 	fzf "${FZF_ARGS[@]}" |
 	{ read FZF_QUERY && read FZF_KEY && read HISTORY_NUM _ }
+	after-fzf
 
 	zle reset-prompt
 
@@ -177,9 +179,11 @@ fzf-files() {
 		)'
 	)
 
+	before-fzf
 	local FILE_PATH
 	FILE_PATH="$(fd "${FD_ARGS[@]}" 2>/dev/null | fzf "${FZF_ARGS[@]}")"
 	FILE_PATH="${FILE_PATH%$'\0'}"
+	after-fzf
 
 	# Dont know if setopt is necessary.
 	setopt LOCAL_OPTIONS LOCAL_TRAPS
@@ -190,4 +194,14 @@ fzf-files() {
 	[[ -z "${FILE_PATH}" ]] && return 1
 	# FIXME: does not preserve LBUFFER contents
 	compadd -P "${PREFIX}" -fW "${SEARCH_PATH}" -- "${FILE_PATH%/}"
+}
+
+# Fix for fzf clearing right side of current line
+before-fzf() {
+	echoti cud1 >/dev/tty
+	echoti civis >/dev/tty 2>/dev/null
+}
+after-fzf() {
+  echoti cuu1 >/dev/tty
+  echoti cnorm >/dev/tty 2>/dev/null
 }
