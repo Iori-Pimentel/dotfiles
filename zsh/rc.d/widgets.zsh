@@ -52,28 +52,6 @@ read-input() {
 	read ${args[@]} $1
 }
 
-zle -N fzf-argument
-fzf-argument() {
-	# NOTE: historywords parameter is not used because it does not
-	# split properly if HIST_LEX_WORDS option is unset
-	zmodload zsh/parameter 2>/dev/null # For history parameter
-	local ARGS
-
-	# (z) split as shell arguments
-	ARGS=( "${(z)BUFFER}" "${(z)history[@]}" )
-
-	# :#  remove elements that match pattern
-	ARGS=( "${ARGS[@]:#*[^[:print:]]*}" )
-	ARGS=( "${ARGS[@]:#}" )
-
-	# (u) unique elements only
-	ARGS=( "${(u)ARGS[@]}" )
-
-	LBUFFER+="$(printf '%s\0' "${ARGS[@]}" | fzf --read0)"
-
-	zle reset-prompt
-}
-
 zle -N fzf-history
 fzf-history() {
 	zmodload zsh/parameter 2>/dev/null # For history parameter
@@ -109,19 +87,46 @@ fzf-history() {
 	local FZF_ARGS=(
 		--ansi
 		--scheme=history
+		--print-query
+		--expect=tab
 		# Exclude first field in search
 		# This allows ^command searches
 		--nth '2..'
 		# To hide it instead, use --with-nth
+		--border-label-pos=3
+		--border-label="[tab]: query 'arg => *arg*"
 	)
 
-	local HISTORY_NUM _
+	local FZF_QUERY FZF_KEY HISTORY_NUM _
 	fc "${FC_ARGS[@]}" |
 	awk "${AWK_ARG}" |
 	sed "${SED_ARGS[@]}" |
-	fzf "${FZF_ARGS[@]}" | read HISTORY_NUM _
+	fzf "${FZF_ARGS[@]}" |
+	{ read FZF_QUERY && read FZF_KEY && read HISTORY_NUM _ }
 
 	zle reset-prompt
+
+	if [[ $FZF_KEY == tab ]]; then
+		local ARG_TO_MATCH ARG
+		# Last word in query
+		ARG_TO_MATCH=( "${=FZF_QUERY}" )
+		ARG_TO_MATCH="${ARG_TO_MATCH[-1]}"
+
+		# Assumes fzf --extended (which is default)
+		# Continue only if using ['] exact mode
+		[[ "${ARG_TO_MATCH}" == "'"* ]] || return
+		ARG_TO_MATCH="${ARG_TO_MATCH##[']}"
+
+		# split line into shell arguments
+		ARG=( "${(z)history[$HISTORY_NUM]}" )
+		# Search arguments that contains ARG_TO_MATCH
+		ARG=( "${(M)ARG[@]:#(#i)*${ARG_TO_MATCH}*}" )
+		# Select last argument
+		ARG="${ARG[-1]}"
+
+		LBUFFER+="${ARG}"
+		return
+	fi
 
 	# Lines imported by SHARE_HISTORY option
 	# end with a * character which we ignore
