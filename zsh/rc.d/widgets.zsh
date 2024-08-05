@@ -108,6 +108,12 @@ fzf-history() {
 
 	zle reset-prompt
 
+	# Lines imported by SHARE_HISTORY option
+	# end with a * character which we ignore
+	HISTORY_NUM=${HISTORY_NUM%%[*]}
+
+	(( $HISTORY_NUM )) || return 1
+
 	if [[ $FZF_KEY == tab ]]; then
 		local ARG_TO_MATCH ARG
 		# Last word in query
@@ -127,22 +133,15 @@ fzf-history() {
 		ARG="${ARG[-1]}"
 
 		LBUFFER+="${ARG}"
-		return
+	else
+		# Updating HISTNO updates the BUFFER using a
+		# history list that includes edits
+		# which doesn't match with fc so we use
+		# ${history[$HISTORY_NUM]} which matches
+		HISTNO="$HISTORY_NUM"
+		BUFFER="${history[$HISTORY_NUM]}"
+		CURSOR="$#BUFFER"
 	fi
-
-	# Lines imported by SHARE_HISTORY option
-	# end with a * character which we ignore
-	HISTORY_NUM=${HISTORY_NUM%%[*]}
-
-	(( $HISTORY_NUM )) || return 1
-
-	# Updating HISTNO updates the BUFFER using a
-	# history list that includes edits
-	# which doesn't match with fc so we use
-	# ${history[$HISTORY_NUM]} which matches
-	HISTNO="$HISTORY_NUM"
-	BUFFER="${history[$HISTORY_NUM]}"
-	CURSOR="$#BUFFER"
 }
 
 zle -C fzf-files complete-word fzf-files
