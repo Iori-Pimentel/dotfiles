@@ -198,9 +198,7 @@ fzf-files() {
 # Fix for fzf clearing right side of current line
 before-fzf() {
 	echoti cud1 >/dev/tty
-	echoti civis >/dev/tty 2>/dev/null
 }
 after-fzf() {
-  echoti cuu1 >/dev/tty
-  echoti cnorm >/dev/tty 2>/dev/null
+	echoti cuu1 >/dev/tty
 }
