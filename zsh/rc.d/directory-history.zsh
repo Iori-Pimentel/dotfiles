@@ -11,7 +11,7 @@ before-save-history() {
 
 add-zsh-hook preexec after-save-history
 after-save-history() {
-	HISTFILE=$GLOBAL_HISTFILE
+	[[ $PRESERVE_HISTFILE_PARAM == true ]] && HISTFILE=$GLOBAL_HISTFILE
 
 	(( $HIST_FD )) || return
 	cat <&$HIST_FD >> $OTHER_HISTFILE &!
@@ -27,6 +27,7 @@ start-history-precmd() {
 	[[ $HISTFILE == '/'* ]] || HISTFILE=${XDG_DATA_HOME}/zsh/history
 	[[ $HISTORY_BASE == '/'* ]] || HISTORY_BASE=${XDG_DATA_HOME}/zsh/directory-history
 	[[ $HIST_START_LOCAL == false ]] || HIST_START_LOCAL=true
+	[[ $PRESERVE_HISTFILE_PARAM == true ]] || PRESERVE_HISTFILE_PARAM=false
 	GLOBAL_HISTFILE=$HISTFILE
 	if [[ $HIST_NAME == */* || $HIST_NAME == '' ]]; then
 	# We make HIST_NAME really long so that it
@@ -71,7 +72,7 @@ set-history-list() {
 	fc -P
 	fc -p $CURRENT_HISTFILE
 
-	HISTFILE=$GLOBAL_HISTFILE
+	[[ $PRESERVE_HISTFILE_PARAM == true ]] && HISTFILE=$GLOBAL_HISTFILE
 }
 
 bindkey '^G' toggle-history-list
