@@ -13,13 +13,13 @@ barcursor() {
 # <Docs> man zshmisc | less +/SPECIAL.FUNCTIONS </Docs>
 autoload add-zsh-hook
 
+# Set previous PWD and OLDPWD
+session-cd load
+
 add-zsh-hook chpwd session-save
 session-save() {
 	session-cd save
 }
-
-# Called only once per session
-session-cd load
 
 add-zsh-hook preexec command-title
 command-title() {
@@ -30,4 +30,14 @@ command-title() {
 add-zsh-hook precmd directory-title
 directory-title() {
 	set-title "${(D)PWD}"
+}
+
+set-title() {
+	TITLE="$1"
+
+	# TODO: Find out why : breaks the title
+	TITLE="${TITLE//:/ }"
+	TITLE="${TITLE//[![:print:]]/ }"
+
+	printf '\e]2;%s\a' "${TITLE}" > $TTY
 }

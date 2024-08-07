@@ -3,10 +3,10 @@
 saveFile="${XDG_DATA_HOME}/zsh/lwd"
 
 if [[ $1 == 'load' ]] && [[ -r "$saveFile" ]]; then
-	local sessionPWD sessionOLDPWD IFS= #read depends on IFS
-	{ read -r sessionPWD && read -r sessionOLDPWD; } < "$saveFile"
+	local sessionPWD sessionOLDPWD
+	{ read -rd '' sessionPWD && read -rd '' sessionOLDPWD; } < "$saveFile"
 	[[ -d "$sessionOLDPWD" ]] && cd "$sessionOLDPWD"
 	[[ -d "$sessionPWD" ]] && cd "$sessionPWD"
 elif [[ $1 == 'save' ]]; then
-	printf '%s\n%s' "$PWD" "$OLDPWD" > "$saveFile"
+	printf '%s\0%s' "$PWD" "$OLDPWD" > "$saveFile"
 fi

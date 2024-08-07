@@ -1,17 +1,17 @@
 #!/bin/zsh
 
 git config --list --show-origin |
-	awk -F'[:\t]' "$(<<- 'EOF'
+	awk -F'[:\t]' --file <(<<- 'EOF'
 		{
-			key = $2; content = $3
-			arr[key] = arr[key] "\n\t" content
+			file = $2; content = $3
+			arr[file] = arr[file] "\n\t" content
 		}
 		END {
-			for (key in arr) {
-				system("zsh -c 'print -Df \\[%s] '" key)
-				print arr[key]
+			for (file in arr) {
+				system("zsh -c 'print -Df \\[%s] '" file)
+				print arr[file]
 			}
 		}
-		EOF
-	)" |
+	EOF
+	) |
 	bat --plain --language=ini # syntax highligthing

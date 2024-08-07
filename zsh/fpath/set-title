@@ -1,9 +1,0 @@
-#!/bin/zsh
-
-TITLE="$1"
-
-# TODO: Find out why : breaks the title
-TITLE="${TITLE//:/ }"
-TITLE="${TITLE//[![:print:]]/ }"
-
-printf '\e]2;%s\a' "${TITLE}" > $TTY
