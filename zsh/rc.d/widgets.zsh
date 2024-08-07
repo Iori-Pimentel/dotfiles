@@ -103,7 +103,7 @@ fzf-history() {
 	awk "${AWK_ARG}" |
 	sed "${SED_ARGS[@]}" |
 	fzf "${FZF_ARGS[@]}" |
-	{ read FZF_QUERY && read FZF_KEY && read HISTORY_NUM _ }
+	{ read -r FZF_QUERY && read FZF_KEY && read HISTORY_NUM _ }
 	after-fzf
 
 	zle reset-prompt
