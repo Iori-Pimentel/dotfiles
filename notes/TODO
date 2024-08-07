@@ -1,31 +1,21 @@
+fast-syntx-highlighting problems:
+	breaks when calling a completion widget
+	breaks on fzf-tab
+	unsets -match functions
+
 man trap
 man 7 signal
 man ps
 # to figure out which CHAR sends signals
 man stty
 
-pasting ^C^D causes a crash
 find why comment lines are being removed from history
 
 git diff show tabs and escape characters
 application mode vs raw mode
 chnage github tabsize using modelines
-learn CHASE_LINKS
-find if current path is symlink
-cd .. and ll .. is different in ~/storage/downloads
-does a program know if in a symbolic link
 
-add current histno at p10k prompt
 zshall compcontext
-
-# interesting
-man zshcontrib | less +/ABBREVIATED.DYNAMIC.REFERENCES.TO.DIRECTORIES
-
-https://stackoverflow.com/questions/76390333/is-there-an-escape-code-to-pause-the-terminal-screen-refresh
-
-autoload -Uz xtermctl ; xtermctl
-xtermctl --explain
-n ~PREFIX/share/zsh/5.9/functions/xtermctl
 
 learn lua
 read man zshcontrib
@@ -33,7 +23,7 @@ read man zshcontrib
 nvim g; g- g+
 nvim show search highlighting only when on word
 marks on cmdwin
-nvim go to insert to paste charwise
+nvim i_CTRL-R_" to paste charwise
 nvim :pu[!] to paste linewese
 git add -p # include untracked files
 increase highlight priority TextYankHighlight
@@ -43,25 +33,8 @@ nvim-treesitter highlight doesnt work when zl
 nvim add changes to qflist from git
 nvim :f := :bm
 
-nvim :h keytrans()
-nvim qq q Q
-nvim :echo(keytrans(@q))
-nvim :h ex-commands
-nvim :h <cWORD>
-nvim :h visual-operators
-nvim :h 'cpoptions'
-nvim :h 'diffexpr'
-nvim :h 'showbreak'
-nvim :h 'showmatch'
-nvim :h 'wildcharm'
-nvim :h 'wildmenu'
-nvim :h 'breakindent'
-nvim double click mouse to center cursor
 nvim :h ex-commands
 nvim :h redo-register
-nvim CTRL-R CTRL-W
-nvim CTRL-R CTRL-A
-nvim CTRL-R CTRL-L
 nvim ga # get ascii
 nvim digraphs
 nvim :h index
@@ -71,33 +44,19 @@ nvim [_i
 nvim ]_CTRL-i
 nvim ]_I
 nvim ]_i
-nvim v_gv
 
-manpages command for shell builtins?
-column vs pr
-zle infer-next-history <Right> key?
-zshall bracketed-paste-magic and its children
 zshall 'PARAMETERS SET BY THE SHELL'
 nvim universal ctags
 nvim :h ins-completion
-nvim :h dict
 nvim :h tag-stack
-man zshoptions
- SH_FILE_EXPANSION
+man zshoptions SH_FILE_EXPANSION
 # interesting
 man zshzle recursive-edit
 man zshall MATCH
 
 chsh - <TAB> redraws prompt
 
- function per-hist-dir-cmd-search() {
-    find ~/.directory_history -type f -name history -exec grep --color=always "${1}" {} + | sed -E 's/: [0-9:]+;//' | sed 's/\/history:/:/'
-}
-
-autosuggestion go to history for ctrl-o && delte history line from file command
 nvim auto :set ft=zsh for files in fpath
-
-dont run command if history expansion fails
 
 syntax highlighting on << EOF broken
 syntax highlighting on regex on grep|sed|awk
@@ -108,8 +67,6 @@ fixnvim SIGHUP
 
 add nvim diff swap file
 
-make colors function for easier echoti/terminfo
-
  man -a # not working
 
 run-help and which-command clear autosuggestion
@@ -119,16 +76,7 @@ no syntax highlighting when creating func .ex mman() { man -a $@ }
  fzf-tab glob operators, glob flags and glob qualifiers
 
 
-# Debugging
- set -x
- export PS4='+(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]:+${FUNCNAME[0]}(): }'
-
-z fzf-tab on directories
-
-
 nvim vi" keys doesnt pair correctly
 
 _path_files completion
 cd ~/./d/z
-
-open files using am
