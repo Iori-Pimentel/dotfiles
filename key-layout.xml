@@ -9,22 +9,26 @@ Horizontal spacing: 2dp
 -->
 <keyboard name="Termux Keyboard" bottom_row="false" locale_extra_keys="false">
 	<modmap>
-		<shift a="^" b="|"/>
-		<shift a="$" b="&amp;"/>
-		<shift a="/" b="?"/>
-		<shift a="-" b="_"/>
-		<shift a="=" b="+"/>
 		<shift a="*" b="\#"/>
-		<shift a=":" b="\\"/>
-		<shift a=";" b=","/>
-		<shift a="'" b="&quot;"/>
-		<shift a="`" b="\@"/>
-		<shift a="%" b="!"/>
-		<shift a="" b="~"/> <!-- "" maps to arrows key0 -->
-		<shift a="(" b="{"/>
-		<shift a=")" b="}"/>
+
 		<shift a="[" b="&lt;"/>
 		<shift a="]" b="&gt;"/>
+		<shift a="(" b="{"/>
+		<shift a=")" b="}"/>
+
+		<shift a="/" b="?"/>
+		<shift a=":" b="!"/>
+		<shift a=";" b=","/>
+		<shift a="%" b="'"/>
+		<shift a="@" b="&quot;"/>
+		<shift a="\\" b="`"/>
+
+		<shift a="=" b="^"/>
+		<shift a="-" b="&amp;"/>
+		<shift a="+" b="$"/>
+		<shift a="_" b="|"/>
+
+		<shift a="" b="~"/> <!-- "" maps to arrows key0 -->
 		</modmap>
 	<row>
 		<key key0="q" se="esc"/>
@@ -36,7 +40,7 @@ Horizontal spacing: 2dp
 		<key key0="u"/>
 		<key key0="i" sw="[" se="]"/>
 		<key key0="o" sw="(" se=")"/>
-		<key key0="p"/>
+		<key key0="p" sw="*"/>
 	</row>
 	<row>
 		<key shift="0.5" key0="a" nw="tab"/>
@@ -47,7 +51,7 @@ Horizontal spacing: 2dp
 		<key key0="h"/>
 		<key key0="j" sw="7" se="8" ne="9"/>
 		<key key0="k" sw="4" se="5" ne="6"/>
-		<key key0="l" sw="1" se="2" ne="3"/>
+		<key key0="l" sw="1" se="2" ne="3" nw="0"/>
 	</row>
 	<row>
 		<key width="1.5" key0="shift" sw="loc capslock"/>
@@ -56,14 +60,14 @@ Horizontal spacing: 2dp
 		<key key0="c"/>
 		<key key0="v"/>
 		<key key0="b"/>
-		<key key0="n" sw="/" ne=":" se="*"/>
-		<key key0="m" sw="'" se="`" ne="0"/>
+		<key key0="n" sw="/" ne=":" se=";"/>
+		<key key0="m" sw="%" se="\\" ne="@"/>
 		<key width="1.5" key0="backspace" ne="delete"/>
 	</row>
 	<row height="0.95">
 		<key width="1.7" key0="ctrl"/>
 		<key width="1.1" key0="." se="loc alt" sw="loc meta" nw="loc compose"/>
-		<key width="4.4" key0="space" nw="^" ne="$" s="-" n="=" sw=";" se="%"/>
+		<key width="4.4" key0="space" nw="=" ne="+" se="-" sw="_"/>
 		<key width="1.1" key0="" n="up" e="right" w="left" s="down"/>
 		<key width="1.7" key0="enter" ne="action" se="config"/>
 	</row>
