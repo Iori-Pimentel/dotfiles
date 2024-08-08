@@ -1,3 +1,5 @@
+nvim slow open lots of files cause by bufferline
+
 fast-syntx-highlighting problems:
 	breaks when calling a completion widget
 	breaks on fzf-tab
@@ -23,8 +25,6 @@ read man zshcontrib
 nvim g; g- g+
 nvim show search highlighting only when on word
 marks on cmdwin
-nvim i_CTRL-R_" to paste charwise
-nvim :pu[!] to paste linewese
 git add -p # include untracked files
 increase highlight priority TextYankHighlight
 The -- more -- prompt
@@ -38,12 +38,6 @@ nvim :h redo-register
 nvim ga # get ascii
 nvim digraphs
 nvim :h index
-nvim [_CTRL-i
-nvim [_I
-nvim [_i
-nvim ]_CTRL-i
-nvim ]_I
-nvim ]_i
 
 zshall 'PARAMETERS SET BY THE SHELL'
 nvim universal ctags
