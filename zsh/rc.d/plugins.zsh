@@ -35,9 +35,6 @@ ZSH_AUTOSUGGEST_CLEAR_WIDGETS=(
 	edit-command-line
 	quoted-insert
 )
-ZSH_AUTOSUGGEST_PARTIAL_ACCEPT_WIDGETS=(
-	forward-word
-)
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
 	os_icon dir per_directory_history vcs status
