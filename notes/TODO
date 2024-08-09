@@ -39,11 +39,9 @@ nvim ga # get ascii
 nvim digraphs
 nvim :h index
 
-zshall 'PARAMETERS SET BY THE SHELL'
 nvim universal ctags
 nvim :h ins-completion
 nvim :h tag-stack
-man zshoptions SH_FILE_EXPANSION
 # interesting
 man zshzle recursive-edit
 man zshall MATCH
