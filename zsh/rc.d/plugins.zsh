@@ -19,10 +19,15 @@ zstyle ':fzf-tab:*' show-group none
 zstyle ':fzf-tab:*' single-group color
 # prevents getting stuck when pressing ctrl-z
 zstyle ':fzf-tab:*' fzf-bindings 'ctrl-z:ignore'
+# causes fzf-tab to trigger immediately
+# instead of adding common prefix first
+zstyle ':completion:*' menu yes
 
 zstyle ':completion:*'            list-dirs-first  true
 zstyle ':completion:*:cd:*'       complete-options yes
 zstyle ':completion:*:parameters' ignored-patterns '_*'
+# search for new commands first
+zstyle ":completion:*:commands" rehash true
 
 # disables rebind on every precmd
 ZSH_AUTOSUGGEST_MANUAL_REBIND=true
