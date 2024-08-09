@@ -12,7 +12,7 @@ key=(
 	ShiftTab      '^[[Z'
 	Space         ' '
 
-	CtrlUp        '^[[1;5A'
+	ShiftUp       '^[[1;2A'
 	CtrlRight     '^[[1;5C'
 	CtrlLeft      '^[[1;5D'
 )
@@ -28,7 +28,7 @@ bindkey ${key[Esc]}${key[Enter]} edit-command-line
 
 # Custom widgets
 bindkey ${key[ShiftTab]} fzf-files
-bindkey ${key[CtrlUp]}   fzf-history
+bindkey ${key[ShiftUp]}  fzf-history
 
 # <Docs> man zshcontrib | less +/select-word-style +nn </Docs>
 # Movements delimited by shell arguments

@@ -94,7 +94,7 @@ fzf-history() {
 		--nth '2..'
 		# To hide it instead, use --with-nth
 		--border-label-pos=3
-		--border-label="[tab]: query 'arg => *arg*"
+		--border-label="[tab]: query 'arg => *arg* [enter]: go to history"
 	)
 
 	before-fzf
