@@ -28,28 +28,27 @@ clear-screen() {
 	clear # removes scrollback buffer
 }
 
-# Fixes pasting text for <Ctrl-v>
+# Bind widget to <Ctrl-v> (default)
+# Fixes <Ctrl-v>bracketed-paste
 zle -N quoted-insert
 quoted-insert() {
 	zle read-command
 
 	if [[ $REPLY == 'bracketed-paste' ]];then
 		zle -U $KEYS # starts bracketed-paste
-		return
+	else
+		LBUFFER+=$KEYS
+		zle read-input
+		LBUFFER+=$REPLY
 	fi
-
-	zle read-input VALUE
-	LBUFFER+=$KEYS$VALUE
 }
 
-# Fixes pasting text for <Esc>
+# Bind widget to <Esc>
+# Fixes <Esc>bracketed-paste
+# Ignores <Esc>undefined-key
 zle -N read-input
 read-input() {
-	local args=(
-		-t 0
-		-k $(( $KEYS_QUEUED_COUNT + 1 ))
-	)
-	read ${args[@]} $1
+	read -t0 -k $(( $KEYS_QUEUED_COUNT + $PENDING ))
 }
 
 zle -N fzf-history
