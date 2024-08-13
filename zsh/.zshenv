@@ -21,7 +21,6 @@ FZF_ARGS=(
 	--ellipsis=
 	--separator=
 	--border=top
-	--select-1
 	--exit-0
 	# Prevents getting stuck when used inside a widget
 	--bind=ctrl-z:ignore
