@@ -53,8 +53,6 @@ read-input() {
 
 zle -N fzf-history
 fzf-history() {
-	[[ $LASTWIDGET == $WIDGET ]] && zle toggle-history-list
-
 	zmodload zsh/parameter 2>/dev/null # For history parameter
 	# Fixes the problem of fc having output even with empty history
 	(( $#history > 0 )) || return 1
@@ -88,7 +86,7 @@ fzf-history() {
 	local FZF_ARGS=(
 		--ansi
 		--scheme=history
-		--bind=ctrl-r:abort
+		--bind=ctrl-r:'become(printf toggle)'
 		# Exclude first field in search
 		# This allows ^command searches
 		--nth '2..'
@@ -105,6 +103,11 @@ fzf-history() {
 	after-fzf
 
 	zle reset-prompt
+
+	# if fzf returned "toggle" instead of a number
+	if [[ $HISTORY_NUM == toggle ]]; then
+		zle toggle-history-list && zle -U $KEYS && return
+	fi
 
 	# Lines imported by SHARE_HISTORY option
 	# end with a * character which we ignore
