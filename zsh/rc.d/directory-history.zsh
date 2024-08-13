@@ -71,18 +71,18 @@ set-history-list() {
 
 	fc -P
 	fc -p $CURRENT_HISTFILE
+	stat=$?
 
 	[[ $PRESERVE_HISTFILE_PARAM == true ]] && HISTFILE=$GLOBAL_HISTFILE
+
+	return $stat
 }
 
-bindkey '^G' toggle-history-list
 zle -N toggle-history-list
 toggle-history-list() {
 	if [[ $CURRENT_HISTFILE == $GLOBAL_HISTFILE ]]; then
 		local-history-list
-		zle -M 'Using local history'
 	else
 		global-history-list
-		zle -M 'Using global history'
 	fi
 }
