@@ -53,6 +53,8 @@ read-input() {
 
 zle -N fzf-history
 fzf-history() {
+	[[ $LASTWIDGET == $WIDGET ]] && zle toggle-history-list
+
 	zmodload zsh/parameter 2>/dev/null # For history parameter
 	# Fixes the problem of fc having output even with empty history
 	(( $#history > 0 )) || return 1
@@ -86,6 +88,7 @@ fzf-history() {
 	local FZF_ARGS=(
 		--ansi
 		--scheme=history
+		--bind=ctrl-r:abort
 		# Exclude first field in search
 		# This allows ^command searches
 		--nth '2..'
