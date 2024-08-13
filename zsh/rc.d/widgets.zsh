@@ -86,14 +86,10 @@ fzf-history() {
 	local FZF_ARGS=(
 		--ansi
 		--scheme=history
-		--print-query
-		--expect=ctrl-r,tab
 		# Exclude first field in search
 		# This allows ^command searches
 		--nth '2..'
 		# To hide it instead, use --with-nth
-		--border-label-pos=3
-		--border-label="[tab]: query 'arg => *arg* [enter]: go to history"
 	)
 
 	before-fzf
@@ -102,7 +98,7 @@ fzf-history() {
 	awk "${AWK_ARG}" |
 	sed "${SED_ARGS[@]}" |
 	fzf "${FZF_ARGS[@]}" |
-	{ read -r FZF_QUERY && read FZF_KEY && read HISTORY_NUM _ }
+	read HISTORY_NUM _
 	after-fzf
 
 	zle reset-prompt
@@ -113,37 +109,13 @@ fzf-history() {
 
 	(( $HISTORY_NUM )) || return 1
 
-	if [[ $FZF_KEY == ctrl-r ]]; then
-		zle toggle-history-list
-		zle -U $KEYS
-	elif [[ $FZF_KEY == tab ]]; then
-		local ARG_TO_MATCH ARG
-		# Last word in query
-		ARG_TO_MATCH=( "${=FZF_QUERY}" )
-		ARG_TO_MATCH="${ARG_TO_MATCH[-1]}"
-
-		# Assumes fzf --extended (which is default)
-		# Continue only if using ['] exact mode
-		[[ "${ARG_TO_MATCH}" == "'"* ]] || return
-		ARG_TO_MATCH="${ARG_TO_MATCH##[']}"
-
-		# split line into shell arguments
-		ARG=( "${(z)history[$HISTORY_NUM]}" )
-		# Search arguments that contains ARG_TO_MATCH
-		ARG=( "${(M)ARG[@]:#(#i)*${ARG_TO_MATCH}*}" )
-		# Select last argument
-		ARG="${ARG[-1]}"
-
-		LBUFFER+="${ARG}"
-	else
-		# Updating HISTNO updates the BUFFER using a
-		# history list that includes edits
-		# which doesn't match with fc so we use
-		# ${history[$HISTORY_NUM]} which matches
-		HISTNO="$HISTORY_NUM"
-		BUFFER="${history[$HISTORY_NUM]}"
-		CURSOR="$#BUFFER"
-	fi
+	# Updating HISTNO updates the BUFFER using a
+	# history list that includes edits
+	# which doesn't match with fc so we use
+	# ${history[$HISTORY_NUM]} which matches
+	HISTNO="$HISTORY_NUM"
+	BUFFER="${history[$HISTORY_NUM]}"
+	CURSOR="$#BUFFER"
 }
 
 zle -C fzf-files complete-word fzf-files

@@ -82,7 +82,9 @@ zle -N toggle-history-list
 toggle-history-list() {
 	if [[ $CURRENT_HISTFILE == $GLOBAL_HISTFILE ]]; then
 		local-history-list
+		zle -M 'Using local history'
 	else
 		global-history-list
+		zle -M 'Using global history'
 	fi
 }
