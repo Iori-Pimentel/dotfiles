@@ -10,13 +10,14 @@ fi
 
 autoload ${ZDOTDIR}/fpath/*
 
-# After {hooks,p10k}.zsh: plugins.zsh
-source ${ZDOTDIR}/rc.d/hooks.zsh
-source ${ZDOTDIR}/rc.d/p10k.zsh
-source ${ZDOTDIR}/rc.d/plugins.zsh
-source ${ZDOTDIR}/rc.d/directory-history.zsh
-# After plugins.zsh: {aliases,keys}.zsh
+# Files with no function definition
+source ${ZDOTDIR}/rc.d/misc.zsh
 source ${ZDOTDIR}/rc.d/aliases.zsh
 source ${ZDOTDIR}/rc.d/keys.zsh
+# Files with function definition
 source ${ZDOTDIR}/rc.d/widgets.zsh
-source ${ZDOTDIR}/rc.d/misc.zsh
+source ${ZDOTDIR}/rc.d/directory-history.zsh
+source ${ZDOTDIR}/rc.d/hooks.zsh
+# Files with plugins
+source ${ZDOTDIR}/rc.d/p10k.zsh
+source ${ZDOTDIR}/rc.d/plugins.zsh

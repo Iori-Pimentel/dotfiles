@@ -4,6 +4,7 @@
 # Patch: completion_list=(${(fD)completions[@]})
 ZSHZ_DATA="${XDG_CACHE_HOME}/zsh/z"
 ZSHZ_NO_RESOLVE_SYMLINKS=1
+ZSHZ_CMD=z-plugin
 
 typeset -A ZSH_HIGHLIGHT_STYLES
 # Fixes comment visibility in gruvbox theme
