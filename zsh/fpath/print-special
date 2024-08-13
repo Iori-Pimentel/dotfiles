@@ -1,0 +1,17 @@
+#!/bin/zsh
+
+local KEY=$1 && shift
+local ARGS=$@
+
+if [[ $KEY == title ]]; then
+	ARGS="${ARGS//:/ }"
+	ARGS="${ARGS//[![:print:]]/ }"
+fi
+
+local -A ESCAPE_CODES
+ESCAPE_CODES=(
+	barcursor '\e[5 q'
+	title     '\e]2;%s\a'
+)
+
+printf "${ESCAPE_CODES[$KEY]}" "${ARGS}" > $TTY

@@ -9,6 +9,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 autoload ${ZDOTDIR}/fpath/*
+print-special barcursor
 
 # Files with no function definition
 source ${ZDOTDIR}/rc.d/misc.zsh
