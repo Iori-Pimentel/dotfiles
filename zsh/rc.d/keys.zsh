@@ -28,7 +28,7 @@ bindkey ${key[Esc]}${key[Enter]} edit-command-line
 
 # Custom widgets
 bindkey ${key[ShiftTab]} fzf-files
-bindkey ${key[ShiftUp]}  fzf-history
+bindkey ${key[Ctrl]}'r'  fzf-history
 
 # <Docs> man zshcontrib | less +/select-word-style +nn </Docs>
 # Movements delimited by shell arguments

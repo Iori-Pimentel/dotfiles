@@ -87,8 +87,7 @@ fzf-history() {
 		--ansi
 		--scheme=history
 		--print-query
-		--expect=tab,ctrl-g
-		--query=$1
+		--expect=ctrl-r,tab
 		# Exclude first field in search
 		# This allows ^command searches
 		--nth '2..'
@@ -114,9 +113,9 @@ fzf-history() {
 
 	(( $HISTORY_NUM )) || return 1
 
-	if [[ $FZF_KEY == ctrl-g ]]; then
+	if [[ $FZF_KEY == ctrl-r ]]; then
 		zle toggle-history-list
-		zle fzf-history
+		zle -U $KEYS
 	elif [[ $FZF_KEY == tab ]]; then
 		local ARG_TO_MATCH ARG
 		# Last word in query
