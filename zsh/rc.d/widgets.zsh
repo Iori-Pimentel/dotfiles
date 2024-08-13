@@ -66,28 +66,29 @@ fzf-history() {
 	# Filter duplicate commands
 	local AWK_ARG='{ line=$0; $1=""; if (!seen[$0]++) print line }'
 
-	local EXPRESSION_ARGS=(
-		'^[0-9]*'
-		# set dim and italic
-		$'\e[2;3m'
-		# reset
-		$'\e[m'
-	)
+	local SET_COLOR
+	local RESET_COLOR=$'\e[m'
+	# zsh/rc.d/directory-history.zsh colors
+	if [[ $CURRENT_HISTFILE == $GLOBAL_HISTFILE ]]
+	then SET_COLOR=$'\e[33m' # Yellow
+	elif [[ $OTHER_HISTFILE == $GLOBAL_HISTFILE ]]
+	then SET_COLOR=$'\e[35m' # Magenta
+	else SET_COLOR=$'\e[2;3m' # dim and italic
+	fi
 
 	local SED_ARGS=(
 		# Convert first column from right to left align
 		--expression='s/^[[:space:]]*//'
 		# Set styles for first column
-		--expression="$(
-			printf 's/%s/%s&%s/' "${EXPRESSION_ARGS[@]}"
-		)"
+		--expression='s/^[0-9]*/'${SET_COLOR}'&'${RESET_COLOR}'/'
 	)
 
 	local FZF_ARGS=(
 		--ansi
 		--scheme=history
 		--print-query
-		--expect=tab
+		--expect=tab,ctrl-g
+		--query=$1
 		# Exclude first field in search
 		# This allows ^command searches
 		--nth '2..'
@@ -113,7 +114,10 @@ fzf-history() {
 
 	(( $HISTORY_NUM )) || return 1
 
-	if [[ $FZF_KEY == tab ]]; then
+	if [[ $FZF_KEY == ctrl-g ]]; then
+		zle toggle-history-list
+		zle fzf-history
+	elif [[ $FZF_KEY == tab ]]; then
 		local ARG_TO_MATCH ARG
 		# Last word in query
 		ARG_TO_MATCH=( "${=FZF_QUERY}" )
