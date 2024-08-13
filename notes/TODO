@@ -1,3 +1,8 @@
+zsh-autosuggestion problems:
+	race condition
+	accept-line on syntax error breaks it
+	todo: ignore multiline
+
 nvim slow open lots of files cause by bufferline
 
 fast-syntx-highlighting problems:
