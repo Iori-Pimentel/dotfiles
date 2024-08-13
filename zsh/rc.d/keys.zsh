@@ -12,7 +12,6 @@ key=(
 	ShiftTab      '^[[Z'
 	Space         ' '
 
-	ShiftUp       '^[[1;2A'
 	CtrlRight     '^[[1;5C'
 	CtrlLeft      '^[[1;5D'
 )

@@ -6,10 +6,8 @@ accept-line() {
 	[[ "$BUFFER" =~ '[^[:space:]]' ]] && zle .accept-line
 }
 
-# Warning if pasting Ctrl-c:
-# Ctrl-c sends an interrupt signal instead of a literal ^C,
-# causing bracketed-paste to not trigger,
-# which breaks literal pasting functionality
+# Avoid pasting Ctrl-C, as it interrupts
+# the process and breaks pasting functionality.
 zle -N bracketed-paste
 bracketed-paste() {
 	local PASTED
@@ -25,7 +23,7 @@ bracketed-paste() {
 
 zle -N clear-screen
 clear-screen() {
-	clear # removes scrollback buffer
+	clear # Remove scrollback buffer
 }
 
 # Bind widget to <Ctrl-v> (default)
@@ -34,8 +32,8 @@ zle -N quoted-insert
 quoted-insert() {
 	zle read-command
 
-	if [[ $REPLY == 'bracketed-paste' ]];then
-		zle -U $KEYS # starts bracketed-paste
+	if [[ $REPLY == 'bracketed-paste' ]]; then
+		zle -U $KEYS
 	else
 		LBUFFER+=$KEYS
 		zle read-input
@@ -89,8 +87,8 @@ fzf-history() {
 		--bind=ctrl-r:'become(printf toggle)'
 		# Exclude first field in search
 		# This allows ^command searches
+		# Use --with-nth to hide field
 		--nth '2..'
-		# To hide it instead, use --with-nth
 	)
 
 	before-fzf
@@ -98,8 +96,7 @@ fzf-history() {
 	fc "${FC_ARGS[@]}" |
 	awk "${AWK_ARG}" |
 	sed "${SED_ARGS[@]}" |
-	fzf "${FZF_ARGS[@]}" |
-	read HISTORY_NUM _
+	fzf "${FZF_ARGS[@]}" | read HISTORY_NUM _
 	after-fzf
 
 	zle reset-prompt
@@ -164,14 +161,12 @@ fzf-files() {
 	FILE_PATH="${FILE_PATH%$'\0'}"
 	after-fzf
 
-	# Dont know if setopt is necessary.
 	setopt LOCAL_OPTIONS LOCAL_TRAPS
 	# Special case for completion widgets:
 	# Cannot call zle directly. Must use TRAPEXIT.
 	TRAPEXIT() { zle reset-prompt }
 
 	[[ -z "${FILE_PATH}" ]] && return 1
-	# FIXME: does not preserve LBUFFER contents
 	compadd -P "${PREFIX}" -fW "${SEARCH_PATH}" -- "${FILE_PATH%/}"
 }
 

@@ -2,13 +2,12 @@
 
 FZF_ARGS=(
 	--height=100% --preview-window='right:75%:wrap'
-	--preview 'pkg show {} 2> /dev/null |
+	--preview='pkg show {} 2> /dev/null |
 		bat --color=always --pager=never --decorations=never --language=yaml'
 )
 
 pkg list-all 2> /dev/null |
 	awk '!/^Listing[.][.][.]$/' |
 	awk -F/ '{ print $1 }' |
-	fzf ${FZF_ARGS[@]} |
-	read PKG &&
+	fzf ${FZF_ARGS[@]} | read PKG &&
 	print -z pkg install $PKG

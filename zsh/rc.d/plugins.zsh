@@ -1,14 +1,10 @@
-# Manually patched ~/.cache/antidote/agkozak/zsh-z/_zshz
-# so that completion uses shortened named directories.
-# This is different from ZSHZ_TILDE that only shortens $HOME to ~
-# Patch: completion_list=(${(fD)completions[@]})
 ZSHZ_DATA="${XDG_CACHE_HOME}/zsh/z"
 ZSHZ_NO_RESOLVE_SYMLINKS=1
 ZSHZ_CMD=z-plugin
 
 typeset -A ZSH_HIGHLIGHT_STYLES
-# Fixes comment visibility in gruvbox theme
-ZSH_HIGHLIGHT_STYLES[comment]='fg=magenta,bold'
+# Fix highlight visibility in gruvbox theme
+ZSH_HIGHLIGHT_STYLES[comment]='fg=white,bold'
 
 # hides unwanted prefix
 zstyle ':fzf-tab:*' prefix ''
@@ -27,7 +23,7 @@ zstyle ':completion:*' menu yes
 zstyle ':completion:*'            list-dirs-first  true
 zstyle ':completion:*:cd:*'       complete-options yes
 zstyle ':completion:*:parameters' ignored-patterns '_*'
-# search for new commands first
+# searches for new commands during completion
 zstyle ":completion:*:commands" rehash true
 
 # disables rebind on every precmd

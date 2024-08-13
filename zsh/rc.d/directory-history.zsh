@@ -27,7 +27,7 @@ start-history-precmd() {
 	[[ $HISTFILE == '/'* ]] || HISTFILE=${XDG_DATA_HOME}/zsh/history
 	[[ $HISTORY_BASE == '/'* ]] || HISTORY_BASE=${XDG_DATA_HOME}/zsh/directory-history
 	[[ $HIST_START_LOCAL == false ]] || HIST_START_LOCAL=true
-	[[ $PRESERVE_HISTFILE_PARAM == true ]] || PRESERVE_HISTFILE_PARAM=false
+	[[ $PRESERVE_HISTFILE_PARAM == false ]] || PRESERVE_HISTFILE_PARAM=true
 	GLOBAL_HISTFILE=$HISTFILE
 	if [[ $HIST_NAME == */* || $HIST_NAME == '' ]]; then
 	# We make HIST_NAME really long so that it
