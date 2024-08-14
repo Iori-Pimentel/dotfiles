@@ -52,65 +52,29 @@ read-input() {
 zle -N fzf-history
 fzf-history() {
 	zmodload zsh/parameter 2>/dev/null # For history parameter
+	print-special downline
+
+	{
+	while true; do
+		history-list-fzf --no-clear | read HISTORY_NUM _
+
+		# Those imported by SHARE_HISTORY option
+		# end with a * character which we ignore
+		HISTORY_NUM=${HISTORY_NUM%%[*]}
+
+		if [[ $HISTORY_NUM == toggle ]]
+		then zle toggle-history-list
+		elif (( $HISTORY_NUM ))
+		then break; else return
+		fi
+	done
+	} always {
+		print-special upline
+		zle reset-prompt
+	}
+
 	# Fixes the problem of fc having output even with empty history
-	(( $#history > 0 )) || return 1
-
-	local FC_ARGS=(
-		-l # list
-		-r # reverse
-		1 # history starting from 1
-	)
-
-	# Filter duplicate commands
-	local AWK_ARG='{ line=$0; $1=""; if (!seen[$0]++) print line }'
-
-	local SET_COLOR
-	local RESET_COLOR=$'\e[m'
-	# zsh/rc.d/directory-history.zsh colors
-	if [[ $CURRENT_HISTFILE == $GLOBAL_HISTFILE ]]
-	then SET_COLOR=$'\e[33m' # Yellow
-	elif [[ $OTHER_HISTFILE == $GLOBAL_HISTFILE ]]
-	then SET_COLOR=$'\e[35m' # Magenta
-	else SET_COLOR=$'\e[2;3m' # dim and italic
-	fi
-
-	local SED_ARGS=(
-		# Convert first column from right to left align
-		--expression='s/^[[:space:]]*//'
-		# Set styles for first column
-		--expression='s/^[0-9]*/'${SET_COLOR}'&'${RESET_COLOR}'/'
-	)
-
-	local FZF_ARGS=(
-		--ansi
-		--scheme=history
-		--bind=ctrl-r:'become(printf toggle)'
-		# Exclude first field in search
-		# This allows ^command searches
-		# Use --with-nth to hide field
-		--nth '2..'
-	)
-
-	before-fzf
-	local FZF_QUERY FZF_KEY HISTORY_NUM _
-	fc "${FC_ARGS[@]}" |
-	awk "${AWK_ARG}" |
-	sed "${SED_ARGS[@]}" |
-	fzf "${FZF_ARGS[@]}" | read HISTORY_NUM _
-	after-fzf
-
-	zle reset-prompt
-
-	# if fzf returned "toggle" instead of a number
-	if [[ $HISTORY_NUM == toggle ]]; then
-		zle toggle-history-list && zle -U $KEYS && return
-	fi
-
-	# Lines imported by SHARE_HISTORY option
-	# end with a * character which we ignore
-	HISTORY_NUM=${HISTORY_NUM%%[*]}
-
-	(( $HISTORY_NUM )) || return 1
+	(( $#history > 0 )) || return
 
 	# Updating HISTNO updates the BUFFER using a
 	# history list that includes edits
@@ -155,11 +119,11 @@ fzf-files() {
 		)'
 	)
 
-	before-fzf
+	print-special downline
 	local FILE_PATH
 	FILE_PATH="$(fd "${FD_ARGS[@]}" 2>/dev/null | fzf "${FZF_ARGS[@]}")"
 	FILE_PATH="${FILE_PATH%$'\0'}"
-	after-fzf
+	print-special upline
 
 	setopt LOCAL_OPTIONS LOCAL_TRAPS
 	# Special case for completion widgets:
@@ -168,12 +132,4 @@ fzf-files() {
 
 	[[ -z "${FILE_PATH}" ]] && return 1
 	compadd -P "${PREFIX}" -fW "${SEARCH_PATH}" -- "${FILE_PATH%/}"
-}
-
-# Fix for fzf clearing right side of current line
-before-fzf() {
-	echoti cud1 >/dev/tty
-}
-after-fzf() {
-	echoti cuu1 >/dev/tty
 }

@@ -10,8 +10,17 @@ fi
 
 local -A ESCAPE_CODES
 ESCAPE_CODES=(
-	barcursor '\e[5 q'
-	title     '\e]2;%s\a'
+	barcursor  '\e[5 q'
+	title      '\e]2;%s\a'
+	showcursor '\e[?25h'
+	hidecursor '\e[?25l'
+
+	upcursor    '\e[%sA'
+	downcursor  '\e[%sB'
+	rightcursor '\e[%sC'
+	leftcursor  '\e[%sD'
+	downline    '\e[%sE'
+	upline      '\e[%sF'
 )
 
 printf "${ESCAPE_CODES[$KEY]}" "${ARGS}" > $TTY
