@@ -5,7 +5,6 @@ autoload add-zle-hook-widget
 # <Docs> man zshmisc | less +/SPECIAL.FUNCTIONS </Docs>
 autoload add-zsh-hook
 
-zle -N barcursor
 add-zle-hook-widget line-pre-redraw barcursor
 add-zle-hook-widget line-init       barcursor
 barcursor() {
