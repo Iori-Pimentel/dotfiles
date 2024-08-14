@@ -1,3 +1,6 @@
+typeset -T tie scalar to trace function
+nvim disable italic if no monet in TERMUX_VERSION
+
 zsh-autosuggestion problems:
 	race condition
 	accept-line on syntax error breaks it
