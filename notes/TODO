@@ -19,8 +19,6 @@ man ps
 # to figure out which CHAR sends signals
 man stty
 
-find why comment lines are being removed from history
-
 git diff show tabs and escape characters
 application mode vs raw mode
 chnage github tabsize using modelines

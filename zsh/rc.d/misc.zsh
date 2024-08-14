@@ -8,7 +8,6 @@ setopt no_FLOW_CONTROL # disable ^S and ^Q
 
 setopt INC_APPEND_HISTORY # appends to the history file immediately
 setopt EXTENDED_HISTORY   # add timestamps in commands
-setopt HIST_REDUCE_BLANKS # trim multiple insgnificant blanks in history
 setopt HIST_IGNORE_SPACE  # don’t store lines starting with space
 
 mkdir -p "${XDG_DATA_HOME}/zsh"
