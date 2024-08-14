@@ -5,6 +5,7 @@ ZSHZ_CMD=z-plugin
 typeset -A ZSH_HIGHLIGHT_STYLES
 # Fix highlight visibility in gruvbox theme
 ZSH_HIGHLIGHT_STYLES[comment]='fg=white,bold'
+ZSH_HIGHLIGHT_MAXLENGTH=100
 
 # hides unwanted prefix
 zstyle ':fzf-tab:*' prefix ''
@@ -30,6 +31,8 @@ zstyle ":completion:*:commands" rehash true
 ZSH_AUTOSUGGEST_MANUAL_REBIND=true
 # default strategy: history
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+# Ignore history longer than 100 chars or has newline
+ZSH_AUTOSUGGEST_HISTORY_IGNORE=$'?(#c100,)|*\n*'
 ZSH_AUTOSUGGEST_CLEAR_WIDGETS=(
 	accept-line
 	bracketed-paste
