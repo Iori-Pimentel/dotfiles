@@ -36,14 +36,6 @@ opt.listchars = {
 	trail = ".",
 }
 
-if vim.fn.executable("rg") == 1 then
-	opt.grepprg = "rg --vimgrep"
-	opt.grepformat:prepend("%f:%l:%c:%m") -- fix cursor to be in correct column
-else
-	-- works only inside git repo
-	opt.grepprg = "git grep -n"
-end
-
 opt.tabstop = 2
 opt.shiftwidth = 2
 opt.softtabstop = 2
