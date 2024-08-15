@@ -20,6 +20,7 @@ autocmd("TextYankPost", {
 autocmd({ "BufWinEnter", "CursorMoved", "CursorMovedI" }, {
 	group = default,
 	callback = function()
+		-- FIXME :e! triggers BufWinEnter with col of 1
 		local col = vim.fn.charcol(".")
 		vim.wo.list = col == 1 and vim.bo.modifiable
 	end,
