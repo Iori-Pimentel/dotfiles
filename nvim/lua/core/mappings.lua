@@ -3,7 +3,6 @@ map({ "n", "v" }, " ", "<Nop>")
 vim.g.mapleader = " "
 
 map("n", "<leader>n", "<CMD>setlocal number!<CR>")
-map("n", "q:", "q:$k")
 
 map("n", "[q", "<CMD>cprev<CR>")
 map("n", "]q", "<CMD>cnext<CR>")
@@ -16,10 +15,6 @@ map("n", "]b", "<CMD>later 1f<CR>")
 -- Moves screen and not cursor when scrolling
 map("i", "<Up>", "<c-x><c-y>")
 map("i", "<Down>", "<c-x><c-e>")
-
--- Navigation that remembers column position
-map("i", "<c-j>", "<c-g>j")
-map("i", "<c-k>", "<c-g>k")
 
 -- excludes whitespace on motion
 map("o", [[a"]], [[2i"]])
