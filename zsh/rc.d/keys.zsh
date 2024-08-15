@@ -19,7 +19,7 @@ key=(
 bindkey -A emacs main
 bindkey ${key[Esc]} read-input
 
-# <Docs> man zshzle | less +/^STANDARD.WIDGETS </Docs>
+# <Docs> man zshzle | less +/STANDARD.WIDGETS </Docs>
 bindkey ${key[Esc]}'u'  undo
 bindkey ${key[Ctrl]}'u' kill-buffer
 bindkey ${key[Delete]}  delete-char
