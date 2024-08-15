@@ -39,15 +39,16 @@ return {
 			},
 		})
 
-		local function setup_cmp(mode, sources)
+		for _, setup in ipairs({
+			{ modes = { "/", "?" }, sources = { { name = "buffer" } } },
+			{ modes = { ":" }, sources = { { name = "path" }, { name = "cmdline" } } },
+		}) do
 			local config = {
 				mapping = cmp.mapping.preset.cmdline(),
-				sources = sources,
+				sources = setup.sources,
 			}
-			cmp.setup.cmdline(mode, config)
-		end
 
-		setup_cmp({ "/", "?" }, { { name = "buffer" } })
-		setup_cmp(":", { { name = "path" }, { name = "cmdline" } })
+			cmp.setup.cmdline(setup.modes, config)
+		end
 	end,
 }
