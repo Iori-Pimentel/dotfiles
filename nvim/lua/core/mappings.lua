@@ -32,13 +32,9 @@ map("n", ".", [[.`.]])
 map("v", "{", [[<CMD>silent! keeppatterns ?\v(\n^$|%^)<CR>]])
 map("v", "}", [[<CMD>silent! keeppatterns /\v(\n^$|%$)<CR>]])
 
+map("v", "<leader>/", "gc", { remap = true })
+map("n", "<leader>/", "gcc", { remap = true })
+
 -- bufferline.nvim
 map("n", "H", "<CMD>BufferLineCyclePrev<CR>")
 map("n", "L", "<CMD>BufferLineCycleNext<CR>")
-
--- Comment.nvim
-map("v", "<leader>/", "gc", { remap = true })
-map("n", "<leader>/", "gcc", { remap = true })
-map("n", "<leader>a", "gcA", { remap = true })
-map("n", "<leader>o", "gco", { remap = true })
-map("n", "<leader>O", "gcO", { remap = true })
