@@ -1,17 +1,16 @@
 typeset -T tie scalar to trace function
-nvim disable italic if no monet in TERMUX_VERSION
+use compstate to insert literally (maybe)
 
 zsh-autosuggestion problems:
 	race condition
 	accept-line on syntax error breaks it
-	todo: ignore multiline
 
 nvim slow open lots of files cause by bufferline
 
 fast-syntx-highlighting problems:
 	breaks when calling a completion widget
 	breaks on fzf-tab
-	unsets -match functions
+	dont like chroma on commands
 
 man trap
 man 7 signal
