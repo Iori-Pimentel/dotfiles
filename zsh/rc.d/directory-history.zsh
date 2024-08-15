@@ -1,3 +1,5 @@
+autoload add-zsh-hook
+
 add-zsh-hook zshaddhistory before-save-history
 before-save-history() {
 	# If SHARE_HISTORY option is set, using CURRENT_HISTFILE
@@ -45,7 +47,7 @@ start-history-precmd() {
 
 	# Remove this function from precmd_functions
 	# since we only want it be called once at startup
-	precmd_functions=("${precmd_functions[@]:#start-history-precmd}")
+	add-zsh-hook -d precmd start-history-precmd
 }
 
 local-history-list() {
