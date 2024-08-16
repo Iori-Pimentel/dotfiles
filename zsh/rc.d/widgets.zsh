@@ -85,21 +85,20 @@ fzf-history() {
 	CURSOR="$#BUFFER"
 }
 
+# <Docs> man zshcompwid | less +/COMPLETION.WIDGET.EXAMPLE </Docs>
+# <Docs> man zshcompwid | less +/COMPLETION.SPECIAL.PARAMETERS </Docs>
 zle -C fzf-files complete-word fzf-files
 fzf-files() {
-	local SEARCH_PATH
-	if [[ "${compstate[quoting]}" =~ 'single|double' ]]; then
-		SEARCH_PATH="${PREFIX}"
-	else
-		# eval should be safe to do in this branch
-		SEARCH_PATH="$(eval printf '"%s\0"' "$PREFIX" 2>/dev/null)" || return 1
-		SEARCH_PATH="${SEARCH_PATH%$'\0'}"
-	fi
+	local SEARCH_PATH="${PREFIX:-./}" stat
 
-	[[ -z "${PREFIX}" ]] && SEARCH_PATH='./'
-
-	[[ "${SEARCH_PATH}" == *$'\0'* ]] && return 1
 	[[ "${SEARCH_PATH[-1]}" == '/' ]] || return 1
+	if ! [[ "${compstate[quoting]}" =~ 'single|double' ]]; then
+		# eval should be safe to do in this branch
+		SEARCH_PATH="$(eval printf '"%s\0"' "$SEARCH_PATH" 2>/dev/null)" stat=$?
+		SEARCH_PATH="${SEARCH_PATH%$'\0'}"
+		(( stat )) && return $stat
+	fi
+	[[ "${SEARCH_PATH}" == *$'\0'* ]] && return 1
 
 	local FD_ARGS=(
 		--print0
@@ -121,7 +120,7 @@ fzf-files() {
 
 	print-special downline
 	local FILE_PATH
-	FILE_PATH="$(fd "${FD_ARGS[@]}" 2>/dev/null | fzf "${FZF_ARGS[@]}")"
+	FILE_PATH="$(fd "${FD_ARGS[@]}" 2>/dev/null | fzf "${FZF_ARGS[@]}")" stat=$?
 	FILE_PATH="${FILE_PATH%$'\0'}"
 	print-special upline
 
@@ -129,7 +128,7 @@ fzf-files() {
 	# Special case for completion widgets:
 	# Cannot call zle directly. Must use TRAPEXIT.
 	TRAPEXIT() { zle reset-prompt }
+	(( stat )) && return $stat
 
-	[[ -z "${FILE_PATH}" ]] && return 1
 	compadd -P "${PREFIX}" -fW "${SEARCH_PATH}" -- "${FILE_PATH%/}"
 }
