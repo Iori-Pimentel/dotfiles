@@ -42,7 +42,7 @@ ZSH_AUTOSUGGEST_CLEAR_WIDGETS=(
 )
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
-	os_icon dir per_directory_history vcs status
+	os_icon dir vcs status
 	newline prompt_char
 )
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
