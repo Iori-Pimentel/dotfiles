@@ -11,6 +11,7 @@ key=(
 	Tab           '^I'
 	ShiftTab      '^[[Z'
 	Space         ' '
+	CtrlSlash     '^_'
 
 	CtrlRight     '^[[1;5C'
 	CtrlLeft      '^[[1;5D'
@@ -20,8 +21,7 @@ bindkey -A emacs main
 bindkey ${key[Esc]} read-input
 
 # <Docs> man zshzle | less +/STANDARD.WIDGETS </Docs>
-bindkey ${key[Esc]}'u'  undo
-bindkey ${key[Ctrl]}'u' kill-buffer
+bindkey ${key[Ctrl]}'\' redo
 bindkey ${key[Delete]}  delete-char
 bindkey ${key[Esc]}${key[Enter]} edit-command-line
 
