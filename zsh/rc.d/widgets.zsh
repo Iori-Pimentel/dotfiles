@@ -110,6 +110,7 @@ fzf-files() {
 	local FZF_ARGS=(
 		--read0
 		--print0
+		--multi
 		--scheme=path
 		--border-label-pos=3
 		# Display on border if selection has non-printable character
@@ -130,5 +131,11 @@ fzf-files() {
 	TRAPEXIT() { zle reset-prompt }
 	(( stat )) && return $stat
 
-	compadd -P "${PREFIX}" -fW "${SEARCH_PATH}" -- "${FILE_PATH%/}"
+	# This allows selecting multiple FILE_PATH
+	FILE_PATH=( "${${(0)FILE_PATH}[@]%/}" )
+	compstate[insert]='all'
+
+	# We use -Ui "${PREFIX}" instead of -P "${PREFIX}"
+	# since the latter breaks on ~/{ completion
+	compadd -Ui "${PREFIX}" -fW "${SEARCH_PATH}" -a FILE_PATH
 }
