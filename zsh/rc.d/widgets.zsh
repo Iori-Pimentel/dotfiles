@@ -90,6 +90,7 @@ fzf-history() {
 zle -C fzf-files complete-word fzf-files
 fzf-files() {
 	local SEARCH_PATH="${PREFIX:-./}" stat
+	(( NUMERIC < 0 )) && SEARCH_PATH=./
 
 	[[ "${SEARCH_PATH[-1]}" == '/' ]] || return 1
 	if ! [[ "${compstate[quoting]}" =~ 'single|double' ]]; then
