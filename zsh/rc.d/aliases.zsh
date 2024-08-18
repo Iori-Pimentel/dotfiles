@@ -37,7 +37,7 @@ alias gri='git rebase --interactive'
 alias grc='git rebase --continue'
 alias gre='git rebase --edit-todo'
 
-alias gws='git stash'
+alias gws='git stash --patch'
 alias gwp='git stash pop'
 
 alias p='cd ~-'
