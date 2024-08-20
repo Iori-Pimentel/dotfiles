@@ -51,20 +51,26 @@ start-history-precmd() {
 }
 
 local-history-list() {
-	CURRENT_HISTFILE=$HISTORY_BASE$PWD/$HIST_NAME
-	OTHER_HISTFILE=$GLOBAL_HISTFILE
-
-	set-history-list
+	set-history-list local
 }
 
 global-history-list() {
-	CURRENT_HISTFILE=$GLOBAL_HISTFILE
-	OTHER_HISTFILE=$HISTORY_BASE$PWD/$HIST_NAME
-
-	set-history-list
+	set-history-list global
 }
 
 set-history-list() {
+	HIST_STATE=${1}
+
+	if [[ $HIST_STATE == local ]]; then
+		CURRENT_HISTFILE=$HISTORY_BASE$PWD/$HIST_NAME
+		OTHER_HISTFILE=$GLOBAL_HISTFILE
+	elif [[ $HIST_STATE == global ]]; then
+		CURRENT_HISTFILE=$GLOBAL_HISTFILE
+		OTHER_HISTFILE=$HISTORY_BASE$PWD/$HIST_NAME
+	else
+		return 1
+	fi
+
 	[[ -d ${CURRENT_HISTFILE:h} ]] || mkdir --parent ${CURRENT_HISTFILE:h}
 	[[ -f ${CURRENT_HISTFILE} ]] || touch ${CURRENT_HISTFILE}
 
@@ -82,10 +88,12 @@ set-history-list() {
 
 zle -N toggle-history-list
 toggle-history-list() {
-	if [[ $CURRENT_HISTFILE == $GLOBAL_HISTFILE ]]; then
+	if [[ $HIST_STATE == global ]]; then
 		local-history-list
-	else
+	elif [[ $HIST_STATE == local ]]; then
 		global-history-list
+	else
+		return 1
 	fi
 }
 
@@ -96,31 +104,32 @@ custom-fc() {
 		1 # history starting from 1
 	)
 
-	local STATE SET_COLOR
+	local SET_COLOR
 	local RESET_COLOR=$'\e[m'
-	if [[ $CURRENT_HISTFILE == $GLOBAL_HISTFILE ]]
-	then STATE='g' SET_COLOR=$'\e[33m' # Yellow
-	elif [[ $OTHER_HISTFILE == $GLOBAL_HISTFILE ]]
-	then STATE='l' SET_COLOR=$'\e[35m' # Magenta
+	if [[ $HIST_STATE == global ]]
+	then SET_COLOR=$'\e[33m' # Yellow
+	elif [[ $HIST_STATE == local ]]
+	then SET_COLOR=$'\e[35m' # Magenta
 	else SET_COLOR=$'\e[2;3m' # dim and italic
 	fi
 
+	setopt LOCAL_OPTIONS no_KSH_ARRAYS
 	local SED_ARGS=(
 		# Convert first column from right to left align
 		--expression='s/^[[:space:]]*//'
 		# Set styles for first column
-		--expression='s/^[0-9]*/'${SET_COLOR}'&'${STATE}${RESET_COLOR}'/'
+		--expression='s/^[0-9]*/'${SET_COLOR}'&'${HIST_STATE[1]}${RESET_COLOR}'/'
 	)
 
 	local stat
 	fc "${FC_ARGS[@]}" | sed "${SED_ARGS[@]}"
 	stat=${pipestatus[-2]}
 
-	if [[ $1 == all && $CURRENT_HISTFILE != $GLOBAL_HISTFILE ]]; then
+	if [[ $1 == all && $HIST_STATE == local ]]; then
 		( fc -p && global-history-list && custom-fc )
 		stat=$?
 	fi
-	
+
 	return $stat
 }
 
@@ -130,8 +139,8 @@ fetch-history-line() {
 (
 	local HISTORY_NUM=$1
 
-	if [[ ${HISTORY_NUM[-1]} == [l] && $CURRENT_HISTFILE == $GLOBAL_HISTFILE ]] ||
-	   [[ ${HISTORY_NUM[-1]} == [g] && $OTHER_HISTFILE == $GLOBAL_HISTFILE ]]
+	if [[ ${HISTORY_NUM[-1]} == [l] && $HIST_STATE == global ]] ||
+	   [[ ${HISTORY_NUM[-1]} == [g] && $HIST_STATE == local ]]
 	then fc -p && toggle-history-list
 	fi
 
