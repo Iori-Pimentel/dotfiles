@@ -1,5 +1,4 @@
-typeset -T tie scalar to trace function
-use compstate to insert literally (maybe)
+zle redisplay or reset-prompt
 
 zsh-autosuggestion problems:
 	race condition
@@ -21,8 +20,6 @@ man stty
 git diff show tabs and escape characters
 application mode vs raw mode
 chnage github tabsize using modelines
-
-zshall compcontext
 
 learn lua
 read man zshcontrib
@@ -55,9 +52,6 @@ chsh - <TAB> redraws prompt
 
 nvim auto :set ft=zsh for files in fpath
 
-syntax highlighting on << EOF broken
-syntax highlighting on regex on grep|sed|awk
-
 androfecth CPU find
 
 fixnvim SIGHUP
@@ -68,12 +62,7 @@ add nvim diff swap file
 
 run-help and which-command clear autosuggestion
 
-no syntax highlighting when creating func .ex mman() { man -a $@ }
-
  fzf-tab glob operators, glob flags and glob qualifiers
 
 
 nvim vi" keys doesnt pair correctly
-
-_path_files completion
-cd ~/./d/z
