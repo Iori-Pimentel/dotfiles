@@ -52,37 +52,41 @@ read-input() {
 zle -N fzf-history
 fzf-history() {
 	zmodload zsh/parameter 2>/dev/null # For history parameter
+
+	# Filter duplicate commands
+	local AWK_ARG='{ line=$0; $1=""; if (!seen[$0]++) print line }'
+
+	local FZF_ARGS=(
+		--ansi
+		--scheme=history
+		# Exclude first field in search
+		# This allows ^command searches
+		# Use --with-nth to hide field
+		--nth '2..'
+	)
+
 	print-special downline
+	local HISTORY_NUM _
 
-	{
-	while true; do
-		history-list-fzf --no-clear | read HISTORY_NUM _
+	custom-fc all |
+	awk "${AWK_ARG}" |
+	fzf "${FZF_ARGS[@]}" | read HISTORY_NUM _
+	print-special upline
 
-		# Those imported by SHARE_HISTORY option
-		# end with a * character which we ignore
-		HISTORY_NUM=${HISTORY_NUM%%[*]}
+	zle reset-prompt
 
-		if [[ $HISTORY_NUM == toggle ]]
-		then zle toggle-history-list
-		elif (( $HISTORY_NUM ))
-		then break; else return
-		fi
-	done
-	} always {
-		print-special upline
-		zle reset-prompt
-	}
+	# Those imported by SHARE_HISTORY option
+	# end with a * character which we ignore
+	HISTORY_NUM=${HISTORY_NUM%[*]}
+	(( $#HISTORY_NUM )) || return 1
 
-	# Fixes the problem of fc having output even with empty history
-	(( $#history > 0 )) || return
+	local HISTORY_LINE
+	HISTORY_LINE="$(fetch-history-line $HISTORY_NUM)" stat=$?
+	HISTORY_LINE="${HISTORY_LINE%$'\0'}"
+	(( stat )) && return $stat
 
-	# Updating HISTNO updates the BUFFER using a
-	# history list that includes edits
-	# which doesn't match with fc so we use
-	# ${history[$HISTORY_NUM]} which matches
-	HISTNO="$HISTORY_NUM"
-	BUFFER="${history[$HISTORY_NUM]}"
-	CURSOR="$#BUFFER"
+	BUFFER="${HISTORY_LINE}"
+	CURSOR=$#BUFFER
 }
 
 # <Docs> man zshcompwid | less +/COMPLETION.WIDGET.EXAMPLE </Docs>

@@ -88,3 +88,56 @@ toggle-history-list() {
 		global-history-list
 	fi
 }
+
+custom-fc() {
+	local FC_ARGS=(
+		-l # list
+		-r # reverse
+		1 # history starting from 1
+	)
+
+	local STATE SET_COLOR
+	local RESET_COLOR=$'\e[m'
+	if [[ $CURRENT_HISTFILE == $GLOBAL_HISTFILE ]]
+	then STATE='g' SET_COLOR=$'\e[33m' # Yellow
+	elif [[ $OTHER_HISTFILE == $GLOBAL_HISTFILE ]]
+	then STATE='l' SET_COLOR=$'\e[35m' # Magenta
+	else SET_COLOR=$'\e[2;3m' # dim and italic
+	fi
+
+	local SED_ARGS=(
+		# Convert first column from right to left align
+		--expression='s/^[[:space:]]*//'
+		# Set styles for first column
+		--expression='s/^[0-9]*/'${SET_COLOR}'&'${STATE}${RESET_COLOR}'/'
+	)
+
+	local stat
+	fc "${FC_ARGS[@]}" | sed "${SED_ARGS[@]}"
+	stat=${pipestatus[-2]}
+
+	if [[ $1 == all && $CURRENT_HISTFILE != $GLOBAL_HISTFILE ]]; then
+		( fc -p && global-history-list && custom-fc )
+		stat=$?
+	fi
+	
+	return $stat
+}
+
+fetch-history-line() {
+# Note that `fc -pa` is not enough to preverve
+# directory-history parameters so we run in a subshell
+(
+	local HISTORY_NUM=$1
+
+	if [[ ${HISTORY_NUM[-1]} == [l] && $CURRENT_HISTFILE == $GLOBAL_HISTFILE ]] ||
+	   [[ ${HISTORY_NUM[-1]} == [g] && $OTHER_HISTFILE == $GLOBAL_HISTFILE ]]
+	then fc -p && toggle-history-list
+	fi
+
+	HISTORY_NUM=${HISTORY_NUM%[lg]}
+	printf '%s\0' "${history[$HISTORY_NUM]}"
+
+	[[ -n ${history[$HISTORY_NUM]} ]]
+)
+}
