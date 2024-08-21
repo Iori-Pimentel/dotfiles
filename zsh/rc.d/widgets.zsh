@@ -65,9 +65,8 @@ fzf-history() {
 		--nth '2..'
 	)
 
-	print-special downline
+	printf '\n'
 	local HISTORY_NUM _
-
 	custom-fc all |
 	awk "${AWK_ARG}" |
 	fzf "${FZF_ARGS[@]}" | read HISTORY_NUM _
@@ -124,7 +123,7 @@ fzf-files() {
 		)'
 	)
 
-	print-special downline
+	printf '\n'
 	local FILE_PATH
 	FILE_PATH="$(fd "${FD_ARGS[@]}" 2>/dev/null | fzf "${FZF_ARGS[@]}")" stat=$?
 	FILE_PATH="${FILE_PATH%$'\0'}"
