@@ -8,10 +8,19 @@ if [[ $KEY == title ]]; then
 	ARGS="${ARGS//[![:print:]]/ }"
 fi
 
+if [[ $KEY == clipboard ]]; then
+	ARGS="$(base64 <<< "$ARGS")"
+fi
+
 local -A ESCAPE_CODES
 ESCAPE_CODES=(
-	barcursor  '\e[5 q'
-	title      '\e]2;%s\a'
+	blockcursor     '\e[1 q'
+	underlinecursor '\e[3 q'
+	barcursor       '\e[5 q'
+
+	title     '\e]2;%s\a'
+	clipboard '\e]52;%s\a'
+
 	showcursor '\e[?25h'
 	hidecursor '\e[?25l'
 
