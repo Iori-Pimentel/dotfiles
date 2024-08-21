@@ -6,5 +6,5 @@ termux-change-repo
 
 To install, run the command:
 ```bash
-source <(curl -fsSL https://github.com/iori-pimentel/dotfiles/raw/main/deploy.sh)
+bash <(curl -fsSL https://github.com/iori-pimentel/dotfiles/raw/main/deploy.sh)
 ```
