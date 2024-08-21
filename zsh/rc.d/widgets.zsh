@@ -79,7 +79,7 @@ fzf-history() {
 	HISTORY_NUM=${HISTORY_NUM%[*]}
 	(( $#HISTORY_NUM )) || return 1
 
-	local HISTORY_LINE
+	local HISTORY_LINE stat
 	HISTORY_LINE="$(fetch-history-line $HISTORY_NUM)" stat=$?
 	HISTORY_LINE="${HISTORY_LINE%$'\0'}"
 	(( stat )) && return $stat

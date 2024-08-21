@@ -77,6 +77,7 @@ set-history-list() {
 	[[ -d ${OTHER_HISTFILE:h} ]] || mkdir --parent ${OTHER_HISTFILE:h}
 	[[ -f ${OTHER_HISTFILE} ]] || touch ${OTHER_HISTFILE}
 
+	local stat
 	fc -P
 	fc -p $CURRENT_HISTFILE
 	stat=$?
