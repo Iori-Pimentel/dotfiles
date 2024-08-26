@@ -1,5 +1,4 @@
 zle redisplay or reset-prompt
-nvim open printed lines
 
 zsh-autosuggestion problems:
 	race condition
@@ -18,7 +17,6 @@ nvim add changes to qflist from git
 
 nvim universal ctags
 nvim :h ins-completion
-nvim :h tag-stack
 
 androfecth CPU find
 

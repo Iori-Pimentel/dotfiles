@@ -2,7 +2,7 @@ local map = vim.keymap.set
 map({ "n", "v" }, " ", "<Nop>")
 vim.g.mapleader = " "
 
-map("n", "<leader>n", "<CMD>setlocal number!<CR>")
+map("n", "<leader>n", "<CMD>setlocal number! hlsearch! <CR>")
 
 -- clipboard and blackhole registers
 map("n", [[+]], [["+]])
