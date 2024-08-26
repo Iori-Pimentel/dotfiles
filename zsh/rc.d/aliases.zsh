@@ -17,26 +17,25 @@ alias gs='git status'
 alias gconf='git-config-info'
 
 # git:log
-alias gl='git log --oneline'
+alias gl='git log --oneline --graph origin'
 alias glr='git reflog'
 
 # git:patch
 alias gps='git add --patch'
 alias gpu='git reset --patch'
 alias gpd='git restore --patch'
-alias gpc='git commit --patch'
 
 # git:untracked
 alias gus='git add --intent-to-add .'
-alias gud='git clean --interactive'
+alias guc='git clean --interactive -d'
 
 # git:diff
 alias gd='git diff'
-alias gds='git diff --staged'
+alias gds='gd --staged'
 
 # git:commit
-alias gc='git commit'
-alias gca='git commit --amend'
+alias gc='git commit --verbose'
+alias gca='gc --amend'
 
 alias p='cd ~-'
 alias o='cd ..'
