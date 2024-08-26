@@ -4,6 +4,10 @@ vim.g.mapleader = " "
 
 map("n", "<leader>n", "<CMD>setlocal number!<CR>")
 
+-- clipboard and blackhole registers
+map("n", [[+]], [["+]])
+map("n", [[_]], [["_]])
+
 map("n", "[q", "<CMD>cprev<CR>")
 map("n", "]q", "<CMD>cnext<CR>")
 map("n", "[Q", "<CMD>cpfile<CR>")

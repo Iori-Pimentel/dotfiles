@@ -7,12 +7,6 @@ autocmd("TextYankPost", {
 	callback = function()
 		-- highlights yank
 		vim.highlight.on_yank({ timeout = 250, on_macro = true })
-
-		-- yank into clipboard
-		local event = vim.v.event
-		if event.regname == "" and event.operator == "y" then
-			vim.fn.setreg("+", event.regcontents)
-		end
 	end,
 })
 
