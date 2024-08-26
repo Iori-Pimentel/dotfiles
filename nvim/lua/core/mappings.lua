@@ -5,8 +5,8 @@ vim.g.mapleader = " "
 map("n", "<leader>n", "<CMD>setlocal number! hlsearch! <CR>")
 
 -- clipboard and blackhole registers
-map("n", [[+]], [["+]])
-map("n", [[_]], [["_]])
+map({ "n", "v" }, [[+]], [["+]])
+map({ "n", "v" }, [[_]], [["_]])
 
 map("n", "[q", "<CMD>cprev<CR>")
 map("n", "]q", "<CMD>cnext<CR>")
