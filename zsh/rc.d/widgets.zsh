@@ -111,10 +111,19 @@ fzf-files() {
 		--base-directory="${SEARCH_PATH}"
 	)
 
+	local MULTI_FZF='--no-multi'
+
+	if ! [[ "${compstate[quoting]}" =~ 'single|double' ]]; then
+		MULTI_FZF='--multi'
+	fi
+
+	(( NUMERIC < 0 )) && MULTI_FZF='--no-multi'
+
 	local FZF_ARGS=(
+		$MULTI_FZF
 		--read0
+		--no-multi-line
 		--print0
-		--multi
 		--scheme=path
 		--border-label-pos=3
 		# Display on border if selection has non-printable character
