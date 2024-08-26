@@ -14,23 +14,17 @@ return {
 	},
 	config = function()
 		local cmp = require("cmp")
-		local luasnip = require("luasnip")
-		-- load snippets
-		require("luasnip.loaders.from_vscode").lazy_load()
 
 		cmp.setup({
-			mapping = cmp.mapping.preset.insert({
-				["<C-Space>"] = cmp.mapping.complete(),
-				["<CR>"] = cmp.mapping.confirm({ select = false }),
-			}),
 			sources = cmp.config.sources({
-				{ name = "nvim_lsp" },
 				{ name = "luasnip" },
 				{ name = "buffer" },
 				{ name = "path" },
 			}),
-			completion = {
-				completeopt = "menu,menuone,preview,noselect",
+			mapping = {
+				["<C-Space>"] = cmp.mapping.complete(),
+				["<C-n>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
+				["<C-p>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
 			},
 			snippet = {
 				expand = function(args)
@@ -39,16 +33,64 @@ return {
 			},
 		})
 
-		for _, setup in ipairs({
-			{ modes = { "/", "?" }, sources = { { name = "buffer" } } },
-			{ modes = { ":" }, sources = { { name = "path" }, { name = "cmdline" } } },
-		}) do
-			local config = {
-				mapping = cmp.mapping.preset.cmdline(),
-				sources = setup.sources,
-			}
+		cmp.setup.cmdline({ "/", "?" }, {
+			mapping = cmp.mapping.preset.cmdline(),
+			sources = {
+				{ name = "buffer" },
+			},
+		})
 
-			cmp.setup.cmdline(setup.modes, config)
+		cmp.setup.cmdline(":", {
+			mapping = cmp.mapping.preset.cmdline(),
+			sources = cmp.config.sources({
+				{ name = "path" },
+			}, {
+				{ name = "cmdline" },
+			}),
+			matching = { disallow_symbol_nonprefix_matching = false },
+		})
+
+		-- Snippets
+		local ls = require("luasnip")
+		require("luasnip.loaders.from_vscode").lazy_load()
+
+		vim.snippet.active = function(filter)
+			filter = filter or {}
+			filter.direction = filter.direction or 1
+
+			if filter.direction == 1 then
+				return ls.expand_or_jumpable()
+			else
+				return ls.jumpable(filter.direction)
+			end
 		end
+
+		vim.snippet.jump = function(direction)
+			if direction == 1 then
+				if ls.expandable() then
+					return ls.expand_or_jump()
+				else
+					return ls.jumpable(1) and ls.jump(1)
+				end
+			else
+				return ls.jumpable(-1) and ls.jump(-1)
+			end
+		end
+
+		vim.snippet.stop = ls.unlink_current
+
+		ls.config.set_config({
+			history = true,
+			updateevents = "TextChanged,TextChangedI",
+			override_builtin = true,
+		})
+
+		vim.keymap.set({ "i", "s" }, "<c-k>", function()
+			return vim.snippet.active({ direction = 1 }) and vim.snippet.jump(1)
+		end, { silent = true })
+
+		vim.keymap.set({ "i", "s" }, "<c-j>", function()
+			return vim.snippet.active({ direction = -1 }) and vim.snippet.jump(-1)
+		end, { silent = true })
 	end,
 }
