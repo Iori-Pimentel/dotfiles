@@ -13,9 +13,8 @@ bracketed-paste() {
 	local PASTED
 	zle .bracketed-paste PASTED
 
-	setopt LOCAL_OPTIONS EXTENDED_GLOB
-	PASTED="${PASTED##[[:space:]]#}"
-	PASTED="${PASTED%%[[:space:]]#}"
+	PASTED="${(*)PASTED##[[:space:]]#}"
+	PASTED="${(*)PASTED%%[[:space:]]#}"
 
 	LBUFFER+="$PASTED"
 	[[ "$PASTED" =~ $'\n' ]] && zle edit-command-line
