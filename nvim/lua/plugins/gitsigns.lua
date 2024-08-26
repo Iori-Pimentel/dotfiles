@@ -3,7 +3,7 @@ return {
 	event = { "BufReadPre", "BufNewFile" },
 	opts = {
 		on_attach = function(bunfnr)
-			local gs = package.loaded.gitsigns
+			local gitsigns = require("gitsigns")
 
 			local function map(mode, l, r, opts)
 				opts = opts or {}
@@ -11,36 +11,20 @@ return {
 				vim.keymap.set(mode, l, r, opts)
 			end
 
-			-- Navigation
-			map("n", "]h", function()
-				if vim.wo.diff then
-					return "]h"
-				end
-				vim.schedule(function()
-					gs.next_hunk()
-				end)
-				return "<Ignore>"
-			end, { expr = true })
-
 			map("n", "[h", function()
-				if vim.wo.diff then
-					return "[h"
-				end
-				vim.schedule(function()
-					gs.prev_hunk()
-				end)
-				return "<Ignore>"
-			end, { expr = true })
-
-			-- Actions
-			map("n", "<leader>hr", gs.reset_hunk)
-			map("v", "<leader>hr", function()
-				gs.reset_hunk({ vim.fn.line("."), vim.fn.line("v") })
+				gitsigns.nav_hunk("next")
 			end)
-			map("n", "<leader>hR", gs.reset_buffer)
+			map("n", "[h", function()
+				gitsigns.nav_hunk("prev")
+			end)
 
-			-- Text object
-			map({ "o", "x" }, "ih", ":<C-U>Gitsigns select_hunk<CR>")
+			map("n", "<leader>hR", gitsigns.reset_buffer)
+			map("n", "<leader>hr", gitsigns.reset_hunk)
+			map("v", "<leader>hr", function()
+				gitsigns.reset_hunk({ vim.fn.line("."), vim.fn.line("v") })
+			end)
+
+			map({ "o", "x" }, "ih", "<CMD>Gitsigns select_hunk<CR>")
 		end,
 	},
 }
