@@ -15,30 +15,28 @@ alias pks='dpkg --search'
 
 alias gs='git status'
 alias gconf='git-config-info'
-alias gl='git log --oneline'
 
+# git:log
+alias gl='git log --oneline'
+alias glr='git reflog'
+
+# git:patch
 alias gps='git add --patch'
 alias gpu='git reset --patch'
 alias gpd='git restore --patch'
 alias gpc='git commit --patch'
 
+# git:untracked
+alias gus='git add --intent-to-add .'
+alias gud='git clean --interactive'
+
+# git:diff
 alias gd='git diff'
 alias gds='git diff --staged'
 
-alias gns='git add --intent-to-add .'
-alias gnd='git clean --interactive'
-
+# git:commit
 alias gc='git commit'
 alias gca='git commit --amend'
-alias gcs='git show'
-alias gcr='git revert --no-commit'
-
-alias gri='git rebase --interactive'
-alias grc='git rebase --continue'
-alias gre='git rebase --edit-todo'
-
-alias gws='git stash --patch'
-alias gwp='git stash pop'
 
 alias p='cd ~-'
 alias o='cd ..'
