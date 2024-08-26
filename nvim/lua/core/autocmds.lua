@@ -34,14 +34,3 @@ autocmd("FileType", {
 		vim.opt.formatoptions:remove("o")
 	end,
 })
-
--- bufferline.nvim add :help buffers
-autocmd("BufWinEnter", {
-	group = default,
-	callback = function()
-		if vim.bo.filetype == "help" then
-			vim.cmd.only()
-			vim.bo.buflisted = true
-		end
-	end,
-})

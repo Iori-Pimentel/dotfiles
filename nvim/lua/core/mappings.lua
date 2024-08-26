@@ -21,20 +21,7 @@ map("o", [[a"]], [[2i"]])
 map("o", [[a']], [[2i']])
 map("o", [[a`]], [[2i`]])
 
--- dot-repeatable replace keyword under cursor
-map({ "n", "v" }, "S", "*Ncgn", { remap = true })
-
--- moves to beginning of change
-map("n", ".", [[.`.]])
-
 -- excludes newline on visual selection
 -- keeps column position on visual block
 map("v", "{", [[<CMD>silent! keeppatterns ?\v(\n^$|%^)<CR>]])
 map("v", "}", [[<CMD>silent! keeppatterns /\v(\n^$|%$)<CR>]])
-
-map("v", "<leader>/", "gc", { remap = true })
-map("n", "<leader>/", "gcc", { remap = true })
-
--- bufferline.nvim
-map("n", "H", "<CMD>BufferLineCyclePrev<CR>")
-map("n", "L", "<CMD>BufferLineCycleNext<CR>")
