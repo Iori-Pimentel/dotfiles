@@ -1,68 +1,29 @@
 zle redisplay or reset-prompt
+nvim open printed lines
 
 zsh-autosuggestion problems:
 	race condition
 	accept-line on syntax error breaks it
-
-nvim slow open lots of files cause by bufferline
 
 fast-syntx-highlighting problems:
 	breaks when calling a completion widget
 	breaks on fzf-tab
 	dont like chroma on commands
 
-man trap
-man 7 signal
-man ps
-# to figure out which CHAR sends signals
-man stty
-
 git diff show tabs and escape characters
-application mode vs raw mode
 chnage github tabsize using modelines
 
-learn lua
-read man zshcontrib
-
-nvim g; g- g+
-nvim show search highlighting only when on word
-marks on cmdwin
-git add -p # include untracked files
-increase highlight priority TextYankHighlight
-The -- more -- prompt
 nvim-treesitter vim not working on cmdline window
-nvim-treesitter highlight doesnt work when zl
 nvim add changes to qflist from git
-nvim :f := :bm
-
-nvim :h ex-commands
-nvim :h redo-register
-nvim ga # get ascii
-nvim digraphs
-nvim :h index
 
 nvim universal ctags
 nvim :h ins-completion
 nvim :h tag-stack
-# interesting
-man zshzle recursive-edit
-man zshall MATCH
-
-chsh - <TAB> redraws prompt
-
-nvim auto :set ft=zsh for files in fpath
 
 androfecth CPU find
 
-fixnvim SIGHUP
+fix nvim SIGHUP
 
-add nvim diff swap file
+man -a # not working
 
- man -a # not working
-
-run-help and which-command clear autosuggestion
-
- fzf-tab glob operators, glob flags and glob qualifiers
-
-
-nvim vi" keys doesnt pair correctly
+zshall glob operators, glob flags and glob qualifiers
