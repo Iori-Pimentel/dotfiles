@@ -1,3 +1,4 @@
+zmodload module
 zle redisplay or reset-prompt
 
 zsh-autosuggestion problems:
@@ -23,5 +24,3 @@ androfecth CPU find
 fix nvim SIGHUP
 
 man -a # not working
-
-zshall glob operators, glob flags and glob qualifiers
