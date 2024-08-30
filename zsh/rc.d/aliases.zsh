@@ -17,7 +17,7 @@ alias gs='git status'
 alias gconf='git-config-info'
 
 # git:log
-alias gl='git log --oneline --graph origin'
+alias gl='git log --oneline --graph --all'
 alias glr='git reflog'
 
 # git:patch
