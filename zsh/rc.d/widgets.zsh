@@ -3,7 +3,7 @@ autoload edit-command-line
 
 zle -N accept-line
 accept-line() {
-	[[ "$BUFFER" =~ '[^[:space:]]' ]] && zle .accept-line
+	[[ "$BUFFER" == *[^[:space:]]* ]] && zle .accept-line
 }
 
 # Avoid pasting Ctrl-C, as it interrupts
