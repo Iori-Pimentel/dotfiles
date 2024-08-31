@@ -15,8 +15,13 @@ zstyle ':completion:*:descriptions' format '[%d]'
 zstyle ':fzf-tab:*' show-group none
 # applies color even for a single group
 zstyle ':fzf-tab:*' single-group color
-# prevents getting stuck when pressing ctrl-z
-zstyle ':fzf-tab:*' fzf-bindings 'ctrl-z:ignore'
+# overrides fzf-tab --cycle option
+zstyle ':fzf-tab:*' fzf-flags '--no-cycle'
+# disable using / as continuous-trigger
+zstyle ':fzf-tab:*' continuous-trigger ''
+# prevents getting stuck when pressing ctrl-z,
+# also replaces unwanted default bindings
+zstyle ':fzf-tab:*' fzf-bindings-default 'ctrl-z:ignore'
 # causes fzf-tab to trigger immediately
 # instead of adding common prefix first
 zstyle ':completion:*' menu yes
