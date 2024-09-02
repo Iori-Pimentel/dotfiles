@@ -1,3 +1,10 @@
+git commit --fixup :/second
+find all ways to refer to commits or refs
+git pathspec
+git refs
+git-config-info breaks on :
+add more git aliases
+
 zmodload module
 zle redisplay or reset-prompt
 
