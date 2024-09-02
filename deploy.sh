@@ -40,10 +40,8 @@ ANTIDOTE=https://github.com/mattmc3/antidote.git
 git clone $DOTFILES ${BASE}
 git clone $ANTIDOTE ${CACHE}/antidote/.antidote --depth=1
 
-mkdir -p ${CONF}/git
-ln -sfT ${BASE}/zsh/.zshenv       ${HOME}/.zshenv
-ln -sfT ${BASE}/configs/gitconfig ${CONF}/git/config
-ln -sfT ${BASE}/nvim              ${CONF}/nvim
+ln -sf ${BASE}/zsh/.zshenv --target-directory ${HOME}
+ln -sf ${BASE}/configs/*   --target-directory ${CONF}
 
 cat <<- 'EOF' > ~/.termux/termux.properties
 	# Example file can be found in:
