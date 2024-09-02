@@ -13,12 +13,23 @@ alias pk='fzf-pkg'
 alias pkf='pkg files'
 alias pks='dpkg --search'
 
+# git:status
 alias gs='git status'
-alias gconf='git-config-info'
+alias gss='gs --short'
+
+# git:info
+alias gic='git-config-info'
 
 # git:log
 alias gl='git log --oneline --graph --all'
 alias glr='git reflog'
+
+# git:rebase
+alias gru='git rebase --interactive @{upstream}'
+alias grr='git rebase --interactive --root'
+alias gre='git rebase --edit-todo'
+alias grc='git rebase --continue'
+alias gra='git rebase --abort'
 
 # git:patch
 alias gps='git add --patch'
