@@ -18,9 +18,7 @@ packages=(
 	fzf termux-api openssh
 	clang  # c compiler for nvim-treesitter
 	stylua # formatter used by conform nvim
-	shfmt  # formatter not used by conform nvim
-	# nmap # networking tool
-	# lsof # list open files (already installed)
+	fastfetch
 )
 pkg install --yes ${packages[@]}
 
@@ -55,7 +53,6 @@ EOF
 FONT=https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
 FONT_ITALIC=https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts%2FJetBrainsMono%2FNoLigatures%2FItalic%2FJetBrainsMonoNLNerdFont-Italic.ttf
 COLORS=https://github.com/adi1090x/termux-style/raw/master/colors/gruvbox-dark.properties
-ANDROFETCH=https://github.com/laraib07/androfetch/raw/main/androfetch
 opts=(
 	--fail # failed response is not saved
 	--location # follow 3xx response
@@ -66,17 +63,7 @@ termux=(--output-dir ~/.termux
 	$FONT_ITALIC -o font-italic.ttf
 	$COLORS      -o colors.properties
 )
-bin=(--output-dir ${PREFIX}/bin
-	$ANDROFETCH -o androfetch
-)
-args=(--parallel
-	${opts[@]} ${termux[@]}
-	--next
-	${opts[@]} ${bin[@]}
-)
-curl ${args[@]}
-
-chmod u+x ${PREFIX}/bin/androfetch
+curl --parallel ${opts[@]} ${termux[@]}
 
 termux-reload-settings
 touch ~/.hushlogin
