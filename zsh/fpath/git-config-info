@@ -1,17 +1,12 @@
 #!/bin/zsh
 
+local -A CONFIG_ARRAY
+local CONFIG_FILE CONFIG_VALUE
+local IFS=$'\t'
+
 git config --list --show-origin |
-	awk -F'[:\t]' --file <(<<- 'EOF'
-		{
-			file = $2; content = $3
-			arr[file] = arr[file] "\n\t" content
-		}
-		END {
-			for (file in arr) {
-				system("zsh -c 'print -Df \\[%s] '" file)
-				print arr[file]
-			}
-		}
-	EOF
-	) |
-	bat --plain --language=ini # syntax highligthing
+while read -r CONFIG_FILE CONFIG_VALUE; do
+	CONFIG_ARRAY[${(D)CONFIG_FILE#file:}]+=$'\t'"${CONFIG_VALUE}"$'\n'
+done
+
+printf '[%s]\n%s' "${(kv)CONFIG_ARRAY[@]}" | bat --plain --language=ini
