@@ -70,6 +70,3 @@ touch ~/.hushlogin
 nvim --headless "+Lazy! install" +qa
 
 clear && chsh -s zsh && exec zsh
-
-# Run command when pushing to github:
-# git remote set-url origin git@github.com:Iori-Pimentel/dotfiles.git
