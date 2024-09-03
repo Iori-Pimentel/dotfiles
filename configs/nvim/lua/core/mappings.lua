@@ -29,3 +29,7 @@ map("o", [[a`]], [[2i`]])
 -- keeps column position on visual block
 map("v", "{", [[<CMD>silent! keeppatterns ?\v(\n^$|%^)<CR>]])
 map("v", "}", [[<CMD>silent! keeppatterns /\v(\n^$|%$)<CR>]])
+
+map("n", "\\", "<CMD>ls<Cr>:b ")
+map("n", "H", "<CMD>bprev<CR>")
+map("n", "L", "<CMD>bnext<CR>")
