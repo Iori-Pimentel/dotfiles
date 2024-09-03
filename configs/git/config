@@ -4,3 +4,7 @@
 
 [url "ssh://git@github.com/"]
 	pushInsteadOf = https://github.com/
+
+[rebase]
+	autoSquash = true
+	autoStash = true
