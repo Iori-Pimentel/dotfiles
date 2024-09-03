@@ -27,19 +27,19 @@ XDG_CONFIG_HOME=~/.config
  XDG_STATE_HOME=~/.local/state
   XDG_DATA_HOME=~/.local/share
 
-DATA=$XDG_DATA_HOME
-CONF=$XDG_CONFIG_HOME
-CACHE=$XDG_CACHE_HOME
-BASE=~/.local/dotfiles
-
 DOTFILES=https://github.com/Iori-Pimentel/dotfiles.git
 ANTIDOTE=https://github.com/mattmc3/antidote.git
 
-git clone $DOTFILES ${BASE}
-git clone $ANTIDOTE ${CACHE}/antidote/.antidote --depth=1
+DOTFILES_BASE=${HOME}/.local/dotfiles
+ANTIDOTE_BASE=${XDG_CACHE_HOME}/antidote/.antidote
 
-ln -sf ${BASE}/zsh/.zshenv --target-directory ${HOME}
-ln -sf ${BASE}/configs/*   --target-directory ${CONF}
+[[ -d ${DOTFILES_BASE}/.git ]] ||
+git clone ${DOTFILES} ${DOTFILES_BASE}
+[[ -d ${ANTIDOTE_BASE}/.git ]] ||
+git clone ${ANTIDOTE} ${ANTIDOTE_BASE} --depth=1
+
+ln -sf ${DOTFILES_BASE}/zsh/.zshenv --target-directory ${HOME}
+ln -sf ${DOTFILES_BASE}/configs/*   --target-directory ${XDG_CONFIG_HOME}
 
 cat <<- 'EOF' > ~/.termux/termux.properties
 	# Example file can be found in:
@@ -69,4 +69,5 @@ termux-reload-settings
 touch ~/.hushlogin
 nvim --headless "+Lazy! install" +qa
 
+read -p 'Press any key to continue' -n1
 clear && chsh -s zsh && exec zsh
