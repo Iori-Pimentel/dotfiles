@@ -54,16 +54,21 @@ FONT=https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20R
 FONT_ITALIC=https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts%2FJetBrainsMono%2FNoLigatures%2FItalic%2FJetBrainsMonoNLNerdFont-Italic.ttf
 COLORS=https://github.com/adi1090x/termux-style/raw/master/colors/gruvbox-dark.properties
 opts=(
-	--fail # failed response is not saved
-	--location # follow 3xx response
-	--continue-at - # fixes crash caused by ~/.termux/font.ttf
+	--parallel
+	--fail
+	--location
 )
 termux=(--output-dir ~/.termux
-	$FONT        -o font.ttf
-	$FONT_ITALIC -o font-italic.ttf
+	# An incomplete font file while the terminal
+	# is being written to, will cause a crash.
+	$FONT        -o font.ttf.tmp
+	$FONT_ITALIC -o font-italic.ttf.tmp
 	$COLORS      -o colors.properties
 )
-curl --parallel ${opts[@]} ${termux[@]}
+curl ${opts[@]} ${termux[@]}
+
+mv ~/.termux/font.ttf{.tmp,}
+mv ~/.termux/font-italic.ttf{.tmp,}
 
 termux-reload-settings
 touch ~/.hushlogin
