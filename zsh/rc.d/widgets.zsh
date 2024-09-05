@@ -110,7 +110,7 @@ fzf-files() {
 
 	local FD_ARGS=(
 		--print0
-		--hidden
+		--unrestricted
 		--strip-cwd-prefix
 		--base-directory="${SEARCH_PATH}"
 	)
