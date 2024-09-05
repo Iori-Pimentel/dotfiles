@@ -92,16 +92,21 @@ fzf-history() {
 zle -C fzf-files complete-word fzf-files
 fzf-files() {
 	local SEARCH_PATH="${PREFIX:-./}" stat
+	local MULTI_FZF='--no-multi'
 	(( NUMERIC < 0 )) && SEARCH_PATH=./
 
 	[[ "${SEARCH_PATH[-1]}" == '/' ]] || return 1
-	if ! [[ "${compstate[quoting]}" == (single|double) ]]; then
+	if [[ "${compstate[quoting]}" != (single|double) ]]; then
 		# eval should be safe to do in this branch
 		SEARCH_PATH="$(eval printf '"%s\0"' "$SEARCH_PATH" 2>/dev/null)" stat=$?
 		SEARCH_PATH="${SEARCH_PATH%$'\0'}"
 		(( stat )) && return $stat
+
+		MULTI_FZF='--multi'
 	fi
 	[[ "${SEARCH_PATH}" == *$'\0'* ]] && return 1
+
+	(( NUMERIC < 0 )) && MULTI_FZF='--no-multi'
 
 	local FD_ARGS=(
 		--print0
@@ -109,14 +114,6 @@ fzf-files() {
 		--strip-cwd-prefix
 		--base-directory="${SEARCH_PATH}"
 	)
-
-	local MULTI_FZF='--no-multi'
-
-	if ! [[ "${compstate[quoting]}" == (single|double) ]]; then
-		MULTI_FZF='--multi'
-	fi
-
-	(( NUMERIC < 0 )) && MULTI_FZF='--no-multi'
 
 	local FZF_ARGS=(
 		$MULTI_FZF
