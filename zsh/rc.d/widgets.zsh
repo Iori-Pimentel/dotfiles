@@ -17,7 +17,7 @@ bracketed-paste() {
 	PASTED="${(*)PASTED%%[[:space:]]#}"
 
 	LBUFFER+="$PASTED"
-	[[ "$PASTED" =~ $'\n' ]] && zle edit-command-line
+	[[ "$PASTED" == *$'\n'* ]] && zle edit-command-line
 }
 
 zle -N clear-screen
@@ -95,7 +95,7 @@ fzf-files() {
 	(( NUMERIC < 0 )) && SEARCH_PATH=./
 
 	[[ "${SEARCH_PATH[-1]}" == '/' ]] || return 1
-	if ! [[ "${compstate[quoting]}" =~ 'single|double' ]]; then
+	if ! [[ "${compstate[quoting]}" == (single|double) ]]; then
 		# eval should be safe to do in this branch
 		SEARCH_PATH="$(eval printf '"%s\0"' "$SEARCH_PATH" 2>/dev/null)" stat=$?
 		SEARCH_PATH="${SEARCH_PATH%$'\0'}"
@@ -112,7 +112,7 @@ fzf-files() {
 
 	local MULTI_FZF='--no-multi'
 
-	if ! [[ "${compstate[quoting]}" =~ 'single|double' ]]; then
+	if ! [[ "${compstate[quoting]}" == (single|double) ]]; then
 		MULTI_FZF='--multi'
 	fi
 
@@ -127,7 +127,7 @@ fzf-files() {
 		--border-label-pos=3
 		# Display on border if selection has non-printable character
 		--bind='focus:transform-border-label(
-			[[ {} =~ [^[:print:]] ]] && printf %q {}
+			[[ {} == *[^[:print:]]* ]] && printf %q {}
 		)'
 	)
 
