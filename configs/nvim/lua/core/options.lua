@@ -8,6 +8,8 @@ opt.cursorline = true
 opt.signcolumn = "yes:1"
 -- disable intro
 opt.shortmess:append("I")
+-- open all folds
+opt.foldenable = false
 
 opt.splitbelow = true
 opt.splitright = true
