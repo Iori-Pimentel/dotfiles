@@ -11,7 +11,7 @@ return {
 				vim.keymap.set(mode, l, r, opts)
 			end
 
-			map("n", "[h", function()
+			map("n", "]h", function()
 				gitsigns.nav_hunk("next")
 			end)
 			map("n", "[h", function()
