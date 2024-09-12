@@ -10,6 +10,8 @@ opt.signcolumn = "yes:1"
 opt.shortmess:append("I")
 -- open all folds
 opt.foldenable = false
+-- set default commentstring
+opt.commentstring = "# %s"
 
 opt.splitbelow = true
 opt.splitright = true
