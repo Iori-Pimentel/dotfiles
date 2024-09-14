@@ -1,5 +1,5 @@
 {
-  "timeStamp": 1726250047024,
+  "timeStamp": 1726330257324,
   "version": "1.59.0",
   "userSettings": {
     "externalLists": "https://divested.dev/blocklists/Fingerprinting.ubl\nhttps://divested.dev/hosts-domains-wildcards\nhttps://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt",
@@ -32,9 +32,6 @@
     "ublock-cookies-easylist",
     "adguard-cookies",
     "ublock-cookies-adguard",
-    "fanboy-social",
-    "adguard-social",
-    "fanboy-thirdparty_social",
     "easylist-chat",
     "easylist-newsletters",
     "easylist-notifications",
