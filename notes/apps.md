@@ -36,16 +36,24 @@
 - [FDM][]
 - [Device Info HW][]
 - [VirusTotal Mobile][]
+- [WordWeb][]
 - [Sound Boost][]
 - [Office NX][]
 - [Brainscape][]
 - [Hardy][]
 - [nzb360][]
 
+### Firefox Extensions
+- [uBlock Origin][]
+- [Dark Reader][]
+- [Bypass Paywalls Clean][]
+
 [App Finder]: https://play.google.com/store/apps/details?id=scadica.aq
 [Brainscape]: https://play.google.com/store/apps/details?id=com.brainscape.mobile.portal
+[Bypass Paywalls Clean]: https://github.com/bpc-clone/bypass-paywalls-firefox-clean
 [ChatGPT]: https://play.google.com/store/apps/details?id=com.openai.chatgpt
 [Cloudstream]: https://github.com/recloudstream/cloudstream
+[Dark Reader]: https://github.com/darkreader/darkreader
 [Device Info HW]: https://play.google.com/store/apps/details?id=ru.andr7e.deviceinfohw
 [FDM]: https://play.google.com/store/apps/details?id=org.freedownloadmanager.fdm
 [Github]: https://play.google.com/store/apps/details?id=com.github.android
@@ -68,5 +76,7 @@
 [Sound Boost]: https://play.google.com/store/apps/details?id=ua.polohalo.soundbooster
 [TachiJ2K]: https://github.com/Jays2Kings/tachiyomiJ2K
 [Termux-Monet]: https://github.com/Termux-Monet/termux-monet
+[uBlock Origin]: https://github.com/gorhill/uBlock
 [Unexpected Keyboard]: https://github.com/Julow/Unexpected-Keyboard
 [VirusTotal Mobile]: https://play.google.com/store/apps/details?id=com.funnycat.virustotal
+[WordWeb]: https://play.google.com/store/apps/details?id=com.wordwebsoftware.android.wordweb
