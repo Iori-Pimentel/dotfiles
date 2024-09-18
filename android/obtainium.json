@@ -1,0 +1,104 @@
+{
+	"apps": [
+		{
+			"id": "dev.imranr.obtainium",
+			"url": "https://github.com/ImranR98/Obtainium",
+			"author": "ImranR98",
+			"name": "Obtainium"
+		},
+		{
+			"id": "com.termux",
+			"url": "https://github.com/Termux-Monet/termux-monet",
+			"author": "Termux-Monet",
+			"name": "Termux:Monet"
+		},
+		{
+			"id": "juloo.keyboard2",
+			"url": "https://github.com/Julow/Unexpected-Keyboard",
+			"author": "Julow",
+			"name": "Unexpected Keyboard"
+		},
+		{
+			"id": "com.lagradost.cloudstream3",
+			"url": "https://github.com/recloudstream/cloudstream",
+			"author": "recloudstream",
+			"name": "CloudStream"
+		},
+		{
+			"id": "com.lagradost.quicknovel",
+			"url": "https://github.com/LagradOst/QuickNovel",
+			"author": "LagradOst",
+			"name": "QuickNovel"
+		},
+		{
+			"id": "eu.kanade.tachiyomi.j2k",
+			"url": "https://github.com/Jays2Kings/tachiyomiJ2K",
+			"author": "Jays2Kings",
+			"name": "TachiyomiJ2K"
+		},
+		{
+			"id": "app.revanced.manager.flutter",
+			"url": "https://github.com/ReVanced/revanced-manager",
+			"author": "ReVanced",
+			"name": "ReVanced Manager"
+		},
+		{
+			"id": "org.proninyaroslav.libretorrent",
+			"url": "https://github.com/proninyaroslav/libretorrent",
+			"author": "proninyaroslav",
+			"name": "LibreTorrent"
+		},
+		{
+			"id": "com.simon.harmonichackernews",
+			"url": "https://github.com/SimonHalvdansson/Harmonic-HN",
+			"author": "SimonHalvdansson",
+			"name": "Harmonic"
+		},
+		{
+			"id": "com.mixplorer.beta",
+			"url": "https://mixplorer.com/beta",
+			"author": "mixplorer.com",
+			"name": "MiXplorer",
+			"additionalSettings": "{\"versionExtractionRegEx\":\"v[0-9.]*-Beta\",\"apkFilterRegEx\":\"arm64\"}"
+		},
+		{
+			"id": "org.lichess.mobileV2",
+			"url": "https://github.com/lichess-org/mobile",
+			"author": "lichess-org",
+			"name": "Lichess"
+		},
+		{
+			"id": "net.osmand.plus",
+			"url": "https://f-droid.org/packages/net.osmand.plus",
+			"author": "F-Droid Official",
+			"name": "OsmAnd~"
+		},
+		{
+			"id": "keepass2android.keepass2android",
+			"url": "https://github.com/PhilippC/keepass2android",
+			"author": "PhilippC",
+			"name": "Keepass2Android"
+		},
+		{
+			"id": "us.spotco.fennec_dos",
+			"url": "https://f-droid.org/packages/us.spotco.fennec_dos",
+			"author": "Divested Computing Group",
+			"name": "Mull"
+		}
+	],
+	"settings": {
+		"checkOnStart": false,
+		"useBlackTheme": false,
+		"categories": "{}",
+		"firstRun": false,
+		"exportSettings": true,
+		"groupByCategory": false,
+		"autoExportOnChanges": false,
+		"lastCompletedBGCheckTime": 1726211018978,
+		"bgUpdatesOnWiFiOnly": true,
+		"useMaterialYou": false,
+		"checkUpdateOnDetailPage": false,
+		"useSystemFont": false,
+		"exportDir": "content://com.android.externalstorage.documents/tree/primary%3ADownload%2FObtainium"
+	}
+}
