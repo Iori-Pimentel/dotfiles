@@ -66,7 +66,7 @@ Horizontal spacing: 2dp
 	</row>
 	<row height="0.95">
 		<key width="1.7" key0="ctrl"/>
-		<key width="1.1" key0="." se="loc alt" sw="loc meta" nw="loc compose"/>
+		<key width="1.1" key0="." se="loc alt" sw="fn" nw="loc compose"/>
 		<key width="4.4" key0="space" nw="=" ne="+" se="-" sw="_"/>
 		<key width="1.1" key0="" n="up" e="right" w="left" s="down"/>
 		<key width="1.7" key0="enter" ne="action" se="config"/>
