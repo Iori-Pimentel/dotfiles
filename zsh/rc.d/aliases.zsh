@@ -36,9 +36,12 @@ alias gps='git add --patch'
 alias gpu='git reset --patch'
 alias gpd='git restore --patch'
 
-# git:untracked
-alias gus='git add --intent-to-add .'
-alias guc='git clean --interactive -d'
+# git:add
+alias ga='git add'
+alias gai='ga --intent-to-add'
+
+# git:clean
+alias gc='git clean --interactive -d'
 
 # git:diff
 alias gd='git diff'
