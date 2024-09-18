@@ -1,6 +1,12 @@
 {
 	"apps": [
 		{
+			"id": "io.github.muntashirakon.AppManager",
+			"url": "https://github.com/MuntashirAkon/AppManager",
+			"author": "MuntashirAkon",
+			"name": "App Manager"
+		},
+		{
 			"id": "dev.imranr.obtainium",
 			"url": "https://github.com/ImranR98/Obtainium",
 			"author": "ImranR98",

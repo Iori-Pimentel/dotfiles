@@ -2,6 +2,7 @@
 
 ### Github/F-Droid Sources
 - [Obtainium][]
+- [App Manager][]
 - [Mull][]
 - [ReVanced Manager][]
 - [Keepass2Android][]
@@ -49,6 +50,7 @@
 - [Bypass Paywalls Clean][]
 
 [App Finder]: https://play.google.com/store/apps/details?id=scadica.aq
+[App Manager]: https://github.com/MuntashirAkon/AppManager
 [Brainscape]: https://play.google.com/store/apps/details?id=com.brainscape.mobile.portal
 [Bypass Paywalls Clean]: https://github.com/bpc-clone/bypass-paywalls-firefox-clean
 [ChatGPT]: https://play.google.com/store/apps/details?id=com.openai.chatgpt
