@@ -12,6 +12,8 @@ opt.shortmess:append("I")
 opt.foldenable = false
 -- set default commentstring
 opt.commentstring = "# %s"
+-- for wrapped lines
+opt.smoothscroll = true
 
 opt.splitbelow = true
 opt.splitright = true
@@ -28,7 +30,6 @@ opt.wrapscan = false
 opt.undofile = true
 opt.wrap = false
 opt.mouse = "n"
-opt.scrolloff = 2
 opt.virtualedit = "block"
 opt.isfname:append({ "{", "}" })
 
