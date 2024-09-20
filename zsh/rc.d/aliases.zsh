@@ -20,6 +20,10 @@ alias gss='gs --short'
 # git:info
 alias gic='git-config-info'
 
+# git:(updates staging area)
+alias gmv='git mv'
+alias grm='git rm'
+
 # git:log
 alias gl='git log --oneline --graph --all'
 alias glr='git reflog'
