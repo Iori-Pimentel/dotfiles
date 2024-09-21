@@ -49,7 +49,9 @@ alias gc='git clean --interactive -d'
 
 # git:diff
 alias gd='git diff'
+alias gdu='gd @{upstream}'
 alias gds='gd --staged'
+alias gdus='gdu --staged'
 
 # git:commit
 alias gc='git commit'
