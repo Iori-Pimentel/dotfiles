@@ -1,3 +1,6 @@
+# git help --config
+# man git-config
+
 [user]
 	name = Iori Pimentel
 	email = ioripimentel64@gmail.com
