@@ -44,9 +44,6 @@ alias gpd='git restore --patch'
 alias ga='git add'
 alias gai='ga --intent-to-add'
 
-# git:clean
-alias gc='git clean --interactive -d'
-
 # git:diff
 alias gd='git diff'
 alias gdu='gd @{upstream}'
