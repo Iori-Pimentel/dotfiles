@@ -8,3 +8,6 @@
 [rebase]
 	autoSquash = true
 	autoStash = true
+
+[commit]
+	verbose = true

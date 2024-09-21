@@ -52,7 +52,7 @@ alias gd='git diff'
 alias gds='gd --staged'
 
 # git:commit
-alias gc='git commit --verbose'
+alias gc='git commit'
 alias gca='gc --amend'
 
 alias p='cd ~-'
