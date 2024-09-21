@@ -1,4 +1,4 @@
-# <Docs> curl -fsSL https://github.com/romkatv/zsh4humans/raw/v5/fn%2F-z4h-init-zle | nvim +/_z4h_key </Docs>
+# <Docs> n https://github.com/romkatv/zsh4humans/raw/v5/fn%2F-z4h-init-zle +/_z4h_key </Docs>
 typeset -A key
 key=(
 	Ctrl          '^'
