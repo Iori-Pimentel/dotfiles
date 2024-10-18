@@ -1,7 +1,7 @@
 {
   "title": "MiXplorer",
   "package": "com.mixplorer.beta",
-  "date": "19\/09\/2024 03:40:13",
+  "date": "18\/10\/2024 21:08:13",
   "type": 0,
   "db": {
     "uris": [
@@ -10,7 +10,7 @@
         "uri": "\/*1726678218454",
         "title": "Storage",
         "user": "*fldr*",
-        "secret": "V6iXyYTvdZ8exTgPRa_lrA",
+        "secret": "TCiOdfjj8Bi4fmdDQIbFZQ",
         "properties": "##"
       },
       {
@@ -43,23 +43,7 @@
         "title": "All Files",
         "user": "",
         "secret": "",
-        "properties": ""
-      },
-      {
-        "pid": 14,
-        "uri": "content:\/\/mix\/app",
-        "title": "App",
-        "user": "",
-        "secret": "",
-        "properties": ""
-      },
-      {
-        "pid": 14,
-        "uri": "content:\/\/mix\/apk",
-        "title": "APK",
-        "user": "",
-        "secret": "",
-        "properties": ""
+        "properties": "##U7HR5kuV2gGJxNuew32LYy31xHf8fYUdMg_YWWLz8ng"
       },
       {
         "pid": 14,
@@ -67,7 +51,7 @@
         "title": "Archive",
         "user": "",
         "secret": "",
-        "properties": ""
+        "properties": "##rhlLPgT1iIdyA4hyFOXELL47hzmDKxFTi9jUudppHOQ"
       },
       {
         "pid": 14,
@@ -75,7 +59,7 @@
         "title": "Audio",
         "user": "",
         "secret": "",
-        "properties": ""
+        "properties": "##u_E72_eZUY_-oZ0l4Ep5bXhpqlXV3k6KlqFgLxS9TvQ"
       },
       {
         "pid": 14,
@@ -83,7 +67,7 @@
         "title": "Document",
         "user": "",
         "secret": "",
-        "properties": ""
+        "properties": "##zIphQ5DMFJiYCm2ugtKYbxlS1Iy81Tf97XywTDgrMsI"
       },
       {
         "pid": 14,
@@ -91,7 +75,7 @@
         "title": "Image",
         "user": "",
         "secret": "",
-        "properties": ""
+        "properties": "##Mb1p4W25RcpPMrcp5KCEz9HvbnIGDck6ucVWP3gvlXY"
       },
       {
         "pid": 14,
@@ -99,14 +83,30 @@
         "title": "Video",
         "user": "",
         "secret": "",
-        "properties": ""
+        "properties": "##5QMFinYYm8rDdPIb4vJ4ww8b2rMG7vl-r5Gqy97JoME"
+      },
+      {
+        "pid": 14,
+        "uri": "content:\/\/mix\/app",
+        "title": "App",
+        "user": "",
+        "secret": "",
+        "properties": "##V7HxhWotbgHvlGuerfQiED9kS1ZtuhZPe2RnfKu4VPk"
+      },
+      {
+        "pid": 14,
+        "uri": "content:\/\/mix\/apk",
+        "title": "APK",
+        "user": "",
+        "secret": "",
+        "properties": "##EUeefNIxE1N-J8Ll-6nkN4e-k5SCHUwmKkSU1hiamns"
       },
       {
         "pid": 14,
         "uri": "\/*1726684266701",
         "title": "MiX",
         "user": "*fldr*",
-        "secret": "TCiOdfjj8Bi4fmdDQIbFZQ",
+        "secret": "V6iXyYTvdZ8exTgPRa_lrA",
         "properties": "##"
       },
       {
@@ -143,6 +143,54 @@
       },
       {
         "pid": 2,
+        "uri": "content:\/\/mix\/archive",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": "##FfMOGrDJdtG1hsGtPXXYb0uglbLO5ge8IwVx3MrwwBt1yVK8N7eYnpzz9FatC_XrUoWfF-feRow_9kt6R09VQ8_HcUSXPRZbdSW_sXsEHukUyZGtzqr9BXtjVihgl6ungTXwT1MPfSvqMMqk51FIGCiTRhOy01dIb7PejHRl4U3gnzyZOLDIhZPn-99Jvmwd"
+      },
+      {
+        "pid": 2,
+        "uri": "content:\/\/mix\/video",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": "##FfMOGrDJdtG1hsGtPXXYb0uglbLO5ge8IwVx3MrwwBt1yVK8N7eYnpzz9FatC_XrUoWfF-feRow_9kt6R09VQ-aRrZGeQHfCFVhpW8fQAlIQAAZ4T541zaAk9K06JRW6m0t6bp-2mp0tHDMw-Ja4kguz8kED4ScYX3R-m-3j9GtAo3QSZIkqPLGB-io8vlNV"
+      },
+      {
+        "pid": 2,
+        "uri": "content:\/\/mix\/image",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": "##FfMOGrDJdtG1hsGtPXXYb0uglbLO5ge8IwVx3MrwwBt1yVK8N7eYnpzz9FatC_XrUoWfF-feRow_9kt6R09VQ-aRrZGeQHfCFVhpW8fQAlIQAAZ4T541zaAk9K06JRW6m0t6bp-2mp0tHDMw-Ja4kguz8kED4ScYX3R-m-3j9GtAo3QSZIkqPLGB-io8vlNV"
+      },
+      {
+        "pid": 2,
+        "uri": "content:\/\/mix\/audio",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": "##FfMOGrDJdtG1hsGtPXXYb0uglbLO5ge8IwVx3MrwwBt1yVK8N7eYnpzz9FatC_XrUoWfF-feRow_9kt6R09VQ8_HcUSXPRZbdSW_sXsEHukUyZGtzqr9BXtjVihgl6ungTXwT1MPfSvqMMqk51FIGCiTRhOy01dIb7PejHRl4U0E0Z979H_akxdwqc3lLKvZ"
+      },
+      {
+        "pid": 2,
+        "uri": "content:\/\/mix\/app",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": "##FfMOGrDJdtG1hsGtPXXYb0uglbLO5ge8IwVx3MrwwBt1yVK8N7eYnpzz9FatC_XrUoWfF-feRow_9kt6R09VQ-aRrZGeQHfCFVhpW8fQAlIQAAZ4T541zaAk9K06JRW6m0t6bp-2mp0tHDMw-Ja4kguz8kED4ScYX3R-m-3j9GtAo3QSZIkqPLGB-io8vlNV"
+      },
+      {
+        "pid": 2,
+        "uri": "content:\/\/mix\/all",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": "##FfMOGrDJdtG1hsGtPXXYb0uglbLO5ge8IwVx3MrwwBt1yVK8N7eYnpzz9FatC_XrUoWfF-feRow_9kt6R09VQ8_HcUSXPRZbdSW_sXsEHukUyZGtzqr9BXtjVihgl6ungTXwT1MPfSvqMMqk51FIGCiTRhOy01dIb7PejHRl4U0E0Z979H_akxdwqc3lLKvZ"
+      },
+      {
+        "pid": 2,
         "uri": "content:\/\/mix\/trash",
         "title": "",
         "user": "",
@@ -167,39 +215,7 @@
       },
       {
         "pid": 2,
-        "uri": "content:\/\/mix\/audio",
-        "title": "",
-        "user": "",
-        "secret": "",
-        "properties": "##FfMOGrDJdtG1hsGtPXXYb0uglbLO5ge8IwVx3MrwwBt1yVK8N7eYnpzz9FatC_XrUoWfF-feRow_9kt6R09VQ-aRrZGeQHfCFVhpW8fQAlIQAAZ4T541zaAk9K06JRW6m0t6bp-2mp0tHDMw-Ja4kguz8kED4ScYX3R-m-3j9GtAo3QSZIkqPLGB-io8vlNV"
-      },
-      {
-        "pid": 2,
-        "uri": "content:\/\/mix\/all",
-        "title": "",
-        "user": "",
-        "secret": "",
-        "properties": "##FfMOGrDJdtG1hsGtPXXYb0uglbLO5ge8IwVx3MrwwBt1yVK8N7eYnpzz9FatC_XrUoWfF-feRow_9kt6R09VQ-aRrZGeQHfCFVhpW8fQAlIQAAZ4T541zaAk9K06JRW6m0t6bp-2mp0tHDMw-Ja4kguz8kED4ScYX3R-m-3j9GtAo3QSZIkqPLGB-io8vlNV"
-      },
-      {
-        "pid": 2,
-        "uri": "content:\/\/mix\/archive",
-        "title": "",
-        "user": "",
-        "secret": "",
-        "properties": "##FfMOGrDJdtG1hsGtPXXYb0uglbLO5ge8IwVx3MrwwBt1yVK8N7eYnpzz9FatC_XrUoWfF-feRow_9kt6R09VQ-aRrZGeQHfCFVhpW8fQAlIQAAZ4T541zaAk9K06JRW6m0t6bp-2mp0tHDMw-Ja4kguz8kED4ScYX3R-m-3j9GvtPOELoiQl_Y4h1GSb7kZh"
-      },
-      {
-        "pid": 2,
         "uri": "content:\/\/mix\/apk",
-        "title": "",
-        "user": "",
-        "secret": "",
-        "properties": "##FfMOGrDJdtG1hsGtPXXYb0uglbLO5ge8IwVx3MrwwBt1yVK8N7eYnpzz9FatC_XrUoWfF-feRow_9kt6R09VQ-aRrZGeQHfCFVhpW8fQAlIQAAZ4T541zaAk9K06JRW6m0t6bp-2mp0tHDMw-Ja4kguz8kED4ScYX3R-m-3j9GtAo3QSZIkqPLGB-io8vlNV"
-      },
-      {
-        "pid": 2,
-        "uri": "content:\/\/mix\/app",
         "title": "",
         "user": "",
         "secret": "",
@@ -212,22 +228,6 @@
         "user": "",
         "secret": "",
         "properties": "##FfMOGrDJdtG1hsGtPXXYb0uglbLO5ge8IwVx3MrwwBt1yVK8N7eYnpzz9FatC_XrUoWfF-feRow_9kt6R09VQ8_HcUSXPRZbdSW_sXsEHukUyZGtzqr9BXtjVihgl6ungTXwT1MPfSvqMMqk51FIGCiTRhOy01dIb7PejHRl4U3gnzyZOLDIhZPn-99Jvmwd"
-      },
-      {
-        "pid": 2,
-        "uri": "content:\/\/mix\/video",
-        "title": "",
-        "user": "",
-        "secret": "",
-        "properties": "##FfMOGrDJdtG1hsGtPXXYb0uglbLO5ge8IwVx3MrwwBt1yVK8N7eYnpzz9FatC_XrUoWfF-feRow_9kt6R09VQ8_HcUSXPRZbdSW_sXsEHukUyZGtzqr9BXtjVihgl6ungTXwT1MPfSvqMMqk51FIGCiTRhOy01dIb7PejHRl4U0E0Z979H_akxdwqc3lLKvZ"
-      },
-      {
-        "pid": 2,
-        "uri": "content:\/\/mix\/image",
-        "title": "",
-        "user": "",
-        "secret": "",
-        "properties": "##FfMOGrDJdtG1hsGtPXXYb0uglbLO5ge8IwVx3MrwwBt1yVK8N7eYnpzz9FatC_XrUoWfF-feRow_9kt6R09VQ8_HcUSXPRZbdSW_sXsEHukUyZGtzqr9BXtjVihgl6ungTXwT1MPfSvqMMqk51FIGCiTRhOy01dIb7PejHRl4U0E0Z979H_akxdwqc3lLKvZ"
       },
       {
         "pid": 2,
@@ -260,6 +260,14 @@
         "user": "",
         "secret": "",
         "properties": "sort=0"
+      },
+      {
+        "pid": 1,
+        "uri": "content:\/\/mix\/document",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": "##c1vDAHAcR-CJ9Z3OC8tTEA"
       },
       {
         "pid": 1,
@@ -375,14 +383,6 @@
       },
       {
         "pid": 1,
-        "uri": "content:\/\/mix\/document",
-        "title": "",
-        "user": "",
-        "secret": "",
-        "properties": "view=4"
-      },
-      {
-        "pid": 1,
         "uri": "content:\/\/mix\/app",
         "title": "",
         "user": "",
@@ -392,9 +392,19 @@
     ],
     "packages": [
       {
+        "extension": "xml:1481493647",
+        "package": "com.mixplorer.beta",
+        "classname": "com.mixplorer.activities.CodeEditorActivity"
+      },
+      {
         "extension": "ttf:1481493647",
         "package": "com.mixplorer.beta",
         "classname": "com.mixplorer.activities.FontViewerActivity"
+      },
+      {
+        "extension": "png:1481493647",
+        "package": "com.mixplorer.beta",
+        "classname": "com.mixplorer.activities.ImageViewerActivity"
       },
       {
         "extension": "pdf:1481493647",
@@ -427,6 +437,11 @@
         "classname": "com.mixplorer.activities.BrowseActivity"
       },
       {
+        "extension": "gif:1481493647",
+        "package": "com.mixplorer.beta",
+        "classname": "com.mixplorer.activities.ImageViewerActivity"
+      },
+      {
         "extension": "docx:1481493647",
         "package": "softmaker.applications.office.textmaker",
         "classname": "softmaker.applications.textmaker.TextMaker"
@@ -445,13 +460,16 @@
   },
   "pref": {
     "main": {
-      "custom_key_last_path": "\/storage\/emulated\/0\/Download",
+      "custom_key_last_path": "\/storage\/emulated\/0",
+      "full_filename": false,
       "search_options": "CATEGORY=6\nSEARCH_ALIGN=2\nFILE_CONTENT=false",
       "saved_customized": "MiX Gray",
-      "code_editor": "encoding=\nwrap=false\nfontsize=30\nline_numbers=true\nhighlight=\nauto_indent=true\neditor_mode=0\nfull_view_size=0\nchars_view=true\nfullscreen=false\nhighlight_old=\nspell_check=false\nno_keyboard=false\nsaved_offs=ce177048:0\nauto_complete=false\nstart_with_keyboard=true\nstart_at_end=false\ntab_space=false",
+      "code_editor": "encoding=\nwrap=false\nfontsize=30\nline_numbers=true\nhighlight=\nauto_indent=true\neditor_mode=0\nfull_view_size=0\nchars_view=true\nfullscreen=false\nhighlight_old=\nspell_check=false\nno_keyboard=false\nsaved_offs=647f77d1:0,c2866ff2:0\nauto_complete=false\nstart_with_keyboard=true\nstart_at_end=false\ntab_space=false\nshow_whitespace=false",
       "custom_key_adv_search_toggle": "false",
+      "text_editor": "encoding=\nwrap=true\nfontsize=30\nline_numbers=true\nhighlight=\nauto_indent=true\neditor_mode=0\nfull_view_size=0\nchars_view=true\nfullscreen=false\nhighlight_old=Extension\nspell_check=false\nno_keyboard=false\nsaved_offs=fd786ebb:0\nauto_complete=false\nstart_with_keyboard=true\nstart_at_end=false\ntab_space=false\nshow_whitespace=false",
       "custom_key_PERM_VIEW_REM_KEY": "1",
       "custom_key_NEW_FILE": "0",
+      "custom_key_txt_to_pdf": "0\/12\/",
       "custom_key_AGREE_PRIVACY": "true",
       "drawer_options": "1|1|1|0|0|1|1|0|0|0",
       "html_viewer": "encoding=UTF-8\norientation=0\nfullscreen=true",
@@ -462,9 +480,10 @@
       "folders_app_icon": "",
       "custom_key_CHROMA": "xxxxx",
       "custom_key_PERM_SHARE_REM_KEY": "1",
+      "play_background": true,
       "allow_root": false,
       "drawer_mode": 0,
-      "menu_orders": "0=0,1,02,3,4,05,06,07,08,09,010,011,12,013,14,15,16,017,18,019,20,021,22,23,24&3=1,4,3,0,02,05,06&21=00,01,02,03,04,05,06,07,08,09,010,011,012,013,014,015,016,017,018,019,020,021,022,023,024&22=1,6,4,5,00,02,03&14=0,1,2,3,4,5,6,7,8,9,10,11,12&12=0,1,2,3,4,5&10=0,1,2,3,4,5,6,7,8,9&9=0,1,2,3,4,5,6,7&6=0,1,2,3,4,5,6,7,8&5=00,01,2,3,4,5,6,7,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,027,28,029,30,031&4=0,5,1,2,3,4"
+      "menu_orders": "0=0,8,14,12,3,23,1,24,02,04,05,06,07,09,010,011,013,015,016,017,018,019,020,021,022&3=1,4,3,0,02,05,06&21=00,01,02,03,04,05,06,07,08,09,010,011,012,013,014,015,016,017,018,019,020,021,022,023,024&22=1,6,4,5,00,02,03&14=0,1,2,3,4,5,6,7,8,9,10,11,12&12=0,1,2,3,4,5&10=0,1,2,3,4,5,6,7,8,9&9=0,1,2,3,4,5,6,7&6=0,1,2,3,4,5,6,7,8&5=2,20,17,3,4,13,012,00,01,05,06,07,08,09,010,011,014,015,016,018,019,021,022,023,024,025,026,027,028,029,030,031&4=0,5,1,2,3,4&1=0,1,2,3,4,5,6,7,8,9&7=0,1,2,3,4,5,6,7,8&8=0,1,2,3,4,5,6,7,8,9,10&11=0,1,2,3,4&13=0,1,2,3,4,5,6,7&16=0,1,2,3,4,5,6,7,8,9,10,11,12,13&20=0,1,2,3,4,5,6&18=0,1,2,3,4,5,6,7,8&19=0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21"
     },
     "skins": {
       "MiX Gray": "#cQK69eoVgupEskHCt57_89NgSzNFk8MBuvNgX7h-4w0FwG4VbAHcHlEGlIBsyM_9Y16DiluoMUrhmh7NMeL58sqnhOx8Ixi7XGQB222BipbnnGz10ClTJgx7DAiucD6lfcEIyvmNYZ3-aYc4moCSm2NwkOi30R7FZQD0fanEqAAPygsaqvuQncsQN7j0zkJOt88y9L7Zyf_htFqEtLY3vb6h3jsobo92mDNASBJ5RYtucCr5S8cMNMERS8JmA3bz5LTyNLO68aWu_UrAw8RTu4OZJL2lJOfY0rdb5Bf5iR50cHaAmJWM8GwO2_NRSTM6dYXH8xzvDhw8pElp-0hkci6TAk8qvI5gcRPfbDSkdEjmUImRguNcRf4KZHleNLNL_PMFGXGdnrgSvQGzN6HXP73WdaEIjgIHuz_R_deBAs6N5Vz8W-JbTg3_BA3oNAglv6rGbvhaw9jv3TTjPE5xXkUliWeH-UdrGuJP4RwfHSR1bvY3znwenJEyAqRdYQvaFcfomDsvJ15e8kefkVipMrO0OIXwnzUEq_yZxIwM-YYtXjDnNI2AodnuF6QxC4yBBn0GExap71JEa2EwlCrrUfiqBtdGDAQUep8ZT-OyBI5l52cQNqCT0yq-ggR1qWnxIF5AbzjXIVmazPFYvDR5nhKCAUGROXXmvN6R5XohFTj_BYIXp_66y0JE7yznkA8E7AssiY2VdlIFFf_RWaQW5zo7fTYm1nPdRqyNW2OJ6WOb_lDKPbA4E02Ij3vL3t9ZapLJDikZOiao_tcd5ioeHw9BK1JnAzNdrKee_TOy_KIz3mgIIM2jJw6BVdmlr5-TgP_0zLIT-t4b2y_b7LPKFXTP6WeDVnkIRKIbvvyrnwAkSSvP9jR57guwL2Ttl_mWpMlKYoYs3lFzEeWY5XwD6AGtK069C7zoeA7BVOv0R3XVv8brf-JACubwJ13K3trylVwTKqtNrky4zYXL9IP4GV-PQv90ro7jTAjy5byj-rc"
