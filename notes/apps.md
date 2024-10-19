@@ -24,7 +24,6 @@
 
 ### Play Store Sources (with Pro versions)
 - Xodo
-- MxPlayer
 - Moon+ Reader
 - Volume styles
 ### Play Store Sources

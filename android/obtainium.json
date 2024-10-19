@@ -84,6 +84,12 @@
 			"url": "https://github.com/PhilippC/keepass2android",
 			"author": "PhilippC",
 			"name": "Keepass2Android"
+		},
+		{
+			"id": "live.mehiz.mpvkt",
+			"url": "https://github.com/abdallahmehiz/mpvKt",
+			"author": "abdallahmehiz",
+			"name": "mpvKt"
 		}
 	],
 	"settings": {
