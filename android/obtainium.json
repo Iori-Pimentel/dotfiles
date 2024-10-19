@@ -84,12 +84,6 @@
 			"url": "https://github.com/PhilippC/keepass2android",
 			"author": "PhilippC",
 			"name": "Keepass2Android"
-		},
-		{
-			"id": "us.spotco.fennec_dos",
-			"url": "https://f-droid.org/packages/us.spotco.fennec_dos",
-			"author": "Divested Computing Group",
-			"name": "Mull"
 		}
 	],
 	"settings": {
