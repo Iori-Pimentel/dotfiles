@@ -7,6 +7,7 @@
 - [Keepass2Android][]
 - [Termux-Monet][]
 - [Unexpected Keyboard][]
+- [mpvKT][]
 - [LibreTorrent][]
 - [Harmonic][]
 - [OsmAnd][]
@@ -22,10 +23,6 @@
 - Youtube Revanced
 - Relay for reddit [Reddit-Client-ID-Guide.md][]
 
-### Play Store Sources (with Pro versions)
-- Xodo
-- Moon+ Reader
-- Volume styles
 ### Play Store Sources
 - [Github][]
 - [SimpleNote][]
@@ -38,6 +35,9 @@
 - [Sound Boost][]
 - [Office NX][]
 - [nzb360][]
+- Xodo
+- Moon+ Reader
+- Volume styles
 
 ### Firefox Extensions
 - [uBlock Origin][]
@@ -57,6 +57,7 @@
 [LibreTorrent]: https://github.com/proninyaroslav/libretorrent
 [Lichess]: https://github.com/lichess-org/mobile
 [MiXplorer]: https://mixplorer.com/beta
+[mpvKT]: https://github.com/abdallahmehiz/mpvKt
 [nzb360]: https://play.google.com/store/apps/details?id=com.kevinforeman.nzb360
 [Obtainium]: https://github.com/ImranR98/Obtainium
 [Office NX]: https://play.google.com/store/apps/details?id=softmaker.applications.office.textmaker
