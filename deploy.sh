@@ -23,9 +23,7 @@ packages=(
 pkg install --yes ${packages[@]}
 
 XDG_CONFIG_HOME=~/.config
- XDG_CACHE_HOME=~/.cache
- XDG_STATE_HOME=~/.local/state
-  XDG_DATA_HOME=~/.local/share
+XDG_CACHE_HOME=~/.cache
 
 DOTFILES=https://github.com/Iori-Pimentel/dotfiles.git
 ANTIDOTE=https://github.com/mattmc3/antidote.git
@@ -38,6 +36,7 @@ git clone ${DOTFILES} ${DOTFILES_BASE}
 [[ -d ${ANTIDOTE_BASE}/.git ]] ||
 git clone ${ANTIDOTE} ${ANTIDOTE_BASE} --depth=1
 
+mkdir -p ${XDG_CONFIG_HOME}
 ln -sf ${DOTFILES_BASE}/zsh/.zshenv --target-directory ${HOME}
 ln -sf ${DOTFILES_BASE}/configs/*   --target-directory ${XDG_CONFIG_HOME}
 
@@ -72,7 +71,11 @@ mv ~/.termux/font-italic.ttf{.tmp,}
 
 termux-reload-settings
 touch ~/.hushlogin
-nvim --headless "+Lazy! install" +qa
+nvim --headless "+Lazy! install" +qa > /dev/null
 
 read -p 'Press any key to continue' -n1
-clear && chsh -s zsh && exec zsh
+clear
+chsh -s zsh
+
+PS4='\e[35m [Wait for zsh prompt to show] \e[m'
+exec zsh
