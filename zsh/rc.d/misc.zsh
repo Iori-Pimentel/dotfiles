@@ -19,7 +19,8 @@ SAVEHIST=10000000 # Size in file
 PROMPT_EOL_MARK='%K{red} %k'
 
 # named directories
-hash -d PREFIX="$PREFIX"
+hash -d prefix="$PREFIX"
+hash -d downloads="$HOME/storage/downloads"
 
 # enable completion
 autoload compinit
