@@ -80,16 +80,17 @@
 			"name": "OsmAnd~"
 		},
 		{
-			"id": "keepass2android.keepass2android",
-			"url": "https://github.com/PhilippC/keepass2android",
-			"author": "PhilippC",
-			"name": "Keepass2Android"
-		},
-		{
 			"id": "live.mehiz.mpvkt",
 			"url": "https://github.com/abdallahmehiz/mpvKt",
 			"author": "abdallahmehiz",
 			"name": "mpvKt"
+		},
+		{
+			"id": "com.kunzisoft.keepass.libre",
+			"url": "https://github.com/Kunzisoft/KeePassDX",
+			"author": "Kunzisoft",
+			"name": "KeePassDX",
+			"additionalSettings": "{\"apkFilterRegEx\":\"libre\"}"
 		}
 	],
 	"settings": {

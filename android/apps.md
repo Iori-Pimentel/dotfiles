@@ -4,7 +4,7 @@
 - [Obtainium][]
 - [App Manager][]
 - [ReVanced Manager][]
-- [Keepass2Android][]
+- [KeePassDX][]
 - [Termux-Monet][]
 - [Unexpected Keyboard][]
 - [mpvKT][]
@@ -53,7 +53,7 @@
 [Device Info HW]: https://play.google.com/store/apps/details?id=ru.andr7e.deviceinfohw
 [Github]: https://play.google.com/store/apps/details?id=com.github.android
 [Harmonic]: https://github.com/SimonHalvdansson/Harmonic-HN
-[Keepass2Android]: https://github.com/PhilippC/keepass2android
+[KeePassDX]: https://github.com/Kunzisoft/KeePassDX
 [LibreTorrent]: https://github.com/proninyaroslav/libretorrent
 [Lichess]: https://github.com/lichess-org/mobile
 [MiXplorer]: https://mixplorer.com/beta
