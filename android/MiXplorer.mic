@@ -1,17 +1,17 @@
 {
   "title": "MiXplorer",
   "package": "com.mixplorer.beta",
-  "date": "18\/10\/2024 21:08:13",
+  "date": "02\/11\/2024 20:18:16",
   "type": 0,
   "db": {
     "uris": [
       {
         "pid": 14,
-        "uri": "\/*1726678218454",
-        "title": "Storage",
-        "user": "*fldr*",
-        "secret": "TCiOdfjj8Bi4fmdDQIbFZQ",
-        "properties": "##"
+        "uri": "\/data\/user\/0\/com.mixplorer.beta\/home",
+        "title": "Home",
+        "user": "",
+        "secret": "",
+        "properties": "##xL7YQRe8Wuw9DS6BoJZHZA"
       },
       {
         "pid": 14,
@@ -19,7 +19,7 @@
         "title": "Internal storage",
         "user": "",
         "secret": "",
-        "properties": ""
+        "properties": "##xL7YQRe8Wuw9DS6BoJZHZA"
       },
       {
         "pid": 14,
@@ -27,12 +27,12 @@
         "title": "Download",
         "user": "",
         "secret": "",
-        "properties": "##"
+        "properties": "##xL7YQRe8Wuw9DS6BoJZHZA"
       },
       {
         "pid": 14,
         "uri": "\/*1726678184242",
-        "title": "All Files",
+        "title": "Categories",
         "user": "*fldr*",
         "secret": "TCiOdfjj8Bi4fmdDQIbFZQ",
         "properties": "##"
@@ -43,7 +43,7 @@
         "title": "All Files",
         "user": "",
         "secret": "",
-        "properties": "##U7HR5kuV2gGJxNuew32LYy31xHf8fYUdMg_YWWLz8ng"
+        "properties": "##7Ip2ZgmgeFhfy3L12LKwwoTRkMhfGJBaFuOP3rGvtmQ"
       },
       {
         "pid": 14,
@@ -51,7 +51,7 @@
         "title": "Archive",
         "user": "",
         "secret": "",
-        "properties": "##rhlLPgT1iIdyA4hyFOXELL47hzmDKxFTi9jUudppHOQ"
+        "properties": "##FGxMxa3o4t4qJ0EHYr2DiJuNTm5lIoRnLdJl5Z03c_s"
       },
       {
         "pid": 14,
@@ -67,7 +67,7 @@
         "title": "Document",
         "user": "",
         "secret": "",
-        "properties": "##zIphQ5DMFJiYCm2ugtKYbxlS1Iy81Tf97XywTDgrMsI"
+        "properties": "##mYPm7UON3kgU4evFbeCZXmaoymJojWVO1KT7y2FMDeA"
       },
       {
         "pid": 14,
@@ -75,7 +75,7 @@
         "title": "Image",
         "user": "",
         "secret": "",
-        "properties": "##Mb1p4W25RcpPMrcp5KCEz9HvbnIGDck6ucVWP3gvlXY"
+        "properties": "##zW8Mq-pDouBGSrUK8w-myVzdeN4eee0GRcJBzzFEYds"
       },
       {
         "pid": 14,
@@ -83,7 +83,7 @@
         "title": "Video",
         "user": "",
         "secret": "",
-        "properties": "##5QMFinYYm8rDdPIb4vJ4ww8b2rMG7vl-r5Gqy97JoME"
+        "properties": "##vM-rtYZ3jMdFN03QZ60cBilspL9oHNPkCTUA7EHEF_8"
       },
       {
         "pid": 14,
@@ -91,7 +91,7 @@
         "title": "App",
         "user": "",
         "secret": "",
-        "properties": "##V7HxhWotbgHvlGuerfQiED9kS1ZtuhZPe2RnfKu4VPk"
+        "properties": "##W7zRWejkWoNG7dX_si1-L8-U1tO1OLPjy6soI32fG_g"
       },
       {
         "pid": 14,
@@ -99,15 +99,7 @@
         "title": "APK",
         "user": "",
         "secret": "",
-        "properties": "##EUeefNIxE1N-J8Ll-6nkN4e-k5SCHUwmKkSU1hiamns"
-      },
-      {
-        "pid": 14,
-        "uri": "\/*1726684266701",
-        "title": "MiX",
-        "user": "*fldr*",
-        "secret": "V6iXyYTvdZ8exTgPRa_lrA",
-        "properties": "##"
+        "properties": "##tsH4FwYbpKi23vKKS28iaF594XtPcV_9r7ruzcXKelA"
       },
       {
         "pid": 14,
@@ -115,7 +107,15 @@
         "title": "Recent files",
         "user": "",
         "secret": "",
-        "properties": ""
+        "properties": "##NaZSV34ByMaFDqZZCpk66Jvm1wQo9yArOfYCiRDJdZE"
+      },
+      {
+        "pid": 14,
+        "uri": "\/*1726684266701",
+        "title": "MiX",
+        "user": "*fldr*",
+        "secret": "TCiOdfjj8Bi4fmdDQIbFZQ",
+        "properties": "##"
       },
       {
         "pid": 14,
@@ -123,15 +123,7 @@
         "title": "Recycle bin",
         "user": "",
         "secret": "",
-        "properties": ""
-      },
-      {
-        "pid": 14,
-        "uri": "\/data\/user\/0\/com.mixplorer.beta\/home",
-        "title": "Home",
-        "user": "",
-        "secret": "",
-        "properties": ""
+        "properties": "##xL7YQRe8Wuw9DS6BoJZHZA"
       },
       {
         "pid": 14,
@@ -139,7 +131,15 @@
         "title": "Root",
         "user": "",
         "secret": "",
-        "properties": ""
+        "properties": "##xL7YQRe8Wuw9DS6BoJZHZA"
+      },
+      {
+        "pid": 2,
+        "uri": "\/data\/user\/0\/com.mixplorer.beta\/home",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": "##5X2F-mRgCANB-H-8VlQCzo5ahLauGk9PDxg7HzXVFkM2cSkQ1E3myquaIoUKtiDwuVOx36mzA90hUc1JejZZZKjBh8TmeCnIoduluyOlFafcjZZouPDhlSW3MwBRZHaU7VOofWBmWFjn2Illc1iBhXa-RBBt6zrEans52-SMFiE-xf6zcmUq6svveUKPcEko"
       },
       {
         "pid": 2,
@@ -196,14 +196,6 @@
         "user": "",
         "secret": "",
         "properties": "##FfMOGrDJdtG1hsGtPXXYb0uglbLO5ge8IwVx3MrwwBt1yVK8N7eYnpzz9FatC_XrUoWfF-feRow_9kt6R09VQ-aRrZGeQHfCFVhpW8fQAlIQAAZ4T541zaAk9K06JRW6m0t6bp-2mp0tHDMw-Ja4kguz8kED4ScYX3R-m-3j9GtAo3QSZIkqPLGB-io8vlNV"
-      },
-      {
-        "pid": 2,
-        "uri": "\/data\/user\/0\/com.mixplorer.beta\/home",
-        "title": "",
-        "user": "",
-        "secret": "",
-        "properties": "##upUyA52Vjibm1a2ayuku7iiTYE--3Osoq7SLDiDqeYDXLgQQWGE7eA_44jbC7o4Rg5Ya636zsggzcTP4bQ0jruTHj9DqKls3VjtTom16z9miynNK_UupS6LKiWA6xK98PaBmyDHvY1rwCOOs6-VfAEO_ACKnS1GOnLcaH8XqeT6LdtYnhkdcbVK8_jiwAliK"
       },
       {
         "pid": 2,
@@ -231,35 +223,27 @@
       },
       {
         "pid": 2,
-        "uri": "\/storage\/emulated\/0\/Download",
-        "title": "",
-        "user": "",
-        "secret": "",
-        "properties": "##FfMOGrDJdtG1hsGtPXXYb0uglbLO5ge8IwVx3MrwwBt1yVK8N7eYnpzz9FatC_XrUoWfF-feRow_9kt6R09VQ-aRrZGeQHfCFVhpW8fQAlIQAAZ4T541zaAk9K06JRW6m0t6bp-2mp0tHDMw-Ja4kguz8kED4ScYX3R-m-3j9GtAo3QSZIkqPLGB-io8vlNV"
-      },
-      {
-        "pid": 2,
-        "uri": "\/storage\/emulated\/0\/.recycle\/1700265905054.3\/827544581",
-        "title": "",
-        "user": "",
-        "secret": "",
-        "properties": "##upUyA52Vjibm1a2ayuku7iiTYE--3Osoq7SLDiDqeYDXLgQQWGE7eA_44jbC7o4Rg5Ya636zsggzcTP4bQ0jrlryOOT8Rr2t_EzjAXqUwFAvnfaZYNiutbED02zC2gdFwhtKLbCmmotb59Kgvb0iAZjXokLzQnHZb4NQgPnQBONHxu6PsOxpydvV5O3uKPM4"
-      },
-      {
-        "pid": 2,
-        "uri": "\/storage\/emulated\/0",
-        "title": "",
-        "user": "",
-        "secret": "",
-        "properties": "sort=0"
-      },
-      {
-        "pid": 2,
         "uri": "\/",
         "title": "",
         "user": "",
         "secret": "",
         "properties": "sort=0"
+      },
+      {
+        "pid": 1,
+        "uri": "\/data\/user\/0\/com.mixplorer.beta\/home",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": "##NU8rixKVZdOoGpMXTtcXi0T6RYc9FGwLH9-nJL_hyiU3vdTClWuT6-F_2zBEH_JybJP18wShnJrgpNGfGQOH2g"
+      },
+      {
+        "pid": 1,
+        "uri": "\/storage\/emulated\/0",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": "##rBTOfpdzdrvZfz3YrfldOzLt73-bd1yI_D1qujA9Kvp9iqQjNR75ZugUzxaSczVBJcny9xmlaIu25aovbhCSfg"
       },
       {
         "pid": 1,
@@ -271,43 +255,11 @@
       },
       {
         "pid": 1,
-        "uri": "\/storage\/emulated\/0\/Download\/?text=.pdf&replace=&recursively=true&ins=false&mode=2&type=131072&before=0&after=0&bigger=0&smaller=0&content=false&archive=false&metadata=false&print=false",
-        "title": "",
-        "user": "",
-        "secret": "",
-        "properties": "##iqBSI_go7ZNyuWvZEkGOZKG9LusvVYsme5OI-PNFAjDQg34-6HY6FGrVu3IaVuV4vF9CEBBOrm3Qztzi8lGLBw"
-      },
-      {
-        "pid": 1,
-        "uri": "\/storage\/emulated\/0\/Download\/?text=&replace=&recursively=true&ins=false&mode=2&type=131072&before=0&after=0&bigger=0&smaller=0&content=false&archive=false&metadata=false&print=false",
-        "title": "",
-        "user": "",
-        "secret": "",
-        "properties": "##NU8rixKVZdOoGpMXTtcXi4qC3H5sFynLPP0it8Jc5rO1xjOCqSZC272Ij3mIE9kDs12tB6EWN9ueJh26_xyilQ"
-      },
-      {
-        "pid": 1,
         "uri": "content:\/\/mix\/trash",
         "title": "",
         "user": "",
         "secret": "",
         "properties": "##iKo7IE7CTrBlr6RW4241Kw"
-      },
-      {
-        "pid": 1,
-        "uri": "\/storage\/emulated\/0\/Download\/?text=&replace=&recursively=true&ins=false&mode=0&type=16384&before=0&after=0&bigger=0&smaller=0&content=false&archive=false&metadata=false&print=false",
-        "title": "",
-        "user": "",
-        "secret": "",
-        "properties": "##c1vDAHAcR-CJ9Z3OC8tTEA"
-      },
-      {
-        "pid": 1,
-        "uri": "\/data\/user\/0\/com.mixplorer.beta\/home",
-        "title": "",
-        "user": "",
-        "secret": "",
-        "properties": "##c1vDAHAcR-CJ9Z3OC8tTEA"
       },
       {
         "pid": 1,
@@ -356,14 +308,6 @@
         "user": "",
         "secret": "",
         "properties": "##c1vDAHAcR-CJ9Z3OC8tTEA"
-      },
-      {
-        "pid": 1,
-        "uri": "\/storage\/emulated\/0",
-        "title": "",
-        "user": "",
-        "secret": "",
-        "properties": "view=1"
       },
       {
         "pid": 1,
@@ -418,8 +362,8 @@
       },
       {
         "extension": "mp4:1481493647",
-        "package": "com.mxtech.videoplayer.pro",
-        "classname": "com.mxtech.videoplayer.pro.ActivityScreen"
+        "package": "live.mehiz.mpvkt",
+        "classname": "live.mehiz.mpvkt.ui.player.PlayerActivity"
       },
       {
         "extension": "mp3:1481493647",
@@ -428,8 +372,13 @@
       },
       {
         "extension": "mov:1481493647",
-        "package": "com.mxtech.videoplayer.pro",
-        "classname": "com.mxtech.videoplayer.pro.ActivityScreen"
+        "package": "live.mehiz.mpvkt",
+        "classname": "live.mehiz.mpvkt.ui.player.PlayerActivity"
+      },
+      {
+        "extension": "mkv:1481493647",
+        "package": "live.mehiz.mpvkt",
+        "classname": "live.mehiz.mpvkt.ui.player.PlayerActivity"
       },
       {
         "extension": "mic:1481493647",
@@ -460,11 +409,11 @@
   },
   "pref": {
     "main": {
-      "custom_key_last_path": "\/storage\/emulated\/0",
+      "custom_key_last_path": "\/storage\/emulated\/0\/Download\/Exports",
       "full_filename": false,
       "search_options": "CATEGORY=6\nSEARCH_ALIGN=2\nFILE_CONTENT=false",
       "saved_customized": "MiX Gray",
-      "code_editor": "encoding=\nwrap=false\nfontsize=30\nline_numbers=true\nhighlight=\nauto_indent=true\neditor_mode=0\nfull_view_size=0\nchars_view=true\nfullscreen=false\nhighlight_old=\nspell_check=false\nno_keyboard=false\nsaved_offs=647f77d1:0,c2866ff2:0\nauto_complete=false\nstart_with_keyboard=true\nstart_at_end=false\ntab_space=false\nshow_whitespace=false",
+      "code_editor": "encoding=\nwrap=false\nfontsize=30\nline_numbers=true\nhighlight=\nauto_indent=true\neditor_mode=0\nfull_view_size=0\nchars_view=true\nfullscreen=false\nhighlight_old=\nspell_check=false\nno_keyboard=false\nsaved_offs=36ffc2f1:0\nauto_complete=false\nstart_with_keyboard=true\nstart_at_end=false\ntab_space=false\nshow_whitespace=false",
       "custom_key_adv_search_toggle": "false",
       "text_editor": "encoding=\nwrap=true\nfontsize=30\nline_numbers=true\nhighlight=\nauto_indent=true\neditor_mode=0\nfull_view_size=0\nchars_view=true\nfullscreen=false\nhighlight_old=Extension\nspell_check=false\nno_keyboard=false\nsaved_offs=fd786ebb:0\nauto_complete=false\nstart_with_keyboard=true\nstart_at_end=false\ntab_space=false\nshow_whitespace=false",
       "custom_key_PERM_VIEW_REM_KEY": "1",
@@ -497,9 +446,63 @@
         "d": true
       },
       {
+        "p": "\/data\/user\/0\/com.mixplorer.beta\/home\/Download.lnk",
+        "l": "\/storage\/emulated\/0\/Download",
+        "n": "Download",
+        "d": true
+      },
+      {
         "p": "\/data\/user\/0\/com.mixplorer.beta\/home\/Image.lnk",
         "l": "content:\/\/mix\/image",
         "n": "Image",
+        "d": true
+      },
+      {
+        "p": "\/data\/user\/0\/com.mixplorer.beta\/home\/Recent.lnk",
+        "l": "content:\/\/mix\/recent",
+        "n": "Recent",
+        "d": true
+      },
+      {
+        "p": "\/data\/user\/0\/com.mixplorer.beta\/home\/Video.lnk",
+        "l": "content:\/\/mix\/video",
+        "n": "Video",
+        "d": true
+      },
+      {
+        "p": "\/data\/user\/0\/com.mixplorer.beta\/home\/Audio.lnk",
+        "l": "content:\/\/mix\/audio",
+        "n": "Audio",
+        "d": true
+      },
+      {
+        "p": "\/data\/user\/0\/com.mixplorer.beta\/home\/Document.lnk",
+        "l": "content:\/\/mix\/document",
+        "n": "Document",
+        "d": true
+      },
+      {
+        "p": "\/data\/user\/0\/com.mixplorer.beta\/home\/App.lnk",
+        "l": "content:\/\/mix\/app",
+        "n": "App",
+        "d": true
+      },
+      {
+        "p": "\/data\/user\/0\/com.mixplorer.beta\/home\/All Files.lnk",
+        "l": "content:\/\/mix\/all",
+        "n": "All Files",
+        "d": true
+      },
+      {
+        "p": "\/data\/user\/0\/com.mixplorer.beta\/home\/Archive.lnk",
+        "l": "content:\/\/mix\/archive",
+        "n": "Archive",
+        "d": true
+      },
+      {
+        "p": "\/data\/user\/0\/com.mixplorer.beta\/home\/APK.lnk",
+        "l": "content:\/\/mix\/apk",
+        "n": "APK",
         "d": true
       }
     ]
