@@ -9,9 +9,8 @@ return {
 
 	opts = {
 		keymap = {
-			["<S-Tab>"] = { "accept" },
-			["<C-l>"] = { "snippet_forward" },
-			["<C-h>"] = { "snippet_backward" },
+			["<Right>"] = { "accept", "snippet_forward" },
+			["<Left>"] = { "snippet_backward" },
 		},
 
 		completion = {
