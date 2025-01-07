@@ -1,6 +1,6 @@
 alias eza='eza --all --no-user --icons=always --color=always --git --group-directories-first'
 alias ll='eza --long'
-alias lt='eza --tree --git-ignore --level 2'
+alias lt='eza --tree'
 
 alias qq=' clear && session-cd save && exec zsh'
 alias q=' exit'
