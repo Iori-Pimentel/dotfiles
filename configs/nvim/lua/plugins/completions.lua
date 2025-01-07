@@ -16,11 +16,13 @@ return {
 				function(cmp)
 					cmp.scroll_documentation_up(1)
 				end,
+				"fallback",
 			},
 			["<Down>"] = {
 				function(cmp)
 					cmp.scroll_documentation_down(1)
 				end,
+				"fallback",
 			},
 		},
 
@@ -34,6 +36,10 @@ return {
 			menu = {
 				max_height = 6,
 			},
+		},
+
+		signature = {
+			enabled = true,
 		},
 
 		snippets = {
