@@ -12,13 +12,24 @@ return {
 		keymap = {
 			["<Right>"] = { "accept", "snippet_forward" },
 			["<Left>"] = { "snippet_backward" },
+			["<Up>"] = {
+				function(cmp)
+					cmp.scroll_documentation_up(1)
+				end,
+			},
+			["<Down>"] = {
+				function(cmp)
+					cmp.scroll_documentation_down(1)
+				end,
+			},
 		},
 
 		completion = {
 			documentation = {
 				auto_show = true,
-				auto_show_delay_ms = 500,
-				treesitter_highlighting = false,
+				window = {
+					min_width = 80,
+				},
 			},
 			menu = {
 				max_height = 6,
