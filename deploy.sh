@@ -18,6 +18,7 @@ packages=(
 	fzf termux-api openssh
 	clang  # c compiler for nvim-treesitter
 	stylua # formatter used by conform nvim
+	lua-language-server # nvim lsp
 	fastfetch
 )
 pkg install --yes ${packages[@]}
