@@ -27,15 +27,22 @@ return {
 		},
 
 		completion = {
+			menu = {
+				max_height = 6,
+			},
+
+			list = {
+				selection = {
+					auto_insert = false,
+				},
+			},
+
 			documentation = {
 				auto_show = true,
 				treesitter_highlighting = false, -- Disables wrong highlighting
 				window = {
 					min_width = 80,
 				},
-			},
-			menu = {
-				max_height = 6,
 			},
 		},
 
