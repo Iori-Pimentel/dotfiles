@@ -48,6 +48,9 @@ return {
 
 		signature = {
 			enabled = true,
+			window = {
+				treesitter_highlighting = false, -- Disables wrong highlighting
+			},
 		},
 
 		snippets = {
