@@ -28,47 +28,47 @@ Horizontal spacing: 2dp
 		<shift a="+" b="$"/>
 		<shift a="_" b="|"/>
 
-		<shift a="" b="~"/> <!-- "" maps to arrows key0 -->
+		<shift a="" b="~"/> <!-- "" maps to arrows c -->
 		</modmap>
 	<row>
-		<key key0="q" se="esc"/>
-		<key key0="w"/>
-		<key key0="e"/>
-		<key key0="r"/>
-		<key key0="t"/>
-		<key key0="y"/>
-		<key key0="u"/>
-		<key key0="i" sw="[" se="]"/>
-		<key key0="o" sw="(" se=")"/>
-		<key key0="p" sw="*"/>
+		<key c="q" se="esc"/>
+		<key c="w"/>
+		<key c="e"/>
+		<key c="r"/>
+		<key c="t"/>
+		<key c="y"/>
+		<key c="u"/>
+		<key c="i" sw="[" se="]"/>
+		<key c="o" sw="(" se=")"/>
+		<key c="p" sw="*"/>
 	</row>
 	<row>
-		<key shift="0.5" key0="a" nw="tab"/>
-		<key key0="s"/>
-		<key key0="d"/>
-		<key key0="f"/>
-		<key key0="g"/>
-		<key key0="h"/>
-		<key key0="j" sw="7" se="8" ne="9"/>
-		<key key0="k" sw="4" se="5" ne="6"/>
-		<key key0="l" sw="1" se="2" ne="3" nw="0"/>
+		<key shift="0.5" c="a" nw="tab"/>
+		<key c="s"/>
+		<key c="d"/>
+		<key c="f"/>
+		<key c="g"/>
+		<key c="h"/>
+		<key c="j" sw="7" se="8" ne="9"/>
+		<key c="k" sw="4" se="5" ne="6"/>
+		<key c="l" sw="1" se="2" ne="3" nw="0"/>
 	</row>
 	<row>
-		<key width="1.5" key0="shift" sw="loc capslock"/>
-		<key key0="z"/>
-		<key key0="x"/>
-		<key key0="c"/>
-		<key key0="v"/>
-		<key key0="b"/>
-		<key key0="n" sw="/" ne=":" se=";"/>
-		<key key0="m" sw="%" se="\\" ne="@"/>
-		<key width="1.5" key0="backspace" ne="delete"/>
+		<key width="1.5" c="shift" sw="loc capslock"/>
+		<key c="z"/>
+		<key c="x"/>
+		<key c="c"/>
+		<key c="v"/>
+		<key c="b"/>
+		<key c="n" sw="/" ne=":" se=";"/>
+		<key c="m" sw="%" se="\\" ne="@"/>
+		<key width="1.5" c="backspace" ne="delete"/>
 	</row>
 	<row height="0.95">
-		<key width="1.7" key0="ctrl"/>
-		<key width="1.1" key0="." se="loc alt" sw="fn" nw="loc compose"/>
-		<key width="4.4" key0="space" nw="=" ne="+" se="-" sw="_"/>
-		<key width="1.1" key0="" n="up" e="right" w="left" s="down"/>
-		<key width="1.7" key0="enter" ne="action" se="config"/>
+		<key width="1.7" c="ctrl"/>
+		<key width="1.1" c="." se="loc alt" sw="fn" nw="loc compose"/>
+		<key width="4.4" c="space" nw="=" ne="+" se="-" sw="_"/>
+		<key width="1.1" c="" n="up" e="right" w="left" s="down"/>
+		<key width="1.7" c="enter" ne="action" se="config"/>
 	</row>
 </keyboard>
