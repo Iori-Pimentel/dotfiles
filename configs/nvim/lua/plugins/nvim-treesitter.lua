@@ -31,6 +31,15 @@ return {
 					},
 				},
 			},
+
+			incremental_selection = {
+				enable = true,
+				keymaps = {
+					init_selection = [[<C-j>]],
+					node_incremental = [[<C-j>]],
+					node_decremental = [[<C-k>]],
+				},
+			},
 		})
 	end,
 }
