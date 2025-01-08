@@ -1,6 +1,6 @@
 return {
 	"saghen/blink.cmp",
-	version = "*",
+	version = "*", -- downloads pre-built binaries
 	dependencies = {
 		"rafamadriz/friendly-snippets",
 		-- !Important! Make sure you're using the latest release of LuaSnip
