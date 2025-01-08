@@ -22,6 +22,9 @@ zstyle ':fzf-tab:*' continuous-trigger ''
 # prevents getting stuck when pressing ctrl-z,
 # also replaces unwanted default bindings
 zstyle ':fzf-tab:*' fzf-bindings-default 'ctrl-z:ignore'
+zstyle ':fzf-tab:*' fzf-bindings-default 'right:accept'
+zstyle ':fzf-tab:*' accept-line enter
+zstyle ':fzf-tab:*' use-fzf-default-opts yes
 # causes fzf-tab to trigger immediately
 # instead of adding common prefix first
 zstyle ':completion:*' menu yes

@@ -121,6 +121,7 @@ fzf-files() {
 		--no-multi-line
 		--print0
 		--scheme=path
+		--expect=right,enter
 		--border-label-pos=3
 		# Display on border if selection has non-printable character
 		--bind='focus:transform-border-label(
@@ -133,6 +134,10 @@ fzf-files() {
 	FILE_PATH="$(fd "${FD_ARGS[@]}" 2>/dev/null | fzf "${FZF_ARGS[@]}")" stat=$?
 	FILE_PATH="${FILE_PATH%$'\0'}"
 	print-special upline
+
+	local KEY_PRESSED="${FILE_PATH%%$'\0'*}"
+	FILE_PATH="${FILE_PATH#*$'\0'}"
+	[[ "$KEY_PRESSED" == enter ]] && zle -U $'\n'
 
 	setopt LOCAL_OPTIONS LOCAL_TRAPS
 	# Special case for completion widgets:
