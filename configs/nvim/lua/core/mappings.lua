@@ -23,6 +23,9 @@ map("n", "]b", "<CMD>later 1f<CR>")
 map("i", "<Up>", "<c-x><c-y>")
 map("i", "<Down>", "<c-x><c-e>")
 
+map("c", "<Left>", "<Nop>")
+map("c", "<Right>", "<Nop>")
+
 -- excludes whitespace on motion
 map("o", [[a"]], [[2i"]])
 map("o", [[a']], [[2i']])
