@@ -13,14 +13,6 @@ return {
 			auto_install = true,
 
 			textobjects = {
-				select = {
-					enable = true,
-					keymaps = {
-						["ia"] = "@parameter.inner",
-						["aa"] = "@parameter.outer",
-					},
-				},
-
 				swap = {
 					enable = true,
 					swap_next = {
@@ -35,9 +27,9 @@ return {
 			incremental_selection = {
 				enable = true,
 				keymaps = {
-					init_selection = [[<C-j>]],
-					node_incremental = [[<C-j>]],
-					node_decremental = [[<C-k>]],
+					init_selection = "<C-j>",
+					node_incremental = "<C-j>",
+					node_decremental = "<C-k>",
 				},
 			},
 		})
