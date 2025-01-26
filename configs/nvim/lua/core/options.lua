@@ -20,6 +20,8 @@ opt.splitright = true
 opt.cmdwinheight = 3
 -- enables global statusline for split windows
 opt.laststatus = 3
+-- disables --INSERT--, --VISUAL--, etc.
+opt.showmode = false
 
 opt.ignorecase = true
 opt.smartcase = true
@@ -32,9 +34,6 @@ opt.wrap = false
 opt.mouse = "n"
 opt.virtualedit = "block"
 opt.isfname:append({ "{", "}" })
-
--- hides netrw header
-vim.g.netrw_banner = 0
 
 opt.listchars = {
 	tab = "╎ ",

@@ -10,6 +10,8 @@ end)
 
 map({ "n", "x" }, "j", "gj")
 map({ "n", "x" }, "k", "gk")
+map("x", "<", "<gv")
+map("x", ">", ">gv")
 
 map("n", "[q", "<CMD>cprev<CR>")
 map("n", "]q", "<CMD>cnext<CR>")
