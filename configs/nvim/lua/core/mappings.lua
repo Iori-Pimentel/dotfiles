@@ -4,6 +4,10 @@ vim.g.mapleader = " "
 
 map("n", "<leader>n", "<CMD>setlocal number! hlsearch! wrap! <CR>")
 
+map("n", "<leader>x", function()
+	vim.ui.open("https://github.com/" .. vim.fn.expand("<cfile>"))
+end)
+
 map("n", "<leader><leader>", function()
 	vim.fn.setreg("+", vim.fn.getreg("0"))
 end)
