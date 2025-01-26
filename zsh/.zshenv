@@ -1,6 +1,7 @@
 #!/bin/zsh
 
 export ZDOTDIR="${HOME}/.local/dotfiles/zsh"
+path+=(${HOME}/.local/bin)
 fpath+=(${ZDOTDIR}/fpath)
 manpath+=(${PREFIX}/share/man)
 export XDG_CONFIG_HOME"=${HOME}/.config"
