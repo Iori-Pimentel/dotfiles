@@ -13,4 +13,10 @@ return {
 			eol = "<leader>a",
 		},
 	},
+	keys = {
+		{ "<leader>/", mode = { "n", "x" } },
+		"<leader>O",
+		"<leader>o",
+		"<leader>a",
+	},
 }

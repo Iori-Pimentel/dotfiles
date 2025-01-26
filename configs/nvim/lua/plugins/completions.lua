@@ -1,4 +1,5 @@
 return {
+	event = { "InsertEnter", "CmdLineEnter" },
 	"saghen/blink.cmp",
 	version = "*", -- downloads pre-built binaries
 	dependencies = {

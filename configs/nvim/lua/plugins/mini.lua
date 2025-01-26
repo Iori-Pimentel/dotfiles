@@ -1,6 +1,7 @@
 return {
 	{
-		"chasnovski/mini.surround",
+		event = "VeryLazy",
+		"echasnovski/mini.surround",
 		opts = {
 			mappings = {
 				add = "s",
@@ -15,6 +16,7 @@ return {
 		},
 	},
 	{
+		event = "VeryLazy",
 		"echasnovski/mini.ai",
 		opts = {
 			mappings = {
@@ -27,8 +29,13 @@ return {
 			silent = true,
 		},
 	},
-	{ "echasnovski/mini.pairs", opts = {} },
 	{
+		event = "VeryLazy",
+		"echasnovski/mini.pairs",
+		opts = {},
+	},
+	{
+		event = "VeryLazy",
 		"echasnovski/mini.files",
 		opts = {
 			windows = {
@@ -39,5 +46,10 @@ return {
 			},
 		},
 	},
-	{ "echasnovski/mini-git", main = "mini.git", opts = {} },
+	{
+		event = "VeryLazy",
+		"echasnovski/mini-git",
+		main = "mini.git",
+		opts = {},
+	},
 }
