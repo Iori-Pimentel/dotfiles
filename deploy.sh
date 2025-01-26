@@ -20,6 +20,7 @@ packages=(
 	stylua # formatter used by conform nvim
 	lua-language-server # nvim lsp
 	fastfetch
+	lazygit difftastic
 )
 pkg install --yes ${packages[@]}
 

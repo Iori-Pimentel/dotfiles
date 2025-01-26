@@ -1,0 +1,15 @@
+gui:
+  sidePanelWidth: 0.25
+  expandFocusedSidePanel: true
+  expandedSidePanelWeight: 5
+  mainPanelSplitMode: horizontal
+  showNumstatInFilesView: true
+  showPanelJumps: false
+  showRandomTip: false
+  showCommandLog: false
+  showBottomLine: false
+git:
+  autoFetch: false
+  autoRefresh: false
+  paging:
+    externalDiffCommand: difft --color=always --display=inline --syntax-highlight=off
