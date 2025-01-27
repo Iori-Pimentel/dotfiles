@@ -1,8 +1,9 @@
 gui:
   sidePanelWidth: 0.25
   expandFocusedSidePanel: true
-  expandedSidePanelWeight: 5
+  expandedSidePanelWeight: 20
   mainPanelSplitMode: horizontal
+  showListFooter: false
   showNumstatInFilesView: true
   showPanelJumps: false
   showRandomTip: false
