@@ -1,6 +1,5 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
-	dependencies = "nvim-treesitter/nvim-treesitter-textobjects",
 	event = { "BufReadPre", "BufNewFile" },
 	build = ":TSUpdate",
 	config = function()
@@ -9,20 +8,7 @@ return {
 		---@diagnostic disable-next-line missing-fields
 		treesitter.setup({
 			highlight = { enable = true },
-			indent = { enable = true },
 			auto_install = true,
-
-			textobjects = {
-				swap = {
-					enable = true,
-					swap_next = {
-						["<S-right>"] = "@parameter.inner",
-					},
-					swap_previous = {
-						["<S-left>"] = "@parameter.inner",
-					},
-				},
-			},
 
 			incremental_selection = {
 				enable = true,
