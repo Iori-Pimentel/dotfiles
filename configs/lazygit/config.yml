@@ -9,6 +9,13 @@ gui:
   showRandomTip: false
   showCommandLog: false
   showBottomLine: false
+  spinner:
+      frames:
+        - 'O'
+        - 'oO'
+        - 'ooO'
+        - 'oooO'
+      rate: 75
 git:
   autoFetch: false
   autoRefresh: false
