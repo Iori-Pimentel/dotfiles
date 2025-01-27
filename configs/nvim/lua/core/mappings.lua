@@ -25,17 +25,12 @@ map("n", "]Q", "<CMD>cnfile<CR>")
 map("n", "[b", "<CMD>earlier 1f<CR>")
 map("n", "]b", "<CMD>later 1f<CR>")
 
--- Moves screen and not cursor when scrolling
+map("i", "<Left>", "<Nop>")
+map("i", "<Right>", "<Nop>")
 map("i", "<Up>", "<c-x><c-y>")
 map("i", "<Down>", "<c-x><c-e>")
-
-map("c", "<Left>", "<Nop>")
-map("c", "<Right>", "<Nop>")
-
--- excludes whitespace on motion
-map("o", [[a"]], [[2i"]])
-map("o", [[a']], [[2i']])
-map("o", [[a`]], [[2i`]])
+map("x", "<Up>", "<c-y>")
+map("x", "<Down>", "<c-e>")
 
 -- excludes newline on visual selection
 -- keeps column position on visual block

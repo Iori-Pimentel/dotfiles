@@ -11,8 +11,8 @@ return {
 
 	opts = {
 		keymap = {
-			["<Right>"] = { "accept", "snippet_forward" },
-			["<Left>"] = { "snippet_backward" },
+			["<Right>"] = { "accept", "snippet_forward", "fallback" },
+			["<Left>"] = { "snippet_backward", "fallback" },
 			["<Up>"] = {
 				function(cmp)
 					cmp.scroll_documentation_up(1)
