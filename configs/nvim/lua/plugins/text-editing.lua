@@ -1,11 +1,18 @@
 return {
 	{
-		keys = { "sa", "sd", "sr" },
+		keys = {
+			{ "sa", mode = { "n", "x" } },
+			{ "sd", mode = { "n", "x" } },
+			{ "sr", mode = { "n", "x" } },
+		},
 		"echasnovski/mini.surround",
 		opts = { silent = true },
 	},
 	{
-		keys = { { "i", mode = "o" }, { "a", mode = "o" } },
+		keys = {
+			{ "i", mode = "o" },
+			{ "a", mode = "o" },
+		},
 		"echasnovski/mini.ai",
 		opts = { silent = true },
 	},
@@ -15,7 +22,12 @@ return {
 		opts = {},
 	},
 	{
-		keys = { { "<leader>/", mode = { "n", "x" } }, "<leader>O", "<leader>o", "<leader>a" },
+		keys = {
+			{ "<leader>/", mode = { "n", "x" } },
+			"<leader>O",
+			"<leader>o",
+			"<leader>a",
+		},
 		"numToStr/Comment.nvim",
 		opts = {
 			toggler = {
