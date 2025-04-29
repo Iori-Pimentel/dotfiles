@@ -15,6 +15,7 @@
 - [Cloudstream][]
 - [QuickNovel][]
 - [TachiJ2K][]
+- [BoostX][]
 
 ### Other Sources
 - [MiXplorer][]
@@ -26,13 +27,11 @@
 ### Play Store Sources
 - [Github][]
 - [SimpleNote][]
-- [ChatGPT][]
 - [One Hand Operation +][]
 - [App Finder][]
 - [Device Info HW][]
 - [VirusTotal Mobile][]
 - [WordWeb][]
-- [Sound Boost][]
 - [Office NX][]
 - [nzb360][]
 - Xodo
@@ -42,12 +41,10 @@
 ### Firefox Extensions
 - [uBlock Origin][]
 - [Dark Reader][]
-- [Bypass Paywalls Clean][]
 
 [App Finder]: https://play.google.com/store/apps/details?id=scadica.aq
 [App Manager]: https://github.com/MuntashirAkon/AppManager
-[Bypass Paywalls Clean]: https://github.com/bpc-clone/bypass-paywalls-firefox-clean
-[ChatGPT]: https://play.google.com/store/apps/details?id=com.openai.chatgpt
+[BoostX]: https://github.com/AumGupta/BoostX
 [Cloudstream]: https://github.com/recloudstream/cloudstream
 [Dark Reader]: https://github.com/darkreader/darkreader
 [Device Info HW]: https://play.google.com/store/apps/details?id=ru.andr7e.deviceinfohw
@@ -67,7 +64,6 @@
 [Reddit-Client-ID-Guide.md]: https://github.com/KobeW50/ReVanced-Documentation/blob/main/Reddit-Client-ID-Guide.md
 [ReVanced Manager]: https://github.com/ReVanced/revanced-manager
 [SimpleNote]: https://play.google.com/store/apps/details?id=com.automattic.simplenote
-[Sound Boost]: https://play.google.com/store/apps/details?id=ua.polohalo.soundbooster
 [TachiJ2K]: https://github.com/Jays2Kings/tachiyomiJ2K
 [Termux-Monet]: https://github.com/Termux-Monet/termux-monet
 [uBlock Origin]: https://github.com/gorhill/uBlock
