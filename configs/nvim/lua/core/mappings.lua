@@ -25,6 +25,10 @@ map("n", "]Q", "<CMD>cnfile<CR>")
 map("n", "[b", "<CMD>earlier 1f<CR>")
 map("n", "]b", "<CMD>later 1f<CR>")
 
+-- Alternative to u and <Ctrl-r> which visits all text state
+map("n", "-", "g-")
+map("n", "+", "g+")
+
 map("i", "<Left>", "<Nop>")
 map("i", "<Right>", "<Nop>")
 map("i", "<Up>", "<c-x><c-y>")
