@@ -1,6 +1,5 @@
 local opt = vim.opt
 
-opt.number = false
 opt.numberwidth = 1
 opt.colorcolumn = { 79, 80 }
 opt.cursorline = true
