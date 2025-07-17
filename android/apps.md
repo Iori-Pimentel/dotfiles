@@ -16,6 +16,7 @@
 - [QuickNovel][]
 - [TachiJ2K][]
 - [BoostX][]
+- [UrlCheck][]
 
 ### Other Sources
 - [MiXplorer][]
@@ -41,11 +42,15 @@
 ### Firefox Extensions
 - [uBlock Origin][]
 - [Dark Reader][]
+- [MobiDevTools][]
+- [Cookie Manager][]
+- [TWP][]
 
 [App Finder]: https://play.google.com/store/apps/details?id=scadica.aq
 [App Manager]: https://github.com/MuntashirAkon/AppManager
 [BoostX]: https://github.com/AumGupta/BoostX
 [Cloudstream]: https://github.com/recloudstream/cloudstream
+[Cookie Manager]: https://addons.mozilla.org/en-US/firefox/addon/a-cookie-manager
 [Dark Reader]: https://github.com/darkreader/darkreader
 [Device Info HW]: https://play.google.com/store/apps/details?id=ru.andr7e.deviceinfohw
 [Github]: https://play.google.com/store/apps/details?id=com.github.android
@@ -54,6 +59,7 @@
 [LibreTorrent]: https://github.com/proninyaroslav/libretorrent
 [Lichess]: https://github.com/lichess-org/mobile
 [MiXplorer]: https://mixplorer.com/beta
+[MobiDevTools]: https://addons.mozilla.org/en-US/firefox/addon/mobidevtools
 [mpvKT]: https://github.com/abdallahmehiz/mpvKt
 [nzb360]: https://play.google.com/store/apps/details?id=com.kevinforeman.nzb360
 [Obtainium]: https://github.com/ImranR98/Obtainium
@@ -66,7 +72,9 @@
 [SimpleNote]: https://play.google.com/store/apps/details?id=com.automattic.simplenote
 [TachiJ2K]: https://github.com/Jays2Kings/tachiyomiJ2K
 [Termux-Monet]: https://github.com/Termux-Monet/termux-monet
+[TWP]: https://addons.mozilla.org/en-GB/android/addon/traduzir-paginas-web
 [uBlock Origin]: https://github.com/gorhill/uBlock
 [Unexpected Keyboard]: https://github.com/Julow/Unexpected-Keyboard
+[UrlCheck]: https://github.com/TrianguloY/URLCheck
 [VirusTotal Mobile]: https://play.google.com/store/apps/details?id=com.funnycat.virustotal
 [WordWeb]: https://play.google.com/store/apps/details?id=com.wordwebsoftware.android.wordweb

@@ -1,6 +1,18 @@
 {
 	"apps": [
 		{
+			"id": "com.example.boostx",
+			"url": "https://github.com/AumGupta/BoostX",
+			"author": "AumGupta",
+			"name": "BoostX"
+		},
+		{
+			"id": "com.trianguloy.urlchecker",
+			"url": "https://github.com/TrianguloY/URLCheck",
+			"author": "TrianguloY",
+			"name": "URLCheck"
+		},
+		{
 			"id": "io.github.muntashirakon.AppManager",
 			"url": "https://github.com/MuntashirAkon/AppManager",
 			"author": "MuntashirAkon",
