@@ -1,13 +1,16 @@
 #!/bin/zsh
 
 export ZDOTDIR="${HOME}/.local/dotfiles/zsh"
-path+=(${HOME}/.local/bin)
+path+=(${HOME}/.local/bin ${HOME}/.cargo/bin)
 fpath+=(${ZDOTDIR}/fpath)
 manpath+=(${PREFIX}/share/man)
 export XDG_CONFIG_HOME"=${HOME}/.config"
 export XDG_CACHE_HOME="${HOME}/.cache"
 export XDG_DATA_HOME="${HOME}/.local/share"
 export XDG_STATE_HOME="${HOME}/.local/state"
+# Fixes plenary.nvim and leetcode.nvim
+# https://github.com/nvim-lua/plenary.nvim/issues/536
+export XDG_RUNTIME_DIR="${PREFIX}/tmp"
 
 export VISUAL=nvim
 export EDITOR=nvim
