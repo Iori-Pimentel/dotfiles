@@ -9,13 +9,10 @@ from keyboard_lib import (
     pretty_copy as COPY,
 )
 
-# Theme Settings
-# Theme: Dark
-# Margin Bottom: 3dp
+# Settings
 # Keyboard Height: 30%
 # Horizontal Margin: 200dp
-# Vertical spacing: 4dp
-# Horizontal spacing: 2dp
+# Automatic Capitalization: Off
 
 # Useful links
 #   https://github.com/Julow/Unexpected-Keyboard/tree/master/doc
