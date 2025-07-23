@@ -21,6 +21,7 @@ packages=(
 	lua-language-server # nvim lsp
 	fastfetch
 	lazygit difftastic
+	python
 )
 pkg install --yes ${packages[@]}
 
