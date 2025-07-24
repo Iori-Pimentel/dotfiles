@@ -13,6 +13,7 @@ from keyboard_lib import (
 # Keyboard Height: 30%
 # Horizontal Margin: 200dp
 # Automatic Capitalization: Off
+# Remove keys: Compose, Voice Typing, Clipboard Manager
 
 # Useful links
 #   https://github.com/Julow/Unexpected-Keyboard/tree/master/doc
