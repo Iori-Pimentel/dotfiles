@@ -1,4 +1,4 @@
-# Configuring my Samsung Tab S7 FE
+|# Configuring my Samsung Tab S7 FE
 
 ## Installation/Setup Wizard
 - Uncheck all optional checkboxes
@@ -16,7 +16,7 @@ https://f-droid.org/en/packages/io.github.samolego.canta
 https://f-droid.org/packages/juloo.keyboard2
 https://f-droid.org/en/packages/com.termux.api
 https://f-droid.org/en/packages/com.termux
-https://f-droid.org/packages/com.aurora.store
+https://gitlab.com/AuroraOSS/AuroraStore
 https://gitlab.com/ironfox-oss/ironfox
 https://mixplorer.com/beta
 https://f-droid.org/packages/org.localsend.localsend_app
