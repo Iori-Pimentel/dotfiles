@@ -1,4 +1,4 @@
-|# Configuring my Samsung Tab S7 FE
+# Configuring my Samsung Tab S7 FE
 
 ## Installation/Setup Wizard
 - Uncheck all optional checkboxes
