@@ -1,125 +1,76 @@
-If using [Termux](https://github.com/termux/termux-app) and not [Termux-Monet](https://github.com/KitsunedFox/termux-monet), run this command first:
+# Configuring my Samsung Tab S7 FE
+
+## Installation/Setup Wizard
+- Uncheck all optional checkboxes
+- Skip connecting to wifi
+- Skip all account login/signin
+
+## Bare Minimum Install
+- Disable Google Play Store
+- Connect to wifi
+- Install Obtainium in Chrome
+- Import `Bare Minimum` in Obtainium:
+```
+https://f-droid.org/en/packages/com.kunzisoft.keepass.libre
+https://f-droid.org/packages/org.localsend.localsend_app
+https://f-droid.org/packages/juloo.keyboard2
+https://f-droid.org/en/packages/com.termux.api
+https://f-droid.org/en/packages/com.termux
+https://f-droid.org/packages/com.aurora.store
+https://f-droid.org/en/packages/io.github.samolego.canta
+https://github.com/RikkaApps/Shizuku
+https://gitlab.com/ironfox-oss/ironfox
+https://mixplorer.com/beta
+```
+- Configure Mixplorer in Obtainium
+```
+versionExtractionRegEx: [0-9.]+.Beta.[0-9B]+
+apkFilterRegEx: arm64
+```
+- Enable Shizuku and clean up using [Canta](android/canta.json)
+
+## Configuration
+- Run in Termux:
 ```bash
 pkg upgrade --yes --option Dpkg::Options::="--force-confnew"
 termux-change-repo
-```
-
-To install, run the command:
-```bash
 bash <(curl -fsSL https://github.com/iori-pimentel/dotfiles/raw/main/deploy.sh)
 ```
-
-# Android Setup
-
-Install [Obtainium](https://github.com/ImranR98/Obtainium) then import:
-[Creating a GitHub Personal Access Token](https://github.com/settings/personal-access-tokens)
-
-Bare Minimum
+- Configure Home Screen Settings
 ```
-https://github.com/Kunzisoft/KeePassDX
-https://github.com/localsend/localsend
-https://github.com/Julow/Unexpected-Keyboard
-https://github.com/termux/termux-api
-https://github.com/termux/termux-app
-https://gitlab.com/ironfox-oss/ironfox
-https://gitlab.com/AuroraOSS/AuroraStore
-https://mixplorer.com/beta
-https://github.com/RikkaApps/Shizuku
-https://github.com/samolego/Canta
+Home Screen Layout: Home Screen Only
+App Icon Badge: Off
+Search From Home: Off
 ```
-
-Unexpected Keyboard XML
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<keyboard name="Termux Layout" bottom_row="False" locale_extra_keys="False">
-  <modmap>
-    <shift a="capslock" b=""/>
-    <fn a="capslock" b=""/>
-    <ctrl a="capslock" b=""/>
-  </modmap>
-  <row>
-    <key c="q" nw="0" se="@"/>
-    <key c="w" nw="1" sw="2" se="3"/>
-    <key c="e" nw="4" sw="5" se="6"/>
-    <key c="r" nw="7" sw="8" se="9"/>
-    <key c="t"/>
-    <key c="y"/>
-    <key c="u"/>
-    <key c="i" sw="-" ne="|" se="~"/>
-    <key c="o" sw="+" ne="&amp;" se="\"/>
-    <key c="p"/>
-  </row>
-  <row>
-    <key c="a" shift="0.5" se="esc" nw="tab"/>
-    <key c="s" nw="{" se="(" sw="`"/>
-    <key c="d" nw="}" se=")" sw="&quot;"/>
-    <key c="f"/>
-    <key c="g"/>
-    <key c="h"/>
-    <key c="j" sw="/" se=";" ne="*"/>
-    <key c="k" sw="?" se="," ne="#"/>
-    <key c="l"/>
-  </row>
-  <row>
-    <key c="shift" width="1.5" nw="capslock"/>
-    <key c="z" se="[" nw="&lt;" sw="%"/>
-    <key c="x" se="]" nw="&gt;" sw="'"/>
-    <key c="c"/>
-    <key c="v"/>
-    <key c="b"/>
-    <key c="n" ne=":" sw="^" se="$"/>
-    <key c="m" ne="=" sw="!" se="_"/>
-    <key c="backspace" width="1.5" ne="delete"/>
-  </row>
-  <row height="0.95">
-    <key c="ctrl" width="1.7"/>
-    <key c="." width="1.1" sw="fn" se="alt"/>
-    <key c="space" width="4.4"/>
-    <key n="up" e="right" w="left" s="down" width="1.1"/>
-    <key c="enter" width="1.7" se="config" ne="action" sw="switch_forward" nw="change_method"/>
-  </row>
-</keyboard>
+- Configure Display Settings
+```
+Screen Timeout: 30 minutes
+Edge Panels: Off
+Taskbar: Off
+Navigation Type: Swipe From Bottom
+Block Gestures with S-Pen: On
+```
+- Configure [Unexpected Keyboard](android/unexpected-keyboard/config.xml)
+```
+Landscape Height: 30%
+Horizontal Margin: 200dp
+Automatic Capitalization: Off
+Remove keys: Compose, Voice Typing, Clipboard Manager
+```
+- Configure App Info
+```
+Unrestricted Battery: Termux, Termux API
+Appear on Top: Termux, Termux API
+Set as Default: Aurora Store
+```
+- Install and Configure [One Hand Operation+](https://play.google.com/store/apps/details?id=com.samsung.android.sidegesturepad)
+```
+Right Top: Previous App, Task Switcher
+Right Bottom: Quick Tools, Quick Launcher
+S Pen Gestures: Off
+Long Swipe Duration: 0ms
 ```
 
-Configuration
-```
-- https://mixplorer.com/beta/
-    - versionExtractionRegEx='[0-9.]+.Beta.[0-9B]+'
-    - apkFilterRegEx='arm64'
-- https://github.com/Kunzisoft/KeePassDX
-    - apkFilterRegEx='libre'
-- https://github.com/ReVanced/GmsCore,
-    - apkFilterRegEx='hw|huawei'
-    - invertAPKFilter=True
-```
-
-Aurora Store
-```
-https://play.google.com/store/apps/details?id=com.github.android
-https://play.google.com/store/apps/details?id=com.samsung.android.sidegesturepad
-https://play.google.com/store/apps/details?id=com.urbandroid.kinestop
-```
-
-Archive
-```
-https://github.com/ReVanced/GmsCore
-https://github.com/ReVanced/revanced-manager
-https://codeberg.org/comaps/comaps
-https://github.com/thunderbird/thunderbird-android
-https://github.com/jameskokoska/Cashew
-https://github.com/revenge-mod/revenge-manager
-https://github.com/drawpile/Drawpile
-https://github.com/MuntashirAkon/AppManager
-```
-
-Not sure
-```
-https://github.com/TrianguloY/URLCheck
-https://github.com/LinkSheet/nightly
-https://github.com/ReadYouApp/ReadYou
-https://github.com/ycngmn/Nobook
-https://github.com/soupslurpr/AppVerifier
-https://github.com/newhinton/Round-Sync
-https://github.com/logseq/logseq
-https://f-droid.org/packages/net.typeblog.shelter
-```
+## Importing Data
+- Acquire passwords in LocalSend
+- Login to accounts
