@@ -1,0 +1,553 @@
+{
+  "title": "MiXplorer",
+  "package": "com.mixplorer.beta",
+  "date": "26\/07\/2025 06:35:56",
+  "type": 0,
+  "db": {
+    "uris": [
+      {
+        "pid": 14,
+        "uri": "\/storage\/emulated\/0",
+        "title": "Internal storage",
+        "user": "",
+        "secret": "",
+        "properties": "##xL7YQRe8Wuw9DS6BoJZHZA"
+      },
+      {
+        "pid": 14,
+        "uri": "\/storage\/emulated\/0\/Download",
+        "title": "Download",
+        "user": "",
+        "secret": "",
+        "properties": "##xL7YQRe8Wuw9DS6BoJZHZA"
+      },
+      {
+        "pid": 14,
+        "uri": "\/*1753478396803",
+        "title": "Filters",
+        "user": "*fldr*",
+        "secret": "TCiOdfjj8Bi4fmdDQIbFZQ",
+        "properties": "##"
+      },
+      {
+        "pid": 14,
+        "uri": "content:\/\/mix\/recent",
+        "title": "Recent",
+        "user": "",
+        "secret": "",
+        "properties": "##MgIW-0AmqhAFZAu7tx9sYnSmKRUbG8AKaEhSDB7a4_A"
+      },
+      {
+        "pid": 14,
+        "uri": "content:\/\/mix\/audio",
+        "title": "Audio",
+        "user": "",
+        "secret": "",
+        "properties": "##xL7YQRe8Wuw9DS6BoJZHZA"
+      },
+      {
+        "pid": 14,
+        "uri": "content:\/\/mix\/video",
+        "title": "Video",
+        "user": "",
+        "secret": "",
+        "properties": "##xL7YQRe8Wuw9DS6BoJZHZA"
+      },
+      {
+        "pid": 14,
+        "uri": "content:\/\/mix\/image",
+        "title": "Image",
+        "user": "",
+        "secret": "",
+        "properties": "##xL7YQRe8Wuw9DS6BoJZHZA"
+      },
+      {
+        "pid": 14,
+        "uri": "content:\/\/mix\/archive",
+        "title": "Archive",
+        "user": "",
+        "secret": "",
+        "properties": "##xL7YQRe8Wuw9DS6BoJZHZA"
+      },
+      {
+        "pid": 14,
+        "uri": "content:\/\/mix\/document",
+        "title": "Document",
+        "user": "",
+        "secret": "",
+        "properties": "##xL7YQRe8Wuw9DS6BoJZHZA"
+      },
+      {
+        "pid": 14,
+        "uri": "content:\/\/mix\/apk",
+        "title": "APK",
+        "user": "",
+        "secret": "",
+        "properties": "##xL7YQRe8Wuw9DS6BoJZHZA"
+      },
+      {
+        "pid": 14,
+        "uri": "\/*1753478440970",
+        "title": "MiXplorer",
+        "user": "*fldr*",
+        "secret": "TCiOdfjj8Bi4fmdDQIbFZQ",
+        "properties": "##"
+      },
+      {
+        "pid": 14,
+        "uri": "\/data\/user\/0\/com.mixplorer.beta\/home",
+        "title": "Home",
+        "user": "",
+        "secret": "",
+        "properties": "##xL7YQRe8Wuw9DS6BoJZHZA"
+      },
+      {
+        "pid": 14,
+        "uri": "\/",
+        "title": "Root",
+        "user": "",
+        "secret": "",
+        "properties": "##xL7YQRe8Wuw9DS6BoJZHZA"
+      },
+      {
+        "pid": 14,
+        "uri": "content:\/\/mix\/app",
+        "title": "App",
+        "user": "",
+        "secret": "",
+        "properties": "##dRoCC_o2mZNuQlNzswjIpSceLldnrXi1LxMhiaWgklo"
+      },
+      {
+        "pid": 14,
+        "uri": "content:\/\/mix\/all",
+        "title": "All Files",
+        "user": "",
+        "secret": "",
+        "properties": "##xL7YQRe8Wuw9DS6BoJZHZA"
+      },
+      {
+        "pid": 14,
+        "uri": "content:\/\/mix\/trash",
+        "title": "Recycle bin",
+        "user": "",
+        "secret": "",
+        "properties": "##xL7YQRe8Wuw9DS6BoJZHZA"
+      },
+      {
+        "pid": 8,
+        "uri": "\/storage\/emulated\/0",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": ""
+      },
+      {
+        "pid": 8,
+        "uri": "\/storage\/emulated\/0\/Download",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": ""
+      },
+      {
+        "pid": 8,
+        "uri": "content:\/\/mix\/apk",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": ""
+      },
+      {
+        "pid": 8,
+        "uri": "content:\/\/mix\/document",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": ""
+      },
+      {
+        "pid": 8,
+        "uri": "content:\/\/mix\/archive",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": ""
+      },
+      {
+        "pid": 8,
+        "uri": "content:\/\/mix\/image",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": ""
+      },
+      {
+        "pid": 8,
+        "uri": "content:\/\/mix\/video",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": ""
+      },
+      {
+        "pid": 8,
+        "uri": "content:\/\/mix\/audio",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": ""
+      },
+      {
+        "pid": 8,
+        "uri": "\/",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": ""
+      },
+      {
+        "pid": 8,
+        "uri": "\/data\/user\/0\/com.mixplorer.beta\/home",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": ""
+      },
+      {
+        "pid": 8,
+        "uri": "content:\/\/mix\/all",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": ""
+      },
+      {
+        "pid": 8,
+        "uri": "content:\/\/mix\/recent",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": ""
+      },
+      {
+        "pid": 8,
+        "uri": "content:\/\/mix\/trash",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": ""
+      },
+      {
+        "pid": 8,
+        "uri": "content:\/\/mix\/app",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": ""
+      },
+      {
+        "pid": 8,
+        "uri": "\/storage\/emulated\/0\/Download\/MiXplorer_26_07_2025_05-17-45.mic",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": "file=1"
+      },
+      {
+        "pid": 8,
+        "uri": "\/storage\/emulated\/0\/Download\/MiXplorer_26_07_2025_05-13-16.mic",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": "file=1"
+      },
+      {
+        "pid": 8,
+        "uri": "\/storage\/emulated\/0\/Download\/Mikukid.png",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": "file=1"
+      },
+      {
+        "pid": 2,
+        "uri": "content:\/\/mix\/apk",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": "##upUyA52Vjibm1a2ayuku7iiTYE--3Osoq7SLDiDqeYDXLgQQWGE7eA_44jbC7o4R-hOIkMXSSmAFzVe00IdItl2YOXxa2Dz1PKgg35eizEpzkO3qe-hQWqBXwUEybbniT1XckSj2tIlrCrLOT-FaRr9pRpVOeconR_i2oSS_1I2zXDmp1cBvi6RoAHEGeNGXcGuuFnnDss1D1j0I01Rv0kysjd566xDWOYz6sU_Q2p0"
+      },
+      {
+        "pid": 2,
+        "uri": "content:\/\/mix\/document",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": "##FfMOGrDJdtG1hsGtPXXYb0uglbLO5ge8IwVx3MrwwBt1yVK8N7eYnpzz9FatC_XrPvXm9uFZ3lorYvG2ClGHmWkThGXcvd5tRjqUHsEX-5FSZ2Y8Kyn3zY7QEtaty5HXA8T7RHc0_PDlB8ugb6Xe0xstM7pG_w5N-HmkMrFOTZ9ywjrrmwNvOcLWVdi-Gej-Npewl7hKKK2jDOKK9FojdRQIplElpAEIXmC2OlrbCxY"
+      },
+      {
+        "pid": 2,
+        "uri": "content:\/\/mix\/archive",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": "##8FeoShCzdkUY9VRIzCfOGxkuEAa03lrJgTuKWosGD9MRLF5AHABgFNLqZToal-PLPOqDO7Pk55bISQGJA0S5Sc57JYL3x3q1NuyxXd3laFvC1BqbNY1NcbvtO5oIqRdBeVO_Ffpno6x-G7ceG0BTHtwpi7ajKJwIJMorusiNxcu3udkgXBJ1HX8lF6PnqpIP4Dbhnr93fz7sajfyrBYNBj0dfHZ_fXj2UWg09D9OZow"
+      },
+      {
+        "pid": 2,
+        "uri": "content:\/\/mix\/image",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": "##FfMOGrDJdtG1hsGtPXXYb0uglbLO5ge8IwVx3MrwwBt1yVK8N7eYnpzz9FatC_XrPvXm9uFZ3lorYvG2ClGHmWkThGXcvd5tRjqUHsEX-5FSZ2Y8Kyn3zY7QEtaty5HXA8T7RHc0_PDlB8ugb6Xe0xstM7pG_w5N-HmkMrFOTZ9ywjrrmwNvOcLWVdi-Gej-Npewl7hKKK2jDOKK9FojdRQIplElpAEIXmC2OlrbCxY"
+      },
+      {
+        "pid": 2,
+        "uri": "content:\/\/mix\/video",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": "##FfMOGrDJdtG1hsGtPXXYb0uglbLO5ge8IwVx3MrwwBt1yVK8N7eYnpzz9FatC_XrPvXm9uFZ3lorYvG2ClGHmWkThGXcvd5tRjqUHsEX-5FSZ2Y8Kyn3zY7QEtaty5HXA8T7RHc0_PDlB8ugb6Xe0xstM7pG_w5N-HmkMrFOTZ9ywjrrmwNvOcLWVdi-Gej-Npewl7hKKK2jDOKK9FojdRQIplElpAEIXmC2OlrbCxY"
+      },
+      {
+        "pid": 2,
+        "uri": "content:\/\/mix\/audio",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": "##FfMOGrDJdtG1hsGtPXXYb0uglbLO5ge8IwVx3MrwwBt1yVK8N7eYnpzz9FatC_XrPvXm9uFZ3lorYvG2ClGHmWkThGXcvd5tRjqUHsEX-5FSZ2Y8Kyn3zY7QEtaty5HXA8T7RHc0_PDlB8ugb6Xe0xstM7pG_w5N-HmkMrFOTZ9ywjrrmwNvOcLWVdi-Gej-Npewl7hKKK2jDOKK9FojdRQIplElpAEIXmC2OlrbCxY"
+      },
+      {
+        "pid": 2,
+        "uri": "\/storage\/emulated\/0\/Download",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": "##upUyA52Vjibm1a2ayuku7iiTYE--3Osoq7SLDiDqeYDXLgQQWGE7eA_44jbC7o4R-hOIkMXSSmAFzVe00IdItgkRZhkMmeTfWjpuhrClidA2nWsCmdpbVAT9oQ3FyMdKI4v-0IrDfLlIFdG9vNYzRSPXtLza0coJ0Orgvbvi2ble8PWUd-wVqEHhTBzzdFuXFNtXrxcLKVniI2rs5iZ2u7KvbIxscMIWWe47rcIOODM"
+      },
+      {
+        "pid": 2,
+        "uri": "\/storage\/emulated\/0",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": "##upUyA52Vjibm1a2ayuku7iiTYE--3Osoq7SLDiDqeYDXLgQQWGE7eA_44jbC7o4R-hOIkMXSSmAFzVe00IdItgkRZhkMmeTfWjpuhrClidA2nWsCmdpbVAT9oQ3FyMdKI4v-0IrDfLlIFdG9vNYzRSPXtLza0coJ0Orgvbvi2ble8PWUd-wVqEHhTBzzdFuXFNtXrxcLKVniI2rs5iZ2u7KvbIxscMIWWe47rcIOODM"
+      },
+      {
+        "pid": 2,
+        "uri": "\/",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": "##upUyA52Vjibm1a2ayuku7iiTYE--3Osoq7SLDiDqeYDXLgQQWGE7eA_44jbC7o4R-hOIkMXSSmAFzVe00IdItgkRZhkMmeTfWjpuhrClidA2nWsCmdpbVAT9oQ3FyMdKI4v-0IrDfLlIFdG9vNYzRSPXtLza0coJ0Orgvbvi2ble8PWUd-wVqEHhTBzzdFuXFNtXrxcLKVniI2rs5iZ2u7KvbIxscMIWWe47rcIOODM"
+      },
+      {
+        "pid": 2,
+        "uri": "content:\/\/mix\/app",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": "sort=4\nsort_sections=false"
+      },
+      {
+        "pid": 2,
+        "uri": "content:\/\/mix\/all",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": "sort=4\nsort_sections=false"
+      },
+      {
+        "pid": 2,
+        "uri": "content:\/\/mix\/recent",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": "sort=4\nsort_dot_files_first=false\nsort_folders_first=false\nsort_sections=true"
+      },
+      {
+        "pid": 2,
+        "uri": "content:\/\/mix\/trash",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": "sort=8"
+      },
+      {
+        "pid": 1,
+        "uri": "\/data\/user\/0\/com.mixplorer.beta\/home",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": "view=1\nwidth=581"
+      },
+      {
+        "pid": 1,
+        "uri": "\/storage\/emulated\/0",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": "view=1"
+      },
+      {
+        "pid": 1,
+        "uri": "\/",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": "view=5"
+      },
+      {
+        "pid": 1,
+        "uri": "content:\/\/mix\/video",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": "view=3"
+      },
+      {
+        "pid": 1,
+        "uri": "content:\/\/mix\/image",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": "view=4"
+      },
+      {
+        "pid": 1,
+        "uri": "content:\/\/mix\/apk",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": "view=3"
+      },
+      {
+        "pid": 1,
+        "uri": "content:\/\/mix\/document",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": "view=4"
+      },
+      {
+        "pid": 1,
+        "uri": "content:\/\/mix\/app",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": "view=3"
+      },
+      {
+        "pid": 1,
+        "uri": "content:\/\/mix\/all",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": "view=5"
+      },
+      {
+        "pid": 1,
+        "uri": "content:\/\/mix\/recent",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": "view=5"
+      }
+    ],
+    "packages": []
+  },
+  "pref": {
+    "main": {
+      "bottom_bar": false,
+      "highlight_visited": false,
+      "folder_symbols": false,
+      "crop_thumbs": false,
+      "cache_thumbs": false,
+      "custom_key_PERM_VIEW_REM_KEY": "1",
+      "custom_key_AUTO_TASKS": "",
+      "custom_key_CHROMA": "xxxxx",
+      "pause_thumb_loader": true,
+      "tap_to_execute": true,
+      "allow_root": false,
+      "drawer_mode": 0,
+      "custom_key_last_path": "\/storage\/emulated\/0\/Download",
+      "no_thumbnail": true,
+      "default_folder": "\/storage\/emulated\/0",
+      "saved_customized": "Gray",
+      "auto_folder_preview": false,
+      "change_view_globally": true,
+      "code_editor": "encoding=\nwrap=false\nfontsize=30\nline_numbers=true\nhighlight=\nauto_indent=true\neditor_mode=0\nfull_view_size=0\nchars_view=false\nfullscreen=false\nhighlight_old=\nspell_check=false\nno_keyboard=false\nsaved_offs=a620cfe7:0\nauto_complete=false\nstart_with_keyboard=true\nstart_at_end=false\ntab_space=false\nshow_whitespace=false",
+      "custom_key_CHECK_ROOT_REM": "1",
+      "show_tab_bar": true,
+      "custom_key_AGREE_PRIVACY": "true",
+      "show_tool_bar": true,
+      "drawer_options": "0|1|1|1|0|1|1|0|0|0",
+      "custom_key_QUERY_PKG_LIST_REM_KEY": "1",
+      "folders_app_icon": "",
+      "file_extension": true,
+      "play_background": true,
+      "custom_key_PERM_SHARE_REM_KEY": "1",
+      "menu_orders": "0=0,1,12,14,23,24,02,03,04,05,06,07,08,09,010,011,013,015,016,017,018,019,020,021,022&3=0,4,1,2,03,05,06&22=00,01,02,03,04,05,06,07,08&21=00,01,02,03,04,05,06,07,08,09,010,011,012,013,014,015,016,017,018,019,020,021,022,023,024&5=1,2,3,4,5,6,7,17,20,32,00,08,09,010,011,012,013,014,015,016,018,019,021,022,023,024,025,026,027,028,029,030,031&2=0,1,2,3,4,5,6,7,8,9,10,11,12,13,14&1=0,1,2,3,4,5,6,7,8,9&4=0,1,2,3,4,5&6=0,1,2,3,4,5,6,7,8&7=0,1,2,3,4,5,6,7,8&8=0,1,2,3,4,5,6,7,8,9,10&9=0,1,2,3,4,5,6,7&10=0,1,2,3,4,5,6,7,8,9&11=0,1,2,3,4&12=0,1,2,3,4,5&13=0,1,2,3,4,5,6,7&14=0,1,2,3,4,5,6,7,8,9,10,11,12&15=0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15&16=0,1,2,3,4,5,6,7,8,9,10,11,12,13&17=0,1,2,3,4,5,6,7,8,9,10&18=0,1,2,3,4,5,6,7,8&19=0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21&20=0,1,2,3,4,5,6,7,8"
+    },
+    "skins": {
+      "Gray": "#cQK69eoVgupEskHCt57_89NgSzNFk8MBuvNgX7h-4w0FwG4VbAHcHlEGlIBsyM_9Y16DiluoMUrhmh7NMeL58sqnhOx8Ixi7XGQB222BipbnnGz10ClTJgx7DAiucD6lfcEIyvmNYZ3-aYc4moCSm2NwkOi30R7FZQD0fanEqAAPygsaqvuQncsQN7j0zkJOt88y9L7Zyf_htFqEtLY3vb6h3jsobo92mDNASBJ5RYtucCr5S8cMNMERS8JmA3bz5LTyNLO68aWu_UrAw8RTu4OZJL2lJOfY0rdb5Bf5iR50cHaAmJWM8GwO2_NRSTM6dYXH8xzvDhw8pElp-0hkci6TAk8qvI5gcRPfbDSkdEjmUImRguNcRf4KZHleNLNL_PMFGXGdnrgSvQGzN6HXP73WdaEIjgIHuz_R_deBAs6N5Vz8W-JbTg3_BA3oNAglv6rGbvhaw9jv3TTjPE5xXkUliWeH-UdrGuJP4RwfHSR1bvY3znwenJEyAqRdYQvaFcfomDsvJ15e8kefkVipMrO0OIXwnzUEq_yZxIwM-Ya0y4FOy029-OUAz-vQes6AtD-t4WVzaNvuzuy9gAu_EB4fTPMCpaBW1xTOyHWrydbpRxFZHIW9MoKpYLgVSwYHx2cX7EQsnYE-_gf2hL3ACfYVQh4NNBXp8kdOQUAjTyU5sGlp6ZbPBtwmCfOXww8ecxAg5GfJANPm8xadAgJLw2DeOp6oFCgZV448Sv8d2k3tDwa3PPbkbb9lMY7NJ23pK36wmNyIiEr58yrjq_XRj69RMYmtbQ-degyFV9hWZQ3vu5qjRVb3qgk-ZxMy0_RzMJEdPLUD5tE96dmZMAuyWGoTVQTIgzmM1KDBjE2oqpkl7Optt-MXxh6pl-zt1qO5pfQAPnsWCuEZtMGUyuxbQG8ndME8apL9ltghGRfgUsbwfBUu3qM3Q6muOP09eZMjNAVrf8nwBy-dapdQbQScZaKG1a_crXlQROe_YV4wTKM_iP2o_fy4GibYngTJNTVj"
+    },
+    "servers": {},
+    "home": [
+      {
+        "p": "\/data\/user\/0\/com.mixplorer.beta\/home\/Internal storage.lnk",
+        "l": "\/storage\/emulated\/0",
+        "n": "Internal storage",
+        "d": true
+      },
+      {
+        "p": "\/data\/user\/0\/com.mixplorer.beta\/home\/Data‎.lnk",
+        "l": "\/storage\/emulated\/0\/Android\/data‎",
+        "n": "Data‎",
+        "d": true
+      },
+      {
+        "p": "\/data\/user\/0\/com.mixplorer.beta\/home\/Download.lnk",
+        "l": "\/storage\/emulated\/0\/Download",
+        "n": "Download",
+        "d": true
+      },
+      {
+        "p": "\/data\/user\/0\/com.mixplorer.beta\/home\/Image.lnk",
+        "l": "content:\/\/mix\/image",
+        "n": "Image",
+        "d": true
+      },
+      {
+        "p": "\/data\/user\/0\/com.mixplorer.beta\/home\/Recent.lnk",
+        "l": "content:\/\/mix\/recent",
+        "n": "Recent",
+        "d": true
+      },
+      {
+        "p": "\/data\/user\/0\/com.mixplorer.beta\/home\/Video.lnk",
+        "l": "content:\/\/mix\/video",
+        "n": "Video",
+        "d": true
+      },
+      {
+        "p": "\/data\/user\/0\/com.mixplorer.beta\/home\/Audio.lnk",
+        "l": "content:\/\/mix\/audio",
+        "n": "Audio",
+        "d": true
+      },
+      {
+        "p": "\/data\/user\/0\/com.mixplorer.beta\/home\/Document.lnk",
+        "l": "content:\/\/mix\/document",
+        "n": "Document",
+        "d": true
+      },
+      {
+        "p": "\/data\/user\/0\/com.mixplorer.beta\/home\/App.lnk",
+        "l": "content:\/\/mix\/app",
+        "n": "App",
+        "d": true
+      }
+    ]
+  }
+}
