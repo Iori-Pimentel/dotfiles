@@ -64,6 +64,11 @@ Show Reccommended Apps: Off
 Lock Screen Notification: Off
 Show Notification Icons: All
 ```
+- Configure Side Button Settings
+```
+Double Press: Off
+Press and Hold: Power Off Menu
+```
 - Configure [Unexpected Keyboard](android/unexpected-keyboard/config.xml)
 ```
 Landscape Height: 30%
