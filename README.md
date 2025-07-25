@@ -10,7 +10,7 @@
 - Connect to wifi
 - Install Obtainium in Chrome
 - Import `Bare Minimum` in Obtainium:
-```
+```text
 https://github.com/RikkaApps/Shizuku
 https://f-droid.org/en/packages/io.github.samolego.canta
 https://f-droid.org/packages/juloo.keyboard2
@@ -23,72 +23,99 @@ https://f-droid.org/packages/org.localsend.localsend_app
 https://f-droid.org/en/packages/com.kunzisoft.keepass.libre
 ```
 - Configure Mixplorer in Obtainium
-```
-versionExtractionRegEx: [0-9.]+.Beta.[0-9B]+
-apkFilterRegEx: arm64
-```
+    - versionExtractionRegEx: `[0-9.]+.Beta.[0-9B]+`
+    - apkFilterRegEx: `arm64`
 - Enable Shizuku and clean up using [Canta](android/canta.json)
 
-## Configuration
+## Termux Configuration
 - Run in Termux:
 ```bash
 pkg upgrade --yes --option Dpkg::Options::="--force-confnew"
 termux-change-repo
 bash <(curl -fsSL https://github.com/iori-pimentel/dotfiles/raw/main/deploy.sh)
 ```
-- Configure Home Screen Settings
-```
-Home Screen Layout: Home Screen Only
-App Icon Badge: Off
-Search From Home: Off
-```
-- Configure Display Settings
-```
-Screen Timeout: 30 minutes
-Edge Panels: Off
-Taskbar: Off
-Navigation Type: Swipe From Bottom
-Block Gestures with S-Pen: On
-```
-- Configure Lock Screen Settings
-```
-Touch and Hold to Edit: Off
-Widgets: None
-```
-- Configure Recent Apps
-```
-Show Reccommended Apps: Off
-```
-- Configure Notification Settings
-```
-Lock Screen Notification: Off
-Show Notification Icons: All
-```
-- Configure Side Button Settings
-```
-Double Press: Off
-Press and Hold: Power Off Menu
-```
-- Configure [Unexpected Keyboard](android/unexpected-keyboard/config.xml)
-```
-Landscape Height: 30%
-Horizontal Margin: 200dp
-Automatic Capitalization: Off
-Remove keys: Compose, Voice Typing, Clipboard Manager
-```
-- Configure App Info
-```
-Unrestricted Battery: Termux, Termux API
-Appear on Top: Termux, Termux API
-Set as Default: Aurora Store
-```
-- Install and Configure [One Hand Operation+](https://play.google.com/store/apps/details?id=com.samsung.android.sidegesturepad)
-```
-Right Top: Previous App, Task Switcher
-Right Bottom: Quick Tools, Quick Launcher
-S Pen Gestures: Off
-Long Swipe Duration: 0ms
-```
+<details>
+<summary> Home Screen Settings </summary>
+| Setting             | Value              |
+|---------------------|--------------------|
+| Home Screen Layout  | Home Screen Only   |
+| App Icon Badge      | Off                |
+| Search From Home    | Off                |
+</details>
+
+<details>
+<summary> Display Settings </summary>
+| Setting                     | Value             |
+|-----------------------------|-------------------|
+| Screen Timeout              | 30 minutes        |
+| Edge Panels                 | Off               |
+| Taskbar                     | Off               |
+| Navigation Type             | Swipe From Bottom |
+| Block Gestures with S-Pen   | On                |
+</details>
+
+<details>
+<summary> Lock Screen Settings </summary>
+| Setting                | Value |
+|------------------------|-------|
+| Touch and Hold to Edit | Off   |
+| Widgets                | None  |
+</details>
+
+<details>
+<summary> Recent Apps Settings </summary>
+| Setting               | Value |
+|-----------------------|-------|
+| Show Recommended Apps | Off   |
+</details>
+
+<details>
+<summary> Notification Settings </summary>
+| Setting                  | Value |
+|--------------------------|-------|
+| Lock Screen Notification | Off   |
+| Show Notification Icons  | All   |
+</details>
+
+<details>
+<summary> Side Button Settings </summary>
+| Setting         | Action          |
+|-----------------|-----------------|
+| Double Press    | Off             |
+| Press and Hold  | Power Off Menu  |
+</details>
+
+<details>
+<summary> Unexpected Keyboard Config </summary>
+| Option                   | Value                         |
+|--------------------------|-------------------------------|
+| Landscape Height         | 30%                           |
+| Horizontal Margin        | 200dp                         |
+| Automatic Capitalization | Off                           |
+| Remove Keys              | Compose, Voice, Clipboard     |
+</details>
+
+<details>
+<summary> App Info Settings </summary>
+| App         | Unrestricted Battery | Appear on Top  | Default App  |
+|-------------|----------------------|----------------|--------------|
+| Termux      | ✅                   | ✅             | ❌           |
+| Termux API  | ✅                   | ✅             | ❌           |
+| Aurora Store| ❌                   | ❌             | ✅           |
+</details>
+
+<details>
+<summary> One Hand Operation+ Configuration </summary>
+| Gesture           | Short Swipe      | Long Swipe       |
+|-------------------|------------------|------------------|
+| Right Top         | Previous App     | Task Switcher    |
+| Right Bottom      | Quick Tools      | Quick Launcher   |
+
+| Option            | Value |
+|-------------------|-------|
+| S-Pen Gestures    | Off   |
+| Long Swipe Delay  | 0ms   |
+</details>
 
 ## Importing Data
 - Acquire passwords in LocalSend
