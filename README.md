@@ -11,16 +11,16 @@
 - Install Obtainium in Chrome
 - Import `Bare Minimum` in Obtainium:
 ```
-https://f-droid.org/en/packages/com.kunzisoft.keepass.libre
-https://f-droid.org/packages/org.localsend.localsend_app
+https://github.com/RikkaApps/Shizuku
+https://f-droid.org/en/packages/io.github.samolego.canta
 https://f-droid.org/packages/juloo.keyboard2
 https://f-droid.org/en/packages/com.termux.api
 https://f-droid.org/en/packages/com.termux
 https://f-droid.org/packages/com.aurora.store
-https://f-droid.org/en/packages/io.github.samolego.canta
-https://github.com/RikkaApps/Shizuku
 https://gitlab.com/ironfox-oss/ironfox
 https://mixplorer.com/beta
+https://f-droid.org/packages/org.localsend.localsend_app
+https://f-droid.org/en/packages/com.kunzisoft.keepass.libre
 ```
 - Configure Mixplorer in Obtainium
 ```
@@ -49,6 +49,21 @@ Edge Panels: Off
 Taskbar: Off
 Navigation Type: Swipe From Bottom
 Block Gestures with S-Pen: On
+```
+- Configure Lock Screen Settings
+```
+Touch and Hold to Edit: Off
+Widgets: None
+```
+- Configure Recent Apps
+```
+Show Reccommended Apps: Off
+```
+```
+- Configure Notification Settings
+```
+Lock Screen Notification: Off
+Show Notification Icons: All
 ```
 - Configure [Unexpected Keyboard](android/unexpected-keyboard/config.xml)
 ```
