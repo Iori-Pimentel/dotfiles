@@ -59,7 +59,6 @@ Widgets: None
 ```
 Show Reccommended Apps: Off
 ```
-```
 - Configure Notification Settings
 ```
 Lock Screen Notification: Off
