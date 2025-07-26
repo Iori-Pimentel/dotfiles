@@ -8,6 +8,9 @@
       "packageName": "com.sec.android.app.servicemodeapp"
     },
     {
+      "packageName": "com.samsung.android.app.telephonyui"
+    },
+    {
       "packageName": "com.samsung.SMT.lang_en_us_f00"
     },
     {
@@ -24,6 +27,9 @@
     },
     {
       "packageName": "com.samsung.android.bixby.agent"
+    },
+    {
+      "packageName": "com.samsung.android.providers.contacts"
     },
     {
       "packageName": "com.osp.app.signin"
@@ -57,6 +63,9 @@
     },
     {
       "packageName": "com.samsung.android.forest"
+    },
+    {
+      "packageName": "com.google.android.cellbroadcastservice"
     },
     {
       "packageName": "com.samsung.android.dialer"
@@ -201,6 +210,9 @@
     },
     {
       "packageName": "com.samsung.android.singletake.service"
+    },
+    {
+      "packageName": "com.android.providers.calendar"
     },
     {
       "packageName": "com.samsung.android.intellivoiceservice"
