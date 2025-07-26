@@ -8,10 +8,16 @@
       "packageName": "com.sec.android.app.servicemodeapp"
     },
     {
+      "packageName": "com.samsung.SMT.lang_en_us_f00"
+    },
+    {
       "packageName": "com.samsung.android.app.reminder"
     },
     {
       "packageName": "com.samsung.android.mcfds"
+    },
+    {
+      "packageName": "com.samsung.android.incall.contentprovider"
     },
     {
       "packageName": "com.sec.spp.push"
@@ -20,13 +26,22 @@
       "packageName": "com.samsung.android.bixby.agent"
     },
     {
+      "packageName": "com.osp.app.signin"
+    },
+    {
       "packageName": "com.samsung.android.app.sharelive"
     },
     {
       "packageName": "com.samsung.android.calendar"
     },
     {
+      "packageName": "com.samsung.android.themecenter"
+    },
+    {
       "packageName": "com.samsung.android.knox.containercore"
+    },
+    {
+      "packageName": "com.samsung.cmh"
     },
     {
       "packageName": "com.samsung.klmsagent"
@@ -50,6 +65,9 @@
       "packageName": "com.sec.location.nsflp2"
     },
     {
+      "packageName": "com.google.android.partnersetup"
+    },
+    {
       "packageName": "com.diotek.sec.lookup.dictionary"
     },
     {
@@ -65,7 +83,16 @@
       "packageName": "com.android.calllogbackup"
     },
     {
+      "packageName": "com.samsung.SMT.lang_en_gb_f00"
+    },
+    {
+      "packageName": "com.android.dreams.basic"
+    },
+    {
       "packageName": "com.sec.android.app.camera"
+    },
+    {
+      "packageName": "com.samsung.android.video"
     },
     {
       "packageName": "com.google.android.gms.supervision"
@@ -77,13 +104,25 @@
       "packageName": "com.samsung.android.easysetup"
     },
     {
+      "packageName": "com.rsupport.rs.activity.rsupport.aas2"
+    },
+    {
+      "packageName": "com.samsung.SMT.lang_es_us_f00"
+    },
+    {
       "packageName": "com.google.mainline.adservices"
     },
     {
       "packageName": "com.google.android.as.oss"
     },
     {
+      "packageName": "com.samsung.android.service.aircommand"
+    },
+    {
       "packageName": "com.sec.android.gallery3d"
+    },
+    {
+      "packageName": "com.samsung.android.smartmirroring"
     },
     {
       "packageName": "com.google.android.federatedcompute"
@@ -93,6 +132,9 @@
     },
     {
       "packageName": "com.samsung.android.service.livedrawing"
+    },
+    {
+      "packageName": "com.samsung.SMT"
     },
     {
       "packageName": "com.google.android.apps.restore"
@@ -125,6 +167,9 @@
       "packageName": "com.samsung.android.app.watchmanagerstub"
     },
     {
+      "packageName": "com.google.android.printservice.recommendation"
+    },
+    {
       "packageName": "com.sec.android.autodoodle.service"
     },
     {
@@ -149,7 +194,16 @@
       "packageName": "com.samsung.faceservice"
     },
     {
+      "packageName": "com.samsung.SMT.lang_pt_br_f00"
+    },
+    {
       "packageName": "com.google.android.onetimeinitializer"
+    },
+    {
+      "packageName": "com.samsung.android.singletake.service"
+    },
+    {
+      "packageName": "com.samsung.android.intellivoiceservice"
     },
     {
       "packageName": "com.samsung.android.mdm"
@@ -194,6 +248,9 @@
       "packageName": "com.samsung.android.app.spage"
     },
     {
+      "packageName": "com.samsung.android.location"
+    },
+    {
       "packageName": "com.google.ar.core"
     },
     {
@@ -206,7 +263,19 @@
       "packageName": "com.google.android.adservices.api"
     },
     {
+      "packageName": "com.sec.android.sdhms"
+    },
+    {
+      "packageName": "com.samsung.android.callbgprovider"
+    },
+    {
+      "packageName": "com.samsung.android.service.tagservice"
+    },
+    {
       "packageName": "com.android.hotwordenrollment.okgoogle"
+    },
+    {
+      "packageName": "com.samsung.app.newtrim"
     },
     {
       "packageName": "com.sec.android.app.soundalive"
@@ -233,6 +302,9 @@
       "packageName": "com.sec.enterprise.mdm.services.simpin"
     },
     {
+      "packageName": "com.samsung.android.mobileservice"
+    },
+    {
       "packageName": "com.android.bluetoothmidiservice"
     },
     {
@@ -242,16 +314,19 @@
       "packageName": "com.sec.android.app.applinker"
     },
     {
+      "packageName": "com.android.wallpaper.livepicker"
+    },
+    {
       "packageName": "com.samsung.android.stickercenter"
     },
     {
       "packageName": "com.samsung.android.rampart"
     },
     {
-      "packageName": "com.android.vending"
+      "packageName": "com.sec.android.mimage.photoretouching"
     },
     {
-      "packageName": "com.google.android.apps.tachyon"
+      "packageName": "com.android.vending"
     },
     {
       "packageName": "com.samsung.android.knox.pushmanager"
@@ -264,6 +339,12 @@
     },
     {
       "packageName": "com.samsung.android.spdfnote"
+    },
+    {
+      "packageName": "com.google.android.apps.tachyon"
+    },
+    {
+      "packageName": "com.sec.android.dexsystemui"
     },
     {
       "packageName": "com.samsung.android.hdmapp"
@@ -281,6 +362,9 @@
       "packageName": "com.sec.android.app.quicktool"
     },
     {
+      "packageName": "com.samsung.android.game.gos"
+    },
+    {
       "packageName": "com.samsung.android.app.taskedge"
     },
     {
@@ -296,10 +380,16 @@
       "packageName": "com.android.theme.font.notoserifsource"
     },
     {
+      "packageName": "com.android.dreams.phototable"
+    },
+    {
       "packageName": "com.sec.android.app.clockpackage"
     },
     {
       "packageName": "com.google.audio.hearing.visualization.accessibility.scribe"
+    },
+    {
+      "packageName": "com.samsung.android.photoremasterservice"
     },
     {
       "packageName": "com.samsung.android.knox.attestation"
@@ -341,6 +431,9 @@
       "packageName": "com.samsung.android.game.gametools"
     },
     {
+      "packageName": "com.sec.android.app.SecSetupWizard"
+    },
+    {
       "packageName": "com.google.android.gm"
     },
     {
@@ -359,13 +452,19 @@
       "packageName": "com.google.android.feedback"
     },
     {
-      "packageName": "com.samsung.android.aircommandmanager"
-    },
-    {
       "packageName": "com.google.android.apps.maps"
     },
     {
+      "packageName": "com.google.android.tts"
+    },
+    {
       "packageName": "com.samsung.android.peripheral.framework"
+    },
+    {
+      "packageName": "com.samsung.android.aircommandmanager"
+    },
+    {
+      "packageName": "com.samsung.android.service.airviewdictionary"
     },
     {
       "packageName": "com.google.android.overlay.gmsconfig.searchselector"
@@ -386,10 +485,34 @@
       "packageName": "com.hiya.star"
     },
     {
-      "packageName": "jp.co.celsys.clipstudiopaint.galaxystore"
+      "packageName": "com.samsung.android.sdk.ocr"
+    },
+    {
+      "packageName": "com.samsung.android.dynamiclock"
+    },
+    {
+      "packageName": "com.samsung.SMT.lang_it_it_f00"
+    },
+    {
+      "packageName": "com.samsung.SMT.lang_es_es_f00"
+    },
+    {
+      "packageName": "com.samsung.SMT.lang_ru_ru_f00"
+    },
+    {
+      "packageName": "com.android.credentialmanager"
+    },
+    {
+      "packageName": "com.samsung.SMT.lang_fr_fr_f00"
     },
     {
       "packageName": "com.samsung.android.app.settings.bixby"
+    },
+    {
+      "packageName": "jp.co.celsys.clipstudiopaint.galaxystore"
+    },
+    {
+      "packageName": "com.samsung.SMT.lang_de_de_f00"
     },
     {
       "packageName": "com.sec.facatfunction"
@@ -405,6 +528,9 @@
     },
     {
       "packageName": "com.android.role.notes.enabled"
+    },
+    {
+      "packageName": "com.samsung.android.service.pentastic"
     },
     {
       "packageName": "com.android.rkpdapp"
@@ -428,10 +554,19 @@
       "packageName": "com.samsung.android.smartsuggestions"
     },
     {
+      "packageName": "com.google.android.syncadapters.calendar"
+    },
+    {
+      "packageName": "com.samsung.android.provider.filterprovider"
+    },
+    {
       "packageName": "com.qti.snapdragon.qdcm_ff"
     },
     {
       "packageName": "com.samsung.knox.securefolder"
+    },
+    {
+      "packageName": "com.samsung.android.smartface"
     },
     {
       "packageName": "com.samsung.android.app.clipboardedge"
@@ -470,6 +605,9 @@
       "packageName": "com.samsung.android.app.tips"
     },
     {
+      "packageName": "com.samsung.android.aware.service"
+    },
+    {
       "packageName": "com.samsung.android.server.wifi.mobilewips"
     },
     {
@@ -497,6 +635,9 @@
       "packageName": "com.sec.android.app.vepreload"
     },
     {
+      "packageName": "com.samsung.android.scs"
+    },
+    {
       "packageName": "com.skms.android.agent"
     },
     {
@@ -506,6 +647,9 @@
       "packageName": "com.google.android.gms.location.history"
     },
     {
+      "packageName": "com.google.android.healthconnect.controller"
+    },
+    {
       "packageName": "com.sec.android.app.hwmoduletest"
     },
     {
@@ -513,6 +657,9 @@
     },
     {
       "packageName": "com.samsung.android.scloud"
+    },
+    {
+      "packageName": "com.samsung.advp.imssettings"
     },
     {
       "packageName": "com.sec.enterprise.knox.cloudmdm.smdms"
@@ -525,6 +672,9 @@
     },
     {
       "packageName": "com.samsung.android.smartswitchassistant"
+    },
+    {
+      "packageName": "com.samsung.android.wifi.ai"
     },
     {
       "packageName": "com.samsung.android.mdx"
@@ -540,6 +690,12 @@
     },
     {
       "packageName": "com.google.android.overlay.modules.documentsui"
+    },
+    {
+      "packageName": "com.samsung.android.app.dofviewer"
+    },
+    {
+      "packageName": "com.google.mainline.telemetry"
     },
     {
       "packageName": "com.samsung.android.bixbyvision.framework"
