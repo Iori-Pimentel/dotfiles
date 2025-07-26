@@ -34,8 +34,8 @@ pkg upgrade --yes --option Dpkg::Options::="--force-confnew"
 termux-change-repo
 bash <(curl -fsSL https://github.com/iori-pimentel/dotfiles/raw/main/deploy.sh)
 ```
-<details>
-<summary> Home Screen Settings </summary>
+<details><summary> Home Screen Settings </summary>
+
 | Setting             | Value              |
 |---------------------|--------------------|
 | Home Screen Layout  | Home Screen Only   |
@@ -43,8 +43,8 @@ bash <(curl -fsSL https://github.com/iori-pimentel/dotfiles/raw/main/deploy.sh)
 | Search From Home    | Off                |
 </details>
 
-<details>
-<summary> Display Settings </summary>
+<details><summary> Display Settings </summary>
+
 | Setting                     | Value             |
 |-----------------------------|-------------------|
 | Screen Timeout              | 30 minutes        |
@@ -54,39 +54,39 @@ bash <(curl -fsSL https://github.com/iori-pimentel/dotfiles/raw/main/deploy.sh)
 | Block Gestures with S-Pen   | On                |
 </details>
 
-<details>
-<summary> Lock Screen Settings </summary>
+<details><summary> Lock Screen Settings </summary>
+
 | Setting                | Value |
 |------------------------|-------|
 | Touch and Hold to Edit | Off   |
 | Widgets                | None  |
 </details>
 
-<details>
-<summary> Recent Apps Settings </summary>
+<details><summary> Recent Apps Settings </summary>
+
 | Setting               | Value |
 |-----------------------|-------|
 | Show Recommended Apps | Off   |
 </details>
 
-<details>
-<summary> Notification Settings </summary>
+<details><summary> Notification Settings </summary>
+
 | Setting                  | Value |
 |--------------------------|-------|
 | Lock Screen Notification | Off   |
 | Show Notification Icons  | All   |
 </details>
 
-<details>
-<summary> Side Button Settings </summary>
+<details><summary> Side Button Settings </summary>
+
 | Setting         | Action          |
 |-----------------|-----------------|
 | Double Press    | Off             |
 | Press and Hold  | Power Off Menu  |
 </details>
 
-<details>
-<summary> Unexpected Keyboard Config </summary>
+<details><summary> Unexpected Keyboard Config </summary>
+
 | Option                   | Value                         |
 |--------------------------|-------------------------------|
 | Landscape Height         | 30%                           |
@@ -95,8 +95,8 @@ bash <(curl -fsSL https://github.com/iori-pimentel/dotfiles/raw/main/deploy.sh)
 | Remove Keys              | Compose, Voice, Clipboard     |
 </details>
 
-<details>
-<summary> App Info Settings </summary>
+<details><summary> App Info Settings </summary>
+
 | App         | Unrestricted Battery | Appear on Top  | Default App  |
 |-------------|----------------------|----------------|--------------|
 | Termux      | ✅                   | ✅             | ❌           |
@@ -104,8 +104,8 @@ bash <(curl -fsSL https://github.com/iori-pimentel/dotfiles/raw/main/deploy.sh)
 | Aurora Store| ❌                   | ❌             | ✅           |
 </details>
 
-<details>
-<summary> One Hand Operation+ Configuration </summary>
+<details><summary> One Hand Operation+ Configuration </summary>
+
 | Gesture           | Short Swipe      | Long Swipe       |
 |-------------------|------------------|------------------|
 | Right Top         | Previous App     | Task Switcher    |
