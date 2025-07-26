@@ -11,7 +11,7 @@ set -o xtrace
 # termux-change-repo alternative that defaults to asia mirror group
 ln -sfT ${PREFIX}/etc/termux/{mirrors/asia,chosen_mirrors}
 
-pkg upgrade --yes
+pkg upgrade --yes --option Dpkg::Options::="--force-confnew"
 packages=(
 	zsh git manpages
 	eza bat fd ripgrep neovim
