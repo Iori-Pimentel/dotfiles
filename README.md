@@ -30,8 +30,6 @@ https://f-droid.org/en/packages/com.kunzisoft.keepass.libre
 ## Termux Configuration
 - Run in Termux:
 ```bash
-pkg upgrade --yes --option Dpkg::Options::="--force-confnew"
-termux-change-repo
 bash <(curl -fsSL https://github.com/iori-pimentel/dotfiles/raw/main/deploy.sh)
 ```
 <details><summary> Home Screen Settings </summary>
