@@ -21,7 +21,9 @@ packages=(
 	lua-language-server # nvim lsp
 	fastfetch
 	lazygit difftastic
-	python
+	python uv
+	websocat tinymist typst
+	rclone
 )
 pkg install --yes ${packages[@]}
 
