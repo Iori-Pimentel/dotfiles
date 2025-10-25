@@ -1,33 +1,17 @@
 {
   "title": "MiXplorer",
   "package": "com.mixplorer.beta",
-  "date": "26\/07\/2025 06:35:56",
+  "date": "25\/10\/2025 13:19:07",
   "type": 0,
   "db": {
     "uris": [
       {
         "pid": 14,
-        "uri": "\/storage\/emulated\/0",
-        "title": "Internal storage",
+        "uri": "content:\/\/mix\/all",
+        "title": "All Files",
         "user": "",
         "secret": "",
         "properties": "##xL7YQRe8Wuw9DS6BoJZHZA"
-      },
-      {
-        "pid": 14,
-        "uri": "\/storage\/emulated\/0\/Download",
-        "title": "Download",
-        "user": "",
-        "secret": "",
-        "properties": "##xL7YQRe8Wuw9DS6BoJZHZA"
-      },
-      {
-        "pid": 14,
-        "uri": "\/*1753478396803",
-        "title": "Filters",
-        "user": "*fldr*",
-        "secret": "TCiOdfjj8Bi4fmdDQIbFZQ",
-        "properties": "##"
       },
       {
         "pid": 14,
@@ -35,7 +19,7 @@
         "title": "Recent",
         "user": "",
         "secret": "",
-        "properties": "##MgIW-0AmqhAFZAu7tx9sYnSmKRUbG8AKaEhSDB7a4_A"
+        "properties": "##xL7YQRe8Wuw9DS6BoJZHZA"
       },
       {
         "pid": 14,
@@ -87,11 +71,43 @@
       },
       {
         "pid": 14,
+        "uri": "content:\/\/mix\/app",
+        "title": "App",
+        "user": "",
+        "secret": "",
+        "properties": "##xL7YQRe8Wuw9DS6BoJZHZA"
+      },
+      {
+        "pid": 14,
+        "uri": "content:\/\/mix\/trash",
+        "title": "Recycle bin",
+        "user": "",
+        "secret": "",
+        "properties": "##xL7YQRe8Wuw9DS6BoJZHZA"
+      },
+      {
+        "pid": 14,
         "uri": "\/*1753478440970",
         "title": "MiXplorer",
         "user": "*fldr*",
         "secret": "TCiOdfjj8Bi4fmdDQIbFZQ",
         "properties": "##"
+      },
+      {
+        "pid": 14,
+        "uri": "\/storage\/emulated\/0",
+        "title": "Internal storage",
+        "user": "",
+        "secret": "",
+        "properties": "##xL7YQRe8Wuw9DS6BoJZHZA"
+      },
+      {
+        "pid": 14,
+        "uri": "\/storage\/emulated\/0\/Download",
+        "title": "Download",
+        "user": "",
+        "secret": "",
+        "properties": "ts=0\ntc=0"
       },
       {
         "pid": 14,
@@ -110,28 +126,92 @@
         "properties": "##xL7YQRe8Wuw9DS6BoJZHZA"
       },
       {
-        "pid": 14,
-        "uri": "content:\/\/mix\/app",
-        "title": "App",
+        "pid": 8,
+        "uri": "\/storage\/emulated\/0\/Download\/MiXplorer_25_10_2025_13-15-39.mic",
+        "title": "",
         "user": "",
         "secret": "",
-        "properties": "##dRoCC_o2mZNuQlNzswjIpSceLldnrXi1LxMhiaWgklo"
+        "properties": "file=1"
       },
       {
-        "pid": 14,
+        "pid": 8,
         "uri": "content:\/\/mix\/all",
-        "title": "All Files",
+        "title": "",
         "user": "",
         "secret": "",
-        "properties": "##xL7YQRe8Wuw9DS6BoJZHZA"
+        "properties": ""
       },
       {
-        "pid": 14,
-        "uri": "content:\/\/mix\/trash",
-        "title": "Recycle bin",
+        "pid": 8,
+        "uri": "\/storage\/emulated\/0\/Download\/vault.kdbx",
+        "title": "",
         "user": "",
         "secret": "",
-        "properties": "##xL7YQRe8Wuw9DS6BoJZHZA"
+        "properties": "file=1"
+      },
+      {
+        "pid": 8,
+        "uri": "\/storage\/emulated\/0\/Download\/app-arm64-v8a-release.apk",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": "file=1"
+      },
+      {
+        "pid": 8,
+        "uri": "\/storage\/emulated\/0\/Music\/Samsung\/Over_the_Horizon.mp3",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": "file=1"
+      },
+      {
+        "pid": 8,
+        "uri": "\/storage\/emulated\/0\/Download\/keepassdx.properties.txt",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": "file=1"
+      },
+      {
+        "pid": 8,
+        "uri": "\/storage\/emulated\/0\/Download\/man.png",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": "file=1"
+      },
+      {
+        "pid": 8,
+        "uri": "content:\/\/mix\/app",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": ""
+      },
+      {
+        "pid": 8,
+        "uri": "content:\/\/mix\/trash",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": ""
+      },
+      {
+        "pid": 8,
+        "uri": "content:\/\/mix\/recent",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": ""
+      },
+      {
+        "pid": 8,
+        "uri": "content:\/\/mix\/apk",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": ""
       },
       {
         "pid": 8,
@@ -144,14 +224,6 @@
       {
         "pid": 8,
         "uri": "\/storage\/emulated\/0\/Download",
-        "title": "",
-        "user": "",
-        "secret": "",
-        "properties": ""
-      },
-      {
-        "pid": 8,
-        "uri": "content:\/\/mix\/apk",
         "title": "",
         "user": "",
         "secret": "",
@@ -208,38 +280,6 @@
       {
         "pid": 8,
         "uri": "\/data\/user\/0\/com.mixplorer.beta\/home",
-        "title": "",
-        "user": "",
-        "secret": "",
-        "properties": ""
-      },
-      {
-        "pid": 8,
-        "uri": "content:\/\/mix\/all",
-        "title": "",
-        "user": "",
-        "secret": "",
-        "properties": ""
-      },
-      {
-        "pid": 8,
-        "uri": "content:\/\/mix\/recent",
-        "title": "",
-        "user": "",
-        "secret": "",
-        "properties": ""
-      },
-      {
-        "pid": 8,
-        "uri": "content:\/\/mix\/trash",
-        "title": "",
-        "user": "",
-        "secret": "",
-        "properties": ""
-      },
-      {
-        "pid": 8,
-        "uri": "content:\/\/mix\/app",
         "title": "",
         "user": "",
         "secret": "",
@@ -319,22 +359,6 @@
       },
       {
         "pid": 2,
-        "uri": "\/storage\/emulated\/0\/Download",
-        "title": "",
-        "user": "",
-        "secret": "",
-        "properties": "##upUyA52Vjibm1a2ayuku7iiTYE--3Osoq7SLDiDqeYDXLgQQWGE7eA_44jbC7o4R-hOIkMXSSmAFzVe00IdItgkRZhkMmeTfWjpuhrClidA2nWsCmdpbVAT9oQ3FyMdKI4v-0IrDfLlIFdG9vNYzRSPXtLza0coJ0Orgvbvi2ble8PWUd-wVqEHhTBzzdFuXFNtXrxcLKVniI2rs5iZ2u7KvbIxscMIWWe47rcIOODM"
-      },
-      {
-        "pid": 2,
-        "uri": "\/storage\/emulated\/0",
-        "title": "",
-        "user": "",
-        "secret": "",
-        "properties": "##upUyA52Vjibm1a2ayuku7iiTYE--3Osoq7SLDiDqeYDXLgQQWGE7eA_44jbC7o4R-hOIkMXSSmAFzVe00IdItgkRZhkMmeTfWjpuhrClidA2nWsCmdpbVAT9oQ3FyMdKI4v-0IrDfLlIFdG9vNYzRSPXtLza0coJ0Orgvbvi2ble8PWUd-wVqEHhTBzzdFuXFNtXrxcLKVniI2rs5iZ2u7KvbIxscMIWWe47rcIOODM"
-      },
-      {
-        "pid": 2,
         "uri": "\/",
         "title": "",
         "user": "",
@@ -380,14 +404,6 @@
         "user": "",
         "secret": "",
         "properties": "view=1\nwidth=581"
-      },
-      {
-        "pid": 1,
-        "uri": "\/storage\/emulated\/0",
-        "title": "",
-        "user": "",
-        "secret": "",
-        "properties": "view=1"
       },
       {
         "pid": 1,
@@ -454,7 +470,33 @@
         "properties": "view=5"
       }
     ],
-    "packages": []
+    "packages": [
+      {
+        "extension": "txt:1481493647",
+        "package": "com.mixplorer.beta",
+        "classname": "com.mixplorer.activities.CodeEditorActivity"
+      },
+      {
+        "extension": "png:1481493647",
+        "package": "com.mixplorer.beta",
+        "classname": "com.mixplorer.activities.ImageViewerActivity"
+      },
+      {
+        "extension": "mp3:1481493647",
+        "package": "com.samsung.android.app.soundpicker",
+        "classname": "com.samsung.android.app.musiclibrary.ui.player.soundplayer.SoundPlayerActivity"
+      },
+      {
+        "extension": "kdbx:1481493647",
+        "package": "com.kunzisoft.keepass.libre",
+        "classname": "com.kunzisoft.keepass.activities.MainCredentialActivity"
+      },
+      {
+        "extension": "apk:1481493647",
+        "package": "com.google.android.packageinstaller",
+        "classname": "com.android.packageinstaller.InstallStart"
+      }
+    ]
   },
   "pref": {
     "main": {
@@ -476,7 +518,7 @@
       "saved_customized": "Gray",
       "auto_folder_preview": false,
       "change_view_globally": true,
-      "code_editor": "encoding=\nwrap=false\nfontsize=30\nline_numbers=true\nhighlight=\nauto_indent=true\neditor_mode=0\nfull_view_size=0\nchars_view=false\nfullscreen=false\nhighlight_old=\nspell_check=false\nno_keyboard=false\nsaved_offs=a620cfe7:0\nauto_complete=false\nstart_with_keyboard=true\nstart_at_end=false\ntab_space=false\nshow_whitespace=false",
+      "code_editor": "encoding=\nwrap=false\nfontsize=30\nline_numbers=true\nhighlight=\nauto_indent=true\neditor_mode=0\nfull_view_size=0\nchars_view=false\nfullscreen=false\nhighlight_old=\nspell_check=false\nno_keyboard=false\nsaved_offs=c96fa09b:2be\nauto_complete=false\nstart_with_keyboard=true\nstart_at_end=false\ntab_space=false\nshow_whitespace=false",
       "custom_key_CHECK_ROOT_REM": "1",
       "show_tab_bar": true,
       "custom_key_AGREE_PRIVACY": "true",
