@@ -25,6 +25,7 @@ https://f-droid.org/en/packages/com.kunzisoft.keepass.libre
 - Configure Mixplorer in Obtainium
     - versionExtractionRegEx: `[0-9.]+.Beta.[0-9B]+`
     - apkFilterRegEx: `arm64`
+- Click "Tap to finish setting up" notification
 - Enable Shizuku and clean up using [Canta](android/canta.json)
 
 ## Termux Configuration
