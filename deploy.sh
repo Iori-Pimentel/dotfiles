@@ -27,9 +27,9 @@ packages=(
 )
 pkg install --yes ${packages[@]}
 
-github_key=~/.ssh/github_key
-ssh-keygen -f $github_key
-ssh-keygen -y -f $github_key | termux-clipboard-set
+GITHUB_KEYFILE=~/.ssh/github_key
+ssh-keygen -f $GITHUB_KEYFILE
+ssh-keygen -f $GITHUB_KEYFILE -y | termux-clipboard-set
 termux-open https://github.com/settings/ssh/new
 
 XDG_CONFIG_HOME=~/.config
@@ -47,8 +47,9 @@ git clone ${DOTFILES} ${DOTFILES_BASE}
 git clone ${ANTIDOTE} ${ANTIDOTE_BASE} --depth=1
 
 mkdir -p ${XDG_CONFIG_HOME}
-ln -sf ${DOTFILES_BASE}/zsh/.zshenv --target-directory ${HOME}
-ln -sf ${DOTFILES_BASE}/configs/*   --target-directory ${XDG_CONFIG_HOME}
+ln -sf ${DOTFILES_BASE}/zsh/.zshenv   --target-directory ${HOME}
+ln -sf ${DOTFILES_BASE}/configs/*     --target-directory ${XDG_CONFIG_HOME}
+ln -sf ${DOTFILES_BASE}/configs/ssh/* --target-directory ${HOME}/.ssh
 
 cat <<- 'EOF' > ~/.termux/termux.properties
 	# Example file can be found in:
