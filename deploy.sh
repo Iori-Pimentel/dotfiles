@@ -27,6 +27,11 @@ packages=(
 )
 pkg install --yes ${packages[@]}
 
+github_key=~/.ssh/github_key
+ssh-keygen -f $github_key
+ssh-keygen -y -f $github_key | termux-clipboard-set
+termux-open https://github.com/settings/ssh/new
+
 XDG_CONFIG_HOME=~/.config
 XDG_CACHE_HOME=~/.cache
 
