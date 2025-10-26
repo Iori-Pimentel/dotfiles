@@ -37,9 +37,11 @@ bash <(curl -fsSL https://github.com/iori-pimentel/dotfiles/raw/main/deploy.sh)
 
 | Setting             | Value              |
 |---------------------|--------------------|
-| Home Screen Layout  | Home Screen Only   |
-| App Icon Badge      | Off                |
-| Search From Home    | Off                |
+| Home Screen Layout                | Home Screen Only |
+| Home Screen Grid                  | 5x5              |
+| App Icon Badge                    | Off              |
+| Swipe Down for Notification Panel | Off              |
+| Search From Home                  | Off              |
 </details>
 
 <details><summary> Display Settings </summary>
