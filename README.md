@@ -97,6 +97,7 @@ bash <(curl -fsSL https://github.com/iori-pimentel/dotfiles/raw/main/deploy.sh)
 | Option                   | Value                         |
 |--------------------------|-------------------------------|
 | Landscape Height         | 30%                           |
+| Portrait Height          | 20%                           |
 | Horizontal Margin        | 200dp                         |
 | Automatic Capitalization | Off                           |
 | Remove Keys              | Compose, Voice, Clipboard     |
