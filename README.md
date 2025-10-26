@@ -11,16 +11,22 @@
 - Install Obtainium in Chrome
 - Import `Bare Minimum` in Obtainium:
 ```text
-https://github.com/RikkaApps/Shizuku
-https://f-droid.org/en/packages/io.github.samolego.canta
+https://f-droid.org/packages/com.kunzisoft.keepass.libre
+https://f-droid.org/packages/com.termux
+https://f-droid.org/packages/com.termux.api
+https://f-droid.org/packages/io.github.muntashirakon.AppManager
+https://f-droid.org/packages/io.github.samolego.canta
 https://f-droid.org/packages/juloo.keyboard2
-https://f-droid.org/en/packages/com.termux.api
-https://f-droid.org/en/packages/com.termux
+https://f-droid.org/packages/net.thunderbird.android
+https://f-droid.org/packages/org.localsend.localsend_app
+https://github.com/ImranR98/Obtainium
+https://github.com/ReVanced/revanced-manager
+https://github.com/RikkaApps/Shizuku
+https://github.com/WSTxda/MicroG-RE
+https://github.com/inotia00/revanced-manager
 https://gitlab.com/AuroraOSS/AuroraStore
 https://gitlab.com/ironfox-oss/ironfox
-https://mixplorer.com/beta
-https://f-droid.org/packages/org.localsend.localsend_app
-https://f-droid.org/en/packages/com.kunzisoft.keepass.libre
+https://mixplorer.com/beta/
 ```
 - Configure Mixplorer in Obtainium
     - versionExtractionRegEx: `[0-9.]+.Beta.[0-9B]+`
